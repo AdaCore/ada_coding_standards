@@ -33,12 +33,13 @@ In Ada, objects are created by being either "declared" or "allocated".  Declared
 
 The terms "static" and "dynamic" tend to be used in place of "declared" and "allocated", although in traditional storage management terminology all storage allocation in Ada is dynamic. In the following discussion, the term "dynamic allocation" refers to storage that is allocated by allocators. "Static" object allocation refers to objects that are declared. "Deallocation" refers to the reclamation of allocated storage.
 
-Unmanaged dynamic storage allocation and deallocation can lead to storage exhaustion; the required analysis is difficult under those circumstances. Furthermore, access values can establish aliases that complicate verification, and explicit deallocation of dynamic storage can lead to specific errors (e.g., "double free", "use after free") having unpredictable results. As a result, the prevalent approach to storage management in high-integrity systems is to disallow dynamic management techniques completely [1-4].  
+Unmanaged dynamic storage allocation and deallocation can lead to storage exhaustion; the required analysis is difficult under those circumstances. Furthermore, access values can establish aliases that complicate verification, and explicit deallocation of dynamic storage can lead to specific errors (e.g., "double free", "use after free") having unpredictable results. As a result, the prevalent approach to storage management in high-integrity systems is to disallow dynamic management techniques completely. [SEI-C]_ [MISRA2013]_ [Holzmann2006]_ [ISO2000]_
 
 However, restricted forms of storage management and associated feature usage can support the necessary reliability and analyzability characteristics while retaining sufficient expressive power to justify the analysis expense. The following sections present possible approaches, including the traditional approach in which no dynamic behavior is allowed. Individual projects may then choose which storage management approach best fits their requirements and apply appropriate tailoring, if necessary, to the specific guidelines.  
 
 Applicable vulnerability within ISO TR 24772-2: 
-? 6.39 "Memory leak and heap fragmentation [XYL].
+
+   * 6.39 "Memory leak and heap fragmentation [XYL].
 
 Realization
    There is a spectrum of management schemes possible, trading ease of analysis against increasing expressive power. At one end there is no dynamic memory allocation (and hence, deallocation) allowed, making analysis trivial. At the other end, nearly the full expressive power of the Ada facility is available, but with analyzability partially retained. In the latter, however, the user must create the allocators in such a manner as to ensure proper behavior.
@@ -91,13 +92,10 @@ Description
 
 The following restrictions must be in effect:
 
-? No_Anonymous_Allocators
-
-? No_Coextensions
-
-? No_Access_Parameter_Allocators
-
-? Immediate_Reclamation
+   * No_Anonymous_Allocators
+   * No_Coextensions
+   * No_Access_Parameter_Allocators
+   * Immediate_Reclamation
 
 The first three restrictions prevent problematic usage that, for example, may cause un-reclaimed (and unreclaimable) storage. The last restriction ensures any storage allocated by the compiler at run-time for representing objects is reclaimed at once. (That restriction does not apply to objects created by allocators in the application.)
 
@@ -117,71 +115,69 @@ Low
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
+For No_Anonymous_Allocators:
+   
+   .. code:: Ada
 
-   For No_Anonymous_Allocators:
-   
       X : access String := new String'("Hello");
-   
       ...
-   
       X := new String'("Hello");
    
-   For No_Coextensions:
+For No_Coextensions:
+
+   .. code:: Ada
    
       type Object (Msg : access String) is ...
-   
       Obj : Object (Msg => new String'("Hello"));
    
-   For No_Access_Parameter_Allocators:
+For No_Access_Parameter_Allocators:
+   
+   .. code:: Ada
    
       procedure P (Formal : access String);
-   
       ...
-   
       P (Formal => new String'("Hello"));
    
 """"""""""""""""""""""""
 Compliant Code Example
 """"""""""""""""""""""""
 
-.. code:: Ada
+For No_Anonymous_Allocators, use a named access type:
+   
+   .. code:: Ada
 
-   For No_Anonymous_Allocators, use a named access type:
-   
       type String_Reference is access all String;   
-   
       S : constant String_Reference := new String'("Hello");
-   
       X : access String := S;
-   
       ...
-   
       X := S;
    
-   For No_Coextensions, use a variable of a named access type:
+For No_Coextensions, use a variable of a named access type:
    
+   .. code:: Ada
+
       type Object (Msg : access String) is ...
-   
       type String_Reference is access all String;   
-   
       S : String_Reference := new String'("Hello");
-   
       Obj : Object (Msg => S);
    
-   For No_Access_Parameter_Allocators, use a variable of a named access type:
+For No_Access_Parameter_Allocators, use a variable of a named access type:
    
+   .. code:: Ada
+
       procedure P (Formal : access String);
-   
       type String_Reference is access all String;   
-   
       S : String_Reference := new String'("Hello");
-   
+      ...
       P (Formal => S);
    
-   The compiler will detect violations of the first three restrictions. Note that GNATcheck can detect violations in addition to the compiler.
+"""""""
+Notes
+"""""""
+
+The compiler will detect violations of the first three restrictions. Note that GNATcheck can detect violations in addition to the compiler.
    
-   The fourth restriction is a directive for implementation behavior, not subject to source-based violation detection.
+The fourth restriction is a directive for implementation behavior, not subject to source-based violation detection.
    
 ----------------------------------------------
 Traditional Static Allocation Policy (DYN02)
@@ -229,9 +225,9 @@ Description
 
 The following restrictions must be in effect:
 
-? No_Allocators
+   * No_Allocators
 
-? No_Task_Allocators
+   * No_Task_Allocators
 
 Under the traditional approach, no dynamic allocations and no deallocations occur.  Only declared objects are used and no access types of any kind appear in the code.
 
@@ -239,15 +235,11 @@ Without allocations there is no issue with deallocation as there would be nothin
 
 In this approach the following constructs are not allowed:
 
-? Allocators
-
-? Access-to-constant access types
-
-? Access-to-variable access types
-
-? User-defined storage pools
-
-? Unchecked Deallocations
+   * Allocators
+   * Access-to-constant access types
+   * Access-to-variable access types
+   * User-defined storage pools
+   * Unchecked Deallocations
 
 """""""""""
 Reference
@@ -265,15 +257,17 @@ Low
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
-
-   Any code using the constructs listed above.
+Any code using the constructs listed above.
 
 """"""""""""""""""""""""
 Compliant Code Example
 """"""""""""""""""""""""
 
 N/A
+
+"""""""
+Notes
+"""""""
 
 The compiler, and/or GNATcheck, will detect violations of the restrictions. 
 
@@ -323,19 +317,16 @@ Description
 
 The following restrictions must be in effect:
 
-? No_Allocators
-
-? No_Dependence => Ada.Unchecked_Deallocation
+   * No_Allocators
+   * No_Dependence => Ada.Unchecked_Deallocation
 
 In this approach dynamic access values are only created via the attribute 'Access applied to aliased objects. Allocation and deallocation never occur. As a result, storage exhaustion cannot occur because no "dynamic" allocations occur. Fragmentation cannot occur because there are no deallocations.  
 
 In this approach the following constructs are not allowed:
 
-? Allocators
-
-? User-defined storage pools
-
-? Unchecked Deallocations
+   * Allocators
+   * User-defined storage pools
+   * Unchecked Deallocations
 
 Notes
 
@@ -361,9 +352,7 @@ Low
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
-
-   Any code using the constructs listed above.
+Any code using the constructs listed above.
 
 """"""""""""""""""""""""
 Compliant Code Example
@@ -372,20 +361,18 @@ Compliant Code Example
 .. code:: Ada
 
    type Descriptor is ...;
-   
    type Descriptor_Ref is access all Descriptor;
-   
    ...
-   
    Device : aliased Descriptor;
-   
    ...
-   
    P : Descriptor_Ref := Device'Access;
-   
    ...
    
-   The compiler, and/or GNATcheck, will detect violations of the restrictions. 
+"""""""
+Notes
+"""""""
+
+The compiler, and/or GNATcheck, will detect violations of the restrictions. 
    
 -------------------------------------------
 Minimal Dynamic Allocation Policy (DYN04)
@@ -427,24 +414,20 @@ Minimal Dynamic Allocation Policy (DYN04)
      - False
      - False
 
-X
- Security
-
 """""""""""""
 Description
 """""""""""""
 
 The following restrictions must be in effect:
 
-? No_Local_Allocators
-
-? No_Dependence => Ada.Unchecked_Deallocation
+   * No_Local_Allocators
+   * No_Dependence => Ada.Unchecked_Deallocation
 
 In this approach dynamic allocation is only allowed during "start-up" and no later.  Deallocations never occur.  As a result, storage exhaustion should never occur assuming the initial allotment is sufficient.  This assumption is as strong as when using only declared objects on the "stack" because in that case a sufficient initial storage allotment for the stack must be made.  
 
 In this approach the following constructs are not allowed:
 
-? Unchecked Deallocations
+   * Unchecked Deallocations
 
 Note that some operating systems intended for this domain directly support this policy.
 
@@ -464,19 +447,19 @@ Low
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
-
-   Any code using the constructs listed above.
+Any code using the constructs listed above.
 
 """"""""""""""""""""""""
 Compliant Code Example
 """"""""""""""""""""""""
 
-.. code:: Ada
-
-   Code performing dynamic allocations any time prior to an arbitrary point designated as the end of the "startup" interval.
+Code performing dynamic allocations any time prior to an arbitrary point designated as the end of the "startup" interval.
    
-   The compiler, and/or GNATcheck, will detect violations of the restrictions. 
+"""""""
+Notes
+"""""""
+
+The compiler, and/or GNATcheck, will detect violations of the restrictions. 
    
 -------------------------------------------
 User-Defined Storage Pools Policy (DYN05)
@@ -550,9 +533,7 @@ Low
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
-
-   Allocation via an access type not tied to a user-defined storage pool.
+Allocation via an access type not tied to a user-defined storage pool.
 
 """"""""""""""""""""""""
 Compliant Code Example
@@ -561,24 +542,20 @@ Compliant Code Example
 .. code:: Ada
 
    Heap : Sequential_Fixed_Blocks.Storage_Pool
-   
             (Storage_Size => Required_Storage_Size,
-   
              Element_Size => Representable_Obj_Size,
-   
              Alignment    => Representation_Alignment);
-   
    type Pointer is access all Unsigned_Longword with
-   
       Storage_Pool => Heap;
-   
    Ptr : Pointer;
-   
    ...
-   
    Ptr := new Unsigned_Longword; -- from Heap
    
-   Enforcement of this approach can only be provided by manual code review unless SPARK is used.
+"""""""
+Notes
+"""""""
+
+Enforcement of this approach can only be provided by manual code review unless SPARK is used.
    
 ---------------------------------------------------------
 Statically Determine Maximum Stack Requirements (DYN06)
@@ -655,5 +632,9 @@ Compliant Code Example
 
 N/A
 
-The GNATstack tool can statically determine the maximum requirements per task. 
+"""""""
+Notes
+"""""""
+
+The GNATstack [GNATstack]_ tool can statically determine the maximum requirements per task. 
 

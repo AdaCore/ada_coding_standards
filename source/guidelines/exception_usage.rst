@@ -38,8 +38,9 @@ Complicating the issue further is the fact that, if exceptions are completely di
 Therefore, for the application software the system software architect must decide whether to allow exceptions at all, and if they are to be used, decide the degree and manner of their usage. At the system level, the architect must identify the exceptions that are possible and how they will be addressed.
 
 Applicable vulnerability within ISO TR 24772-2: 
-? 6.36 "Ignored error status and unhandled exceptions [OYB]"
-? 6.50 "Unanticipated exceptions from library routines [HJW]"
+
+   * 6.36 "Ignored error status and unhandled exceptions [OYB]"
+   * 6.50 "Unanticipated exceptions from library routines [HJW]"
 
 -------------------------------------------------
 Don't Raise Language-Defined Exceptions (EXU01)
@@ -93,7 +94,7 @@ The Ada language-defined exceptions are raised implicitly in specific circumstan
 Reference
 """""""""""
 
-[15] ERR07-J
+[SEI-Java]_ ERR07-J
 
 """""""""""""
 Remediation
@@ -108,9 +109,7 @@ Noncompliant Code Example
 .. code:: Ada
 
    if Fuel_Exhaused (This) then
-   
       raise Constraint_Error;
-   
    end if;
 
 """"""""""""""""""""""""
@@ -120,16 +119,16 @@ Compliant Code Example
 .. code:: Ada
 
    Fuel_Limits : exception;
-   
    ...
-   
    if Fuel_Exhaused (This) then
-   
       raise Fuel_Limits;
-   
    end if;
+
+"""""""
+Notes
+"""""""
    
-   This restriction is detected by GNATcheck with the Raising_Predefined_Exceptions rule applied.
+This restriction is detected by GNATcheck with the Raising_Predefined_Exceptions rule applied.
    
 -----------------------------------------------------
 No Unhandled Application-Defined Exceptions (EXU02)
@@ -211,6 +210,10 @@ Compliant Code Example
 
 N/A
 
+"""""""
+Notes
+"""""""
+   
 SPARK can prove that no exception will be raised (or fail to prove it and indicate the failure).
 
 ---------------------------------------------------------
@@ -278,80 +281,62 @@ Noncompliant Code Example
 .. code:: Ada
 
    package P is
-   
       procedure Q;
-   
    end P;
    
    package body P is
-   
       Error : exception;
-   
       procedure Q is
-   
       begin
-   
          ...
-   
          raise Error;   -- under some circumstance
-   
          ...
-   
       end Q;
-   
    end P;
    
-   As a result the exception name cannot be referenced outside the body:
+As a result the exception name cannot be referenced outside the body:
    
+.. code:: Ada
+
    begin -- some code outside of P
-   
       P.Q;
-   
    exception
-   
       when P.Error =>   -- illegal
 
 """"""""""""""""""""""""
 Compliant Code Example
 """"""""""""""""""""""""
 
-.. code:: Ada
+Either make the exception name visible to clients:
 
-   Either make the exception name visible to clients:
+.. code:: Ada
    
    package P is
-   
       Error : exception;   -- moved from package body
-   
       procedure Q;
-   
    end P;
    
-   or ensure the exception is not propagated beyond the scope of its declaration:
+or ensure the exception is not propagated beyond the scope of its declaration:
    
+.. code:: Ada
+
    package body P is
-   
       Error : exception;
-   
       procedure Q is
-   
       begin
-   
          ...
-   
          raise Error;   -- under some circumstance
-   
          ...
-   
       exception
-   
          when Error => ...
-   
       end Q;
-   
    end P;
    
-   GNATcheck can detect violations via the Non_Visible_Exceptions rule. 
+"""""""
+Notes
+"""""""
+
+GNATcheck can detect violations via the Non_Visible_Exceptions rule. 
    
 ----------------------------------------------
 Prove Absence of Run-time Exceptions (EXU04)
@@ -424,6 +409,10 @@ Compliant Code Example
 """"""""""""""""""""""""
 
 N/A
+
+"""""""
+Notes
+"""""""
 
 This restriction is detected by SPARK, in which any statements explicitly raising an exception must be proven unreachable (or proof fails and the failure is indicated), and any possibility of run-time exception should be proved not to happen.
 

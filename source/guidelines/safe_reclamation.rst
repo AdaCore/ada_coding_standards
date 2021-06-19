@@ -79,7 +79,7 @@ Never deallocate the storage designated by a given access value more than once.
 Reference
 """""""""""
 
-[14] CWE-415: Double Free
+[CWE2019]_ CWE-415: Double Free
 
 """""""""""""
 Remediation
@@ -94,32 +94,26 @@ Noncompliant Code Example
 .. code:: Ada
 
       type String_Reference is access all String;
-   
       procedure Free is new Ada.Unchecked_Deallocation
-   
     	(Object => String,  Name => String_Reference);
-   
       S : String_Reference := new String'("Hello");
-   
       Y : String_Reference;
-   
    begin
-   
       Y := S;
-   
       Free (S);
-   
       Free (Y);
    
 """"""""""""""""""""""""
 Compliant Code Example
 """"""""""""""""""""""""
 
-.. code:: Ada
-
-   Remove the call to Free (Y).
+Remove the call to Free (Y).
    
-   Enforcement of this rule can be provided by manual code review, unless deallocation is forbidden via No_Unchecked_Deallocation or SPARK is used, as ownership analysis in SPARK detects such cases. Note that storage utilization analysis tools such as Valgrind can usually find this sort of error. In addition, a GNAT-defined storage pool is available to help debug such errors.
+"""""""
+Notes
+"""""""
+
+Enforcement of this rule can be provided by manual code review, unless deallocation is forbidden via No_Unchecked_Deallocation or SPARK is used, as ownership analysis in SPARK detects such cases. Note that storage utilization analysis tools such as Valgrind can usually find this sort of error. In addition, a GNAT-defined storage pool is available to help debug such errors.
    
 ----------------------------------------
 Only Reclaim Allocated Storage (RCL02)
@@ -173,7 +167,7 @@ This is a possibility because Ada allows creation of access values designating d
 Reference
 """""""""""
 
-[1] MEM34-C: Only Free Memory Allocated Dynamically
+[SEI-C]_ MEM34-C: Only Free Memory Allocated Dynamically
 
 """""""""""""
 Remediation
@@ -188,28 +182,24 @@ Noncompliant Code Example
 .. code:: Ada
 
       type String_Reference is access all String;
-   
       procedure Free is new Ada.Unchecked_Deallocation
-   
     	(Object => String,  Name => String_Reference);
-   
       S : aliased String := "Hello";
-   
       Y : String_Reference := S'Access;
-   
    begin
-   
       Free (Y);
    
 """"""""""""""""""""""""
 Compliant Code Example
 """"""""""""""""""""""""
 
-.. code:: Ada
-
-   Remove the call to Free (Y).
+Remove the call to Free (Y).
    
-   Enforcement of this rule can only be provided by manual code review, unless deallocation is forbidden via No_Unchecked_Deallocation.
+"""""""
+Notes
+"""""""
+
+Enforcement of this rule can only be provided by manual code review, unless deallocation is forbidden via No_Unchecked_Deallocation.
    
 ---------------------------------------
 Only Reclaim To The Same Pool (RCL03)
@@ -278,38 +268,27 @@ Noncompliant Code Example
 .. code:: Ada
 
       type Pointer1 is access all Integer;
-   
       type Pointer2 is access all Integer;
-   
       P1 : Pointer1;
-   
       P2 : Pointer2;
-   
       procedure Free is new Ada.Unchecked_Deallocation
-   
-         (Object => Integer,
-   
-          Name   => Pointer2);
-   
+         (Object => Integer, Name   => Pointer2);
    begin
-   
       P1 := new Integer;
-   
       P2 := Pointer2 (P1); 
-   
       ...
-   
       Free (P2);
    
-   In the above, P1.all was allocated from Pointer1'Storage_Pool, but, via the type conversion, the code above is attempting to return it to Pointer2'Storage_Pool, which may be a different pool.
+In the above, P1.all was allocated from Pointer1'Storage_Pool, but, via the type conversion, the code above is attempting to return it to Pointer2'Storage_Pool, which may be a different pool.
 
 """"""""""""""""""""""""
 Compliant Code Example
 """"""""""""""""""""""""
 
-.. code:: Ada
+Don't deallocate converted access values.
+   
+"""""""
+Notes
+"""""""
 
-   Don't deallocate converted access values.
-   
-   Enforcement of this rule can only be provided by manual code review, unless deallocation is forbidden via No_Unchecked_Deallocation.
-   
+Enforcement of this rule can only be provided by manual code review, unless deallocation is forbidden via No_Unchecked_Deallocation.

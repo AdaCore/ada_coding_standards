@@ -26,7 +26,7 @@ The guidelines are separated into related categories, such as storage management
 Enforcement
 =============
 
-Detection and enforcement mechanisms are indicated for each guideline. These mechanisms typically consist of the application of a language standard pragma named "Restrictions," with policy-specific restriction identifiers given as parameters to the pragma [5]. Violations of the given restrictions are then detected and enforced by the Ada compiler. 
+Detection and enforcement mechanisms are indicated for each guideline. These mechanisms typically consist of the application of a language standard pragma named "Restrictions," with policy-specific restriction identifiers given as parameters to the pragma [AdaRM2016]_. Violations of the given restrictions are then detected and enforced by the Ada compiler. 
 
 Alternatively, the AdaCore GNATcheck utility program has rules precisely corresponding to those restriction identifiers, with the same degree of detection and enforcement. For example, the language restriction identifier No_Unchecked_Deallocation corresponds to the GNATcheck "+RRestrictions:No_Unchecked_Deallocation" rule.
 

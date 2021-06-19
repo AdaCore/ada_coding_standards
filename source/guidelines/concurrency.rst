@@ -35,18 +35,18 @@ High integrity applications are subject to a number of stringent analyses, inclu
 
 These analyses are applied both to the application and to the implementation of the underlying run-time library.  However, analysis of the complete set of general Ada tasking features is not tractable, neither technically nor in terms of cost. A subset of the language is required.
 
-The Ravenscar profile [5] is a subset of the Ada concurrency facilities that supports determinism, schedulability analysis, constrained memory utilization, and certification to the highest integrity levels. Four distinct application domains are specifically intended:
+The Ravenscar profile [AdaRM2016]_ is a subset of the Ada concurrency facilities that supports determinism, schedulability analysis, constrained memory utilization, and certification to the highest integrity levels. Four distinct application domains are specifically intended:
 
-? hard real-time applications requiring predictability,  
-? safety-critical systems requiring formal, stringent certification, 
-? high-integrity applications requiring formal static analysis and verification,
-? embedded applications requiring both a small memory footprint and low execution overhead.
+   * Hard real-time applications requiring predictability,  
+   * Safety-critical systems requiring formal, stringent certification, 
+   * High-integrity applications requiring formal static analysis and verification,
+   * Embedded applications requiring both a small memory footprint and low execution overhead.
 
 Those tasking constructs that preclude analysis at the source level or analysis of the tasking portion of the underlying run-time library are disallowed. 
 
 The Ravenscar profile is necessarily strict in terms of what it removes so that it can support the stringent analyses, such as safety analysis, that go beyond the timing analysis required for real-time applications. In addition, the strict subset facilitates that timing analysis in the first place. 
 
-However, not all high-integrity applications are amenable to expression in the Ravenscar profile subset. The Jorvik profile [6] is an alternative subset of the Ada concurrency facilities. It is based directly on the Ravenscar profile but removes selected restrictions in order to increase expressive power, while retaining analyzability and performance. As a result, typical idioms for protected objects can be used, for example, and relative delays statements are allowed. Timing analysis is still possible but slightly more complicated, and the underlying run-time library is slightly larger and more complex.
+However, not all high-integrity applications are amenable to expression in the Ravenscar profile subset. The Jorvik profile [AdaRM2020]_ is an alternative subset of the Ada concurrency facilities. It is based directly on the Ravenscar profile but removes selected restrictions in order to increase expressive power, while retaining analyzability and performance. As a result, typical idioms for protected objects can be used, for example, and relative delays statements are allowed. Timing analysis is still possible but slightly more complicated, and the underlying run-time library is slightly larger and more complex.
 
 When the most stringent analyses are required and the tightest timing is involved, use the Ravenscar profile. When a slight increase in complexity is tolerable, i.e., in those cases not undergoing all of these stringent analyses, consider using the Jorvik profile.
 
@@ -176,9 +176,7 @@ High
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
-
-   Any code disallowed by the profile. Remediation is "high" because use of the facilities outside the subset can be difficult to retrofit into compliance.
+Any code disallowed by the profile. Remediation is "high" because use of the facilities outside the subset can be difficult to retrofit into compliance.
 
 """"""""""""""""""""""""
 Compliant Code Example
@@ -186,11 +184,15 @@ Compliant Code Example
 
 N/A
 
+"""""""
+Notes
+"""""""
+
 The Ada builder will detect violations if the programmer specifies this profile or corresponding pragmas. GNATcheck also can detect violations of profile restrictions.
 
 Applicable vulnerability within ISO TR 24772-2: 
 
-? 6.63 "Lock protocol errors [CGM]".
+   * 6.63 "Lock protocol errors [CGM]".
 
 --------------------------------
 Use the Jorvik Profile (CON02)
@@ -322,15 +324,17 @@ High
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
-
-   Any code disallowed by the profile. Remediation is "high" because use of the facilities outside the subset can be difficult to retrofit into compliance.
+Any code disallowed by the profile. Remediation is "high" because use of the facilities outside the subset can be difficult to retrofit into compliance.
 
 """"""""""""""""""""""""
 Compliant Code Example
 """"""""""""""""""""""""
 
 N/A
+
+"""""""
+Notes
+"""""""
 
 The Ada builder will detect violations. GNATcheck can also detect violations.
 
@@ -396,29 +400,32 @@ Medium
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
+A variable marked as Volatile but not assigned to a specific address in memory:
+   
+   .. code:: Ada
 
-   A variable marked as Volatile but not assigned to a specific address in memory:
+      X : Integer with Volatile;
    
-   X : Integer with Volatile;
-   
-   Note that variables marked as Atomic are also Volatile, per the Ada RM  C.6/8(3).
+Note that variables marked as Atomic are also Volatile, per the Ada RM  C.6/8(3).
 
 """"""""""""""""""""""""
 Compliant Code Example
 """"""""""""""""""""""""
 
-.. code:: Ada
+When assigned to a memory address, a Volatile variable can be used to interact with a memory-mapped device, among other similar usages.
+   
+   .. code:: Ada
 
-   When assigned to a memory address, a Volatile variable can be used to interact with a memory-mapped device, among other similar usages.
+      GPIO_A : GPIO_Port 
+         with Import, Volatile, Address => GPIOA_Base;
    
-   GPIO_A : GPIO_Port 
+"""""""
+Notes
+"""""""
+
+GNATcheck can detect violations via the Volatile_Objects_Without_Address_Clauses rule. SPARK and CodePeer can also detect conflicting access to unprotected variables. 
    
-      with Import, Volatile, Address => GPIOA_Base;
+Applicable vulnerability within ISO TR 24772-2: 
    
-   GNATcheck can detect violations via the Volatile_Objects_Without_Address_Clauses rule. SPARK and CodePeer can also detect conflicting access to unprotected variables. 
-   
-   Applicable vulnerability within ISO TR 24772-2: 
-   
-   ? 6.56 "Undefined behaviour [EWF]".
+   * 6.56 "Undefined behaviour [EWF]".
    
