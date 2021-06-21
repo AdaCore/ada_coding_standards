@@ -3,25 +3,12 @@
 Exception Usage (EXU)
 =======================
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - True
-     - True
-     - True
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: :math:`\checkmark`
+   :Performance: :math:`\checkmark`
+   :Security: :math:`\checkmark`
 
 Description
    Have a plan for managing the use of Ada exceptions at the application level.
@@ -37,7 +24,7 @@ Complicating the issue further is the fact that, if exceptions are completely di
 
 Therefore, for the application software the system software architect must decide whether to allow exceptions at all, and if they are to be used, decide the degree and manner of their usage. At the system level, the architect must identify the exceptions that are possible and how they will be addressed.
 
-Applicable vulnerability within ISO TR 24772-2: 
+*Applicable vulnerability within ISO TR 24772-2*
 
    * 6.36 "Ignored error status and unhandled exceptions [OYB]"
    * 6.50 "Unanticipated exceptions from library routines [HJW]"
@@ -46,41 +33,24 @@ Applicable vulnerability within ISO TR 24772-2:
 Don't Raise Language-Defined Exceptions (EXU01)
 -------------------------------------------------
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
+*Safety*
+   :Cyber: :math:`\checkmark`
+   :Required: :math:`\checkmark`
 
-   * - Safety 
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: :math:`\checkmark`
+   :Performance: 
+   :Security: 
 
-     - Cyber
-     - Required
-     - Mandatory
+*Remediation* :math:`\rightarrow` **Low**
 
-   * -
+"""""""""""
+Reference
+"""""""""""
 
-     - True
-     - True
-     - False
-
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - True
-     - False
-     - False
+[SEI-Java]_ ERR07-J
 
 """""""""""""
 Description
@@ -90,18 +60,12 @@ In no case should the application explicitly raise a language-defined exception.
 
 The Ada language-defined exceptions are raised implicitly in specific circumstances defined by the language standard. Explicitly raising these exceptions would be confusing to application developers. The potential for confusion increases as the exception is propagated up the dynamic call chain, away from the point of the raise statement, because this increases the number of paths and thus corresponding language-defined checks that could have been the cause.
 
-"""""""""""
-Reference
-"""""""""""
-
-[SEI-Java]_ ERR07-J
-
-"""""""""""""
-Remediation
-"""""""""""""
-
-Low
-
+"""""""
+Notes
+"""""""
+   
+This restriction is detected by GNATcheck with the Raising_Predefined_Exceptions rule applied.
+   
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -124,51 +88,28 @@ Compliant Code Example
       raise Fuel_Limits;
    end if;
 
-"""""""
-Notes
-"""""""
-   
-This restriction is detected by GNATcheck with the Raising_Predefined_Exceptions rule applied.
-   
 -----------------------------------------------------
 No Unhandled Application-Defined Exceptions (EXU02)
 -----------------------------------------------------
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
+*Safety*
+   :Cyber: :math:`\checkmark`
+   :Required: :math:`\checkmark`
 
-   * - Safety 
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: :math:`\checkmark`
+   :Performance: 
+   :Security: 
 
-     - Cyber
-     - Required
-     - Mandatory
+*Remediation* :math:`\rightarrow` **Low**
 
-   * -
+"""""""""""
+Reference
+"""""""""""
 
-     - True
-     - True
-     - False
-
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - True
-     - False
-     - False
+N/A
 
 """""""""""""
 Description
@@ -186,17 +127,11 @@ When the environment task completes (normally or abnormally) it waits for the co
 
 Finally, whether the environment task waited for the dependent tasks or aborted them, the semantics of further execution beyond that point are undefined. There is no concept of a calling environment beyond the environment task (RM 10.2(34). In some systems there is no calling environment, such as bare-metal platforms with only an Ada run-time library and no operating system.
 
-"""""""""""
-Reference
-"""""""""""
-
-N/A
-
-"""""""""""""
-Remediation
-"""""""""""""
-
-Low
+"""""""
+Notes
+"""""""
+   
+SPARK can prove that no exception will be raised (or fail to prove it and indicate the failure).
 
 """""""""""""""""""""""""""
 Noncompliant Code Example
@@ -210,57 +145,22 @@ Compliant Code Example
 
 N/A
 
-"""""""
-Notes
-"""""""
-   
-SPARK can prove that no exception will be raised (or fail to prove it and indicate the failure).
-
 ---------------------------------------------------------
 No Exception Propagation Beyond Name Visibility (EXU03)
 ---------------------------------------------------------
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
+*Safety*
+   :Cyber: :math:`\checkmark`
+   :Required: :math:`\checkmark`
 
-   * - Safety 
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: :math:`\checkmark`
+   :Performance: 
+   :Security: 
 
-     - Cyber
-     - Required
-     - Mandatory
-
-   * -
-
-     - True
-     - True
-     - False
-
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - True
-     - False
-     - False
-
-"""""""""""""
-Description
-"""""""""""""
-
-An active exception can be propagated dynamically past the point where the name of the exception is visible (the scope of the declaration). The exception can only be handled via "others" past that point. That situation prevents handling the exception specifically, and violates RPP05.
+*Remediation* :math:`\rightarrow` **Low**
 
 """""""""""
 Reference
@@ -269,11 +169,17 @@ Reference
 RPP05
 
 """""""""""""
-Remediation
+Description
 """""""""""""
 
-Low
+An active exception can be propagated dynamically past the point where the name of the exception is visible (the scope of the declaration). The exception can only be handled via "others" past that point. That situation prevents handling the exception specifically, and violates RPP05.
 
+"""""""
+Notes
+"""""""
+
+GNATcheck can detect violations via the Non_Visible_Exceptions rule. 
+   
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -332,59 +238,20 @@ or ensure the exception is not propagated beyond the scope of its declaration:
       end Q;
    end P;
    
-"""""""
-Notes
-"""""""
-
-GNATcheck can detect violations via the Non_Visible_Exceptions rule. 
-   
 ----------------------------------------------
 Prove Absence of Run-time Exceptions (EXU04)
 ----------------------------------------------
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
+*Safety*
+   :Cyber: :math:`\checkmark`
+   :Required: :math:`\checkmark`
 
-   * - Safety 
-
-     - Cyber
-     - Required
-     - Mandatory
-
-   * -
-
-     - True
-     - True
-     - False
-
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - True
-     - False
-     - False
-
-"""""""""""""
-Description
-"""""""""""""
-
-In many high-integrity systems the possible responses to an exception are limited or nonexistent.  In these cases the only approach is to prove exceptions cannot occur in the first place.  Additionally, the cost of proving exceptions cannot happen may be less than the cost of analyzing code in which they are allowed to be raised.
-
-The restriction No_Exceptions can be used with pragma Restrictions to enforce this approach.  Specifically, the restriction ensures that "raise" statements and exception handlers do not appear in the source code and that language-defined checks are not emitted by the compiler.  However, a run-time check performed automatically by the hardware is permitted because it typically cannot be prevented.  An example of such a check would be traps on invalid addresses.  If a hardware check fails, or if an omitted language-defined check would have failed, execution is unpredictable. As a result, enforcement with the restriction is not ideal. However, proof of the absence of run-time errors is possible using the SPARK subset of Ada.
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: :math:`\checkmark`
+   :Performance: 
+   :Security: 
 
 """""""""""
 Reference
@@ -398,6 +265,20 @@ Remediation
 
 High
 
+"""""""""""""
+Description
+"""""""""""""
+
+In many high-integrity systems the possible responses to an exception are limited or nonexistent.  In these cases the only approach is to prove exceptions cannot occur in the first place.  Additionally, the cost of proving exceptions cannot happen may be less than the cost of analyzing code in which they are allowed to be raised.
+
+The restriction No_Exceptions can be used with pragma Restrictions to enforce this approach.  Specifically, the restriction ensures that "raise" statements and exception handlers do not appear in the source code and that language-defined checks are not emitted by the compiler.  However, a run-time check performed automatically by the hardware is permitted because it typically cannot be prevented.  An example of such a check would be traps on invalid addresses.  If a hardware check fails, or if an omitted language-defined check would have failed, execution is unpredictable. As a result, enforcement with the restriction is not ideal. However, proof of the absence of run-time errors is possible using the SPARK subset of Ada.
+
+"""""""
+Notes
+"""""""
+
+This restriction is detected by SPARK, in which any statements explicitly raising an exception must be proven unreachable (or proof fails and the failure is indicated), and any possibility of run-time exception should be proved not to happen.
+
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -409,10 +290,4 @@ Compliant Code Example
 """"""""""""""""""""""""
 
 N/A
-
-"""""""
-Notes
-"""""""
-
-This restriction is detected by SPARK, in which any statements explicitly raising an exception must be proven unreachable (or proof fails and the failure is indicated), and any possibility of run-time exception should be proved not to happen.
 

@@ -3,25 +3,12 @@
 Software Engineering (SWE)
 ============================
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - True
-     - False
-     - True
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: :math:`\checkmark`
+   :Performance: 
+   :Security: :math:`\checkmark`
 
 Description
    These rules promote "best practices" for software development.
@@ -33,47 +20,18 @@ Rules
 Use SPARK Extensively (SWE01)
 -------------------------------
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
+*Safety*
+   :Cyber: :math:`\checkmark`
+   :Required: 
 
-   * - Safety 
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: :math:`\checkmark`
+   :Performance: :math:`\checkmark`
+   :Security: :math:`\checkmark`
 
-     - Cyber
-     - Required
-     - Mandatory
-
-   * -
-
-     - True
-     - False
-     - False
-
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - True
-     - True
-     - True
-
-"""""""""""""
-Description
-"""""""""""""
-
-SPARK has proven itself highly effective, both in terms of low defects, low development costs, and high productivity. The guideline advises extensive of SPARK, especially for the sake of formally proving the most critical parts of the source code. The rest of the code can be in SPARK as well, even if formal proof is not intended, with some parts in Ada when features outside the SPARK subset are essential.
+*Remediation* :math:`\rightarrow` **High, as retrofit can be extensive**
 
 """""""""""
 Reference
@@ -82,10 +40,16 @@ Reference
 [SPARK2014]_ Section 8 "Applying SPARK in Practice"
 
 """""""""""""
-Remediation
+Description
 """""""""""""
 
-High, as retrofit can be extensive
+SPARK has proven itself highly effective, both in terms of low defects, low development costs, and high productivity. The guideline advises extensive of SPARK, especially for the sake of formally proving the most critical parts of the source code. The rest of the code can be in SPARK as well, even if formal proof is not intended, with some parts in Ada when features outside the SPARK subset are essential.
+
+"""""""
+Notes
+"""""""
+
+Violations are detected by the SPARK toolset.
 
 """""""""""""""""""""""""""
 Noncompliant Code Example
@@ -99,51 +63,30 @@ Compliant Code Example
 
 N/A
 
-"""""""
-Notes
-"""""""
-
-Violations are detected by the SPARK toolset.
-
 -------------------------------------------------------
 Enable Optional Warnings and Treat As Errors  (SWE02)
 -------------------------------------------------------
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
+*Safety*
+   :Cyber: :math:`\checkmark`
+   :Required: :math:`\checkmark`
 
-   * - Safety 
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: 
+   :Performance: 
+   :Security: :math:`\checkmark`
 
-     - Cyber
-     - Required
-     - Mandatory
+*Remediation* :math:`\rightarrow` **Low**
 
-   * -
+"""""""""""
+Reference
+"""""""""""
 
-     - True
-     - True
-     - False
+Power of 10 rule #10: All code must be compiled, from the first day of development, with all compiler warnings enabled at the most
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - False
-     - False
-     - True
+pedantic setting available. All code must compile without warnings.
 
 """""""""""""
 Description
@@ -155,20 +98,21 @@ To ensure that warnings are examined and addressed one way or the other, the com
 
 Note that warnings will occasionally be given for code usage that is intentional. In those cases the warnings should be disabled by using pragma Warnings with the parameter Off, and a string indicating the error message to be disabled. In other cases, a different mechanism might be appropriate, such as aspect (or pragma) Unreferenced.
 
-"""""""""""
-Reference
-"""""""""""
+"""""""
+Notes
+"""""""
 
-Power of 10 rule #10: All code must be compiled, from the first day of development, with all compiler warnings enabled at the most
-
-pedantic setting available. All code must compile without warnings.
-
-"""""""""""""
-Remediation
-"""""""""""""
-
-Low
-
+This rule can be applied via the GNAT "-gnatwae" compiler switch, which both enables warnings and treats them as errors. Note that the switch enables almost all optional warnings, but not all. Some optional warnings correspond to very specific circumstances, and would otherwise generate too much noise for their value.
+   
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
+   
+   * 6.18 "Dead Store [WXQ]"
+   * 6.19 Unused variable [YZS]"
+   * 6.20 "Identifier name reuse [YOW]"
+   * 6.22 "Initialization of variables [LAV]".
+   
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -196,61 +140,28 @@ Compliant Code Example
    
 The compiler will no longer issue a warning that the formal Parameter This is not referenced. Of course, if that changes and This becomes referenced, the compiler will flag the pragma.
    
-"""""""
-Notes
-"""""""
-
-This rule can be applied via the GNAT "-gnatwae" compiler switch, which both enables warnings and treats them as errors. Note that the switch enables almost all optional warnings, but not all. Some optional warnings correspond to very specific circumstances, and would otherwise generate too much noise for their value.
-   
-Applicable vulnerability within ISO TR 24772-2: 
-   
-   * 6.18 "Dead Store [WXQ]"
-   
-   * 6.19 Unused variable [YZS]"
-   
-   * 6.20 "Identifier name reuse [YOW]"
-   
-   * 6.22 "Initialization of variables [LAV]".
-   
 ------------------------------------------------
 Use A Static Analysis Tool Extensively (SWE03)
 ------------------------------------------------
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
+*Safety*
+   :Cyber: :math:`\checkmark`
+   :Required: :math:`\checkmark`
 
-   * - Safety 
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: :math:`\checkmark`
+   :Performance: :math:`\checkmark`
+   :Security: :math:`\checkmark`
 
-     - Cyber
-     - Required
-     - Mandatory
+*Remediation* :math:`\rightarrow` **High**
 
-   * -
+"""""""""""
+Reference
+"""""""""""
 
-     - True
-     - False
-     - True
-
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - True
-     - True
-     - True
+Power of 10 rule #10: All code must also be checked daily with at least one, but preferably more than one, strong static source code analyzer and should pass all analyses with zero warnings.
 
 """""""""""""
 Description
@@ -260,17 +171,22 @@ If not using SPARK for regular development, use a static analyzer, such as CodeP
 
 Specifically, any code checked into the configuration management system must be checked by the analyzer and be error-free prior to check-in. Similarly, each nightly build should produce a CodePeer baseline for the project. 
 
-"""""""""""
-Reference
-"""""""""""
+"""""""
+Notes
+"""""""
 
-Power of 10 rule #10: All code must also be checked daily with at least one, but preferably more than one, strong static source code analyzer and should pass all analyses with zero warnings.
+CodePeer is the recommended static analyzer. Note that CodePeer can detect GNATcheck rule violations (via the "--gnatcheck" CodePeer switch and a rules file).
 
-"""""""""""""
-Remediation
-"""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
 
-High
+   * 6.6 "Conversion errors [FLC]"
+   * 6.18 "Dead store [WXQ]"
+   * 6.19 "Unused variable [YZS]"
+   * 6.20 "Identifier name reuse [YOW]"
+   * 6.24 "Side-effects and order of evaluation [SAM]"
+   * 6.25 "Likely incorrect expression [KOA]"
 
 """""""""""""""""""""""""""
 Noncompliant Code Example
@@ -284,60 +200,32 @@ Compliant Code Example
 
 N/A
 
-"""""""
-Notes
-"""""""
-
-CodePeer is the recommended static analyzer. Note that CodePeer can detect GNATcheck rule violations (via the "--gnatcheck" CodePeer switch and a rules file).
-
-Applicable vulnerability within ISO TR 24772-2: 
-
-   * 6.6 "Conversion errors [FLC]"
-   * 6.18 "Dead store [WXQ]"
-   * 6.19 "Unused variable [YZS]"
-   * 6.20 "Identifier name reuse [YOW]"
-   * 6.24 "Side-effects and order of evaluation [SAM]"
-   * 6.25 "Likely incorrect expression [KOA]"
-
 ----------------------------------------
 Hide Implementation Artifacts  (SWE04)
 ----------------------------------------
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
+*Safety*
+   :Cyber: :math:`\checkmark`
+   :Required: 
 
-   * - Safety 
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: 
+   :Performance: 
+   :Security: :math:`\checkmark`
 
-     - Cyber
-     - Required
-     - Mandatory
+"""""""""""
+Reference
+"""""""""""
 
-   * -
+MISRA C rule 8.7 "Functions and objects should not be defined with external linkage if they are referenced in only one translation unit"
 
-     - True
-     - False
-     - False
+"""""""""""""
+Remediation
+"""""""""""""
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - False
-     - False
-     - True
+High
 
 """""""""""""
 Description
@@ -351,17 +239,11 @@ This guideline also limits the region of code required to find any bugs to the p
 
 This guideline is to be followed extensively, as the design default for components. Once the application code size becomes non-trivial, the cost of retrofit is extremely high.
 
-"""""""""""
-Reference
-"""""""""""
+"""""""
+Notes
+"""""""
 
-MISRA C rule 8.7 "Functions and objects should not be defined with external linkage if they are referenced in only one translation unit"
-
-"""""""""""""
-Remediation
-"""""""""""""
-
-High
+This rule can be partially enforced by the GNATcheck switches Visible_Components applied. 
 
 """""""""""""""""""""""""""
 Noncompliant Code Example
@@ -412,8 +294,3 @@ Compliant Code Example
    
 Type Content, as well as the record type components of type Stack, are no longer visible to clients. Any bugs in the Stack code must be in this package, or its child packages, if any.
    
-"""""""
-Notes
-"""""""
-
-This rule can be partially enforced by the GNATcheck switches Visible_Components applied. 

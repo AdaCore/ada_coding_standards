@@ -3,25 +3,12 @@
 Object-Oriented Programming (OOP)
 ===================================
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - False
-     - False
-     - True
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: 
+   :Performance: 
+   :Security: :math:`\checkmark`
 
 Description
    Have a plan for selecting the OOP facilities of the language to use.
@@ -43,41 +30,24 @@ The following rules assume use of tagged types, a requirement for full OOP in Ad
 No Class-wide Constructs Policy (OOP01)
 -----------------------------------------
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
+*Safety*
+   :Cyber: :math:`\checkmark`
+   :Required: 
 
-   * - Safety 
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: 
+   :Performance: 
+   :Security: :math:`\checkmark`
 
-     - Cyber
-     - Required
-     - Mandatory
+*Remediation* :math:`\rightarrow` **N/A**
 
-   * -
+"""""""""""
+Reference
+"""""""""""
 
-     - True
-     - False
-     - False
-
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - False
-     - False
-     - True
+N/A
 
 """""""""""""
 Description
@@ -89,16 +59,18 @@ This restriction ensures there are no class-wide objects or formal parameters, n
 
 In this approach there are no possible dynamic dispatching calls because such calls can only occur when a class-wide value is passed as the parameter to a primitive operation of a tagged type.
 
-"""""""""""
-Reference
-"""""""""""
+"""""""
+Notes
+"""""""
 
-N/A
-
-"""""""""""""
-Remediation
-"""""""""""""
-
+The compiler will detect violations with the standard Ada restriction No_Dispatch applied. 
+   
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
+   
+   * 6.43 "Redispatching [PPH]"
+   
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -115,55 +87,28 @@ Compliant Code Example
 
    X : Object := Some_Object;
    
-"""""""
-Notes
-"""""""
-
-The compiler will detect violations with the standard Ada restriction No_Dispatch applied. 
-   
-Applicable vulnerability within ISO TR 24772-2: 
-   
-   * 6.43 "Redispatching [PPH]"
-   
 ----------------------------------------
 Static Dispatching Only Policy (OOP02)
 ----------------------------------------
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
+*Safety*
+   :Cyber: :math:`\checkmark`
+   :Required: 
 
-   * - Safety 
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: 
+   :Performance: 
+   :Security: :math:`\checkmark`
 
-     - Cyber
-     - Required
-     - Mandatory
+*Remediation* :math:`\rightarrow` **N/A**
 
-   * -
+"""""""""""
+Reference
+"""""""""""
 
-     - True
-     - False
-     - False
-
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - False
-     - False
-     - True
+N/A
 
 """""""""""""
 Description
@@ -175,16 +120,18 @@ This rule ensures there are no class-wide values passed as the parameter to a pr
 
 Note that this rule should not be applied without due consideration.
 
-"""""""""""
-Reference
-"""""""""""
+"""""""
+Notes
+"""""""
 
-N/A
-
-"""""""""""""
-Remediation
-"""""""""""""
-
+The compiler will detect violations with the GNAT-defined restriction No_Dispatching_Calls applied. 
+   
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
+   
+   * 6.43 "Redispatching [PPH]"
+   
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -201,55 +148,28 @@ Compliant Code Example
 
    Some_Primitive (X);
    
-"""""""
-Notes
-"""""""
-
-The compiler will detect violations with the GNAT-defined restriction No_Dispatching_Calls applied. 
-   
-Applicable vulnerability within ISO TR 24772-2: 
-   
-   * 6.43 "Redispatching [PPH]"
-   
 -------------------------------------------
 Limit Inheritance Hierarchy Depth (OOP03)
 -------------------------------------------
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
+*Safety*
+   :Cyber: :math:`\checkmark`
+   :Required: 
 
-   * - Safety 
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: 
+   :Performance: 
+   :Security: :math:`\checkmark`
 
-     - Cyber
-     - Required
-     - Mandatory
+*Remediation* :math:`\rightarrow` **High**
 
-   * -
+"""""""""""
+Reference
+"""""""""""
 
-     - True
-     - False
-     - False
-
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - False
-     - False
-     - True
+[AdaOOP2016]_ section 5.1
 
 """""""""""""
 Description
@@ -263,17 +183,17 @@ A common characteristic of problematic hierarchies is "excessive" depth, in whic
 
 Deep inheritance hierarchies also contribute to complexity, rather than lessening it, by requiring the reader to understand multiple superclasses in order to understand the behavior of a given subclass.
 
-"""""""""""
-Reference
-"""""""""""
+"""""""
+Notes
+"""""""
 
-[AdaOOP2016]_ section 5.1
+Violations can be detected with the GNATcheck tool parameter Deep_Inheritance_Hierarchies, specifying a maximum inheritance depth as a parameter of the rule. 
 
-"""""""""""""
-Remediation
-"""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
 
-High
+   * 6.41 "Inheritance [RIP]"
 
 """""""""""""""""""""""""""
 Noncompliant Code Example
@@ -287,55 +207,26 @@ Compliant Code Example
 
 N/A
 
-"""""""
-Notes
-"""""""
-
-Violations can be detected with the GNATcheck tool parameter Deep_Inheritance_Hierarchies, specifying a maximum inheritance depth as a parameter of the rule. 
-
-Applicable vulnerability within ISO TR 24772-2: 
-
-   * 6.41 "Inheritance [RIP]"
-
 -------------------------------------------------------------------
 Limit Statically-Dispatched Calls To Primitive Operations (OOP04)
 -------------------------------------------------------------------
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
+*Safety*
+   :Cyber: :math:`\checkmark`
+   :Required: 
 
-   * - Safety 
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: :math:`\checkmark`
+   :Performance: 
+   :Security: 
 
-     - Cyber
-     - Required
-     - Mandatory
+*Remediation* :math:`\rightarrow` **Medium (easy fix, but a difficult to detect bug)**
 
-   * -
-
-     - True
-     - False
-     - False
-
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - True
-     - False
-     - False
+"""""""""""
+Reference
+"""""""""""
 
 """""""""""""
 Description
@@ -355,16 +246,12 @@ Typically constructor functions only have the tagged type as the result type, no
 
 Note that constructors implemented as procedures also call primitive operations of the specific type, for the same reasons as constructor functions. This usage is allowed by this rule and does not require the GNATcheck parameter. (The difference between function and procedure constructors is that these procedures will have a formal parameter of the tagged type, of mode "out".)
 
-"""""""""""
-Reference
-"""""""""""
+"""""""
+Notes
+"""""""
 
-"""""""""""""
-Remediation
-"""""""""""""
-
-Medium (easy fix, but a difficult to detect bug)
-
+This rule can be enforced by GNATcheck with the Direct_Calls_To_Primitives rule applied. The rule parameter Except_Constructors may be added for constructor functions.
+   
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -412,51 +299,28 @@ Compliant Code Example
       ...
    end Graphics;
    
-"""""""
-Notes
-"""""""
-
-This rule can be enforced by GNATcheck with the Direct_Calls_To_Primitives rule applied. The rule parameter Except_Constructors may be added for constructor functions.
-   
 ---------------------------------------------
 Use Explicit Overriding Annotations (OOP05)
 ---------------------------------------------
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
+*Safety*
+   :Cyber: :math:`\checkmark`
+   :Required: :math:`\checkmark`
 
-   * - Safety 
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: :math:`\checkmark`
+   :Performance: 
+   :Security: 
 
-     - Cyber
-     - Required
-     - Mandatory
+*Remediation* :math:`\rightarrow` **Low**
 
-   * -
+"""""""""""
+Reference
+"""""""""""
 
-     - True
-     - True
-     - False
-
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - True
-     - False
-     - False
+[AdaOOP2016]_ section 4.3
 
 """""""""""""
 Description
@@ -486,18 +350,18 @@ This guideline is implemented by compiler switches, or  alternatively, by a GNAT
 
 Note that the compiler switches will also require the explicit overriding indicator when overriding a language-defined operator. The switches also apply to inherited primitive subprograms for non-tagged types.
 
-"""""""""""
-Reference
-"""""""""""
+"""""""
+Notes
+"""""""
 
-[AdaOOP2016]_ section 4.3
-
-"""""""""""""
-Remediation
-"""""""""""""
-
-Low
-
+This rule requires the GNAT compiler switches "-gnatyO" and "-gnatwe" in order for the compiler to flag missing overriding annotations as errors. The first causes the compiler to generate the warnings, and the second causes those warnings to be treated as errors. Alternatively, GNATcheck will flag those errors via the "+Style_Checks:O" rule.
+   
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
+   
+   * 6.41 "Inheritance [RIP]"
+   
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -525,55 +389,30 @@ Compliant Code Example
    
    procedure Initialise (This : in out Generator);
    
-"""""""
-Notes
-"""""""
-
-This rule requires the GNAT compiler switches "-gnatyO" and "-gnatwe" in order for the compiler to flag missing overriding annotations as errors. The first causes the compiler to generate the warnings, and the second causes those warnings to be treated as errors. Alternatively, GNATcheck will flag those errors via the "+Style_Checks:O" rule.
-   
-Applicable vulnerability within ISO TR 24772-2: 
-   
-   * 6.41 "Inheritance [RIP]"
-   
 -------------------------------------------
 Use Class-wide Pre/Post Contracts (OOP06)
 -------------------------------------------
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
+*Safety*
+   :Cyber: :math:`\checkmark`
+   :Required: :math:`\checkmark`
 
-   * - Safety 
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: 
+   :Performance: 
+   :Security: :math:`\checkmark`
 
-     - Cyber
-     - Required
-     - Mandatory
+*Remediation* :math:`\rightarrow` **Low**
 
-   * -
+"""""""""""
+Reference
+"""""""""""
 
-     - True
-     - True
-     - False
+[AdaOOP2016]_ section 6.1.4 
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - False
-     - False
-     - True
+[SPARK2014]_ section 7.5.2
 
 """""""""""""
 Description
@@ -587,20 +426,18 @@ The class-wide form of precondition and postcondition expresses conditions that 
 
 Note: this approach will be required for OOP07 (Ensure Local Type Consistency).
 
-"""""""""""
-Reference
-"""""""""""
+"""""""
+Notes
+"""""""
 
-[AdaOOP2016]_ section 6.1.4 
-
-[SPARK2014_] section 7.5.2
-
-"""""""""""""
-Remediation
-"""""""""""""
-
-Low
-
+Violations can be detected with the GNATcheck rule Specific_Pre_Post.  SPARK enforces this guideline automatically.
+   
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
+   
+   * 6.42 "Violations of the Liskov substitution principle or the contract model [BLP]"
+   
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -623,55 +460,34 @@ Compliant Code Example
       Pre'Class => not Empty (This),
       ...
    
-"""""""
-Notes
-"""""""
-
-Violations can be detected with the GNATcheck rule Specific_Pre_Post.  SPARK enforces this guideline automatically.
-   
-Applicable vulnerability within ISO TR 24772-2: 
-   
-   * 6.42 "Violations of the Liskov substitution principle or the contract model [BLP]"
-   
 ---------------------------------------
 Ensure Local Type Consistency (OOP07)
 ---------------------------------------
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
+*Safety*
+   :Cyber: :math:`\checkmark`
+   :Required: :math:`\checkmark`
 
-   * - Safety 
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: 
+   :Performance: 
+   :Security: :math:`\checkmark`
 
-     - Cyber
-     - Required
-     - Mandatory
+"""""""""""
+Reference
+"""""""""""
 
-   * -
+[AdaOOP2016]_ See section 4.2.
 
-     - True
-     - True
-     - False
+[GNATUG]_ See section 5.10.11.
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
+"""""""""""""
+Remediation
+"""""""""""""
 
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - False
-     - False
-     - True
+High (the correction is syntactically trivial individually, but would be required throughout the tree).
 
 """""""""""""
 Description
@@ -712,19 +528,11 @@ To verify substitutability via testing, all the tests for all superclass types a
 
 For further discussion of this topic, see the sections cited in the Reference entry in this table.
 
-"""""""""""
-Reference
-"""""""""""
+"""""""
+Notes
+"""""""
 
-[AdaOOP2016]_ See section 4.2.
-
-[GNATUG]_ See section 5.10.11.
-
-"""""""""""""
-Remediation
-"""""""""""""
-
-High (the correction is syntactically trivial individually, but would be required throughout the tree).
+Verification can be achieved dynamically with the GNATtest tool, using the "---validate-type-extensions" switch. SPARK enforces this rule.
 
 """""""""""""""""""""""""""
 Noncompliant Code Example
@@ -814,6 +622,8 @@ Compliant Code Example
    
 Now the postconditions are class-wide so they are inherited by subclasses. In the subclass Square, the postconditions will not hold at run-time. Likewise, SPARK can now prove that type consistency is not verified because the postconditions are weaker than those inherited:
    
+.. code:: Ada
+
    with P; use P;
    package Q with SPARK_Mode is
       pragma Elaborate_Body;
@@ -835,8 +645,3 @@ Now the postconditions are class-wide so they are inherited by subclasses. In th
       type Square is new Rectangle with null record;
    end Q;
    
-"""""""
-Notes
-"""""""
-
-Verification can be achieved dynamically with the GNATtest tool, using the "---validate-type-extensions" switch. SPARK enforces this rule.

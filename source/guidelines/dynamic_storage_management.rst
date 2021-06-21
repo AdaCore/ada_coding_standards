@@ -3,25 +3,12 @@
 Dynamic Storage Management (DYN)
 ==================================
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - False
-     - True
-     - True
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: 
+   :Performance: :math:`\checkmark`
+   :Security: :math:`\checkmark`
 
 Description
    Have a plan for managing dynamic memory allocation and deallocation.
@@ -37,54 +24,37 @@ Unmanaged dynamic storage allocation and deallocation can lead to storage exhaus
 
 However, restricted forms of storage management and associated feature usage can support the necessary reliability and analyzability characteristics while retaining sufficient expressive power to justify the analysis expense. The following sections present possible approaches, including the traditional approach in which no dynamic behavior is allowed. Individual projects may then choose which storage management approach best fits their requirements and apply appropriate tailoring, if necessary, to the specific guidelines.  
 
-Applicable vulnerability within ISO TR 24772-2: 
-
-   * 6.39 "Memory leak and heap fragmentation [XYL].
-
 Realization
    There is a spectrum of management schemes possible, trading ease of analysis against increasing expressive power. At one end there is no dynamic memory allocation (and hence, deallocation) allowed, making analysis trivial. At the other end, nearly the full expressive power of the Ada facility is available, but with analyzability partially retained. In the latter, however, the user must create the allocators in such a manner as to ensure proper behavior.
 
 Rule DYN01 is Required, as it avoids problematic features whatever the strategy chosen. Rules DYN02-05 are marked as Advisory, because one of them should be chosen and enforced throughout a given software project.
 
+*Applicable vulnerability within ISO TR 24772-2*
+
+   * 6.39 "Memory leak and heap fragmentation [XYL].
+
 --------------------------------------------
 Common High Integrity Restrictions (DYN01)
 --------------------------------------------
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
+*Safety*
+   :Cyber: :math:`\checkmark`
+   :Required: :math:`\checkmark`
 
-   * - Safety 
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: 
+   :Performance: 
+   :Security: :math:`\checkmark`
 
-     - Cyber
-     - Required
-     - Mandatory
+*Remediation* :math:`\rightarrow` **Low**
 
-   * -
+"""""""""""
+Reference
+"""""""""""
 
-     - True
-     - True
-     - False
-
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - False
-     - False
-     - True
+Ada RM, High Integrity Annex Restrictions, section H.4
 
 """""""""""""
 Description
@@ -99,18 +69,14 @@ The following restrictions must be in effect:
 
 The first three restrictions prevent problematic usage that, for example, may cause un-reclaimed (and unreclaimable) storage. The last restriction ensures any storage allocated by the compiler at run-time for representing objects is reclaimed at once. (That restriction does not apply to objects created by allocators in the application.)
 
-"""""""""""
-Reference
-"""""""""""
+"""""""
+Notes
+"""""""
 
-Ada RM, High Integrity Annex Restrictions, section H.4
-
-"""""""""""""
-Remediation
-"""""""""""""
-
-Low
-
+The compiler will detect violations of the first three restrictions. Note that GNATcheck can detect violations in addition to the compiler.
+   
+The fourth restriction is a directive for implementation behavior, not subject to source-based violation detection.
+   
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -171,53 +137,28 @@ For No_Access_Parameter_Allocators, use a variable of a named access type:
       ...
       P (Formal => S);
    
-"""""""
-Notes
-"""""""
-
-The compiler will detect violations of the first three restrictions. Note that GNATcheck can detect violations in addition to the compiler.
-   
-The fourth restriction is a directive for implementation behavior, not subject to source-based violation detection.
-   
 ----------------------------------------------
 Traditional Static Allocation Policy (DYN02)
 ----------------------------------------------
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
+*Safety*
+   :Cyber: :math:`\checkmark`
+   :Required: 
 
-   * - Safety 
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: 
+   :Performance: 
+   :Security: :math:`\checkmark`
 
-     - Cyber
-     - Required
-     - Mandatory
+*Remediation* :math:`\rightarrow` **Low**
 
-   * -
+"""""""""""
+Reference
+"""""""""""
 
-     - True
-     - False
-     - False
-
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - False
-     - False
-     - True
+MISRA C Dir 4.12 "Dynamic memory allocation shall not be used"
 
 """""""""""""
 Description
@@ -241,17 +182,11 @@ In this approach the following constructs are not allowed:
    * User-defined storage pools
    * Unchecked Deallocations
 
-"""""""""""
-Reference
-"""""""""""
+"""""""
+Notes
+"""""""
 
-MISRA C Dir 4.12 "Dynamic memory allocation shall not be used"
-
-"""""""""""""
-Remediation
-"""""""""""""
-
-Low
+The compiler, and/or GNATcheck, will detect violations of the restrictions. 
 
 """""""""""""""""""""""""""
 Noncompliant Code Example
@@ -265,51 +200,28 @@ Compliant Code Example
 
 N/A
 
-"""""""
-Notes
-"""""""
-
-The compiler, and/or GNATcheck, will detect violations of the restrictions. 
-
 ------------------------------------------------
 Access Types Without Allocators Policy (DYN03)
 ------------------------------------------------
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
+*Safety*
+   :Cyber: :math:`\checkmark`
+   :Required: 
 
-   * - Safety 
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: 
+   :Performance: 
+   :Security: :math:`\checkmark`
 
-     - Cyber
-     - Required
-     - Mandatory
+*Remediation* :math:`\rightarrow` **Low**
 
-   * -
+"""""""""""
+Reference
+"""""""""""
 
-     - True
-     - False
-     - False
-
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - False
-     - False
-     - True
+MISRA rule 21.3 "The memory allocation and deallocation functions of <stdlib.h> shall not be used"
 
 """""""""""""
 Description
@@ -336,18 +248,12 @@ Aspects should be applied to all access types in this approach, specifying a val
 
 The above would also ensure no allocations can occur with access types that have the default pool as their associated storage pool (per RM 13.11.3(6.1/3)).
 
-"""""""""""
-Reference
-"""""""""""
+"""""""
+Notes
+"""""""
 
-MISRA rule 21.3 "The memory allocation and deallocation functions of <stdlib.h> shall not be used"
-
-"""""""""""""
-Remediation
-"""""""""""""
-
-Low
-
+The compiler, and/or GNATcheck, will detect violations of the restrictions. 
+   
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -368,51 +274,28 @@ Compliant Code Example
    P : Descriptor_Ref := Device'Access;
    ...
    
-"""""""
-Notes
-"""""""
-
-The compiler, and/or GNATcheck, will detect violations of the restrictions. 
-   
 -------------------------------------------
 Minimal Dynamic Allocation Policy (DYN04)
 -------------------------------------------
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
+*Safety*
+   :Cyber: :math:`\checkmark`
+   :Required: 
 
-   * - Safety 
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: 
+   :Performance: 
+   :Security: 
 
-     - Cyber
-     - Required
-     - Mandatory
+*Remediation* :math:`\rightarrow` **Low**
 
-   * -
+"""""""""""
+Reference
+"""""""""""
 
-     - True
-     - False
-     - False
-
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - False
-     - False
-     - False
+Power of Ten rule 3 "Do not use dynamic memory allocation after initialization"
 
 """""""""""""
 Description
@@ -431,18 +314,12 @@ In this approach the following constructs are not allowed:
 
 Note that some operating systems intended for this domain directly support this policy.
 
-"""""""""""
-Reference
-"""""""""""
+"""""""
+Notes
+"""""""
 
-Power of Ten rule 3 "Do not use dynamic memory allocation after initialization"
-
-"""""""""""""
-Remediation
-"""""""""""""
-
-Low
-
+The compiler, and/or GNATcheck, will detect violations of the restrictions. 
+   
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -455,51 +332,28 @@ Compliant Code Example
 
 Code performing dynamic allocations any time prior to an arbitrary point designated as the end of the "startup" interval.
    
-"""""""
-Notes
-"""""""
-
-The compiler, and/or GNATcheck, will detect violations of the restrictions. 
-   
 -------------------------------------------
 User-Defined Storage Pools Policy (DYN05)
 -------------------------------------------
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
+*Safety*
+   :Cyber: :math:`\checkmark`
+   :Required: 
 
-   * - Safety 
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: 
+   :Performance: 
+   :Security: :math:`\checkmark`
 
-     - Cyber
-     - Required
-     - Mandatory
+*Remediation* :math:`\rightarrow` **Low**
 
-   * -
+"""""""""""
+Reference
+"""""""""""
 
-     - True
-     - False
-     - False
-
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - False
-     - False
-     - True
+MISRA rule 21.3 "The memory allocation and deallocation functions of <stdlib.h> shall not be used"
 
 """""""""""""
 Description
@@ -517,18 +371,12 @@ Given an analysis providing the worst-case allocations and deallocations, it wou
 
 In this approach no storage-related constructs are disallowed unless the SPARK subset is applied.
 
-"""""""""""
-Reference
-"""""""""""
+"""""""
+Notes
+"""""""
 
-MISRA rule 21.3 "The memory allocation and deallocation functions of <stdlib.h> shall not be used"
-
-"""""""""""""
-Remediation
-"""""""""""""
-
-Low
-
+Enforcement of this approach can only be provided by manual code review unless SPARK is used.
+   
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -551,62 +399,23 @@ Compliant Code Example
    ...
    Ptr := new Unsigned_Longword; -- from Heap
    
-"""""""
-Notes
-"""""""
-
-Enforcement of this approach can only be provided by manual code review unless SPARK is used.
-   
 ---------------------------------------------------------
 Statically Determine Maximum Stack Requirements (DYN06)
 ---------------------------------------------------------
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
+*Safety*
+   :Cyber: :math:`\checkmark`
+   :Required: :math:`\checkmark`
 
-   * - Safety 
-
-     - Cyber
-     - Required
-     - Mandatory
-
-   * -
-
-     - True
-     - True
-     - False
-
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - False
-     - False
-     - False
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: 
+   :Performance: 
+   :Security: 
 
 X
  Security
-
-"""""""""""""
-Description
-"""""""""""""
-
-Each Ada application task has a stack, as does the "environment task" that elaborates library packages and calls the main subprogram. A tool to statically determine the maximum storage required for these stacks must be used, per task.
-
-This guideline concerns another kind of dynamic memory utilization. The previous guidelines concerned the management of storage commonly referred to as the "heap." This guideline concerns the storage commonly referred to as the "stack."  (Neither term is defined by the language, but both are commonly recognized and are artifacts of the underlying run-time library or operating system implementation.)
 
 """""""""""
 Reference
@@ -620,6 +429,20 @@ Remediation
 
 High
 
+"""""""""""""
+Description
+"""""""""""""
+
+Each Ada application task has a stack, as does the "environment task" that elaborates library packages and calls the main subprogram. A tool to statically determine the maximum storage required for these stacks must be used, per task.
+
+This guideline concerns another kind of dynamic memory utilization. The previous guidelines concerned the management of storage commonly referred to as the "heap." This guideline concerns the storage commonly referred to as the "stack."  (Neither term is defined by the language, but both are commonly recognized and are artifacts of the underlying run-time library or operating system implementation.)
+
+"""""""
+Notes
+"""""""
+
+The GNATstack [GNATstack]_ tool can statically determine the maximum requirements per task. 
+
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -631,10 +454,4 @@ Compliant Code Example
 """"""""""""""""""""""""
 
 N/A
-
-"""""""
-Notes
-"""""""
-
-The GNATstack [GNATstack]_ tool can statically determine the maximum requirements per task. 
 

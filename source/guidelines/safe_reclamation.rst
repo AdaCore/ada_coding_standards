@@ -3,25 +3,12 @@
 Safe Reclamation (RCL)
 ========================
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - False
-     - True
-     - True
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: 
+   :Performance: :math:`\checkmark`
+   :Security: :math:`\checkmark`
 
 Description
    Related to managing dynamic storage at the system (policy) level, these statement-level rules concern the safe reclamation of access ("pointer") values.
@@ -33,47 +20,18 @@ Rules
 No Multiple Reclamations (RCL01)
 ----------------------------------
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
+*Safety*
+   :Cyber: :math:`\checkmark`
+   :Required: :math:`\checkmark`
 
-   * - Safety 
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: :math:`\checkmark`
+   :Performance: 
+   :Security: :math:`\checkmark`
 
-     - Cyber
-     - Required
-     - Mandatory
-
-   * -
-
-     - True
-     - False
-     - True
-
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - True
-     - False
-     - True
-
-"""""""""""""
-Description
-"""""""""""""
-
-Never deallocate the storage designated by a given access value more than once.
+*Remediation* :math:`\rightarrow` **High**
 
 """""""""""
 Reference
@@ -82,11 +40,17 @@ Reference
 [CWE2019]_ CWE-415: Double Free
 
 """""""""""""
-Remediation
+Description
 """""""""""""
 
-High
+Never deallocate the storage designated by a given access value more than once.
 
+"""""""
+Notes
+"""""""
+
+Enforcement of this rule can be provided by manual code review, unless deallocation is forbidden via No_Unchecked_Deallocation or SPARK is used, as ownership analysis in SPARK detects such cases. Note that storage utilization analysis tools such as Valgrind can usually find this sort of error. In addition, a GNAT-defined storage pool is available to help debug such errors.
+   
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -109,51 +73,28 @@ Compliant Code Example
 
 Remove the call to Free (Y).
    
-"""""""
-Notes
-"""""""
-
-Enforcement of this rule can be provided by manual code review, unless deallocation is forbidden via No_Unchecked_Deallocation or SPARK is used, as ownership analysis in SPARK detects such cases. Note that storage utilization analysis tools such as Valgrind can usually find this sort of error. In addition, a GNAT-defined storage pool is available to help debug such errors.
-   
 ----------------------------------------
 Only Reclaim Allocated Storage (RCL02)
 ----------------------------------------
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
+*Safety*
+   :Cyber: :math:`\checkmark`
+   :Required: :math:`\checkmark`
 
-   * - Safety 
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: :math:`\checkmark`
+   :Performance: 
+   :Security: :math:`\checkmark`
 
-     - Cyber
-     - Required
-     - Mandatory
+*Remediation* :math:`\rightarrow` **High**
 
-   * -
+"""""""""""
+Reference
+"""""""""""
 
-     - True
-     - False
-     - True
-
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - True
-     - False
-     - True
+[SEI-C]_ MEM34-C: Only Free Memory Allocated Dynamically
 
 """""""""""""
 Description
@@ -163,18 +104,12 @@ Only deallocate storage that was dynamically allocated by the evaluation of an a
 
 This is a possibility because Ada allows creation of access values designating declared (aliased) objects.
 
-"""""""""""
-Reference
-"""""""""""
+"""""""
+Notes
+"""""""
 
-[SEI-C]_ MEM34-C: Only Free Memory Allocated Dynamically
-
-"""""""""""""
-Remediation
-"""""""""""""
-
-High
-
+Enforcement of this rule can only be provided by manual code review, unless deallocation is forbidden via No_Unchecked_Deallocation.
+   
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -195,59 +130,20 @@ Compliant Code Example
 
 Remove the call to Free (Y).
    
-"""""""
-Notes
-"""""""
-
-Enforcement of this rule can only be provided by manual code review, unless deallocation is forbidden via No_Unchecked_Deallocation.
-   
 ---------------------------------------
 Only Reclaim To The Same Pool (RCL03)
 ---------------------------------------
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
+*Safety*
+   :Cyber: :math:`\checkmark`
+   :Required: :math:`\checkmark`
 
-   * - Safety 
-
-     - Cyber
-     - Required
-     - Mandatory
-
-   * -
-
-     - True
-     - False
-     - True
-
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - True
-     - False
-     - True
-
-"""""""""""""
-Description
-"""""""""""""
-
-When deallocating, ensure that the pool to which the storage will be returned was the same pool from which it was allocated. Execution is erroneous otherwise, meaning anything can happen (RM 13.11.2(16)).
-
-Each access type has an associated storage pool, either implicitly by default, or explicitly with a storage pool specified by the programmer. The implicit default pool might not be the same pool used for another access type, even an access type designating the same subtype.
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: :math:`\checkmark`
+   :Performance: 
+   :Security: :math:`\checkmark`
 
 """""""""""
 Reference
@@ -260,6 +156,20 @@ Remediation
 """""""""""""
 
 High
+
+"""""""""""""
+Description
+"""""""""""""
+
+When deallocating, ensure that the pool to which the storage will be returned was the same pool from which it was allocated. Execution is erroneous otherwise, meaning anything can happen (RM 13.11.2(16)).
+
+Each access type has an associated storage pool, either implicitly by default, or explicitly with a storage pool specified by the programmer. The implicit default pool might not be the same pool used for another access type, even an access type designating the same subtype.
+
+"""""""
+Notes
+"""""""
+
+Enforcement of this rule can only be provided by manual code review, unless deallocation is forbidden via No_Unchecked_Deallocation.
 
 """""""""""""""""""""""""""
 Noncompliant Code Example
@@ -287,8 +197,3 @@ Compliant Code Example
 
 Don't deallocate converted access values.
    
-"""""""
-Notes
-"""""""
-
-Enforcement of this rule can only be provided by manual code review, unless deallocation is forbidden via No_Unchecked_Deallocation.

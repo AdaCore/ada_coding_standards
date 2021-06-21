@@ -3,25 +3,12 @@
 Concurrency (CON)
 ===================
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - True
-     - True
-     - False
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: :math:`\checkmark`
+   :Performance: :math:`\checkmark`
+   :Security: 
 
 Description
    Have a plan for managing the use of concurrency in high-integrity applications having real-time requirements.
@@ -54,41 +41,24 @@ When the most stringent analyses are required and the tightest timing is involve
 Use the Ravenscar Profile (CON01)
 -----------------------------------
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
+*Safety*
+   :Cyber: :math:`\checkmark`
+   :Required: 
 
-   * - Safety 
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: :math:`\checkmark`
+   :Performance: :math:`\checkmark`
+   :Security: 
 
-     - Cyber
-     - Required
-     - Mandatory
+*Remediation* :math:`\rightarrow` **High**
 
-   * -
+"""""""""""
+Reference
+"""""""""""
 
-     - True
-     - False
-     - False
-
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - True
-     - True
-     - False
+Ada RM section D.13
 
 """""""""""""
 Description
@@ -160,17 +130,17 @@ pragma Restrictions (
 
           	No_Dependence => System.Multiprocessors.Dispatching_Domains);
 
-"""""""""""
-Reference
-"""""""""""
+"""""""
+Notes
+"""""""
 
-Ada RM section D.13
+The Ada builder will detect violations if the programmer specifies this profile or corresponding pragmas. GNATcheck also can detect violations of profile restrictions.
 
-"""""""""""""
-Remediation
-"""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
 
-High
+   * 6.63 "Lock protocol errors [CGM]".
 
 """""""""""""""""""""""""""
 Noncompliant Code Example
@@ -184,55 +154,28 @@ Compliant Code Example
 
 N/A
 
-"""""""
-Notes
-"""""""
-
-The Ada builder will detect violations if the programmer specifies this profile or corresponding pragmas. GNATcheck also can detect violations of profile restrictions.
-
-Applicable vulnerability within ISO TR 24772-2: 
-
-   * 6.63 "Lock protocol errors [CGM]".
-
 --------------------------------
 Use the Jorvik Profile (CON02)
 --------------------------------
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
+*Safety*
+   :Cyber: :math:`\checkmark`
+   :Required: 
 
-   * - Safety 
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: :math:`\checkmark`
+   :Performance: :math:`\checkmark`
+   :Security: 
 
-     - Cyber
-     - Required
-     - Mandatory
+*Remediation* :math:`\rightarrow` **High**
 
-   * -
+"""""""""""
+Reference
+"""""""""""
 
-     - True
-     - False
-     - False
-
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - True
-     - True
-     - False
+Ada 202x RM section D.13
 
 """""""""""""
 Description
@@ -308,17 +251,11 @@ These restrictions are removed from Ravenscar:
 
 Jorvik also replaces restriction Simple_Barriers with Pure_Barriers (a weaker requirement than Simple_Barriers).
 
-"""""""""""
-Reference
-"""""""""""
+"""""""
+Notes
+"""""""
 
-Ada 202x RM section D.13
-
-"""""""""""""
-Remediation
-"""""""""""""
-
-High
+The Ada builder will detect violations. GNATcheck can also detect violations.
 
 """""""""""""""""""""""""""
 Noncompliant Code Example
@@ -332,57 +269,20 @@ Compliant Code Example
 
 N/A
 
-"""""""
-Notes
-"""""""
-
-The Ada builder will detect violations. GNATcheck can also detect violations.
-
 -------------------------------------------------------------
 Avoid Shared Variables for Inter-task Communication (CON03)
 -------------------------------------------------------------
 
-.. list-table::
-   :stub-columns: 1
-   :align: left
+*Safety*
+   :Cyber: :math:`\checkmark`
+   :Required: 
 
-   * - Safety 
-
-     - Cyber
-     - Required
-     - Mandatory
-
-   * -
-
-     - True
-     - False
-     - False
-
-.. list-table::
-   :stub-columns: 1
-   :align: left
-
-   * - Goal 
-
-     - Maintainability
-     - Reliability
-     - Portability
-     - Performance
-     - Security
-
-   * -
-
-     - True
-     - True
-     - True
-     - True
-     - False
-
-"""""""""""""
-Description
-"""""""""""""
-
-Although the Ravenscar and Jorvik profiles allow the use of shared variables for inter-task communication, such use is less robust and less reliable than encapsulating shared variables within protected objects.
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: :math:`\checkmark`
+   :Performance: :math:`\checkmark`
+   :Security: 
 
 """""""""""
 Reference
@@ -396,6 +296,24 @@ Remediation
 
 Medium
 
+"""""""""""""
+Description
+"""""""""""""
+
+Although the Ravenscar and Jorvik profiles allow the use of shared variables for inter-task communication, such use is less robust and less reliable than encapsulating shared variables within protected objects.
+
+"""""""
+Notes
+"""""""
+
+GNATcheck can detect violations via the Volatile_Objects_Without_Address_Clauses rule. SPARK and CodePeer can also detect conflicting access to unprotected variables. 
+   
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
+   
+   * 6.56 "Undefined behaviour [EWF]".
+   
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -418,14 +336,4 @@ When assigned to a memory address, a Volatile variable can be used to interact w
 
       GPIO_A : GPIO_Port 
          with Import, Volatile, Address => GPIOA_Base;
-   
-"""""""
-Notes
-"""""""
-
-GNATcheck can detect violations via the Volatile_Objects_Without_Address_Clauses rule. SPARK and CodePeer can also detect conflicting access to unprotected variables. 
-   
-Applicable vulnerability within ISO TR 24772-2: 
-   
-   * 6.56 "Undefined behaviour [EWF]".
    
