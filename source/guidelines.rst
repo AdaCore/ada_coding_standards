@@ -11,7 +11,7 @@ Although we refer to them as "rules" in the tables for the sake of brevity, thes
 .. toctree::
    :maxdepth: 2
 
-   
+   Definitions <guidelines/definitions>
    Dynamic Storage Management <guidelines/dynamic_storage_management>
    Safe Reclamation <guidelines/safe_reclamation>
    Concurrency <guidelines/concurrency>

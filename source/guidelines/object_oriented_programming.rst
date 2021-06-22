@@ -30,9 +30,11 @@ The following rules assume use of tagged types, a requirement for full OOP in Ad
 No Class-wide Constructs Policy (OOP01)
 -----------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Advisory**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: 
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -91,9 +93,11 @@ Compliant Code Example
 Static Dispatching Only Policy (OOP02)
 ----------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Advisory**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: 
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -152,9 +156,11 @@ Compliant Code Example
 Limit Inheritance Hierarchy Depth (OOP03)
 -------------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Advisory**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: 
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -211,9 +217,11 @@ N/A
 Limit Statically-Dispatched Calls To Primitive Operations (OOP04)
 -------------------------------------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Advisory**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: 
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -303,9 +311,11 @@ Compliant Code Example
 Use Explicit Overriding Annotations (OOP05)
 ---------------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Required**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: :math:`\checkmark`
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -393,9 +403,11 @@ Compliant Code Example
 Use Class-wide Pre/Post Contracts (OOP06)
 -------------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Required**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: :math:`\checkmark`
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -464,9 +476,11 @@ Compliant Code Example
 Ensure Local Type Consistency (OOP07)
 ---------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Required**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: :math:`\checkmark`
 
 *Goal*
    :Maintainability: :math:`\checkmark`

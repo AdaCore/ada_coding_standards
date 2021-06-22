@@ -33,9 +33,11 @@ Therefore, for the application software the system software architect must decid
 Don't Raise Language-Defined Exceptions (EXU01)
 -------------------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Required**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: :math:`\checkmark`
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -92,9 +94,11 @@ Compliant Code Example
 No Unhandled Application-Defined Exceptions (EXU02)
 -----------------------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Required**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: :math:`\checkmark`
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -149,9 +153,11 @@ N/A
 No Exception Propagation Beyond Name Visibility (EXU03)
 ---------------------------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Required**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: :math:`\checkmark`
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -242,9 +248,11 @@ or ensure the exception is not propagated beyond the scope of its declaration:
 Prove Absence of Run-time Exceptions (EXU04)
 ----------------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Required**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: :math:`\checkmark`
 
 *Goal*
    :Maintainability: :math:`\checkmark`

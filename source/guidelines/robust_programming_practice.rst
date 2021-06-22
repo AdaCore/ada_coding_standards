@@ -20,9 +20,11 @@ Rules
 No Use of "others" in Case Constructs (RPP01)
 -----------------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Required**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: :math:`\checkmark`
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -96,9 +98,11 @@ Compliant Code Example
 No Enumeration Ranges in Case Constructs (RPP02)
 --------------------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Required**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: :math:`\checkmark`
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -167,9 +171,11 @@ Compliant Code Example
 Limited Use of "others" In Aggregates (RPP03)
 -----------------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Advisory**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: 
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -225,9 +231,11 @@ In this example, the "others" is allowed because it refers to all but one compon
 No Unassigned Mode-Out Procedure Parameters (RPP04)
 -----------------------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Required**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: :math:`\checkmark`
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -315,9 +323,11 @@ Compliant Code Example
 No Use of "others" in Exception Handlers (RPP05)
 --------------------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Required**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: :math:`\checkmark`
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -374,9 +384,11 @@ Code that references all handled exceptions by their names.
 Avoid Function Side-Effects (RPP06)
 -------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Advisory**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: 
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -442,9 +454,11 @@ Remove the update to Call_Count. or change the function into a procedure with a 
 Functions Only Have Mode "in" (RPP07)
 ---------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Required**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: :math:`\checkmark`
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -521,9 +535,11 @@ or
 Limit Parameter Aliasing  (RPP08)
 -----------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Required**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: :math:`\checkmark`
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -607,9 +623,11 @@ Don't pass Obj as the actual parameter to both formal parameters.
 Use Precondition and Postcondition Contracts (RPP09)
 ------------------------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Advisory**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: 
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -684,9 +702,11 @@ Compliant Code Example
 Do Not Re-Verify Preconditions In Subprogram Bodies (RPP10)
 -------------------------------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Advisory**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: 
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -756,9 +776,11 @@ Compliant Code Example
 Always Use the Result of Function Calls (RPP11)
 -------------------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Advisory**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: 
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -817,9 +839,11 @@ N/A
 No Recursion (RPP12)
 ----------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Advisory**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: 
 
 *Goal*
    :Maintainability: :math:`\checkmark`

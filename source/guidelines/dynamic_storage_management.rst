@@ -37,9 +37,11 @@ Rule DYN01 is Required, as it avoids problematic features whatever the strategy 
 Common High Integrity Restrictions (DYN01)
 --------------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Required**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: :math:`\checkmark`
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -141,9 +143,11 @@ For No_Access_Parameter_Allocators, use a variable of a named access type:
 Traditional Static Allocation Policy (DYN02)
 ----------------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Advisory**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: 
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -204,9 +208,11 @@ N/A
 Access Types Without Allocators Policy (DYN03)
 ------------------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Advisory**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: 
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -278,9 +284,11 @@ Compliant Code Example
 Minimal Dynamic Allocation Policy (DYN04)
 -------------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Advisory**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: 
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -336,9 +344,11 @@ Code performing dynamic allocations any time prior to an arbitrary point designa
 User-Defined Storage Pools Policy (DYN05)
 -------------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Advisory**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: 
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -403,9 +413,11 @@ Compliant Code Example
 Statically Determine Maximum Stack Requirements (DYN06)
 ---------------------------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Required**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: :math:`\checkmark`
 
 *Goal*
    :Maintainability: :math:`\checkmark`

@@ -20,9 +20,11 @@ Rules
 Use SPARK Extensively (SWE01)
 -------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Advisory**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: 
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -67,9 +69,11 @@ N/A
 Enable Optional Warnings and Treat As Errors  (SWE02)
 -------------------------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Required**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: :math:`\checkmark`
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -144,9 +148,11 @@ The compiler will no longer issue a warning that the formal Parameter This is no
 Use A Static Analysis Tool Extensively (SWE03)
 ------------------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Mandatory**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: :math:`\checkmark`
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -204,9 +210,11 @@ N/A
 Hide Implementation Artifacts  (SWE04)
 ----------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Advisory**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: 
 
 *Goal*
    :Maintainability: :math:`\checkmark`

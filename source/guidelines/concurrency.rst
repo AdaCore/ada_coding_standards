@@ -41,9 +41,11 @@ When the most stringent analyses are required and the tightest timing is involve
 Use the Ravenscar Profile (CON01)
 -----------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Advisory**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: 
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -158,9 +160,11 @@ N/A
 Use the Jorvik Profile (CON02)
 --------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Advisory**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: 
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -273,9 +277,11 @@ N/A
 Avoid Shared Variables for Inter-task Communication (CON03)
 -------------------------------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Advisory**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: 
 
 *Goal*
    :Maintainability: :math:`\checkmark`

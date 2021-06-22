@@ -20,9 +20,11 @@ Rules
 No Multiple Reclamations (RCL01)
 ----------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Mandatory**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: :math:`\checkmark`
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -77,9 +79,11 @@ Remove the call to Free (Y).
 Only Reclaim Allocated Storage (RCL02)
 ----------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Mandatory**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: :math:`\checkmark`
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -134,9 +138,11 @@ Remove the call to Free (Y).
 Only Reclaim To The Same Pool (RCL03)
 ---------------------------------------
 
-*Safety*
+*Level* :math:`\rightarrow` **Mandatory**
+
+*Category*
+   :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
-   :Required: :math:`\checkmark`
 
 *Goal*
    :Maintainability: :math:`\checkmark`
