@@ -48,6 +48,8 @@ Don't Raise Language-Defined Exceptions (EXU01)
 
 *Remediation* :math:`\rightarrow` **Low**
 
+*GNATcheck Rule* :math:`\rightarrow` Raising_Predefined_Exceptions
+
 """""""""""
 Reference
 """""""""""
@@ -109,6 +111,8 @@ No Unhandled Application-Defined Exceptions (EXU02)
 
 *Remediation* :math:`\rightarrow` **Low**
 
+*GNATcheck Rule* :math:`\rightarrow` TBD
+
 """""""""""
 Reference
 """""""""""
@@ -127,9 +131,13 @@ Although the language-defined package Ada.Task_Termination can be used to provid
 
 When an unhandled exception occurrence reaches the main subprogram and is not handled there, the exception occurrence is propagated to the environment task, which then completes abnormally.  Even if the main subprogram does handle the exception, the environment task still completes (normally in that case). 
 
-When the environment task completes (normally or abnormally) it waits for the completion of dependent application tasks, if any. Those dependent tasks continue executing normally, i.e., they do not complete as a result of the environment task completion. Alternatively, however, instead of waiting for them, the implementation has permission to abort the dependent application tasks, per RM 10.2(30). The resulting application-specific effect is undefined.
+When the environment task completes (normally or abnormally) it waits for the completion of dependent application tasks, if any. Those dependent tasks continue executing normally, i.e., they do not complete as a result of the environment task completion. Alternatively, however, instead of waiting for them, the implementation has permission to abort the dependent application tasks, per
+`Ada RM 10.2(30) - Program Execution <http://www.ada-auth.org/standards/2xrm/html/RM-10-2.html>`_.
+The resulting application-specific effect is undefined.
 
-Finally, whether the environment task waited for the dependent tasks or aborted them, the semantics of further execution beyond that point are undefined. There is no concept of a calling environment beyond the environment task (RM 10.2(34). In some systems there is no calling environment, such as bare-metal platforms with only an Ada run-time library and no operating system.
+Finally, whether the environment task waited for the dependent tasks or aborted them, the semantics of further execution beyond that point are undefined. There is no concept of a calling environment beyond the environment task
+(`Ada RM 10.2(30) - Program Execution <http://www.ada-auth.org/standards/2xrm/html/RM-10-2.html>`_)
+In some systems there is no calling environment, such as bare-metal platforms with only an Ada run-time library and no operating system.
 
 """""""
 Notes
@@ -167,6 +175,8 @@ No Exception Propagation Beyond Name Visibility (EXU03)
    :Security: 
 
 *Remediation* :math:`\rightarrow` **Low**
+
+*GNATcheck Rule* :math:`\rightarrow` Non_Visible_Exceptions
 
 """""""""""
 Reference

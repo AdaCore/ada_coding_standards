@@ -56,11 +56,13 @@ Use the Ravenscar Profile (CON01)
 
 *Remediation* :math:`\rightarrow` **High**
 
+*GNATcheck Rule* :math:`\rightarrow` TBD
+
 """""""""""
 Reference
 """""""""""
 
-Ada RM section D.13
+`Ada RM D.13 - The Ravenscar Profile <http://ada-auth.org/standards/12rm/html/RM-D-13.html>`_
 
 """""""""""""
 Description
@@ -156,6 +158,12 @@ Compliant Code Example
 
 N/A
 
+"""""""""""
+Reference
+"""""""""""
+
+`Ada RM D.13 - The Ravenscar Profile <http://ada-auth.org/standards/12rm/html/RM-D-13.html>`_
+
 --------------------------------
 Use the Jorvik Profile (CON02)
 --------------------------------
@@ -175,11 +183,13 @@ Use the Jorvik Profile (CON02)
 
 *Remediation* :math:`\rightarrow` **High**
 
+*GNATcheck Rule* :math:`\rightarrow` TBD
+
 """""""""""
 Reference
 """""""""""
 
-Ada 202x RM section D.13
+`Ada RM D.13 - The Ravenscar Profile <http://ada-auth.org/standards/12rm/html/RM-D-13.html>`_
 
 """""""""""""
 Description
@@ -294,7 +304,7 @@ Avoid Shared Variables for Inter-task Communication (CON03)
 Reference
 """""""""""
 
-Ada RM section D.13
+`Ada RM D.13 - The Ravenscar Profile <http://ada-auth.org/standards/12rm/html/RM-D-13.html>`_
 
 """""""""""""
 Remediation
@@ -330,7 +340,8 @@ A variable marked as Volatile but not assigned to a specific address in memory:
 
       X : Integer with Volatile;
    
-Note that variables marked as Atomic are also Volatile, per the Ada RM  C.6/8(3).
+Note that variables marked as Atomic are also Volatile, per the
+`Ada RM C.6/8(3) - Shared Variable Control <http://www.ada-auth.org/standards/12rm/html/RM-C-6.html>`_
 
 """"""""""""""""""""""""
 Compliant Code Example

@@ -45,6 +45,8 @@ No Class-wide Constructs Policy (OOP01)
 
 *Remediation* :math:`\rightarrow` **N/A**
 
+*GNATcheck Rule* :math:`\rightarrow` TBD
+
 """""""""""
 Reference
 """""""""""
@@ -107,6 +109,8 @@ Static Dispatching Only Policy (OOP02)
    :Security: :math:`\checkmark`
 
 *Remediation* :math:`\rightarrow` **N/A**
+
+*GNATcheck Rule* :math:`\rightarrow` TBD
 
 """""""""""
 Reference
@@ -171,6 +175,8 @@ Limit Inheritance Hierarchy Depth (OOP03)
 
 *Remediation* :math:`\rightarrow` **High**
 
+*GNATcheck Rule* :math:`\rightarrow` Deep_Inheritance_Hierarchies
+
 """""""""""
 Reference
 """""""""""
@@ -231,6 +237,8 @@ Limit Statically-Dispatched Calls To Primitive Operations (OOP04)
    :Security: 
 
 *Remediation* :math:`\rightarrow` **Medium (easy fix, but a difficult to detect bug)**
+
+*GNATcheck Rule* :math:`\rightarrow` Direct_Calls_To_Primitives
 
 """""""""""
 Reference
@@ -326,6 +334,8 @@ Use Explicit Overriding Annotations (OOP05)
 
 *Remediation* :math:`\rightarrow` **Low**
 
+*GNATcheck Rule* :math:`\rightarrow` TBD
+
 """""""""""
 Reference
 """""""""""
@@ -417,6 +427,8 @@ Use Class-wide Pre/Post Contracts (OOP06)
    :Security: :math:`\checkmark`
 
 *Remediation* :math:`\rightarrow` **Low**
+
+*GNATcheck Rule* :math:`\rightarrow` Specific_Pre_Post
 
 """""""""""
 Reference

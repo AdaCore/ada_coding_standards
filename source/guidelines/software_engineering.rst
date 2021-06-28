@@ -35,6 +35,8 @@ Use SPARK Extensively (SWE01)
 
 *Remediation* :math:`\rightarrow` **High, as retrofit can be extensive**
 
+*GNATcheck Rule* :math:`\rightarrow` TBD
+
 """""""""""
 Reference
 """""""""""
@@ -83,6 +85,8 @@ Enable Optional Warnings and Treat As Errors  (SWE02)
    :Security: :math:`\checkmark`
 
 *Remediation* :math:`\rightarrow` **Low**
+
+*GNATcheck Rule* :math:`\rightarrow` TBD
 
 """""""""""
 Reference
@@ -162,6 +166,8 @@ Use A Static Analysis Tool Extensively (SWE03)
    :Security: :math:`\checkmark`
 
 *Remediation* :math:`\rightarrow` **High**
+
+*GNATcheck Rule* :math:`\rightarrow` TBD
 
 """""""""""
 Reference

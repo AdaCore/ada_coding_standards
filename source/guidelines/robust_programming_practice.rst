@@ -35,6 +35,8 @@ No Use of "others" in Case Constructs (RPP01)
 
 *Remediation* :math:`\rightarrow` **Low**
 
+*GNATcheck Rule* :math:`\rightarrow` OTHERS_In_CASE_Statements
+
 """""""""""
 Reference
 """""""""""
@@ -113,6 +115,8 @@ No Enumeration Ranges in Case Constructs (RPP02)
 
 *Remediation* :math:`\rightarrow` **Low**
 
+*GNATcheck Rule* :math:`\rightarrow` Enumeration_Ranges_In_CASE_Statements
+
 """""""""""
 Reference
 """""""""""
@@ -186,6 +190,8 @@ Limited Use of "others" In Aggregates (RPP03)
 
 *Remediation* :math:`\rightarrow` **Low**
 
+*GNATcheck Rule* :math:`\rightarrow` OTHERS_In_Aggregates
+
 """""""""""
 Reference
 """""""""""
@@ -245,6 +251,8 @@ No Unassigned Mode-Out Procedure Parameters (RPP04)
    :Security: 
 
 *Remediation* :math:`\rightarrow` **High**
+
+*GNATcheck Rule* :math:`\rightarrow` Unassigned_OUT_Parameters
 
 """""""""""
 Reference
@@ -338,6 +346,8 @@ No Use of "others" in Exception Handlers (RPP05)
 
 *Remediation* :math:`\rightarrow` **Low**
 
+*GNATcheck Rule* :math:`\rightarrow` OTHERS_In_Exception_Handlers
+
 """""""""""
 Reference
 """""""""""
@@ -398,6 +408,8 @@ Avoid Function Side-Effects (RPP06)
    :Security: 
 
 *Remediation* :math:`\rightarrow` **Medium**
+
+*GNATcheck Rule* :math:`\rightarrow` TBD
 
 """""""""""
 Reference
@@ -468,6 +480,8 @@ Functions Only Have Mode "in" (RPP07)
    :Security: 
 
 *Remediation* :math:`\rightarrow` **Low**
+
+*GNATcheck Rule* :math:`\rightarrow` TBD
 
 """""""""""
 Reference
@@ -550,13 +564,15 @@ Limit Parameter Aliasing  (RPP08)
 
 *Remediation* :math:`\rightarrow` **High**
 
+*GNATcheck Rule* :math:`\rightarrow` TBD
+
 """""""""""
 Reference
 """""""""""
 
-Ada RM section 6.2
+`Ada RM 6.2 - Formal Parameter Modes <http://www.ada-auth.org/standards/2xrm/html/RM-6-2.html>`_,
 
-SPARK RM section 6.4.2
+`SPARK RM 6.4.2 - Anti-Aliasing <https://docs.adacore.com/spark2014-docs/html/lrm/subprograms.html#anti-aliasing>`_
 
 """""""""""""
 Description
@@ -638,6 +654,8 @@ Use Precondition and Postcondition Contracts (RPP09)
 
 *Remediation* :math:`\rightarrow` **Low**
 
+*GNATcheck Rule* :math:`\rightarrow` TBD
+
 """""""""""
 Reference
 """""""""""
@@ -717,6 +735,8 @@ Do Not Re-Verify Preconditions In Subprogram Bodies (RPP10)
 
 *Remediation* :math:`\rightarrow` **Low**
 
+*GNATcheck Rule* :math:`\rightarrow` TBD
+
 """""""""""
 Reference
 """""""""""
@@ -791,6 +811,8 @@ Always Use the Result of Function Calls (RPP11)
 
 *Remediation* :math:`\rightarrow` **Low**
 
+*GNATcheck Rule* :math:`\rightarrow` TBD
+
 """""""""""
 Reference
 """""""""""
@@ -852,17 +874,15 @@ No Recursion (RPP12)
    :Performance: 
    :Security: 
 
+*Remediation* :math:`\rightarrow` **Low**
+
+*GNATcheck Rule* :math:`\rightarrow` Recursive_Subprograms
+
 """""""""""
 Reference
 """""""""""
 
 MISRA C rule 17.2 "Functions shall not call themselves, either directly or indirectly"
-
-"""""""""""""
-Remediation
-"""""""""""""
-
-Low
 
 """""""""""""
 Description
@@ -931,17 +951,15 @@ No Reuse of Standard Typemarks (RPP13)
    :Performance: 
    :Security: 
 
+*Remediation* :math:`\rightarrow` **Low**
+
+*GNATcheck Rule* :math:`\rightarrow` TBD
+
 """""""""""
 Reference
 """""""""""
 
 N/A
-
-"""""""""""""
-Remediation
-"""""""""""""
-
-Low
 
 """""""""""""
 Description
@@ -1010,17 +1028,15 @@ Use Symbolic Constants For Literal Values (RPP14)
    :Performance: 
    :Security: 
 
+*Remediation* :math:`\rightarrow` **Low**
+
+*GNATcheck Rule* :math:`\rightarrow` TBD
+
 """""""""""
 Reference
 """""""""""
 
 N/A
-
-"""""""""""""
-Remediation
-"""""""""""""
-
-Low
 
 """""""""""""
 Description
