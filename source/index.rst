@@ -7,7 +7,7 @@ Guidelines for Development of Safety-Critical and Security-Critical Applications
 ======================================================================================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :numbered:
 
    introduction
