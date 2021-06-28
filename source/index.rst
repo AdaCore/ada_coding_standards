@@ -15,11 +15,3 @@ Guidelines for Development of Safety-Critical and Security-Critical Applications
    references
    annex_a
    annex_b
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
