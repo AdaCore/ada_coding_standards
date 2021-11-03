@@ -8,13 +8,21 @@ the user's desired format.
 
 ## Top-level directory
 
-   :README.md: This file
+   * README.md
 
-   :make.bat: ``sphinx-build`` build script for Windows
+      This file
 
-   :Makefile: Makefile to use with ``sphinx-build``
+   * make.bat
 
-   :original.docx: Original Word document that this repository used as a baseline
+      ``sphinx-build`` build script for Windows
+
+   * Makefile
+
+      Makefile to use with ``sphinx-build``
+
+   * original.docx
+
+      Original Word document that this repository used as a baseline
 
 ## Tools
 
