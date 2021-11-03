@@ -14,7 +14,7 @@ Description
    Have a plan for managing the use of concurrency in high-integrity applications having real-time requirements.
 
 Rules
-   CON01, CON02, CON02
+   CON01, CON02, CON03
 
 The canonical approach to applications having multiple periodic and aperiodic activities is to map those activities onto independent tasks, i.e., threads of control. The advantages for the application are both a matter of software engineering and also ease of implementation. For example, when the different periods are not harmonics of one another, the fact that each task executes independently means that the differences are trivially represented. In contrast, such periods are not easily implemented in a cyclic scheduler, which, by definition, involves only one (implicit) thread of control with one frame rate.
 
@@ -299,6 +299,10 @@ Avoid Shared Variables for Inter-task Communication (CON03)
    :Portability: :math:`\checkmark`
    :Performance: :math:`\checkmark`
    :Security: 
+
+*Remediation* :math:`\rightarrow` **High**
+
+*GNATcheck Rule* :math:`\rightarrow` TBD
 
 """""""""""
 Reference

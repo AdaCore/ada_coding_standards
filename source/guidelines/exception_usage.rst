@@ -271,6 +271,10 @@ Prove Absence of Run-time Exceptions (EXU04)
    :Performance: 
    :Security: 
 
+*Remediation* :math:`\rightarrow` **Low**
+
+*GNATcheck Rule* :math:`\rightarrow` TBD
+
 """""""""""
 Reference
 """""""""""

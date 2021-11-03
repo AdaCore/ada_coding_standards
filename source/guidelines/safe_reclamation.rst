@@ -155,6 +155,10 @@ Only Reclaim To The Same Pool (RCL03)
    :Performance: 
    :Security: :math:`\checkmark`
 
+*Remediation* :math:`\rightarrow` **High**
+
+*GNATcheck Rule* :math:`\rightarrow` TBD
+
 """""""""""
 Reference
 """""""""""

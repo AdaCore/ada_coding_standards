@@ -501,6 +501,10 @@ Ensure Local Type Consistency (OOP07)
    :Performance: 
    :Security: :math:`\checkmark`
 
+*Remediation* :math:`\rightarrow` **N/A**
+
+*GNATcheck Rule* :math:`\rightarrow` TBD
+
 """""""""""
 Reference
 """""""""""

@@ -229,6 +229,10 @@ Hide Implementation Artifacts  (SWE04)
    :Performance: 
    :Security: :math:`\checkmark`
 
+*Remediation* :math:`\rightarrow` **High, as retrofit can be extensive**
+
+*GNATcheck Rule* :math:`\rightarrow` Visible_Components
+
 """""""""""
 Reference
 """""""""""

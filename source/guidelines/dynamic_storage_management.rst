@@ -437,8 +437,9 @@ Statically Determine Maximum Stack Requirements (DYN06)
    :Performance: 
    :Security: 
 
-X
- Security
+*Remediation* :math:`\rightarrow` **Low**
+
+*GNATcheck Rule* :math:`\rightarrow` TBD
 
 """""""""""
 Reference

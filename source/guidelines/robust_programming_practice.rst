@@ -14,7 +14,7 @@ Description
    These rules promote the production of robust software.
 
 Rules
-   RPP01, RPP02, RPP03, RPP04, RPP05, RPP06, RPP07, RPP07, RPP08, RPP09, RPP10, RPP11, RPP12
+   RPP01, RPP02, RPP03, RPP04, RPP05, RPP06, RPP07, RPP07, RPP08, RPP09, RPP10, RPP11, RPP12, RPP13, RPP14
 
 -----------------------------------------------
 No Use of "others" in Case Constructs (RPP01)
@@ -1030,7 +1030,7 @@ Use Symbolic Constants For Literal Values (RPP14)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*GNATcheck Rule* :math:`\rightarrow` TBD
+*GNATcheck Rule* :math:`\rightarrow` Numeric_Literals
 
 """""""""""
 Reference
