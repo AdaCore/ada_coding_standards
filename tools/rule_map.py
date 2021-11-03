@@ -1,5 +1,6 @@
 import argparse
 import os
+import tempfile
 
 SLIDE   = "---"
 DEFAULT_OUTPUT = "rule_map.tab"
@@ -10,7 +11,7 @@ def get_gnatcheck_rule ( rule ):
     if last_space < 0:
         return ""
     else:
-        return rule[last_space:]
+        return rule[last_space:].strip()
 
 def get_standard ( title ):
     right_paren = title.rindex(')')
@@ -52,12 +53,24 @@ def process_one_file ( in_filename, standards ):
         elif lines[i].lower().startswith ( RULE_KEY ):
             add_rule ( standards, last_title, lines[i] )
 
+def find_all_rules():
+    gnatcheck_rules = []
+    temp = tempfile.NamedTemporaryFile()
+    temp.close()
+    os.system ( "gnatcheck -h 2> " + temp.name )
+    with open ( temp.name, 'r' ) as file:
+        for line in file:
+            if len(line) > 0 and line[0] == ' ' and ' - ' in line:
+                gnatcheck_rules.append (line.strip().split(' ')[0].lower() )
+    os.remove ( temp.name )
+    return gnatcheck_rules
+
 if __name__== "__main__":
 
-    parser = argparse.ArgumentParser()
+    parser = argparse.ArgumentParser(description='Generate a table that maps coding standards to "gnatcheck" rules')
 
-    parser.add_argument('--guidelines',
-                        help='directory containing source files for guidelines (will be searched recursively)',
+    parser.add_argument('--source',
+                        help='Directory containing source files for guidelines (will be searched recursively)',
                         required=True)
 
     parser.add_argument('--output',
@@ -66,19 +79,33 @@ if __name__== "__main__":
                              'Default = ' + DEFAULT_OUTPUT,
                         default=DEFAULT_OUTPUT)
 
+    parser.add_argument('--short',
+                        help='Do not show unimplemented "gnatcheck" rules',
+                        action='store_true')
+
     args = parser.parse_args()
 
     standards = {}
 
-    for root, dirs, files in os.walk ( args.guidelines ):
+    for root, dirs, files in os.walk ( args.source ):
         for file in files:
             if file.lower().endswith ( ".rst" ):
                 process_one_file ( os.path.join ( root, file ), standards )
+
+    gnatcheck_rules = find_all_rules()
 
     separator = "\t"
     if args.output.lower().endswith("csv"):
         separator = ","
     output = open ( args.output, "w" )
     for key in sorted(standards.keys()):
-        output.write ( key + separator + standards[key][0] + separator + standards[key][1] + "\n" )
+        standard = standards[key][0]
+        rule = standards[key][1]
+        output.write ( key + separator + standard + separator + rule + "\n" )
+        if rule.lower() in gnatcheck_rules:
+            gnatcheck_rules.remove ( rule.lower() )
+
+    if not args.short:
+        for rule in gnatcheck_rules:
+            output.write ( ' ' + separator + "(unimplemented)" + separator + rule + "\n" )
     output.close()
