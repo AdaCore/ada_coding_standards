@@ -175,7 +175,7 @@ Limit Inheritance Hierarchy Depth (OOP03)
 
 *Remediation* :math:`\rightarrow` **High**
 
-*GNATcheck Rule* :math:`\rightarrow` Deep_Inheritance_Hierarchies
+*GNATcheck Rule* :math:`\rightarrow` Deep_Inheritance_Hierarchies:2
 
 """""""""""
 Reference

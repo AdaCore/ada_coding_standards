@@ -1,0 +1,6 @@
+# Flag if specified profile is not used
+
+@check(message="Flag if specified profile is not used", category="Feature")
+fun uses_profile(node, profile: string = "") = node is Pragma when node.f_id.p_name_is("Profile") and
+                                                  node.f_args[1].p_assoc_expr() is e@Expr and
+										          not e.p_name_is(profile)
