@@ -3,8 +3,10 @@ import os
 import tempfile
 
 SLIDE   = "---"
-DEFAULT_OUTPUT = "rule_map.tab"
+DEFAULT_OUTPUT = "rule_map"
 RULE_KEY = "*gnatcheck rule*"
+ENABLE_RULE = "+R"
+ANNOTATION = ":"
 
 def get_gnatcheck_rule ( rule ):
     last_space = rule.rindex(' ')
@@ -82,7 +84,11 @@ if __name__== "__main__":
     parser.add_argument('--short',
                         help='Do not show unimplemented "gnatcheck" rules',
                         action='store_true')
-
+                        
+    parser.add_argument('--params',
+                        help='Manually enter params for rules that use them',
+                        action='store_true')
+                        
     args = parser.parse_args()
 
     standards = {}
@@ -94,14 +100,36 @@ if __name__== "__main__":
 
     gnatcheck_rules = find_all_rules()
 
-    separator = "\t"
+    rules_file = True
+    separator = "_"
     if args.output.lower().endswith("csv"):
         separator = ","
+        rules_file = False
+    elif args.output.lower().endswith("tab"):
+        separator = "\t"
+        rules_file = False
     output = open ( args.output, "w" )
+    
     for key in sorted(standards.keys()):
         standard = standards[key][0]
         rule = standards[key][1]
-        output.write ( key + separator + standard + separator + rule + "\n" )
+        if (rules_file):
+           if (rule=="TBD"):
+              rule = key + "_Unimplemented"
+           param = ""
+           if (args.params):
+               split_rule = rule.split(":")
+               if len(split_rule) > 1:
+                  rule = split_rule[0]
+                  print("Enter the parameter for rule [" + rule, end="]: ")
+                  user_param = input()
+                  print()
+                  param = ":" + user_param
+           formatted_text = key + separator + standard.replace(" ", separator)
+           output.write (ENABLE_RULE + ANNOTATION + formatted_text + ANNOTATION + rule + param + "\n" )
+           args.short = True
+        else:
+           output.write ( key + separator + standard + separator + rule + "\n" )
         if rule.lower() in gnatcheck_rules:
             gnatcheck_rules.remove ( rule.lower() )
 
