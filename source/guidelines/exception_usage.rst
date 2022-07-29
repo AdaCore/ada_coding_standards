@@ -111,7 +111,7 @@ No Unhandled Application-Defined Exceptions (EXU02)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*GNATcheck Rule* :math:`\rightarrow` TBD
+*GNATcheck Rule* :math:`\rightarrow` Unhandled_Exceptions
 
 """""""""""
 Reference
@@ -273,7 +273,7 @@ Prove Absence of Run-time Exceptions (EXU04)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*GNATcheck Rule* :math:`\rightarrow` TBD
+*GNATcheck Rule* :math:`\rightarrow` Unimplemented_Use_SPARK_Analysis
 
 """""""""""
 Reference

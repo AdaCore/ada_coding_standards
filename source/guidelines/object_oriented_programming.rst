@@ -47,6 +47,8 @@ No Class-wide Constructs Policy (OOP01)
 
 *GNATcheck Rule* :math:`\rightarrow` TBD
 
+*Mutually Exclusive* :math:`\rightarrow` OOP02
+
 """""""""""
 Reference
 """""""""""
@@ -111,6 +113,8 @@ Static Dispatching Only Policy (OOP02)
 *Remediation* :math:`\rightarrow` **N/A**
 
 *GNATcheck Rule* :math:`\rightarrow` TBD
+
+*Mutually Exclusive* :math:`\rightarrow` OOP01
 
 """""""""""
 Reference

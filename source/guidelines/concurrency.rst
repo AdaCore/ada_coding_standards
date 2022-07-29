@@ -14,7 +14,7 @@ Description
    Have a plan for managing the use of concurrency in high-integrity applications having real-time requirements.
 
 Rules
-   CON01, CON02
+   CON01, CON02, CON03
 
 The canonical approach to applications having multiple periodic and aperiodic activities is to map those activities onto independent tasks, i.e., threads of control. The advantages for the application are both a matter of software engineering and also ease of implementation. For example, when the different periods are not harmonics of one another, the fact that each task executes independently means that the differences are trivially represented. In contrast, such periods are not easily implemented in a cyclic scheduler, which, by definition, involves only one (implicit) thread of control with one frame rate.
 
@@ -38,7 +38,7 @@ However, not all high-integrity applications are amenable to expression in the R
 When the most stringent analyses are required and the tightest timing is involved, use the Ravenscar profile. When a slight increase in complexity is tolerable, i.e., in those cases not undergoing all of these stringent analyses, consider using the Jorvik profile.
 
 -----------------------------------
-Use the Ravenscar or Jorvik Profile (CON01)
+Use the Ravenscar Profile (CON01)
 -----------------------------------
 
 *Level* :math:`\rightarrow` **Advisory**
@@ -58,6 +58,8 @@ Use the Ravenscar or Jorvik Profile (CON01)
 
 *GNATcheck Rule* :math:`\rightarrow` uses_profile:Ravenscar
 
+*Mutually Exclusive* :math:`\rightarrow` CON02
+
 """""""""""
 Reference
 """""""""""
@@ -68,12 +70,11 @@ Reference
 Description
 """""""""""""
 
-One of the following two profiles must be in effect:
+The following profile must be in effect:
 
    pragma Profile (Ravenscar);
-   pragma Profile (Jorvik);
 
-The Ravenscar profile is equivalent to the following set of pragmas:
+The profile is equivalent to the following set of pragmas:
 
 pragma Task_Dispatching_Policy (FIFO_Within_Priorities);
 
@@ -135,7 +136,74 @@ pragma Restrictions (
 
           	No_Dependence => System.Multiprocessors.Dispatching_Domains);
 
-The Jorvik profile is equivalent to the following set of pragmas:
+"""""""
+Notes
+"""""""
+
+The Ada builder will detect violations if the programmer specifies this profile or corresponding pragmas. GNATcheck also can detect violations of profile restrictions.
+
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
+
+   * 6.63 "Lock protocol errors [CGM]".
+
+"""""""""""""""""""""""""""
+Noncompliant Code Example
+"""""""""""""""""""""""""""
+
+Any code disallowed by the profile. Remediation is "high" because use of the facilities outside the subset can be difficult to retrofit into compliance.
+
+""""""""""""""""""""""""
+Compliant Code Example
+""""""""""""""""""""""""
+
+N/A
+
+"""""""""""
+Reference
+"""""""""""
+
+`Ada RM D.13 - The Ravenscar Profile <http://ada-auth.org/standards/12rm/html/RM-D-13.html>`_
+
+--------------------------------
+Use the Jorvik Profile (CON02)
+--------------------------------
+
+*Level* :math:`\rightarrow` **Advisory**
+
+*Category*
+   :Safety: :math:`\checkmark`
+   :Cyber: :math:`\checkmark`
+
+*Goal*
+   :Maintainability: :math:`\checkmark`
+   :Reliability: :math:`\checkmark`
+   :Portability: :math:`\checkmark`
+   :Performance: :math:`\checkmark`
+   :Security: 
+
+*Remediation* :math:`\rightarrow` **High**
+
+*GNATcheck Rule* :math:`\rightarrow` uses_profile:Jorvik
+
+*Mutually Exclusive* :math:`\rightarrow` CON01
+
+"""""""""""
+Reference
+"""""""""""
+
+`Ada RM D.13 - The Ravenscar Profile <http://ada-auth.org/standards/12rm/html/RM-D-13.html>`_
+
+"""""""""""""
+Description
+"""""""""""""
+
+The following profile must be in effect:
+
+   pragma Profile (Jorvik);
+
+The profile is equivalent to the following set of pragmas:
 
 pragma Task_Dispatching_Policy (FIFO_Within_Priorities);
 
@@ -199,19 +267,13 @@ These restrictions are removed from Ravenscar:
 
     No_Dependence => Ada.Synchronous_Barriers
 
-Jorvik also replaces restriction Simple_Barriers with Pure_Barriers (a weaker requirement than Simple_Barriers).			
+Jorvik also replaces restriction Simple_Barriers with Pure_Barriers (a weaker requirement than Simple_Barriers).
 
 """""""
 Notes
 """""""
 
-The Ada builder will detect violations if the programmer specifies this profile or corresponding pragmas. GNATcheck also can detect violations of profile restrictions.
-
-""""""""""""""""""""""""""""""""""""""""""""""""
-Applicable vulnerability within ISO TR 24772-2 
-""""""""""""""""""""""""""""""""""""""""""""""""
-
-   * 6.63 "Lock protocol errors [CGM]".
+The Ada builder will detect violations. GNATcheck can also detect violations.
 
 """""""""""""""""""""""""""
 Noncompliant Code Example
@@ -225,14 +287,8 @@ Compliant Code Example
 
 N/A
 
-"""""""""""
-Reference
-"""""""""""
-
-`Ada RM D.13 - The Ravenscar Profile <http://ada-auth.org/standards/12rm/html/RM-D-13.html>`_
-
 -------------------------------------------------------------
-Avoid Shared Variables for Inter-task Communication (CON02)
+Avoid Shared Variables for Inter-task Communication (CON03)
 -------------------------------------------------------------
 
 *Level* :math:`\rightarrow` **Advisory**
@@ -250,7 +306,7 @@ Avoid Shared Variables for Inter-task Communication (CON02)
 
 *Remediation* :math:`\rightarrow` **High**
 
-*GNATcheck Rule* :math:`\rightarrow` TBD
+*GNATcheck Rule* :math:`\rightarrow` Volatile_Objects_Without_Address_Clauses
 
 """""""""""
 Reference

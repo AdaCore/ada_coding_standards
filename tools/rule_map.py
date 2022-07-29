@@ -5,6 +5,7 @@ import tempfile
 SLIDE   = "---"
 DEFAULT_OUTPUT = "rule_map"
 RULE_KEY = "*gnatcheck rule*"
+EXCLUSION_KEY = "*mutually exclusive*"
 ENABLE_RULE = "+R"
 ANNOTATION = ":"
 
@@ -22,8 +23,7 @@ def get_standard ( title ):
     standard = title[0:left_paren].strip()
     return ( key, standard )
 
-
-def add_rule ( standards, title, rule ):
+def add_rule ( standards, title, rule, isRule):
     if len(title) == 0:
         print ( "No title for '" + rule + "'" )
     elif title in standards.keys():
@@ -36,10 +36,12 @@ def add_rule ( standards, title, rule ):
             key, standard = get_standard ( title )
             if len(key) == 0 or len(standard) == 0:
                 print ("'" + title + "' is not a legal standard format" )
-            else:
+            elif(isRule):
                 standards[key] = ( standard, gnatcheck_rule )
+            else:
+                standards[key] = gnatcheck_rule.split(",")
 
-def process_one_file ( in_filename, standards ):
+def process_one_file ( in_filename, standards, exclusions ):
 
     lines = []
     with open ( in_filename ) as f:
@@ -53,7 +55,9 @@ def process_one_file ( in_filename, standards ):
             if len(next) > 0:
                 last_title = next
         elif lines[i].lower().startswith ( RULE_KEY ):
-            add_rule ( standards, last_title, lines[i] )
+            add_rule ( standards, last_title, lines[i], True )
+        elif lines[i].lower().startswith ( EXCLUSION_KEY ):
+            add_rule ( exclusions, last_title, lines[i], False )
 
 def find_all_rules():
     gnatcheck_rules = []
@@ -92,11 +96,12 @@ if __name__== "__main__":
     args = parser.parse_args()
 
     standards = {}
+    exclusions = {}
 
     for root, dirs, files in os.walk ( args.source ):
         for file in files:
             if file.lower().endswith ( ".rst" ):
-                process_one_file ( os.path.join ( root, file ), standards )
+                process_one_file ( os.path.join ( root, file ), standards, exclusions )
 
     gnatcheck_rules = find_all_rules()
 
@@ -109,13 +114,14 @@ if __name__== "__main__":
         separator = "\t"
         rules_file = False
     output = open ( args.output, "w" )
-    
+   
+    commented_rules = {}   
     for key in sorted(standards.keys()):
         standard = standards[key][0]
         rule = standards[key][1]
         if (rules_file):
-           if (rule=="TBD"):
-              rule = key + "_Unimplemented"
+        
+           commented_out = ""
            param = ""
            if (args.params):
                split_rule = rule.split(":")
@@ -125,8 +131,23 @@ if __name__== "__main__":
                   user_param = input()
                   print()
                   param = ":" + user_param
+          
            formatted_text = key + separator + standard.replace(" ", separator)
-           output.write (ENABLE_RULE + ANNOTATION + formatted_text + ANNOTATION + rule + param + "\n" )
+           if key in exclusions:
+              for excl_rule in exclusions[key]:
+                 commented_rules[excl_rule] = True
+                 exclusions.pop(excl_rule)
+                 exclusive_rule_text1 = "-- " + key + " is mutually exclusive with the following rule(s): " + ','.join(exclusions[key])
+                 exclusive_rule_text2 = "-- " + key + " is active by default. " + ','.join(exclusions[key]) + " is commented out.  Modify rules file as needed."
+                 print(exclusive_rule_text1)
+                 print(exclusive_rule_text2 + "\n")
+                 output.write(exclusive_rule_text1 + "\n")
+                 output.write(exclusive_rule_text2 + "\n")
+                 
+           if key in commented_rules:
+              commented_out = "--"    
+              
+           output.write (commented_out + ENABLE_RULE + ANNOTATION + formatted_text + ANNOTATION + rule + param + "\n" )
            args.short = True
         else:
            output.write ( key + separator + standard + separator + rule + "\n" )
