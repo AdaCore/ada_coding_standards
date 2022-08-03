@@ -56,7 +56,7 @@ Use the Ravenscar Profile (CON01)
 
 *Remediation* :math:`\rightarrow` **High**
 
-*GNATcheck Rule* :math:`\rightarrow` uses_profile:Ravenscar
+*GNATcheck Rule* :math:`\rightarrow` uses_ravenscar_profile
 
 *Mutually Exclusive* :math:`\rightarrow` CON02
 
@@ -185,7 +185,7 @@ Use the Jorvik Profile (CON02)
 
 *Remediation* :math:`\rightarrow` **High**
 
-*GNATcheck Rule* :math:`\rightarrow` uses_profile:Jorvik
+*GNATcheck Rule* :math:`\rightarrow` uses_jorvik_profile
 
 *Mutually Exclusive* :math:`\rightarrow` CON01
 
