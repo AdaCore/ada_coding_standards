@@ -4,7 +4,7 @@ import stdlib
 
 @memoize
 fun find_profile(profile) =
-    (select first p@Pragma when p.f_id.p_name_is("Profile") and 
+    (select first p@PragmaNode when p.f_id.p_name_is("Profile") and 
 	                      p.f_args[1].p_assoc_expr() is 
 						  e@Expr and e.p_name_is(profile)) == null
 	
