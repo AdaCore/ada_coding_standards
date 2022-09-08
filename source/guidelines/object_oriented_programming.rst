@@ -45,7 +45,9 @@ No Class-wide Constructs Policy (OOP01)
 
 *Remediation* :math:`\rightarrow` **N/A**
 
-*GNATcheck Rule* :math:`\rightarrow` TBD
+*GNATcheck Rule* :math:`\rightarrow` no_classwide_constructs
+
+*Mutually Exclusive* :math:`\rightarrow` OOP02
 
 """""""""""
 Reference
@@ -110,7 +112,9 @@ Static Dispatching Only Policy (OOP02)
 
 *Remediation* :math:`\rightarrow` **N/A**
 
-*GNATcheck Rule* :math:`\rightarrow` TBD
+*GNATcheck Rule* :math:`\rightarrow` no_dynamic_dispatching
+
+*Mutually Exclusive* :math:`\rightarrow` OOP01
 
 """""""""""
 Reference
@@ -334,7 +338,7 @@ Use Explicit Overriding Annotations (OOP05)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*GNATcheck Rule* :math:`\rightarrow` TBD
+*GNATcheck Rule* :math:`\rightarrow` Style_Checks:O
 
 """""""""""
 Reference
@@ -503,7 +507,7 @@ Ensure Local Type Consistency (OOP07)
 
 *Remediation* :math:`\rightarrow` **N/A**
 
-*GNATcheck Rule* :math:`\rightarrow` TBD
+*GNATcheck Rule* :math:`\rightarrow` Unimplemented_Use_SPARK_Analysis
 
 """""""""""
 Reference
