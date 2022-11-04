@@ -18,6 +18,19 @@ def list_text ( items ):
         retval = retval + item
     return retval
 
+def camel_case ( text ):
+    retval = ''
+    if len(text) <= 1:
+        retval = text.upper()
+    else:
+        retval = text[0].upper()
+        for i in range(1,len(text)):
+            if text[i-1] == ' ':
+                retval = retval + text[i].upper()
+            else:
+                retval = retval + text[i]
+    return retval
+
 def find_value ( lines, key ):
     for line in lines:
         if key in line:
@@ -61,9 +74,18 @@ def process_rule ( lines, full ):
             write ( '--  Goal: ' + goal )
         write('')
             
+def print_header ( title ):
+    if len(title) > 0:
+        sep = '-'.ljust(len(title),'-')
+        write ( "---" + sep + "---" )
+        write ( "-- " + title + " --" )
+        write ( "---" + sep + "---" )
+        write ( '' )
+    return ''
 
-def process_one_file ( in_filename, full ):
+def process_one_file ( in_filename, full, title ):
 
+    header = title
     with open ( in_filename ) as f:
         lines = f.read().splitlines()
 
@@ -71,32 +93,38 @@ def process_one_file ( in_filename, full ):
 
     for i in range(1,len(lines)-1):
         line = lines[i].strip()
-        if line.startswith ( HEADER ):
-            line = lines[i+1].strip()
-            if len(line) > 3 and "(" in line:
-                write ( '' )
-                write ( '' )
-                sep = '-'.ljust(len(lines[i+1]),'-')
-                write ( "---" + sep + "---" )
-                write ( "-- " + lines[i+1] + " --" )
-                write ( "---" + sep + "---" )
-                write ( '' )
-        elif line.startswith ( RULE ):
+        if line.startswith ( RULE ):
             if start_of_rule < 0:
                 start_of_rule = i
             elif i - start_of_rule > 3:
+                header = print_header ( header )
                 process_rule ( lines[start_of_rule:i], full )
                 start_of_rule = i
+    if start_of_rule > 1:
+        header = print_header ( header )
+        process_rule ( lines[start_of_rule-2:len(lines)], full )
 
-def process_directory ( source, output, full ):
+    return header
+
+def process_one_directory ( dir, full ):
+    dirname = camel_case ( os.path.basename ( os.path.normpath ( dir ) ).replace('_',' ') )
+
+    for root, dirs, files in os.walk ( dir ):
+        for file in files:
+            if file.lower().endswith('.rst'):
+                dirname = process_one_file ( os.path.join ( root, file ), full, dirname )
+        if len(dirname) == 0:
+            write ( '\n' )
+
+def process_source ( source, output, full ):
     global global_file
 
     global_file = open ( args.output, 'w' )
 
-    for root, dirs, files in os.walk ( args.source ):
-        for file in files:
-            if file.lower().endswith ( ".rst" ):
-                process_one_file ( os.path.join ( root, file ), full )
+    for something in os.listdir ( args.source ):
+        full_path = os.path.join ( args.source, something )
+        if os.path.isdir ( full_path ):
+            process_one_directory ( full_path, full )
 
 
 if __name__== "__main__":
@@ -118,4 +146,4 @@ if __name__== "__main__":
                         
     args = parser.parse_args()
 
-    process_directory ( args.source, args.output, args.full )
+    process_source ( args.source, args.output, args.full )
