@@ -1,0 +1,33 @@
+fun is_standard(s) =
+    s == "boolean" or
+    s == "character" or
+    s == "constraint_error" or
+    s == "duration" or
+    s == "float" or
+    s == "integer" or
+    s == "long_float" or
+    s == "long_integer" or
+    s == "long_long_float" or
+    s == "long_long_integer" or
+    s == "long_long_long_integer" or
+    s == "natural" or
+    s == "numeric_error" or
+    s == "positive" or
+    s == "program_error" or
+    s == "short_float" or
+    s == "short_integer" or
+    s == "short_short_integer" or
+    s == "standard" or
+    s == "standard;" or
+    s == "storage_error" or
+    s == "string" or
+    s == "tasking_error" or
+    s == "wide_character" or
+    s == "wide_string" or
+    s == "wide_wide_character" or
+    s == "wide_wide_string"
+
+@check
+fun override_standard_name(node) =
+    node is DefiningName and
+    is_standard ( node.f_name.text )

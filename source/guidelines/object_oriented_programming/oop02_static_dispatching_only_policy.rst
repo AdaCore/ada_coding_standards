@@ -17,7 +17,7 @@ Static Dispatching Only Policy (OOP02)
 
 *Remediation* :math:`\rightarrow` **N/A**
 
-*GNATcheck Rule* :math:`\rightarrow` no_dynamic_dispatching
+*GNATcheck Rule* :math:`\rightarrow` TBD
 
 *Mutually Exclusive* :math:`\rightarrow` OOP01
 
