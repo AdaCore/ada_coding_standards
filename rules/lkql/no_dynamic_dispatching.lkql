@@ -4,7 +4,7 @@ import stdlib
 
 @memoize
 fun find_restriction(restriction) =
-    (select first p@Pragma when p.f_id.p_name_is("Restrictions") and 
+    (select first p@PragmaNode when p.f_id.p_name_is("Restrictions") and 
 	                      p.f_args[1].p_assoc_expr() is 
 						  e@Expr and e.p_name_is(restriction)) == null
 	
