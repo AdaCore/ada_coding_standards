@@ -51,32 +51,23 @@ Applicable vulnerability within ISO TR 24772-2
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
-
-   function Square (Input : in out Integer) return Integer is
-      Result : Integer;
-   begin
-      Result := Input * Input;
-      Input := Input + 1;
-      return Result;
-   end Square;
+.. include:: examples/rpp07.adb
+  :code: Ada
+  :start-line: 3
+  :end-line: 10
 
 """"""""""""""""""""""""
 Compliant Code Example
 """"""""""""""""""""""""
 
-.. code:: Ada
+.. include:: examples/rpp07.adb
+  :code: Ada
+  :start-line: 11
+  :end-line: 15
 
-   function Square (Input : in Integer) return Integer is
-      Result : Integer;
-   begin
-      Result := Input * Input;
-      return Result;
-   end Square;
-   
-or
-   
-.. code:: Ada
+OR
 
-   function Square (Input : in Integer) return Integer is
-      (Input * Input);
+.. include:: examples/rpp07.adb
+  :code: Ada
+  :start-line: 16
+  :end-line: 22

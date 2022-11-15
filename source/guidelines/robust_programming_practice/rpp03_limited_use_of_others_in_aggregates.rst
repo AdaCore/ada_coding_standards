@@ -43,19 +43,16 @@ GNATcheck can detect violations via the OTHERS_In_Aggregates rule.
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
-
-   type Agency is (ESA, NASA, RFSA, JAXA, CNSA);
-   --  there are dozens...
-   type Agencies_Mask is array (Agency) of Boolean;
-   Partners : Agencies_Mask := (NASA | ESA | JAXA | RFSA => True, others => False);
+.. include:: examples/rpp03.ads
+  :code: Ada
+  :start-line: 3
+  :end-line: 14
 
 """"""""""""""""""""""""
 Compliant Code Example
 """"""""""""""""""""""""
 
-.. code:: Ada
-
-   Partners : constant Agencies_Mask := (CNSA => False, others => True);
-   
-In this example, the "others" is allowed because it refers to all but one component.
+.. include:: examples/rpp03.ads
+  :code: Ada
+  :start-line: 17
+  :end-line: 27

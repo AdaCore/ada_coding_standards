@@ -49,28 +49,16 @@ Applicable vulnerability within ISO TR 24772-2
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
-
-   function Factorial (N : Positive) return Positive is
-   begin
-      if N = 1 then
-     	return 1;
-      else
-     	return N * Factorial (N - 1); -- could overflow
-      end if;
-   end Factorial;
+.. include:: examples/rpp12.adb
+  :code: Ada
+  :start-line: 6
+  :end-line: 14
 
 """"""""""""""""""""""""
 Compliant Code Example
 """"""""""""""""""""""""
 
-.. code:: Ada
-
-   function Factorial (N : Positive) return Positive is
-      Result : Positive := 1;
-   begin
-     for K in 2 .. N loop
-     	Result := Result * K;  -- could overflow
-      end loop;
-      return Result;
-   end Factorial;
+.. include:: examples/rpp12.adb
+  :code: Ada
+  :start-line: 15
+  :end-line: 23

@@ -1,12 +1,12 @@
 procedure Rpp05 (Value : in out Integer) is
 
-   procedure Non_Compliant (X : in out Integer) is
+   procedure Noncompliant (X : in out Integer) is
    begin
       X := X * X;
    exception
       when others =>
          X := -1;
-   end Non_Compliant;
+   end Noncompliant;
 
    procedure Compliant (X : in out Integer) is
    begin
@@ -17,6 +17,6 @@ procedure Rpp05 (Value : in out Integer) is
    end Compliant;
 
 begin
-   Non_Compliant (Value);
+   Noncompliant (Value);
    Compliant (Value);
 end Rpp05;
