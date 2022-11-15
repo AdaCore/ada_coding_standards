@@ -56,13 +56,15 @@ def find_values ( lines, key ):
                 retval = retval + l[first+1:last]
     return retval
 
-def process_rule ( lines, full ):
+def process_rule ( lines, detail ):
     id_start = lines[1].index('(')
     id = f = lines[1][id_start+1:lines[1].index(')')]
-    name = lines[1][:id_start].strip().replace(' ','_')
+    name = lines[1][:id_start].strip()
     rule = find_value ( lines[2:], 'GNATcheck Rule' )
-    write ( '+R:' + id + '_' + name + ':' + rule )
-    if full:
+    if detail != 'quiet':
+        write ( '-- ' + id + ' ' + name )
+    write ( '+R' + rule )
+    if detail != 'quiet' and detail != 'short':
         level = find_value ( lines, "*Level*" )
         if len(level) > 0:
             write ( '--  Level: ' + level )
@@ -73,9 +75,11 @@ def process_rule ( lines, full ):
         if len(category) > 0:
             write ( '--  Goal: ' + goal )
         write('')
+    if detail != 'quiet':
+        write('')
             
-def print_header ( title ):
-    if len(title) > 0:
+def print_header ( title, want_header ):
+    if want_header and len(title) > 0:
         sep = '-'.ljust(len(title),'-')
         write ( "---" + sep + "---" )
         write ( "-- " + title + " --" )
@@ -83,7 +87,7 @@ def print_header ( title ):
         write ( '' )
     return ''
 
-def process_one_file ( in_filename, full, title ):
+def process_one_file ( in_filename, detail, title ):
 
     header = title
     with open ( in_filename ) as f:
@@ -97,26 +101,26 @@ def process_one_file ( in_filename, full, title ):
             if start_of_rule < 0:
                 start_of_rule = i
             elif i - start_of_rule > 3:
-                header = print_header ( header )
-                process_rule ( lines[start_of_rule:i], full )
+                header = print_header ( header, detail != 'quiet' )
+                process_rule ( lines[start_of_rule:i], detail )
                 start_of_rule = i
     if start_of_rule > 1:
-        header = print_header ( header )
-        process_rule ( lines[start_of_rule-2:len(lines)], full )
+        header = print_header ( header, detail != 'quiet' )
+        process_rule ( lines[start_of_rule-2:len(lines)], detail )
 
     return header
 
-def process_one_directory ( dir, full ):
+def process_one_directory ( dir, detail ):
     dirname = camel_case ( os.path.basename ( os.path.normpath ( dir ) ).replace('_',' ') )
 
     for root, dirs, files in os.walk ( dir ):
         for file in files:
             if file.lower().endswith('.rst'):
-                dirname = process_one_file ( os.path.join ( root, file ), full, dirname )
-        if len(dirname) == 0:
+                dirname = process_one_file ( os.path.join ( root, file ), detail, dirname )
+        if detail != 'quiet' and len(dirname) == 0:
             write ( '\n' )
 
-def process_source ( source, output, full ):
+def process_source ( source, output, detail ):
     global global_file
 
     global_file = open ( args.output, 'w' )
@@ -124,7 +128,7 @@ def process_source ( source, output, full ):
     for something in os.listdir ( args.source ):
         full_path = os.path.join ( args.source, something )
         if os.path.isdir ( full_path ):
-            process_one_directory ( full_path, full )
+            process_one_directory ( full_path, detail )
 
 
 if __name__== "__main__":
@@ -140,10 +144,10 @@ if __name__== "__main__":
                         help='Filename for rules file',
                         required=True)
 
-    parser.add_argument('--full',
-                        help='Include "level", "category", and "goal" in comments section',
-                        action='store_true')
+    parser.add_argument('--detail',
+                        help='quiet | short | full => just rule | name and rule | name, rule, info',
+                        default='full')
                         
     args = parser.parse_args()
 
-    process_source ( args.source, args.output, args.full )
+    process_source ( args.source, args.output, args.detail.lower() )

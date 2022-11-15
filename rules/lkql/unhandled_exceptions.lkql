@@ -7,6 +7,6 @@ fun unhandled_exceptions(node) =
     match node
     | DefiningName(any parent is ExceptionDecl) => {
 		val num_ref = node.p_find_all_references(units().to_list).length;	
-        num_ref < 2 and print(node.f_name)
+        num_ref < 2
       }
     | *    => false

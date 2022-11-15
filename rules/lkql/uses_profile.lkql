@@ -1,6 +1,15 @@
-# Flag if specified profile is not used
+# Flag where specified profile is used
 
-@check(message="Flag if specified profile is not used", category="Feature")
-fun uses_profile(node, profile: string = "") = node is PragmaNode when node.f_id.p_name_is("Profile") and
-                                                  node.f_args[1].p_assoc_expr() is e@Expr and
-										          not e.p_name_is(profile)
+@memoized
+fun profile_name_matches ( assoc_list, profile ) =
+    assoc_list.f_expr.p_name_is(profile)
+
+@unit_check(message="Pragma Profile found")
+fun uses_profile(unit, profile = "") = [
+    {message: "Pragma Profile (" & profile & ") found",
+     loc: node}
+    for node in from unit.root select p_node@PragmaNode
+    when
+        p_node.f_id?.p_name_is ("profile") and
+        profile_name_matches ( p_node.f_args[1], profile )
+]

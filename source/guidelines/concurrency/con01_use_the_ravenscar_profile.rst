@@ -17,7 +17,7 @@ Use the Ravenscar Profile (CON01)
 
 *Remediation* :math:`\rightarrow` **High**
 
-*GNATcheck Rule* :math:`\rightarrow` uses_ravenscar_profile
+*GNATcheck Rule* :math:`\rightarrow` uses_profile:ravenscar
 
 *Mutually Exclusive* :math:`\rightarrow` CON02
 

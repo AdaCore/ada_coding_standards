@@ -17,7 +17,7 @@ Use the Jorvik Profile (CON02)
 
 *Remediation* :math:`\rightarrow` **High**
 
-*GNATcheck Rule* :math:`\rightarrow` uses_jorvik_profile
+*GNATcheck Rule* :math:`\rightarrow` uses_profile:jorvik
 
 *Mutually Exclusive* :math:`\rightarrow` CON01
 
