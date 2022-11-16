@@ -43,20 +43,16 @@ This restriction is detected by GNATcheck with the Raising_Predefined_Exceptions
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
-
-   if Fuel_Exhaused (This) then
-      raise Constraint_Error;
-   end if;
+.. include:: examples/exu01.adb
+  :code: Ada
+  :start-line: 3
+  :end-line: 12
 
 """"""""""""""""""""""""
 Compliant Code Example
 """"""""""""""""""""""""
 
-.. code:: Ada
-
-   Fuel_Limits : exception;
-   ...
-   if Fuel_Exhaused (This) then
-      raise Fuel_Limits;
-   end if;
+.. include:: examples/exu01.adb
+  :code: Ada
+  :start-line: 13
+  :end-line: 22

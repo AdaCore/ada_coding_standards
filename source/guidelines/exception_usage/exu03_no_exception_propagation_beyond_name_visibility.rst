@@ -41,56 +41,24 @@ GNATcheck can detect violations via the Non_Visible_Exceptions rule.
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
+.. include:: examples/exu03.adb
+  :code: Ada
+  :start-line: 3
+  :end-line: 11
 
-   package P is
-      procedure Q;
-   end P;
-   
-   package body P is
-      Error : exception;
-      procedure Q is
-      begin
-         ...
-         raise Error;   -- under some circumstance
-         ...
-      end Q;
-   end P;
-   
 As a result the exception name cannot be referenced outside the body:
    
-.. code:: Ada
-
-   begin -- some code outside of P
-      P.Q;
-   exception
-      when P.Error =>   -- illegal
+.. include:: examples/exu03.adb
+  :code: Ada
+  :start-line: 12
+  :end-line: 19
 
 """"""""""""""""""""""""
 Compliant Code Example
 """"""""""""""""""""""""
 
-Either make the exception name visible to clients:
+.. include:: examples/exu03.adb
+  :code: Ada
+  :start-line: 20
+  :end-line: 36
 
-.. code:: Ada
-   
-   package P is
-      Error : exception;   -- moved from package body
-      procedure Q;
-   end P;
-   
-or ensure the exception is not propagated beyond the scope of its declaration:
-   
-.. code:: Ada
-
-   package body P is
-      Error : exception;
-      procedure Q is
-      begin
-         ...
-         raise Error;   -- under some circumstance
-         ...
-      exception
-         when Error => ...
-      end Q;
-   end P;
