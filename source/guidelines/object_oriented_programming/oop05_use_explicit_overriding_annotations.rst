@@ -69,25 +69,21 @@ Applicable vulnerability within ISO TR 24772-2
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
+.. include:: examples/oop05.ads
+  :code: Ada
+  :start-line: 2
+  :end-line: 4
 
-   type Generator is new Ada.Finalization.Controlled with ...
-   
-   --  really overriding, but not marked as such
-   procedure Initialize (This : in out Generator);
-   
-   overriding -- marked but not really overriding
-   procedure Initialise (This : in out Generator);
+.. include:: examples/oop05.ads
+  :code: Ada
+  :start-line: 5
+  :end-line: 7
 
 """"""""""""""""""""""""
 Compliant Code Example
 """"""""""""""""""""""""
 
-.. code:: Ada
-
-   type Generator is new Ada.Finalization.Controlled with ...
-   
-   overriding
-   procedure Initialize (This : in out Generator);
-   
-   procedure Initialise (This : in out Generator);
+.. include:: examples/oop05.ads
+  :code: Ada
+  :start-line: 7
+  :end-line: 10
