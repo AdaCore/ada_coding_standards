@@ -53,11 +53,10 @@ Applicable vulnerability within ISO TR 24772-2
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-A variable marked as Volatile but not assigned to a specific address in memory:
-   
-   .. code:: Ada
-
-      X : Integer with Volatile;
+.. include:: examples/con03.ads
+  :code: Ada
+  :start-line: 4
+  :end-line: 7
    
 Note that variables marked as Atomic are also Volatile, per the
 `Ada RM C.6/8(3) - Shared Variable Control <http://www.ada-auth.org/standards/12rm/html/RM-C-6.html>`_
@@ -68,7 +67,7 @@ Compliant Code Example
 
 When assigned to a memory address, a Volatile variable can be used to interact with a memory-mapped device, among other similar usages.
    
-   .. code:: Ada
-
-      GPIO_A : GPIO_Port 
-         with Import, Volatile, Address => GPIOA_Base;
+.. include:: examples/con03.ads
+  :code: Ada
+  :start-line: 10
+  :end-line: 14
