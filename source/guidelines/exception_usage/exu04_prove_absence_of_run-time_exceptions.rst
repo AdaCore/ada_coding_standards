@@ -17,7 +17,7 @@ Prove Absence of Run-time Exceptions (EXU04)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*GNATcheck Rule* :math:`\rightarrow` TBD SPARK
+*Verification Method* :math:`\rightarrow` TBD
 
 """""""""""
 Reference

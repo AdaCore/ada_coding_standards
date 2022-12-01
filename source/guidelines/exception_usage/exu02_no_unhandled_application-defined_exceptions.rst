@@ -17,7 +17,7 @@ No Unhandled Application-Defined Exceptions (EXU02)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*GNATcheck Rule* :math:`\rightarrow` Unhandled_Exceptions
+*Verification Method* :math:`\rightarrow` GNATcheck rule: ``Unhandled_Exceptions``
 
 """""""""""
 Reference

@@ -17,7 +17,7 @@ Don't Raise Language-Defined Exceptions (EXU01)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*GNATcheck Rule* :math:`\rightarrow` Raising_Predefined_Exceptions
+*Verification Method* :math:`\rightarrow` GNATcheck rule: ``Raising_Predefined_Exceptions``
 
 """""""""""
 Reference

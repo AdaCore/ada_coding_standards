@@ -17,7 +17,7 @@ No Recursion (RPP12)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*GNATcheck Rule* :math:`\rightarrow` Recursive_Subprograms
+*Verification Method* :math:`\rightarrow` GNATcheck rule: ``Recursive_Subprograms``
 
 """""""""""
 Reference

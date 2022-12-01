@@ -17,7 +17,7 @@ No Enumeration Ranges in Case Constructs (RPP02)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*GNATcheck Rule* :math:`\rightarrow` Enumeration_Ranges_In_CASE_Statements
+*Verification Method* :math:`\rightarrow` GNATcheck rule: ``Enumeration_Ranges_In_CASE_Statements``
 
 """""""""""
 Reference

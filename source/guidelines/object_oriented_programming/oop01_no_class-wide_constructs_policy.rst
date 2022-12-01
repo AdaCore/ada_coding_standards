@@ -17,7 +17,7 @@ No Class-wide Constructs Policy (OOP01)
 
 *Remediation* :math:`\rightarrow` **N/A**
 
-*GNATcheck Rule* :math:`\rightarrow` TBD
+*Verification Method* :math:`\rightarrow` TBD
 
 *Mutually Exclusive* :math:`\rightarrow` OOP02
 

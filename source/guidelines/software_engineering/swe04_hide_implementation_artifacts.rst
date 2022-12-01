@@ -17,7 +17,7 @@ Hide Implementation Artifacts  (SWE04)
 
 *Remediation* :math:`\rightarrow` **High, as retrofit can be extensive**
 
-*GNATcheck Rule* :math:`\rightarrow` Visible_Components
+*Verification Method* :math:`\rightarrow` GNATcheck rule: ``Visible_Components``
 
 """""""""""
 Reference

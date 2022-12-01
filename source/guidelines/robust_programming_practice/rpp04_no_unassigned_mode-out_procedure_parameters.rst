@@ -17,7 +17,7 @@ No Unassigned Mode-Out Procedure Parameters (RPP04)
 
 *Remediation* :math:`\rightarrow` **High**
 
-*GNATcheck Rule* :math:`\rightarrow` Unassigned_OUT_Parameters
+*Verification Method* :math:`\rightarrow` GNATcheck rule: ``Unassigned_OUT_Parameters``
 
 """""""""""
 Reference

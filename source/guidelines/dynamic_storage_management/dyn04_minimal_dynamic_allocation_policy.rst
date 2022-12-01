@@ -17,7 +17,7 @@ Minimal Dynamic Allocation Policy (DYN04)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*GNATcheck Rule* :math:`\rightarrow` TBD
+*Verification Method* :math:`\rightarrow` TBD
 
 """""""""""
 Reference

@@ -17,7 +17,7 @@ Limit Parameter Aliasing  (RPP08)
 
 *Remediation* :math:`\rightarrow` **High**
 
-*GNATcheck Rule* :math:`\rightarrow` TBD
+*Verification Method* :math:`\rightarrow` TBD
 
 """""""""""
 Reference

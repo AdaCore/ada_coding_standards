@@ -17,7 +17,7 @@ Avoid Function Side-Effects (RPP06)
 
 *Remediation* :math:`\rightarrow` **Medium**
 
-*GNATcheck Rule* :math:`\rightarrow` TBD
+*Verification Method* :math:`\rightarrow` TBD
 
 """""""""""
 Reference

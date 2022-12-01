@@ -17,7 +17,7 @@ Access Types Without Allocators Policy (DYN03)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*GNATcheck Rule* :math:`\rightarrow` TBD
+*Verification Method* :math:`\rightarrow` TBD
 
 """""""""""
 Reference
