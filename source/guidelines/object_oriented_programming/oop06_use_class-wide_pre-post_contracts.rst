@@ -55,20 +55,16 @@ Applicable vulnerability within ISO TR 24772-2
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
-
-   type Stack is tagged ...
-   function Top_Element (This : Stack) return Element with
-      Pre => not Empty (This),
-      ...
+.. include:: examples/oop06.adb
+  :code: Ada
+  :start-line: 3
+  :end-line: 9
 
 """"""""""""""""""""""""
 Compliant Code Example
 """"""""""""""""""""""""
 
-.. code:: Ada
-
-   type Stack is tagged ...
-   function Top_Element (This : Stack) return Element with
-      Pre'Class => not Empty (This),
-      ...
+.. include:: examples/oop06.adb
+  :code: Ada
+  :start-line: 12
+  :end-line: 18

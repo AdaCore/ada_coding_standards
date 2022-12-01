@@ -1,3 +1,6 @@
+.. role:: ada(code)
+    :language: Ada
+
 -----------------------------------------------------
 No Unassigned Mode-Out Procedure Parameters (RPP04)
 -----------------------------------------------------
@@ -49,45 +52,24 @@ Applicable vulnerability within ISO TR 24772-2
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
+.. include:: examples/rpp04.adb
+  :code: Ada
+  :start-line: 5
+  :end-line: 21
 
-   type Agency is (ESA, NASA, RFSA, JAXA, CNSA);
-   --  there are dozens...
-   for Agency use 
-      (ESA => 1, NASA => 3, RFSA => 5, JAXA => 7, CNSA => 9);
-   Bureau : Agency := RFSA;
-   
-   procedure Update (Input   : in Boolean; 
-                     Partner : out Agency) 
-   is
-   begin
-      if Input then
-         Partner := ...
-      end if;
-   end Update;
-   
-In the above, some value is copied back for the second formal parameter Partner, but the value is only defined if the first parameter is True. That value copied to the actual parameter may not be a valid representation for a value of the type. (We give the enumeration values a non-standard representation for the sake of illustration, i.e., to make it more likely that the undefined value is not valid.)
+In the above, some value is copied back for an output parameter as
+specified by :ada:`Register`. The other parameter is not assigned, and
+on return the value copied to the actual parameter may not be a valid
+representation for a value of the type.
+(We give the enumeration values a non-standard representation for the sake
+of illustration, i.e., to make it more likely that the undefined value
+is not valid.)
 
 """"""""""""""""""""""""
 Compliant Code Example
 """"""""""""""""""""""""
 
-.. code:: Ada
-
-   type Agency is (ESA, NASA, RFSA, JAXA, CNSA);
-   --  there are dozens...
-   for Agency use 
-      (ESA => 1, NASA => 3, RFSA => 5, JAXA => 7, CNSA => 9);
-   
-   Bureau : Agency := RFSA;
-   
-   procedure Update (Input   : in Boolean; 
-                     Partner : out Agency) 
-   is
-   begin
-      if Input then
-         Partner := ...
-      else
-         Partner := ...
-      end if;
-   end Update;
+.. include:: examples/rpp04.adb
+  :code: Ada
+  :start-line: 22
+  :end-line: 32

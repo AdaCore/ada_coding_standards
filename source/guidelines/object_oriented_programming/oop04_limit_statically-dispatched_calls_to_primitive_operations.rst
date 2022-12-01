@@ -51,45 +51,25 @@ This rule can be enforced by GNATcheck with the Direct_Calls_To_Primitives rule 
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
+Class constructs
 
-   package Graphics is
-      type Shape is tagged  -- really, abstract and private
-         record
-            X : Float := 0.0;
-            Y : Float := 0.0;
-         end record;
+.. include:: examples/oop04.adb
+  :code: Ada
+  :start-line: 2
+  :end-line: 18
 
-      function Area (This : Shape) return Float;   
-        -- would really be abstract
-   
-      function Momentum (This : Shape) return Float;
-      ...
-   end Graphics;
-   
-   package body Graphics is
-      function Area (This : Shape) return Float is (0.0);
-      function Momentum (This : Shape) return Float is
-      begin
-     	return This.X * Area (This);   -- wrong, but legal
-      end Momentum;
-      ...
-   end Graphics;
-   
-In the (somewhat artificial) example above, Momentum always returns zero because it always calls the Area function for type Shape.
+Noncompliant Code
+
+.. include:: examples/oop04.adb
+  :code: Ada
+  :start-line: 21
+  :end-line: 26
 
 """"""""""""""""""""""""
 Compliant Code Example
 """"""""""""""""""""""""
 
-.. code:: Ada
-
-   package body Graphics is
-      ...
-      function Momentum (This : Shape) return Float is
-      begin
-     	return This.X * Area (Shape'Class (This)); 
-             -- redispatch to an overriding for Area, if any
-      end Momentum;
-      ...
-   end Graphics;
+.. include:: examples/oop04.adb
+  :code: Ada
+  :start-line: 27
+  :end-line: 32

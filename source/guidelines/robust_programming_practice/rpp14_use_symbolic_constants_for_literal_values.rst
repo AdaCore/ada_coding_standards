@@ -62,25 +62,16 @@ N/A
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
-
-   type Array_T is array ( 0 .. 255 ) of integer;
-   Object : Array_T;
-   ...
-   for I in 0 .. 255 loop
-      Do_Something ( Object(I) );
-   end loop;
+.. include:: examples/rpp14.ads
+  :code: Ada
+  :start-line: 3
+  :end-line: 6
 
 """"""""""""""""""""""""
 Compliant Code Example
 """"""""""""""""""""""""
 
-.. code:: Ada
-
-   Maximum_Elements : constant := 256;
-   type Array_T is array ( 0 .. Maximum_Elements-1 ) of integer;
-   Object : Array_T;
-   ...
-   for I in Object'First .. Object'Last loop
-      Do_Something ( Object(I) );
-   end loop;
+.. include:: examples/rpp14.ads
+  :code: Ada
+  :start-line: 9
+  :end-line: 13

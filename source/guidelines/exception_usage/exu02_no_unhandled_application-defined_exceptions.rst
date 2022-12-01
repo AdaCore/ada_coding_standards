@@ -55,10 +55,16 @@ SPARK can prove that no exception will be raised (or fail to prove it and indica
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-N/A
+.. include:: examples/exu02.adb
+  :code: Ada
+  :start-line: 18
+  :end-line: 31
 
 """"""""""""""""""""""""
 Compliant Code Example
 """"""""""""""""""""""""
 
-N/A
+.. include:: examples/exu02.adb
+  :code: Ada
+  :start-line: 34
+  :end-line: 50

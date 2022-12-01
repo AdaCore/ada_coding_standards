@@ -1,5 +1,5 @@
 procedure Exu01 (X : in out Integer) is
-   Local_Exception : exception;
+   Math_Overflow : exception;
 
    procedure Noncompliant (X : in out Integer) is
    begin
@@ -17,7 +17,7 @@ procedure Exu01 (X : in out Integer) is
       then
          X := X * 2;
       else
-         raise Local_Exception;
+         raise Math_Overflow;
       end if;
    end Compliant;
 
