@@ -35,7 +35,7 @@ A range of enumeration literals must not be used as a choice in a case statement
 Notes
 """""""
 
-GNATcheck can detect violations via the Enumeration_Ranges_In_CASE_Statements rule. 
+N/A
    
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 

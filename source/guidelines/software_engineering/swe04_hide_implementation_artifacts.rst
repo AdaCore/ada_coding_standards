@@ -47,7 +47,7 @@ This guideline is to be followed extensively, as the design default for componen
 Notes
 """""""
 
-This rule can be partially enforced by the GNATcheck switches Visible_Components applied. 
+The GNATcheck rule specified above is not exhaustive.
 
 """""""""""""""""""""""""""
 Noncompliant Code Example

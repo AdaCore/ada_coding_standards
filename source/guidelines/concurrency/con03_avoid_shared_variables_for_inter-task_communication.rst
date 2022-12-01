@@ -41,7 +41,7 @@ Although the Ravenscar and Jorvik profiles allow the use of shared variables for
 Notes
 """""""
 
-GNATcheck can detect violations via the Volatile_Objects_Without_Address_Clauses rule. SPARK and CodePeer can also detect conflicting access to unprotected variables. 
+SPARK and CodePeer can detect conflicting access to unprotected variables. 
    
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 

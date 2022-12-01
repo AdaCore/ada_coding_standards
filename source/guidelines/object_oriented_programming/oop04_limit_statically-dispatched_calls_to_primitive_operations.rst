@@ -45,7 +45,8 @@ Note that constructors implemented as procedures also call primitive operations 
 Notes
 """""""
 
-This rule can be enforced by GNATcheck with the Direct_Calls_To_Primitives rule applied. The rule parameter Except_Constructors may be added for constructor functions.
+The GNATcheck rule specified above can be modified to add the parameter
+``Except_Constructors`` to prevent flagging of constructor functions.
    
 """""""""""""""""""""""""""
 Noncompliant Code Example

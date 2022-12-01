@@ -37,7 +37,7 @@ The Ada language-defined exceptions are raised implicitly in specific circumstan
 Notes
 """""""
    
-This restriction is detected by GNATcheck with the Raising_Predefined_Exceptions rule applied.
+N/A
    
 """""""""""""""""""""""""""
 Noncompliant Code Example

@@ -37,7 +37,7 @@ Note that this is opposite to typical C guidelines such as [SEI-C]_ MSC01-C. The
 Notes
 """""""
 
-GNATcheck can detect violations via the OTHERS_In_CASE_Statements rule. 
+N/A
    
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 

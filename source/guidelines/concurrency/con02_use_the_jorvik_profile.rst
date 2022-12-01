@@ -83,7 +83,8 @@ Jorvik also replaces restriction Simple_Barriers with Pure_Barriers (a weaker re
 Notes
 """""""
 
-The Ada builder will detect violations. GNATcheck can also detect violations.
+The Ada builder will detect violations if the programmer specifies this profile or corresponding pragmas.
+The GNATcheck rule specified above will search the codebase for the specified profile.
 
 """""""""""""""""""""""""""
 Noncompliant Code Example

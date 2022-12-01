@@ -41,7 +41,7 @@ Deep inheritance hierarchies also contribute to complexity, rather than lessenin
 Notes
 """""""
 
-Violations can be detected with the GNATcheck tool parameter Deep_Inheritance_Hierarchies, specifying a maximum inheritance depth as a parameter of the rule. 
+The GNATcheck rule specified above can be modified to indicate the maximum inheritance depth.
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 

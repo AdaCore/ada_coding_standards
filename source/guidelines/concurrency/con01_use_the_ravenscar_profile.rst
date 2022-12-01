@@ -76,7 +76,8 @@ The profile is equivalent to the following set of pragmas:
 Notes
 """""""
 
-The Ada builder will detect violations if the programmer specifies this profile or corresponding pragmas. GNATcheck also can detect violations of profile restrictions.
+The Ada builder will detect violations if the programmer specifies this profile or corresponding pragmas.
+The GNATcheck rule specified above will search the codebase for the specified profile.
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 

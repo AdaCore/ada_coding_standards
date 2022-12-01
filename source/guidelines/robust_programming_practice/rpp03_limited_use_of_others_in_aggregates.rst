@@ -37,7 +37,7 @@ This guideline prevents accidental provision of a general value for a record com
 Notes
 """""""
 
-GNATcheck can detect violations via the OTHERS_In_Aggregates rule. 
+N/A
    
 """""""""""""""""""""""""""
 Noncompliant Code Example

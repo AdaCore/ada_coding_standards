@@ -35,9 +35,15 @@ For any procedure, all formal parameters of mode "out" must be assigned a value 
 Notes
 """""""
 
-GNATcheck can detect violations via the Unassigned_OUT_Parameters rule. 
-   
-Warning: This rule only detects a trivial case of an unassigned variable and doesn't provide a guarantee that there is no uninitialized access. It is not a replacement for a rigorous check for uninitialized access provided by advanced static analysis tools such as SPARK and CodePeer. Note that the GNATcheck rule does not check function parameters (as of Ada 2012 functions can have out parameters). As a result, the better choice is either SPARK or CodePeer.
+The GNATcheck rule specified above only detects a trivial case of an
+unassigned variable and doesn't provide a guarantee that there is no
+uninitialized access. It is not a replacement for a rigorous check
+for uninitialized access provided by advanced static analysis tools
+such as SPARK and CodePeer.
+
+Note that the GNATcheck rule does not check function parameters (as
+of Ada 2012 functions can have out parameters). As a result, the
+better choice is either SPARK or CodePeer.
    
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 

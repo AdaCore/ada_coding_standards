@@ -35,7 +35,7 @@ An active exception can be propagated dynamically past the point where the name 
 Notes
 """""""
 
-GNATcheck can detect violations via the Non_Visible_Exceptions rule. 
+N/A
    
 """""""""""""""""""""""""""
 Noncompliant Code Example

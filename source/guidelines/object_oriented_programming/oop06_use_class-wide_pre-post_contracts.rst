@@ -43,7 +43,7 @@ Note: this approach will be required for OOP07 (Ensure Local Type Consistency).
 Notes
 """""""
 
-Violations can be detected with the GNATcheck rule Specific_Pre_Post.  SPARK enforces this guideline automatically.
+SPARK enforces this guideline automatically.
    
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 
