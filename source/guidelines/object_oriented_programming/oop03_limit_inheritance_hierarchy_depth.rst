@@ -55,8 +55,17 @@ Noncompliant Code Example
 
 The threshold for "too deep" is inexact, but beyond around 4 or 5 levels the complexity accelerates rapidly.
 
+.. include:: examples/oop03.ads
+  :code: Ada
+  :start-line: 3
+  :end-line: 12
+
 """"""""""""""""""""""""
 Compliant Code Example
 """"""""""""""""""""""""
 
-N/A
+.. include:: examples/oop03.ads
+  :code: Ada
+  :start-line: 27
+  :end-line: 34
+

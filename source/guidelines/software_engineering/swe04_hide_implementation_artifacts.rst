@@ -53,47 +53,26 @@ The GNATcheck rule specified above is not exhaustive.
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
+.. include:: examples/swe04.ads
+  :code: Ada
+  :start-line: 4
+  :end-line: 17
 
-   generic
-      ...
-   package Bounded_Stacks is
-   
-      type Content is 
-         array (Physical_Capacity range <>) of Element;
-      type Stack (Capacity : Physical_Capacity) is 
-         tagged record
-            Values : Content (1 .. Capacity);
-            Top    : Element_Count := 0;
-         end record;
-      procedure Push (This : in out Stack; ...
-      -- additional primitives ...
-   
-   end Bounded_Stacks;
-   
-Note that both type Content, as well as the record type components of type Stack, are visible to clients. Client code may declare variables of type Content and may directly access and modify the record components. Bugs introduced via this access could be anywhere in the entire client codebase.
+Note that both type :ada:`Content_T`, as well as the record type components of
+type :ada:`Stack_T`, are visible to clients. Client code may declare variables
+of type :ada:`Content_T` and may directly access and modify the record components.
+Bugs introduced via this access could be anywhere in the entire client codebase.
 
 """"""""""""""""""""""""
 Compliant Code Example
 """"""""""""""""""""""""
 
-.. code:: Ada
+.. include:: examples/swe04.ads
+  :code: Ada
+  :start-line: 18
+  :end-line: 33
 
-   generic
-      ...
-   package Bounded_Stacks is
-      type Stack (Capacity : Physical_Capacity) is 
-         tagged private;
-      procedure Push (This : in out Stack; ...
-      -- additional primitives ...
-   private
-      type Content is 
-         array (Physical_Capacity range <>) of Element;
-      type Stack (Capacity : Physical_Capacity) is 
-         tagged record
-            Values : Content (1 .. Capacity);
-            Top    : Element_Count := 0;
-         end record;
-   end Bounded_Stacks;
-   
-Type Content, as well as the record type components of type Stack, are no longer visible to clients. Any bugs in the Stack code must be in this package, or its child packages, if any.
+
+Type :ada:`Content_T`, as well as the record type components of type :ada:`Stack_T`,
+are no longer visible to clients. Any bugs in the stack processing code must be in
+this package, or its child packages, if any.

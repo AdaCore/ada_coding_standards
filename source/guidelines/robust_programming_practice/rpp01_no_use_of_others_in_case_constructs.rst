@@ -49,31 +49,16 @@ Applicable vulnerability within ISO TR 24772-2
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
-
-   type Agency is ( ESA, NASA, RFSA, JAXA, CNSA);
-   --  there are dozens...
-   Bureau : Agency;
-   ...
-   case Bureau is
-      ...
-      when others => ...
-   end case;
+.. include:: examples/rpp01.adb
+  :code: Ada
+  :start-line: 5
+  :end-line: 11
 
 """"""""""""""""""""""""
 Compliant Code Example
 """"""""""""""""""""""""
 
-.. code:: Ada
-
-   type Agency is ( ESA, NASA, RFSA, JAXA, CNSA);
-   --  there are dozens...
-   Bureau : Agency;
-   ...
-   case Bureau is
-      when ESA =>  ...
-      when NASA => ...
-      when RFSA => ...
-      when JAXA => ...
-      when CNSA => ...
-   end case;
+.. include:: examples/rpp01.adb
+  :code: Ada
+  :start-line: 15
+  :end-line: 21
