@@ -17,7 +17,7 @@ User-Defined Storage Pools Policy (DYN05)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*Verification Method* :math:`\rightarrow` TBD
+*Verification Method* :math:`\rightarrow` Code inspection
 
 """""""""""
 Reference

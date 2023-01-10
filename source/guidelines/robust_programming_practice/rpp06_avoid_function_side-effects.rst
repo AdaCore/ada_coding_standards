@@ -17,7 +17,7 @@ Avoid Function Side-Effects (RPP06)
 
 *Remediation* :math:`\rightarrow` **Medium**
 
-*Verification Method* :math:`\rightarrow` TBD
+*Verification Method* :math:`\rightarrow` Code inspection
 
 """""""""""
 Reference

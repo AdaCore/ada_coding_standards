@@ -17,7 +17,7 @@ Use Precondition and Postcondition Contracts (RPP09)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*Verification Method* :math:`\rightarrow` TBD
+*Verification Method* :math:`\rightarrow` Code inspection
 
 """""""""""
 Reference

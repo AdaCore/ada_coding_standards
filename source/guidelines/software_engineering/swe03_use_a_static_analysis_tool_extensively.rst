@@ -17,7 +17,7 @@ Use A Static Analysis Tool Extensively (SWE03)
 
 *Remediation* :math:`\rightarrow` **High**
 
-*Verification Method* :math:`\rightarrow` TBD
+*Verification Method* :math:`\rightarrow` Static analysis tools
 
 """""""""""
 Reference

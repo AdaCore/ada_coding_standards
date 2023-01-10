@@ -17,7 +17,7 @@ Limit Parameter Aliasing  (RPP08)
 
 *Remediation* :math:`\rightarrow` **High**
 
-*Verification Method* :math:`\rightarrow` TBD
+*Verification Method* :math:`\rightarrow` Code inspection
 
 """""""""""
 Reference

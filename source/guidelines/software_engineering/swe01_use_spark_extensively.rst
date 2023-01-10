@@ -17,7 +17,7 @@ Use SPARK Extensively (SWE01)
 
 *Remediation* :math:`\rightarrow` **High, as retrofit can be extensive**
 
-*Verification Method* :math:`\rightarrow` TBD
+*Verification Method* :math:`\rightarrow` Compiler restrictions
 
 """""""""""
 Reference

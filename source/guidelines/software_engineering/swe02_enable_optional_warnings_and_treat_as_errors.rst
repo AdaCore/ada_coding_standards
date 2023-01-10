@@ -17,7 +17,7 @@ Enable Optional Warnings and Treat As Errors  (SWE02)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*Verification Method* :math:`\rightarrow` TBD
+*Verification Method* :math:`\rightarrow` Compiler restrictions
 
 """""""""""
 Reference

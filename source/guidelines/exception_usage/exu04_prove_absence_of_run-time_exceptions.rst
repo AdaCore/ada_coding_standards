@@ -17,7 +17,7 @@ Prove Absence of Run-time Exceptions (EXU04)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*Verification Method* :math:`\rightarrow` TBD
+*Verification Method* :math:`\rightarrow` Compiler restrictions
 
 """""""""""
 Reference

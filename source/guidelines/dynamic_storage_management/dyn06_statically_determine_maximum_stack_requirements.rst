@@ -17,7 +17,7 @@ Statically Determine Maximum Stack Requirements (DYN06)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*Verification Method* :math:`\rightarrow` TBD
+*Verification Method* :math:`\rightarrow` Static analysis tools
 
 """""""""""
 Reference

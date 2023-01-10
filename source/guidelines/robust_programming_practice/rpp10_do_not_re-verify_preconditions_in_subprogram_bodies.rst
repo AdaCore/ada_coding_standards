@@ -17,7 +17,7 @@ Do Not Re-Verify Preconditions In Subprogram Bodies (RPP10)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*Verification Method* :math:`\rightarrow` TBD
+*Verification Method* :math:`\rightarrow` Static analysis tools
 
 """""""""""
 Reference

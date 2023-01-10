@@ -17,7 +17,7 @@ Static Dispatching Only Policy (OOP02)
 
 *Remediation* :math:`\rightarrow` **N/A**
 
-*Verification Method* :math:`\rightarrow` TBD
+*Verification Method* :math:`\rightarrow` Compiler restrictions
 
 *Mutually Exclusive* :math:`\rightarrow` OOP01
 

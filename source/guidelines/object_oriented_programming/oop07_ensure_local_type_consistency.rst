@@ -17,7 +17,7 @@ Ensure Local Type Consistency (OOP07)
 
 *Remediation* :math:`\rightarrow` **N/A**
 
-*Verification Method* :math:`\rightarrow` TBD
+*Verification Method* :math:`\rightarrow` Software test
 
 """""""""""
 Reference

@@ -17,7 +17,7 @@ No Class-wide Constructs Policy (OOP01)
 
 *Remediation* :math:`\rightarrow` **N/A**
 
-*Verification Method* :math:`\rightarrow` TBD
+*Verification Method* :math:`\rightarrow` Compiler restrictions
 
 *Mutually Exclusive* :math:`\rightarrow` OOP02
 
