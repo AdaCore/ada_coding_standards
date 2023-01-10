@@ -52,14 +52,16 @@ It also recommends "All tasks should contain an exception handler at the outer l
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
-
-   exception
-      when others => 
-         ...
+.. include:: examples/rpp05.adb
+  :code: Ada
+  :start-line: 2
+  :end-line: 9
 
 """"""""""""""""""""""""
 Compliant Code Example
 """"""""""""""""""""""""
 
-Code that references all handled exceptions by their names.
+.. include:: examples/rpp05.adb
+  :code: Ada
+  :start-line: 10
+  :end-line: 17

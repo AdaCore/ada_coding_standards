@@ -55,22 +55,16 @@ N/A
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
-
-   package Example is
-      type Word8 is mod 256;
-      type Words is array ( Positive range <> ) of Word8;
-      subtype Integer is Words(1..4);
-   end Example;
+.. include:: examples/rpp13.ads
+  :code: Ada
+  :start-line: 3
+  :end-line: 5
 
 """"""""""""""""""""""""
 Compliant Code Example
 """"""""""""""""""""""""
 
-.. code:: Ada
-
-   package Example is
-      type Word8 is mod 256;
-      type Words is array ( Positive range <> ) of Word8;
-      subtype Integer_T is Words(1..4);
-   end Example;
+.. include:: examples/rpp13.ads
+  :code: Ada
+  :start-line: 8
+  :end-line: 10

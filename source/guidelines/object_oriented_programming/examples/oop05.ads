@@ -3,14 +3,10 @@ package Oop05 is
    type Root_T is tagged null record;
    procedure Primitive (X : in out Root_T) is null;
 
-   package Non_Compliant is
-      type Child_T is new Root_T with null record;
-      procedure Primitive (X : in out Child_T) is null;
-   end Non_Compliant;
+   type Noncompliant_Child_T is new Root_T with null record;
+   procedure Primitive (X : in out Noncompliant_Child_T) is null;
 
-   package Compliant is
-      type Child_T is new Root_T with null record;
-      overriding procedure Primitive (X : in out Child_T) is null;
-   end Compliant;
+   type Compliant_Child_T is new Root_T with null record;
+   overriding procedure Primitive (X : in out Compliant_Child_T) is null;
 
 end Oop05;

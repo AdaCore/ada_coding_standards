@@ -4,25 +4,19 @@ function Rpp12
 
    A, B : Positive;
 
-   function Non_Compliant
-     (N : Positive)
-      return Positive is
+   function Noncompliant (N : Positive) return Positive is
    begin
-      if N = 1
-      then
+      if N = 1 then
          return 1;
       else
-         return N * Non_Compliant (N - 1);
+         return N * Noncompliant (N - 1);  -- could overflow
       end if;
-   end Non_Compliant;
+   end Noncompliant;
 
-   function Compliant
-     (N : Positive)
-      return Positive is
+   function Compliant (N : Positive) return Positive is
       Result : Positive := 1;
    begin
-      for K in 2 .. N
-      loop
+      for K in 2 .. N loop
          Result := Result * K;  -- could overflow
       end loop;
       return Result;
@@ -30,7 +24,7 @@ function Rpp12
 
 begin
 
-   A := Non_Compliant (Number);
+   A := Noncompliant (Number);
    B := Compliant (Number);
    return A + B;
 

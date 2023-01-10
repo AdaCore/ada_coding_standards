@@ -1,30 +1,43 @@
 with Ada.Text_IO; use Ada.Text_IO;
 procedure Exu03 (X : in out Integer) is
 
-   procedure Local (Param : in out Integer) is
-      Subprogram_Exception : exception;
+   procedure Noncompliant (Param : in out Integer) is
+      Noncompliant_Exception : exception;
    begin
       Param := Param * Param;
    exception
       when others =>
-         raise Subprogram_Exception;
-   end Local;
-
-begin
-   Noncompliant :
-   begin
-      Local (X);
-   exception
-      when others =>
-         raise;
+         raise Noncompliant_Exception;
    end Noncompliant;
 
-   Compliant :
+   procedure Bad_Call (Param : in out Integer) is
    begin
-      Local (X);
+      Noncompliant (Param);
+   exception
+      when Noncompliant_Exception =>  -- compile error
+         null;
+   end Bad_Call;
+
+   Compliant_Exception : exception;
+   procedure Compliant (Param : in out Integer) is
+   begin
+      Param := Param * Param;
    exception
       when others =>
-         raise Data_Error;
+         raise Compliant_Exception;
    end Compliant;
 
+   procedure Good_Call (Param : in out Integer) is
+   begin
+      Compliant (Param);
+   exception
+      when Compliant_Exception =>
+         null;
+   end Good_Call;
+
+begin
+   null;
+exception
+   when others =>
+      null;
 end Exu03;
