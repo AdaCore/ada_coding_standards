@@ -34,19 +34,11 @@ Description
 
 For any procedure, all formal parameters of mode "out" must be assigned a value if the procedure exits normally. This rule ensures that, upon a normal return, the corresponding actual parameter has a defined value. Ensuring a defined value is especially important for scalar parameters because they are passed by value, such that some value is copied out to the actual. These undefined values can be especially difficult to locate because evaluation of the actual parameter's value might not occur immediately after the call returns.
 
-"""""""
-Notes
-"""""""
-
-GNATcheck can detect violations via the Unassigned_OUT_Parameters rule. 
-   
-Warning: This rule only detects a trivial case of an unassigned variable and doesn't provide a guarantee that there is no uninitialized access. It is not a replacement for a rigorous check for uninitialized access provided by advanced static analysis tools such as SPARK and CodePeer. Note that the GNATcheck rule does not check function parameters (as of Ada 2012 functions can have out parameters). As a result, the better choice is either SPARK or CodePeer.
-   
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
    
-   * 6.32 "Passing parameters and return values [CSJ]".
+* 6.32 Passing parameters and return values [CSJ]
    
 """""""""""""""""""""""""""
 Noncompliant Code Example
@@ -73,3 +65,12 @@ Compliant Code Example
   :code: Ada
   :start-line: 22
   :end-line: 32
+
+"""""""
+Notes
+"""""""
+
+GNATcheck can detect violations via the Unassigned_OUT_Parameters rule. 
+   
+Warning: This rule only detects a trivial case of an unassigned variable and doesn't provide a guarantee that there is no uninitialized access. It is not a replacement for a rigorous check for uninitialized access provided by advanced static analysis tools such as SPARK and CodePeer. Note that the GNATcheck rule does not check function parameters (as of Ada 2012 functions can have out parameters). As a result, the better choice is either SPARK or CodePeer.
+   

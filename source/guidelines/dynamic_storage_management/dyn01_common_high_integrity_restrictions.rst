@@ -38,14 +38,12 @@ The following restrictions must be in effect:
 
 The first three restrictions prevent problematic usage that, for example, may cause un-reclaimed (and unreclaimable) storage. The last restriction ensures any storage allocated by the compiler at run-time for representing objects is reclaimed at once. (That restriction does not apply to objects created by allocators in the application.)
 
-"""""""
-Notes
-"""""""
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
 
-The compiler will detect violations of the first three restrictions. Note that GNATcheck can detect violations in addition to the compiler.
-   
-The fourth restriction is a directive for implementation behavior, not subject to source-based violation detection.
-   
+* 4.10 Storage Pool
+
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -105,3 +103,12 @@ For No_Access_Parameter_Allocators, use a variable of a named access type:
       S : String_Reference := new String'("Hello");
       ...
       P (Formal => S);
+
+"""""""
+Notes
+"""""""
+
+The compiler will detect violations of the first three restrictions. Note that GNATcheck can detect violations in addition to the compiler.
+   
+The fourth restriction is a directive for implementation behavior, not subject to source-based violation detection.
+   

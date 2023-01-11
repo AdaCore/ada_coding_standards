@@ -33,12 +33,12 @@ Only deallocate storage that was dynamically allocated by the evaluation of an a
 
 This is a possibility because Ada allows creation of access values designating declared (aliased) objects.
 
-"""""""
-Notes
-"""""""
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
 
-Enforcement of this rule can only be provided by manual code review, unless deallocation is forbidden via No_Unchecked_Deallocation.
-   
+* 6.39 Memory leak and heap fragmentation [XYL]
+
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -58,3 +58,10 @@ Compliant Code Example
 """"""""""""""""""""""""
 
 Remove the call to Free (Y).
+
+"""""""
+Notes
+"""""""
+
+Enforcement of this rule can only be provided by manual code review, unless deallocation is forbidden via No_Unchecked_Deallocation.
+   

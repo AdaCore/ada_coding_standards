@@ -23,6 +23,8 @@ Limit Statically-Dispatched Calls To Primitive Operations (OOP04)
 Reference
 """""""""""
 
+   TBD
+
 """""""""""""
 Description
 """""""""""""
@@ -41,12 +43,14 @@ Typically constructor functions only have the tagged type as the result type, no
 
 Note that constructors implemented as procedures also call primitive operations of the specific type, for the same reasons as constructor functions. This usage is allowed by this rule and does not require the GNATcheck parameter. (The difference between function and procedure constructors is that these procedures will have a formal parameter of the tagged type, of mode "out".)
 
-"""""""
-Notes
-"""""""
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
 
-This rule can be enforced by GNATcheck with the Direct_Calls_To_Primitives rule applied. The rule parameter Except_Constructors may be added for constructor functions.
-   
+* 6.42 Violations of the Liskov substitution principle of the contract model [BLP]
+* 6.43 Redispatching [PPH]
+* 6.44 Polymorphic variables [BKK]
+
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -73,3 +77,10 @@ Compliant Code Example
   :code: Ada
   :start-line: 27
   :end-line: 32
+
+"""""""
+Notes
+"""""""
+
+This rule can be enforced by GNATcheck with the Direct_Calls_To_Primitives rule applied. The rule parameter Except_Constructors may be added for constructor functions.
+   

@@ -25,7 +25,7 @@ Use the Jorvik Profile (CON02)
 Reference
 """""""""""
 
-`Ada RM D.13 - The Ravenscar Profile <http://ada-auth.org/standards/12rm/html/RM-D-13.html>`_
+`Ada RM D.13 - The Ravenscar and Jorvik Profiles <http://ada-auth.org/standards/22rm/html/RM-D-13.html>`_
 
 """""""""""""
 Description
@@ -79,11 +79,15 @@ The following restrictions are part of the Ravenscar profile but **not** part of
 
 Jorvik also replaces restriction Simple_Barriers with Pure_Barriers (a weaker requirement than Simple_Barriers).
 
-"""""""
-Notes
-"""""""
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
 
-The Ada builder will detect violations. GNATcheck can also detect violations.
+* 6.59 Concurrency - Activation [GGA]
+* 6.60 Concurrency - Directed termination [CGT]
+* 6.61 Concurrent data access [CGX]
+* 6.62 Concurrency - Premature termination [CGS]
+* 6.63 Lock protocol errors [CGM]
 
 """""""""""""""""""""""""""
 Noncompliant Code Example
@@ -105,3 +109,9 @@ Compliant Code Example
   :start-line: 30
   :end-line: 38
 
+
+"""""""
+Notes
+"""""""
+
+The Ada builder will detect violations. GNATcheck can also detect violations.

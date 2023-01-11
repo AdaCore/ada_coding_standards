@@ -26,12 +26,6 @@ Reference
 MISRA C rule 8.7 "Functions and objects should not be defined with external linkage if they are referenced in only one translation unit"
 
 """""""""""""
-Remediation
-"""""""""""""
-
-High
-
-"""""""""""""
 Description
 """""""""""""
 
@@ -43,11 +37,11 @@ This guideline also limits the region of code required to find any bugs to the p
 
 This guideline is to be followed extensively, as the design default for components. Once the application code size becomes non-trivial, the cost of retrofit is extremely high.
 
-"""""""
-Notes
-"""""""
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
 
-This rule can be partially enforced by the GNATcheck switches Visible_Components applied. 
+N/A
 
 """""""""""""""""""""""""""
 Noncompliant Code Example
@@ -76,3 +70,9 @@ Compliant Code Example
 Type :ada:`Content_T`, as well as the record type components of type :ada:`Stack_T`,
 are no longer visible to clients. Any bugs in the stack processing code must be in
 this package, or its child packages, if any.
+
+"""""""
+Notes
+"""""""
+
+This rule can be partially enforced by the GNATcheck switches Visible_Components applied. 

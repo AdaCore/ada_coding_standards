@@ -53,17 +53,11 @@ This guideline is implemented by compiler switches, or  alternatively, by a GNAT
 
 Note that the compiler switches will also require the explicit overriding indicator when overriding a language-defined operator. The switches also apply to inherited primitive subprograms for non-tagged types.
 
-"""""""
-Notes
-"""""""
-
-This rule requires the GNAT compiler switches "-gnatyO" and "-gnatwe" in order for the compiler to flag missing overriding annotations as errors. The first causes the compiler to generate the warnings, and the second causes those warnings to be treated as errors. Alternatively, GNATcheck will flag those errors via the "+Style_Checks:O" rule.
-   
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
    
-   * 6.41 "Inheritance [RIP]"
+* 6.41 Inheritance [RIP]
    
 """""""""""""""""""""""""""
 Noncompliant Code Example
@@ -87,3 +81,10 @@ Compliant Code Example
   :code: Ada
   :start-line: 7
   :end-line: 10
+
+"""""""
+Notes
+"""""""
+
+This rule requires the GNAT compiler switches "-gnatyO" and "-gnatwe" in order for the compiler to flag missing overriding annotations as errors. The first causes the compiler to generate the warnings, and the second causes those warnings to be treated as errors. Alternatively, GNATcheck will flag those errors via the "+Style_Checks:O" rule.
+   

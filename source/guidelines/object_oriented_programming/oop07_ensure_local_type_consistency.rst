@@ -28,12 +28,6 @@ Reference
 [GNATUG]_ See section 5.10.11.
 
 """""""""""""
-Remediation
-"""""""""""""
-
-High (the correction is syntactically trivial individually, but would be required throughout the tree).
-
-"""""""""""""
 Description
 """""""""""""
 
@@ -72,11 +66,13 @@ To verify substitutability via testing, all the tests for all superclass types a
 
 For further discussion of this topic, see the sections cited in the Reference entry in this table.
 
-"""""""
-Notes
-"""""""
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
 
-Verification can be achieved dynamically with the GNATtest tool, using the "---validate-type-extensions" switch. SPARK enforces this rule.
+* 6.42 Violations of the Liskov substitution principle of the contract model [BLP]
+* 6.43 Redispatching [PPH]
+* 6.44 Polymorphic variables [BKK]
 
 """""""""""""""""""""""""""
 Noncompliant Code Example
@@ -188,3 +184,9 @@ Now the postconditions are class-wide so they are inherited by subclasses. In th
    private
       type Square is new Rectangle with null record;
    end Q;
+
+"""""""
+Notes
+"""""""
+
+Verification can be achieved dynamically with the GNATtest tool, using the "---validate-type-extensions" switch. SPARK enforces this rule.

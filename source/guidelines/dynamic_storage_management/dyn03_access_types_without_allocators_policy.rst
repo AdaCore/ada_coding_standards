@@ -51,12 +51,12 @@ Aspects should be applied to all access types in this approach, specifying a val
 The above would also ensure no allocations can occur with access types that have the default pool as their associated storage pool (per
 `Ada RM 13.11.3(6.1/3) - Default Storage Pools <http://ada-auth.org/standards/12rm/html/RM-13-11-3.html>`_)
 
-"""""""
-Notes
-"""""""
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
 
-The compiler, and/or GNATcheck, will detect violations of the restrictions. 
-   
+* 4.10 Storage Pool
+
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -76,3 +76,10 @@ Compliant Code Example
    ...
    P : Descriptor_Ref := Device'Access;
    ...
+
+"""""""
+Notes
+"""""""
+
+The compiler, and/or GNATcheck, will detect violations of the restrictions. 
+   
