@@ -49,7 +49,7 @@ In some systems there is no calling environment, such as bare-metal platforms wi
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-   * TBD
+* 6.36 Ignored error status and unhandled exceptions [OYB]
 
 """""""""""""""""""""""""""
 Noncompliant Code Example

@@ -45,7 +45,7 @@ The Global contract specifies interactions with those objects not local to the c
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
    
-   * 6.42 "Violations of the Liskov substitution principle or the contract model [BLP]".
+* 6.42 Violations of the Liskov substitution principle or the contract model [BLP]
    
 """""""""""""""""""""""""""
 Noncompliant Code Example

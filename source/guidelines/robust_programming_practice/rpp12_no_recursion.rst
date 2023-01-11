@@ -37,7 +37,7 @@ In addition to making static analysis more complex, recursive calls make static 
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
    
-   * 6.35 "Recursion [GDL]"
+* 6.35 Recursion [GDL]
    
 """""""""""""""""""""""""""
 Noncompliant Code Example

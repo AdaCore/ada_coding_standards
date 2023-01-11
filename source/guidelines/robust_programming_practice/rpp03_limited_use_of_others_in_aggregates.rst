@@ -37,7 +37,8 @@ This guideline prevents accidental provision of a general value for a record com
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-   * TBD
+* 6.5 Enumerator issues [CCB]
+* 6.27 Switch statements and static analysis [CLL]
 
 """""""""""""""""""""""""""
 Noncompliant Code Example

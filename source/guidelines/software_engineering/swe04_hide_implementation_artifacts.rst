@@ -41,7 +41,7 @@ This guideline is to be followed extensively, as the design default for componen
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-   * TBD
+N/A
 
 """""""""""""""""""""""""""
 Noncompliant Code Example

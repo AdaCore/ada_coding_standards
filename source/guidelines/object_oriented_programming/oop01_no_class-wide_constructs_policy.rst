@@ -41,7 +41,7 @@ In this approach there are no possible dynamic dispatching calls because such ca
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
    
-   * 6.43 "Redispatching [PPH]"
+* 6.43 "Redispatching [PPH]"
    
 """""""""""""""""""""""""""
 Noncompliant Code Example

@@ -35,7 +35,7 @@ SPARK has proven itself highly effective, both in terms of low defects, low deve
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-   * TBD
+N/A
 
 """""""""""""""""""""""""""
 Noncompliant Code Example

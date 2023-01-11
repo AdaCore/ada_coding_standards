@@ -55,7 +55,7 @@ The above would also ensure no allocations can occur with access types that have
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-   * TBD
+* 4.10 Storage Pool
 
 """""""""""""""""""""""""""
 Noncompliant Code Example

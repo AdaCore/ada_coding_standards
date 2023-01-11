@@ -76,7 +76,11 @@ The profile is equivalent to the following set of pragmas:
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-   * 6.63 "Lock protocol errors [CGM]".
+* 6.59 Concurrency - Activation [GGA]
+* 6.60 Concurrency - Directed termination [CGT]
+* 6.61 Concurrent data access [CGX]
+* 6.62 Concurrency - Premature termination [CGS]
+* 6.63 Lock protocol errors [CGM]
 
 """""""""""""""""""""""""""
 Noncompliant Code Example

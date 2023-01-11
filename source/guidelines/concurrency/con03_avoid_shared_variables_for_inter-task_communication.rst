@@ -35,7 +35,7 @@ Although the Ravenscar and Jorvik profiles allow the use of shared variables for
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
    
-   * 6.56 "Undefined behaviour [EWF]".
+* 6.56 "Undefined behaviour [EWF]".
    
 """""""""""""""""""""""""""
 Noncompliant Code Example

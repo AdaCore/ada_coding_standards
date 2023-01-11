@@ -35,7 +35,7 @@ Never deallocate the storage designated by a given access value more than once.
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-   * TBD
+* 6.39 Memory leak and heap fragmentation [XYL]
 
 """""""""""""""""""""""""""
 Noncompliant Code Example

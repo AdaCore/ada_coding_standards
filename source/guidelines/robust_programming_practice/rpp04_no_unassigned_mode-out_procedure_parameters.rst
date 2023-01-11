@@ -38,7 +38,7 @@ For any procedure, all formal parameters of mode "out" must be assigned a value 
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
    
-   * 6.32 "Passing parameters and return values [CSJ]".
+* 6.32 Passing parameters and return values [CSJ]
    
 """""""""""""""""""""""""""
 Noncompliant Code Example

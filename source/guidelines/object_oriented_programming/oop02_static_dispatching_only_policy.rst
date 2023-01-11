@@ -41,7 +41,7 @@ Note that this rule should not be applied without due consideration.
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
    
-   * 6.43 "Redispatching [PPH]"
+* 6.43 "Redispatching [PPH]"
    
 """""""""""""""""""""""""""
 Noncompliant Code Example

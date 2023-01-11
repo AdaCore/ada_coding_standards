@@ -42,7 +42,7 @@ The first three restrictions prevent problematic usage that, for example, may ca
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-   * TBD
+* 4.10 Storage Pool
 
 """""""""""""""""""""""""""
 Noncompliant Code Example

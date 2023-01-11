@@ -43,7 +43,7 @@ Note: this approach will be required for OOP07 (Ensure Local Type Consistency).
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
    
-   * 6.42 "Violations of the Liskov substitution principle or the contract model [BLP]"
+* 6.42 Violations of the Liskov substitution principle or the contract model [BLP]
    
 """""""""""""""""""""""""""
 Noncompliant Code Example

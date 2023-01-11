@@ -35,7 +35,7 @@ Much like the situation with "others" in case statements and case expressions, t
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-   * TBD
+N/A
 
 """""""""""""""""""""""""""
 Noncompliant Code Example

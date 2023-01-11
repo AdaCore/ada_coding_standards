@@ -37,7 +37,7 @@ This is a possibility because Ada allows creation of access values designating d
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-   * TBD
+* 6.39 Memory leak and heap fragmentation [XYL]
 
 """""""""""""""""""""""""""
 Noncompliant Code Example

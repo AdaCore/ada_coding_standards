@@ -38,7 +38,7 @@ Each access type has an associated storage pool, either implicitly by default, o
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-   * TBD
+* 6.39 Memory leak and heap fragmentation [XYL]
 
 """""""""""""""""""""""""""
 Noncompliant Code Example

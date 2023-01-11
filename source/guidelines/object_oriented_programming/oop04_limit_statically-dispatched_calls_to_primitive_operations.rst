@@ -47,7 +47,9 @@ Note that constructors implemented as procedures also call primitive operations 
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-   * TBD
+* 6.42 Violations of the Liskov substitution principle of the contract model [BLP]
+* 6.43 Redispatching [PPH]
+* 6.44 Polymorphic variables [BKK]
 
 """""""""""""""""""""""""""
 Noncompliant Code Example

@@ -35,7 +35,7 @@ A range of enumeration literals must not be used as a choice in a case statement
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
    
-   * 6.5 "Enumerator issues [CCB]".
+* 6.5 Enumerator issues [CCB]
    
 """""""""""""""""""""""""""
 Noncompliant Code Example

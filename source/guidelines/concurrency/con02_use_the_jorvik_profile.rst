@@ -25,7 +25,7 @@ Use the Jorvik Profile (CON02)
 Reference
 """""""""""
 
-`Ada RM D.13 - The Ravenscar Profile <http://ada-auth.org/standards/12rm/html/RM-D-13.html>`_
+`Ada RM D.13 - The Ravenscar and Jorvik Profiles <http://ada-auth.org/standards/22rm/html/RM-D-13.html>`_
 
 """""""""""""
 Description
@@ -83,7 +83,11 @@ Jorvik also replaces restriction Simple_Barriers with Pure_Barriers (a weaker re
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-   * TBD
+* 6.59 Concurrency - Activation [GGA]
+* 6.60 Concurrency - Directed termination [CGT]
+* 6.61 Concurrent data access [CGX]
+* 6.62 Concurrency - Premature termination [CGS]
+* 6.63 Lock protocol errors [CGM]
 
 """""""""""""""""""""""""""
 Noncompliant Code Example

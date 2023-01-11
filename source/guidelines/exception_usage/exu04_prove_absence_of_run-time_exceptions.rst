@@ -37,7 +37,7 @@ The restriction No_Exceptions can be used with pragma Restrictions to enforce th
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-   * TBD
+N/A
 
 """""""""""""""""""""""""""
 Noncompliant Code Example

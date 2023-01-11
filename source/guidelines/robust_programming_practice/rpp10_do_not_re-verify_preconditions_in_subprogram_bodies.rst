@@ -35,7 +35,7 @@ Do not re-verify preconditions in the corresponding subprogram bodies. It is a w
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-   * TBD
+N/A
 
 """""""""""""""""""""""""""
 Noncompliant Code Example

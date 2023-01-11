@@ -58,7 +58,7 @@ Where one of the rules above prohibits the occurrence of an object or any of its
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-   * TBD
+* 6.32 Passing parameters and return values [CSJ]
 
 """""""""""""""""""""""""""
 Noncompliant Code Example

@@ -41,7 +41,7 @@ Deep inheritance hierarchies also contribute to complexity, rather than lessenin
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-   * 6.41 "Inheritance [RIP]"
+* 6.41 Inheritance [RIP]
 
 """""""""""""""""""""""""""
 Noncompliant Code Example

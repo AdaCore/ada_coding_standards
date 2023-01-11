@@ -41,7 +41,7 @@ There are useful idioms based on functions with side effects. Indeed, a random n
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
    
-   * 6.24 "Side-effects and order of evaluation [SAM]".
+* 6.24 Side-effects and order of evaluation [SAM]
    
 """""""""""""""""""""""""""
 Noncompliant Code Example

@@ -41,10 +41,10 @@ Note that warnings will occasionally be given for code usage that is intentional
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
    
-   * 6.18 "Dead Store [WXQ]"
-   * 6.19 Unused variable [YZS]"
-   * 6.20 "Identifier name reuse [YOW]"
-   * 6.22 "Initialization of variables [LAV]".
+* 6.18 Dead Store [WXQ]
+* 6.19 Unused variable [YZS]
+* 6.20 Identifier name reuse [YOW]
+* 6.22 Initialization of variables [LAV]
    
 """""""""""""""""""""""""""
 Noncompliant Code Example

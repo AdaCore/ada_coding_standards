@@ -37,7 +37,7 @@ Note that this is opposite to typical C guidelines such as [SEI-C]_ MSC01-C. The
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
    
-   * 6.39.1 "Unanticipated exceptions from library routines [HJW]".
+* 6.39.1 Unanticipated exceptions from library routines [HJW]
    
 """""""""""""""""""""""""""
 Noncompliant Code Example

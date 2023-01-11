@@ -37,12 +37,12 @@ Specifically, any code checked into the configuration management system must be 
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-   * 6.6 "Conversion errors [FLC]"
-   * 6.18 "Dead store [WXQ]"
-   * 6.19 "Unused variable [YZS]"
-   * 6.20 "Identifier name reuse [YOW]"
-   * 6.24 "Side-effects and order of evaluation [SAM]"
-   * 6.25 "Likely incorrect expression [KOA]"
+* 6.6 Conversion errors [FLC]
+* 6.18 Dead store [WXQ]
+* 6.19 Unused variable [YZS]
+* 6.20 Identifier name reuse [YOW]
+* 6.24 Side-effects and order of evaluation [SAM]
+* 6.25 Likely incorrect expression [KOA]
 
 """""""""""""""""""""""""""
 Noncompliant Code Example

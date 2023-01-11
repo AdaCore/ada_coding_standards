@@ -37,7 +37,7 @@ The Ada language-defined exceptions are raised implicitly in specific circumstan
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-   * TBD
+N/A
 
 """""""""""""""""""""""""""
 Noncompliant Code Example
