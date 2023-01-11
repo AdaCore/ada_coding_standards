@@ -72,12 +72,6 @@ The profile is equivalent to the following set of pragmas:
           	No_Dependence => Ada.Task_Attributes,
           	No_Dependence => System.Multiprocessors.Dispatching_Domains);
 
-"""""""
-Notes
-"""""""
-
-The Ada builder will detect violations if the programmer specifies this profile or corresponding pragmas. GNATcheck also can detect violations of profile restrictions.
-
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -103,3 +97,9 @@ Compliant Code Example
   :code: Ada
   :start-line: 26
   :end-line: 36
+
+"""""""
+Notes
+"""""""
+
+The Ada builder will detect violations if the programmer specifies this profile or corresponding pragmas. GNATcheck also can detect violations of profile restrictions.

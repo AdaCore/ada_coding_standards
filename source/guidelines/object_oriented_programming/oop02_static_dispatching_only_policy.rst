@@ -37,12 +37,6 @@ This rule ensures there are no class-wide values passed as the parameter to a pr
 
 Note that this rule should not be applied without due consideration.
 
-"""""""
-Notes
-"""""""
-
-The compiler will detect violations with the GNAT-defined restriction No_Dispatching_Calls applied. 
-   
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -64,3 +58,10 @@ Compliant Code Example
 .. code:: Ada
 
    Some_Primitive (X);
+
+"""""""
+Notes
+"""""""
+
+The compiler will detect violations with the GNAT-defined restriction No_Dispatching_Calls applied. 
+   

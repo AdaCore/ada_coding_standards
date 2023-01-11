@@ -34,12 +34,6 @@ When deallocating, ensure that the pool to which the storage will be returned wa
 
 Each access type has an associated storage pool, either implicitly by default, or explicitly with a storage pool specified by the programmer. The implicit default pool might not be the same pool used for another access type, even an access type designating the same subtype.
 
-"""""""
-Notes
-"""""""
-
-Enforcement of this rule can only be provided by manual code review, unless deallocation is forbidden via No_Unchecked_Deallocation.
-
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -71,3 +65,9 @@ Compliant Code Example
 """"""""""""""""""""""""
 
 Don't deallocate converted access values.
+
+"""""""
+Notes
+"""""""
+
+Enforcement of this rule can only be provided by manual code review, unless deallocation is forbidden via No_Unchecked_Deallocation.

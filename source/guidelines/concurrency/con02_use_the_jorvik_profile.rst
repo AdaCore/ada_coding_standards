@@ -79,12 +79,6 @@ The following restrictions are part of the Ravenscar profile but **not** part of
 
 Jorvik also replaces restriction Simple_Barriers with Pure_Barriers (a weaker requirement than Simple_Barriers).
 
-"""""""
-Notes
-"""""""
-
-The Ada builder will detect violations. GNATcheck can also detect violations.
-
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -111,3 +105,9 @@ Compliant Code Example
   :start-line: 30
   :end-line: 38
 
+
+"""""""
+Notes
+"""""""
+
+The Ada builder will detect violations. GNATcheck can also detect violations.

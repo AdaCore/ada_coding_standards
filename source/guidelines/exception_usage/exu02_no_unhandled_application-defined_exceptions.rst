@@ -45,12 +45,6 @@ Finally, whether the environment task waited for the dependent tasks or aborted 
 (`Ada RM 10.2(30) - Program Execution <http://www.ada-auth.org/standards/2xrm/html/RM-10-2.html>`_)
 In some systems there is no calling environment, such as bare-metal platforms with only an Ada run-time library and no operating system.
 
-"""""""
-Notes
-"""""""
-   
-SPARK can prove that no exception will be raised (or fail to prove it and indicate the failure).
-
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -74,3 +68,9 @@ Compliant Code Example
   :code: Ada
   :start-line: 34
   :end-line: 50
+
+"""""""
+Notes
+"""""""
+   
+SPARK can prove that no exception will be raised (or fail to prove it and indicate the failure).

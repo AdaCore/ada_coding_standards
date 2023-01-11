@@ -33,12 +33,6 @@ No subprogram shall be invoked, directly or indirectly, as part of its own execu
 
 In addition to making static analysis more complex, recursive calls make static stack usage analysis extremely difficult, requiring manual supply of call limits (for example).
 
-"""""""
-Notes
-"""""""
-
-The compiler will detect violations with the restriction No_Recursion in place. Note this is a dynamic check. GNATcheck enforces it statically with +RRecursive_Subprograms, subject to the limitations described in http://docs.adacore.com/live/wave/asis/html/gnatcheck_rm/gnatcheck_rm/predefined_rules.html#recursive-subprograms.
-   
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -62,3 +56,10 @@ Compliant Code Example
   :code: Ada
   :start-line: 15
   :end-line: 23
+
+"""""""
+Notes
+"""""""
+
+The compiler will detect violations with the restriction No_Recursion in place. Note this is a dynamic check. GNATcheck enforces it statically with +RRecursive_Subprograms, subject to the limitations described in http://docs.adacore.com/live/wave/asis/html/gnatcheck_rm/gnatcheck_rm/predefined_rules.html#recursive-subprograms.
+   

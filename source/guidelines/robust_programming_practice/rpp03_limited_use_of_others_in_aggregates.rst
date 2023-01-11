@@ -33,12 +33,6 @@ Do not use an "others" choice in an extension aggregate. In record and array agg
 
 This guideline prevents accidental provision of a general value for a record component or array component, when a specific value was intended. This possibility includes the case in which new components are added to an existing composite type.
 
-"""""""
-Notes
-"""""""
-
-GNATcheck can detect violations via the OTHERS_In_Aggregates rule. 
-   
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -62,3 +56,10 @@ Compliant Code Example
   :code: Ada
   :start-line: 17
   :end-line: 27
+
+"""""""
+Notes
+"""""""
+
+GNATcheck can detect violations via the OTHERS_In_Aggregates rule. 
+   

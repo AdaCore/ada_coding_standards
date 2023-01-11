@@ -31,12 +31,6 @@ Description
 
 Although the Ravenscar and Jorvik profiles allow the use of shared variables for inter-task communication, such use is less robust and less reliable than encapsulating shared variables within protected objects.
 
-"""""""
-Notes
-"""""""
-
-GNATcheck can detect violations via the Volatile_Objects_Without_Address_Clauses rule. SPARK and CodePeer can also detect conflicting access to unprotected variables. 
-   
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -65,3 +59,10 @@ When assigned to a memory address, a Volatile variable can be used to interact w
   :code: Ada
   :start-line: 10
   :end-line: 14
+
+"""""""
+Notes
+"""""""
+
+GNATcheck can detect violations via the Volatile_Objects_Without_Address_Clauses rule. SPARK and CodePeer can also detect conflicting access to unprotected variables. 
+   

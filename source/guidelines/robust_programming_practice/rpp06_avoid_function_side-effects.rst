@@ -37,12 +37,6 @@ Side effects enable one form of parameter aliasing (see below) and evaluation or
 
 There are useful idioms based on functions with side effects. Indeed, a random number generator expressed as a function must use side effects to update the seed value.  So-called "memo" functions are another example, in which the function tracks the number of times it is called. Therefore, exceptions to this rule are anticipated but should only be allowed on a per-instance basis after careful analysis.
 
-"""""""
-Notes
-"""""""
-
-Violations are detected by SPARK as part of a rule disallowing side effects on expression evaluation. 
-   
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -69,3 +63,10 @@ Compliant Code Example
 """"""""""""""""""""""""
 
 Remove the update to Call_Count. or change the function into a procedure with a parameter for Call_Count.
+
+"""""""
+Notes
+"""""""
+
+Violations are detected by SPARK as part of a rule disallowing side effects on expression evaluation. 
+   

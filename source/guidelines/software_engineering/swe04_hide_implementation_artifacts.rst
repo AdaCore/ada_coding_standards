@@ -37,12 +37,6 @@ This guideline also limits the region of code required to find any bugs to the p
 
 This guideline is to be followed extensively, as the design default for components. Once the application code size becomes non-trivial, the cost of retrofit is extremely high.
 
-"""""""
-Notes
-"""""""
-
-This rule can be partially enforced by the GNATcheck switches Visible_Components applied. 
-
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -76,3 +70,9 @@ Compliant Code Example
 Type :ada:`Content_T`, as well as the record type components of type :ada:`Stack_T`,
 are no longer visible to clients. Any bugs in the stack processing code must be in
 this package, or its child packages, if any.
+
+"""""""
+Notes
+"""""""
+
+This rule can be partially enforced by the GNATcheck switches Visible_Components applied. 

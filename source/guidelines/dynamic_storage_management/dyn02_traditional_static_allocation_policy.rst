@@ -47,12 +47,6 @@ In this approach the following constructs are not allowed:
    * User-defined storage pools
    * Unchecked Deallocations
 
-"""""""
-Notes
-"""""""
-
-The compiler, and/or GNATcheck, will detect violations of the restrictions. 
-
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -70,3 +64,9 @@ Compliant Code Example
 """"""""""""""""""""""""
 
 N/A
+
+"""""""
+Notes
+"""""""
+
+The compiler, and/or GNATcheck, will detect violations of the restrictions. 

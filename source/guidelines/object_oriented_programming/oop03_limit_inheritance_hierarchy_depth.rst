@@ -37,12 +37,6 @@ A common characteristic of problematic hierarchies is "excessive" depth, in whic
 
 Deep inheritance hierarchies also contribute to complexity, rather than lessening it, by requiring the reader to understand multiple superclasses in order to understand the behavior of a given subclass.
 
-"""""""
-Notes
-"""""""
-
-Violations can be detected with the GNATcheck tool parameter Deep_Inheritance_Hierarchies, specifying a maximum inheritance depth as a parameter of the rule. 
-
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -69,3 +63,9 @@ Compliant Code Example
   :start-line: 27
   :end-line: 34
 
+
+"""""""
+Notes
+"""""""
+
+Violations can be detected with the GNATcheck tool parameter Deep_Inheritance_Hierarchies, specifying a maximum inheritance depth as a parameter of the rule. 

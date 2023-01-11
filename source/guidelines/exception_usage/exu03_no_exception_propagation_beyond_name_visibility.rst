@@ -31,12 +31,6 @@ Description
 
 An active exception can be propagated dynamically past the point where the name of the exception is visible (the scope of the declaration). The exception can only be handled via "others" past that point. That situation prevents handling the exception specifically, and violates RPP05.
 
-"""""""
-Notes
-"""""""
-
-GNATcheck can detect violations via the Non_Visible_Exceptions rule. 
-   
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -68,3 +62,10 @@ Compliant Code Example
   :start-line: 20
   :end-line: 36
 
+
+"""""""
+Notes
+"""""""
+
+GNATcheck can detect violations via the Non_Visible_Exceptions rule. 
+   

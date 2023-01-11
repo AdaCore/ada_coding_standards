@@ -41,14 +41,6 @@ Not all subprograms will have both a precondition and a postcondition, some will
 
 The Global contract specifies interactions with those objects not local to the corresponding subprogram body. As such, they help complete the specification because, otherwise, one would need to examine the body of the subprogram itself and all those it calls, directly or indirectly, to know whether any global objects were accessed.
 
-"""""""
-Notes
-"""""""
-
-This rule must be enforced by manual inspection.
-   
-Moreover, the program must be compiled with enabled assertions (GNAT "-gnata" switch) to ensure that the contracts are executed, or a sound static analysis tool such as CodePeer or SPARK toolset should be used to prove that the contracts are always true.
-   
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -78,3 +70,12 @@ Compliant Code Example
               and Extent (This) = Extent (This)'Old + 1
               and Unchanged (This'Old, Within => This),
       Global => null;
+
+"""""""
+Notes
+"""""""
+
+This rule must be enforced by manual inspection.
+   
+Moreover, the program must be compiled with enabled assertions (GNAT "-gnata" switch) to ensure that the contracts are executed, or a sound static analysis tool such as CodePeer or SPARK toolset should be used to prove that the contracts are always true.
+   

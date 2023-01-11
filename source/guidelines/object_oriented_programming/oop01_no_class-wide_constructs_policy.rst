@@ -37,12 +37,6 @@ This restriction ensures there are no class-wide objects or formal parameters, n
 
 In this approach there are no possible dynamic dispatching calls because such calls can only occur when a class-wide value is passed as the parameter to a primitive operation of a tagged type.
 
-"""""""
-Notes
-"""""""
-
-The compiler will detect violations with the standard Ada restriction No_Dispatch applied. 
-   
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -64,3 +58,10 @@ Compliant Code Example
 .. code:: Ada
 
    X : Object := Some_Object;
+
+"""""""
+Notes
+"""""""
+
+The compiler will detect violations with the standard Ada restriction No_Dispatch applied. 
+   

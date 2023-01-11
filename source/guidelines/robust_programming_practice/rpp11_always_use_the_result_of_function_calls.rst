@@ -39,12 +39,6 @@ However, that does not mean that the value is actually used to compute some furt
 
 Note that functions will not have side-effects (due to RPP06) so it is only the returned value that is of interest here.
 
-"""""""
-Notes
-"""""""
-
-The GNAT compiler warning switch "-gnatwu" (or the more general "-gnatwa" warnings switch) will cause the compiler to detect variables assigned but not read. CodePeer will detect these unused variables as well. SPARK goes further by checking that all computations contribute all the way to subprogram outputs.
-
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -62,3 +56,9 @@ Compliant Code Example
 """"""""""""""""""""""""
 
 N/A
+
+"""""""
+Notes
+"""""""
+
+The GNAT compiler warning switch "-gnatwu" (or the more general "-gnatwa" warnings switch) will cause the compiler to detect variables assigned but not read. CodePeer will detect these unused variables as well. SPARK goes further by checking that all computations contribute all the way to subprogram outputs.

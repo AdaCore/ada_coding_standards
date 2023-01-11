@@ -54,12 +54,6 @@ Where one of the rules above prohibits the occurrence of an object or any of its
    * A qualified expression whose operand is a prohibited construct;
    * A prohibited construct enclosed in parentheses.
 
-"""""""
-Notes
-"""""""
-
-All violations are detected by SPARK. The GNAT compiler switch "-gnateA[1]" enables detection of some cases, but not all.
-   
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -93,3 +87,10 @@ Compliant Code Example
 """"""""""""""""""""""""
 
 Don't pass Obj as the actual parameter to both formal parameters.
+
+"""""""
+Notes
+"""""""
+
+All violations are detected by SPARK. The GNAT compiler switch "-gnateA[1]" enables detection of some cases, but not all.
+   

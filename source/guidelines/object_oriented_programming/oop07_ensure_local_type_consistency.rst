@@ -66,12 +66,6 @@ To verify substitutability via testing, all the tests for all superclass types a
 
 For further discussion of this topic, see the sections cited in the Reference entry in this table.
 
-"""""""
-Notes
-"""""""
-
-Verification can be achieved dynamically with the GNATtest tool, using the "---validate-type-extensions" switch. SPARK enforces this rule.
-
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -188,3 +182,9 @@ Now the postconditions are class-wide so they are inherited by subclasses. In th
    private
       type Square is new Rectangle with null record;
    end Q;
+
+"""""""
+Notes
+"""""""
+
+Verification can be achieved dynamically with the GNATtest tool, using the "---validate-type-extensions" switch. SPARK enforces this rule.

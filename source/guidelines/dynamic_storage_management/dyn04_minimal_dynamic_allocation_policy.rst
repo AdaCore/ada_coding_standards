@@ -42,12 +42,6 @@ In this approach the following constructs are not allowed:
 
 Note that some operating systems intended for this domain directly support this policy.
 
-"""""""
-Notes
-"""""""
-
-The compiler, and/or GNATcheck, will detect violations of the restrictions. 
-   
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -65,3 +59,10 @@ Compliant Code Example
 """"""""""""""""""""""""
 
 Code performing dynamic allocations any time prior to an arbitrary point designated as the end of the "startup" interval.
+
+"""""""
+Notes
+"""""""
+
+The compiler, and/or GNATcheck, will detect violations of the restrictions. 
+   
