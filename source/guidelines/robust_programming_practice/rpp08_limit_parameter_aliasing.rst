@@ -60,6 +60,12 @@ Notes
 
 All violations are detected by SPARK. The GNAT compiler switch "-gnateA[1]" enables detection of some cases, but not all.
    
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
+
+   * TBD
+
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""

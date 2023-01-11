@@ -37,6 +37,12 @@ Notes
 
 GNATcheck can detect violations via the Non_Visible_Exceptions rule. 
    
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
+
+   * TBD
+
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""

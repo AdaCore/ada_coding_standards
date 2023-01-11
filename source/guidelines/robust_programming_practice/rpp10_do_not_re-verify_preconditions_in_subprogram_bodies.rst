@@ -37,6 +37,12 @@ Notes
 
 This rule can be enforced by CodePeer or SPARK, via detection of dead code.
    
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
+
+   * TBD
+
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""

@@ -72,6 +72,12 @@ Notes
 
 Verification can be achieved dynamically with the GNATtest tool, using the "---validate-type-extensions" switch. SPARK enforces this rule.
 
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
+
+   * TBD
+
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""

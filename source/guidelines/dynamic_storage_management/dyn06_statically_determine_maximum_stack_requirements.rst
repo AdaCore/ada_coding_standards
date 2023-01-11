@@ -39,6 +39,12 @@ Notes
 
 The GNATstack [GNATstack]_ tool can statically determine the maximum requirements per task. 
 
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
+
+   * TBD
+
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""

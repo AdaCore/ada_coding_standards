@@ -46,6 +46,12 @@ The compiler will detect violations of the first three restrictions. Note that G
    
 The fourth restriction is a directive for implementation behavior, not subject to source-based violation detection.
    
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
+
+   * TBD
+
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""

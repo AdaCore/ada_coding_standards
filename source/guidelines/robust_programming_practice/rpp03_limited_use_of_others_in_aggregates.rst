@@ -39,6 +39,12 @@ Notes
 
 GNATcheck can detect violations via the OTHERS_In_Aggregates rule. 
    
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
+
+   * TBD
+
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""

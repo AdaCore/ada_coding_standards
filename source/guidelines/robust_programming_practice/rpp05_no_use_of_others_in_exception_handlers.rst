@@ -45,6 +45,12 @@ ISO TR 24772-2: 6.50.2 slightly contradicts this when applying exception handler
    
 It also recommends "All tasks should contain an exception handler at the outer level to prevent silent termination due to unhandled exceptions." for vulnerability 6.62 Concurrency - Premature termination.
    
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
+
+   * TBD
+
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""

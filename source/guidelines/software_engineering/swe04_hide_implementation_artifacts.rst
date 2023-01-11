@@ -43,6 +43,12 @@ Notes
 
 This rule can be partially enforced by the GNATcheck switches Visible_Components applied. 
 
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
+
+   * TBD
+
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""

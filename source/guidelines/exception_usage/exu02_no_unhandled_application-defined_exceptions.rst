@@ -51,6 +51,12 @@ Notes
    
 SPARK can prove that no exception will be raised (or fail to prove it and indicate the failure).
 
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
+
+   * TBD
+
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""

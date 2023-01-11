@@ -23,6 +23,8 @@ Limit Statically-Dispatched Calls To Primitive Operations (OOP04)
 Reference
 """""""""""
 
+   TBD
+
 """""""""""""
 Description
 """""""""""""
@@ -47,6 +49,12 @@ Notes
 
 This rule can be enforced by GNATcheck with the Direct_Calls_To_Primitives rule applied. The rule parameter Except_Constructors may be added for constructor functions.
    
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
+
+   * TBD
+
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""

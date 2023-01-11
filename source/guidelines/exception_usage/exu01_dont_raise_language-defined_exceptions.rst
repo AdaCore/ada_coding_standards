@@ -39,6 +39,12 @@ Notes
    
 This restriction is detected by GNATcheck with the Raising_Predefined_Exceptions rule applied.
    
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
+
+   * TBD
+
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
