@@ -72,18 +72,15 @@ The profile is equivalent to the following set of pragmas:
           	No_Dependence => Ada.Task_Attributes,
           	No_Dependence => System.Multiprocessors.Dispatching_Domains);
 
-"""""""
-Notes
-"""""""
-
-The Ada builder will detect violations if the programmer specifies this profile or corresponding pragmas.
-The GNATcheck rule specified above will search the codebase for the specified profile.
-
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-   * 6.63 "Lock protocol errors [CGM]".
+* 6.59 Concurrency - Activation [GGA]
+* 6.60 Concurrency - Directed termination [CGT]
+* 6.61 Concurrent data access [CGX]
+* 6.62 Concurrency - Premature termination [CGS]
+* 6.63 Lock protocol errors [CGM]
 
 """""""""""""""""""""""""""
 Noncompliant Code Example
@@ -105,8 +102,8 @@ Compliant Code Example
   :start-line: 26
   :end-line: 36
 
-"""""""""""
-Reference
-"""""""""""
+"""""""
+Notes
+"""""""
 
-`Ada RM D.13 - The Ravenscar Profile <http://ada-auth.org/standards/12rm/html/RM-D-13.html>`_
+The Ada builder will detect violations if the programmer specifies this profile or corresponding pragmas. GNATcheck also can detect violations of profile restrictions.

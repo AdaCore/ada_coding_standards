@@ -31,11 +31,11 @@ Description
 
 SPARK has proven itself highly effective, both in terms of low defects, low development costs, and high productivity. The guideline advises extensive of SPARK, especially for the sake of formally proving the most critical parts of the source code. The rest of the code can be in SPARK as well, even if formal proof is not intended, with some parts in Ada when features outside the SPARK subset are essential.
 
-"""""""
-Notes
-"""""""
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
 
-Violations are detected by the SPARK toolset.
+N/A
 
 """""""""""""""""""""""""""
 Noncompliant Code Example
@@ -48,3 +48,9 @@ Compliant Code Example
 """"""""""""""""""""""""
 
 N/A
+
+"""""""
+Notes
+"""""""
+
+Violations are detected by the SPARK toolset.

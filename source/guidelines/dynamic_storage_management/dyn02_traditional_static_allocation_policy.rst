@@ -32,7 +32,6 @@ Description
 The following restrictions must be in effect:
 
    * No_Allocators
-
    * No_Task_Allocators
 
 Under the traditional approach, no dynamic allocations and no deallocations occur.  Only declared objects are used and no access types of any kind appear in the code.
@@ -47,11 +46,11 @@ In this approach the following constructs are not allowed:
    * User-defined storage pools
    * Unchecked Deallocations
 
-"""""""
-Notes
-"""""""
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
 
-The compiler, and/or GNATcheck, will detect violations of the restrictions. 
+* 4.10 Storage Pool
 
 """""""""""""""""""""""""""
 Noncompliant Code Example
@@ -64,3 +63,9 @@ Compliant Code Example
 """"""""""""""""""""""""
 
 N/A
+
+"""""""
+Notes
+"""""""
+
+The compiler, and/or GNATcheck, will detect violations of the restrictions. 

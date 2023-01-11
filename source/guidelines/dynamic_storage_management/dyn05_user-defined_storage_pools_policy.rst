@@ -41,12 +41,12 @@ Given an analysis providing the worst-case allocations and deallocations, it wou
 
 In this approach no storage-related constructs are disallowed unless the SPARK subset is applied.
 
-"""""""
-Notes
-"""""""
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
 
-Enforcement of this approach can only be provided by manual code review unless SPARK is used.
-   
+* 4.10 Storage Pool
+
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -68,3 +68,10 @@ Compliant Code Example
    Ptr : Pointer;
    ...
    Ptr := new Unsigned_Longword; -- from Heap
+
+"""""""
+Notes
+"""""""
+
+Enforcement of this approach can only be provided by manual code review unless SPARK is used.
+   

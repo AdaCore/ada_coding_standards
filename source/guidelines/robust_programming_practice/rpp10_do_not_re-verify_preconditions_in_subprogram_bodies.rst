@@ -31,12 +31,12 @@ Description
 
 Do not re-verify preconditions in the corresponding subprogram bodies. It is a waste of cycles and confuses the reader as well.
 
-"""""""
-Notes
-"""""""
+""""""""""""""""""""""""""""""""""""""""""""""""
+Applicable vulnerability within ISO TR 24772-2 
+""""""""""""""""""""""""""""""""""""""""""""""""
 
-This rule can be enforced by CodePeer or SPARK, via detection of dead code.
-   
+N/A
+
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -73,3 +73,10 @@ Compliant Code Example
       This.Top := This.Top + 1;
       This.Values (This.Top) := Item;
    end Push;
+
+"""""""
+Notes
+"""""""
+
+This rule can be enforced by CodePeer or SPARK, via detection of dead code.
+   

@@ -39,12 +39,6 @@ unintentionally use the locally-scoped ``Integer`` rather than the original
 ``Standard.Integer``. The locally-scoped ``Integer`` can have different
 attributes (and may not even be of the same base type).
 
-"""""""
-Notes
-"""""""
-
-N/A
-   
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -68,3 +62,10 @@ Compliant Code Example
   :code: Ada
   :start-line: 8
   :end-line: 10
+
+"""""""
+Notes
+"""""""
+
+N/A
+   

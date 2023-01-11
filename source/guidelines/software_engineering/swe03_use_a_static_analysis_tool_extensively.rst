@@ -33,22 +33,16 @@ If not using SPARK for regular development, use a static analyzer, such as CodeP
 
 Specifically, any code checked into the configuration management system must be checked by the analyzer and be error-free prior to check-in. Similarly, each nightly build should produce a CodePeer baseline for the project. 
 
-"""""""
-Notes
-"""""""
-
-CodePeer is the recommended static analyzer. Note that CodePeer can detect GNATcheck rule violations (via the "--gnatcheck" CodePeer switch and a rules file).
-
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-   * 6.6 "Conversion errors [FLC]"
-   * 6.18 "Dead store [WXQ]"
-   * 6.19 "Unused variable [YZS]"
-   * 6.20 "Identifier name reuse [YOW]"
-   * 6.24 "Side-effects and order of evaluation [SAM]"
-   * 6.25 "Likely incorrect expression [KOA]"
+* 6.6 Conversion errors [FLC]
+* 6.18 Dead store [WXQ]
+* 6.19 Unused variable [YZS]
+* 6.20 Identifier name reuse [YOW]
+* 6.24 Side-effects and order of evaluation [SAM]
+* 6.25 Likely incorrect expression [KOA]
 
 """""""""""""""""""""""""""
 Noncompliant Code Example
@@ -61,3 +55,9 @@ Compliant Code Example
 """"""""""""""""""""""""
 
 N/A
+
+"""""""
+Notes
+"""""""
+
+CodePeer is the recommended static analyzer. Note that CodePeer can detect GNATcheck rule violations (via the "--gnatcheck" CodePeer switch and a rules file).

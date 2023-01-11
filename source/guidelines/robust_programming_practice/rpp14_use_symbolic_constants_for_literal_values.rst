@@ -46,12 +46,6 @@ Some literals can be replaced with attribute values. For example, when iterating
 over an array, it is better to use ``Array_Object'First .. Array_Object`Last``
 than using ``1 .. Array_Object'Length``.
 
-"""""""
-Notes
-"""""""
-
-N/A
-   
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -75,3 +69,10 @@ Compliant Code Example
   :code: Ada
   :start-line: 9
   :end-line: 13
+
+"""""""
+Notes
+"""""""
+
+N/A
+   

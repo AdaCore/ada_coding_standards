@@ -35,17 +35,11 @@ As of Ada 2012, functions are allowed to have the same modes as procedures. Howe
 
 This rule disallows all modes except mode "in" for functions.
 
-"""""""
-Notes
-"""""""
-
-Violations are detected by SPARK. 
-   
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
    
-   * 6.24 "Side-effects and order of evaluation [SAM]".
+* 6.24 Side-effects and order of evaluation [SAM]
    
 """""""""""""""""""""""""""
 Noncompliant Code Example
@@ -71,3 +65,10 @@ OR
   :code: Ada
   :start-line: 16
   :end-line: 22
+
+"""""""
+Notes
+"""""""
+
+Violations are detected by SPARK. 
+   

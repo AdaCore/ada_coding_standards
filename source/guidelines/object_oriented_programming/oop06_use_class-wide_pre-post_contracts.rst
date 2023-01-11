@@ -39,17 +39,11 @@ The class-wide form of precondition and postcondition expresses conditions that 
 
 Note: this approach will be required for OOP07 (Ensure Local Type Consistency).
 
-"""""""
-Notes
-"""""""
-
-SPARK enforces this guideline automatically.
-   
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2 
 """"""""""""""""""""""""""""""""""""""""""""""""
    
-   * 6.42 "Violations of the Liskov substitution principle or the contract model [BLP]"
+* 6.42 Violations of the Liskov substitution principle or the contract model [BLP]
    
 """""""""""""""""""""""""""
 Noncompliant Code Example
@@ -68,3 +62,10 @@ Compliant Code Example
   :code: Ada
   :start-line: 12
   :end-line: 18
+
+"""""""
+Notes
+"""""""
+
+Violations can be detected with the GNATcheck rule Specific_Pre_Post.  SPARK enforces this guideline automatically.
+   
