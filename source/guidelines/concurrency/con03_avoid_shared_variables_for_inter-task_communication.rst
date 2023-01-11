@@ -26,12 +26,6 @@ Reference
 `Ada RM D.13 - The Ravenscar Profile <http://ada-auth.org/standards/12rm/html/RM-D-13.html>`_
 
 """""""""""""
-Remediation
-"""""""""""""
-
-Medium
-
-"""""""""""""
 Description
 """""""""""""
 

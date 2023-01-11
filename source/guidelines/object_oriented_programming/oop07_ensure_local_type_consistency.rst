@@ -28,12 +28,6 @@ Reference
 [GNATUG]_ See section 5.10.11.
 
 """""""""""""
-Remediation
-"""""""""""""
-
-High (the correction is syntactically trivial individually, but would be required throughout the tree).
-
-"""""""""""""
 Description
 """""""""""""
 

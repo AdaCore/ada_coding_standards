@@ -26,12 +26,6 @@ Reference
 MISRA C rule 8.7 "Functions and objects should not be defined with external linkage if they are referenced in only one translation unit"
 
 """""""""""""
-Remediation
-"""""""""""""
-
-High
-
-"""""""""""""
 Description
 """""""""""""
 

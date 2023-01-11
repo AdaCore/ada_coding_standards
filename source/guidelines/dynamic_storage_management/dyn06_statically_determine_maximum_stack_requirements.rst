@@ -26,12 +26,6 @@ Reference
 N/A
 
 """""""""""""
-Remediation
-"""""""""""""
-
-High
-
-"""""""""""""
 Description
 """""""""""""
 
