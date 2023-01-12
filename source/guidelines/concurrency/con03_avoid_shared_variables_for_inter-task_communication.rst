@@ -13,7 +13,7 @@ Avoid Shared Variables for Inter-task Communication (CON03)
    :Reliability: :math:`\checkmark`
    :Portability: :math:`\checkmark`
    :Performance: :math:`\checkmark`
-   :Security: 
+   :Security:
 
 *Remediation* :math:`\rightarrow` **High**
 
@@ -32,11 +32,11 @@ Description
 Although the Ravenscar and Jorvik profiles allow the use of shared variables for inter-task communication, such use is less robust and less reliable than encapsulating shared variables within protected objects.
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-Applicable vulnerability within ISO TR 24772-2 
+Applicable vulnerability within ISO TR 24772-2
 """"""""""""""""""""""""""""""""""""""""""""""""
-   
+
 * 6.56 "Undefined behaviour [EWF]".
-   
+
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -45,7 +45,7 @@ Noncompliant Code Example
   :code: Ada
   :start-line: 4
   :end-line: 7
-   
+
 Note that variables marked as Atomic are also Volatile, per the
 `Ada RM C.6/8(3) - Shared Variable Control <http://www.ada-auth.org/standards/12rm/html/RM-C-6.html>`_
 
@@ -54,7 +54,7 @@ Compliant Code Example
 """"""""""""""""""""""""
 
 When assigned to a memory address, a Volatile variable can be used to interact with a memory-mapped device, among other similar usages.
-   
+
 .. include:: examples/con03.ads
   :code: Ada
   :start-line: 10
@@ -64,5 +64,4 @@ When assigned to a memory address, a Volatile variable can be used to interact w
 Notes
 """""""
 
-GNATcheck can detect violations via the Volatile_Objects_Without_Address_Clauses rule. SPARK and CodePeer can also detect conflicting access to unprotected variables. 
-   
+In additon to GNATcheck, SPARK and CodePeer can also detect conflicting access to unprotected variables.

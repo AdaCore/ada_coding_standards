@@ -12,8 +12,8 @@ No Exception Propagation Beyond Name Visibility (EXU03)
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
    :Portability: :math:`\checkmark`
-   :Performance: 
-   :Security: 
+   :Performance:
+   :Security:
 
 *Remediation* :math:`\rightarrow` **Low**
 
@@ -32,7 +32,7 @@ Description
 An active exception can be propagated dynamically past the point where the name of the exception is visible (the scope of the declaration). The exception can only be handled via "others" past that point. That situation prevents handling the exception specifically, and violates RPP05.
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-Applicable vulnerability within ISO TR 24772-2 
+Applicable vulnerability within ISO TR 24772-2
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 N/A
@@ -47,7 +47,7 @@ Noncompliant Code Example
   :end-line: 11
 
 As a result the exception name cannot be referenced outside the body:
-   
+
 .. include:: examples/exu03.adb
   :code: Ada
   :start-line: 12
@@ -67,5 +67,4 @@ Compliant Code Example
 Notes
 """""""
 
-GNATcheck can detect violations via the Non_Visible_Exceptions rule. 
-   
+N/A

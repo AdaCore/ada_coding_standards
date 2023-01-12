@@ -12,8 +12,8 @@ Limited Use of "others" In Aggregates (RPP03)
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
    :Portability: :math:`\checkmark`
-   :Performance: 
-   :Security: 
+   :Performance:
+   :Security:
 
 *Remediation* :math:`\rightarrow` **Low**
 
@@ -34,7 +34,7 @@ Do not use an "others" choice in an extension aggregate. In record and array agg
 This guideline prevents accidental provision of a general value for a record component or array component, when a specific value was intended. This possibility includes the case in which new components are added to an existing composite type.
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-Applicable vulnerability within ISO TR 24772-2 
+Applicable vulnerability within ISO TR 24772-2
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 * 6.5 Enumerator issues [CCB]
@@ -62,5 +62,4 @@ Compliant Code Example
 Notes
 """""""
 
-GNATcheck can detect violations via the OTHERS_In_Aggregates rule. 
-   
+N/A

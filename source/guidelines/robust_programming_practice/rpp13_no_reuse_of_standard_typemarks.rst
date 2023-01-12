@@ -12,8 +12,8 @@ No Reuse of Standard Typemarks (RPP13)
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
    :Portability: :math:`\checkmark`
-   :Performance: 
-   :Security: 
+   :Performance:
+   :Security:
 
 *Remediation* :math:`\rightarrow` **Low**
 
@@ -40,11 +40,11 @@ unintentionally use the locally-scoped ``Integer`` rather than the original
 attributes (and may not even be of the same base type).
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-Applicable vulnerability within ISO TR 24772-2 
+Applicable vulnerability within ISO TR 24772-2
 """"""""""""""""""""""""""""""""""""""""""""""""
-   
+
 N/A
-   
+
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -68,4 +68,3 @@ Notes
 """""""
 
 N/A
-   
