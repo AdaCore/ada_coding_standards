@@ -62,4 +62,4 @@ Compliant Code Example
 Notes
 """""""
 
-GNATcheck can detect violations via the OTHERS_In_Aggregates rule.
+N/A

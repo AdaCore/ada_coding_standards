@@ -64,4 +64,4 @@ When assigned to a memory address, a Volatile variable can be used to interact w
 Notes
 """""""
 
-GNATcheck can detect violations via the Volatile_Objects_Without_Address_Clauses rule. SPARK and CodePeer can also detect conflicting access to unprotected variables.
+In additon to GNATcheck, SPARK and CodePeer can also detect conflicting access to unprotected variables.

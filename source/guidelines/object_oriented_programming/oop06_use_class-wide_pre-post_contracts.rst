@@ -67,4 +67,4 @@ Compliant Code Example
 Notes
 """""""
 
-Violations can be detected with the GNATcheck rule Specific_Pre_Post.  SPARK enforces this guideline automatically.
+N/A

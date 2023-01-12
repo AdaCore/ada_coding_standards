@@ -61,4 +61,4 @@ Compliant Code Example
 Notes
 """""""
 
-This restriction is detected by GNATcheck with the Raising_Predefined_Exceptions rule applied.
+N/A

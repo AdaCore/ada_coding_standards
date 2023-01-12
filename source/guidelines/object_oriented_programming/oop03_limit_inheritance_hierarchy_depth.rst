@@ -68,4 +68,4 @@ Compliant Code Example
 Notes
 """""""
 
-Violations can be detected with the GNATcheck tool parameter Deep_Inheritance_Hierarchies, specifying a maximum inheritance depth as a parameter of the rule.
+N/A

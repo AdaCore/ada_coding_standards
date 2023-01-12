@@ -67,4 +67,4 @@ Compliant Code Example
 Notes
 """""""
 
-GNATcheck can detect violations via the Non_Visible_Exceptions rule.
+N/A

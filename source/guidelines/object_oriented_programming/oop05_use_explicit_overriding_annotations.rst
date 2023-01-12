@@ -89,4 +89,4 @@ Compliant Code Example
 Notes
 """""""
 
-This rule requires the GNAT compiler switches "-gnatyO" and "-gnatwe" in order for the compiler to flag missing overriding annotations as errors. The first causes the compiler to generate the warnings, and the second causes those warnings to be treated as errors. Alternatively, GNATcheck will flag those errors via the "+Style_Checks:O" rule.
+This rule requires the GNAT compiler switches "-gnatyO" and "-gnatwe" in order for the compiler to flag missing overriding annotations as errors. The first causes the compiler to generate the warnings, and the second causes those warnings to be treated as errors.

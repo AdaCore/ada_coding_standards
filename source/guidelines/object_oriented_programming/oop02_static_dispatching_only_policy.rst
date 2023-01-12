@@ -63,4 +63,4 @@ Compliant Code Example
 Notes
 """""""
 
-The compiler will detect violations with the GNAT-defined restriction No_Dispatching_Calls applied.
+N/A

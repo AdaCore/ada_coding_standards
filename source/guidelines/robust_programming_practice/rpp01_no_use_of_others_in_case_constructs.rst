@@ -61,4 +61,4 @@ Compliant Code Example
 Notes
 """""""
 
-GNATcheck can detect violations via the OTHERS_In_CASE_Statements rule.
+N/A
