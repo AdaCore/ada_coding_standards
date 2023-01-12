@@ -24,11 +24,6 @@ Complicating the issue further is the fact that, if exceptions are completely di
 
 Therefore, for the application software the system software architect must decide whether to allow exceptions at all, and if they are to be used, decide the degree and manner of their usage. At the system level, the architect must identify the exceptions that are possible and how they will be addressed.
 
-*Applicable vulnerability within ISO TR 24772-2*
-
-   * 6.36 "Ignored error status and unhandled exceptions [OYB]"
-   * 6.50 "Unanticipated exceptions from library routines [HJW]"
-
 .. toctree::
    :maxdepth: 1
 

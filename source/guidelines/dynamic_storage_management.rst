@@ -29,10 +29,6 @@ Realization
 
 Rule DYN01 is Required, as it avoids problematic features whatever the strategy chosen. Rules DYN02-05 are marked as Advisory, because one of them should be chosen and enforced throughout a given software project.
 
-*Applicable vulnerability within ISO TR 24772-2*
-
-   * 6.39 "Memory leak and heap fragmentation [XYL].
-
 .. toctree::
    :maxdepth: 1
 
