@@ -11,8 +11,8 @@ User-Defined Storage Pools Policy (DYN05)
 *Goal*
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
-   :Portability: 
-   :Performance: 
+   :Portability:
+   :Performance:
    :Security: :math:`\checkmark`
 
 *Remediation* :math:`\rightarrow` **Low**
@@ -42,7 +42,7 @@ Given an analysis providing the worst-case allocations and deallocations, it wou
 In this approach no storage-related constructs are disallowed unless the SPARK subset is applied.
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-Applicable vulnerability within ISO TR 24772-2 
+Applicable vulnerability within ISO TR 24772-2
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 * 4.10 Storage Pool
@@ -74,4 +74,3 @@ Notes
 """""""
 
 Enforcement of this approach can only be provided by manual code review unless SPARK is used.
-   

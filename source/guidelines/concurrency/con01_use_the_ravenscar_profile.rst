@@ -13,7 +13,7 @@ Use the Ravenscar Profile (CON01)
    :Reliability: :math:`\checkmark`
    :Portability: :math:`\checkmark`
    :Performance: :math:`\checkmark`
-   :Security: 
+   :Security:
 
 *Remediation* :math:`\rightarrow` **High**
 
@@ -73,7 +73,7 @@ The profile is equivalent to the following set of pragmas:
           	No_Dependence => System.Multiprocessors.Dispatching_Domains);
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-Applicable vulnerability within ISO TR 24772-2 
+Applicable vulnerability within ISO TR 24772-2
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 * 6.59 Concurrency - Activation [GGA]

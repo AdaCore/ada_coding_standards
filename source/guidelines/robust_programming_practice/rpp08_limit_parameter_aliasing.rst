@@ -12,8 +12,8 @@ Limit Parameter Aliasing  (RPP08)
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
    :Portability: :math:`\checkmark`
-   :Performance: 
-   :Security: 
+   :Performance:
+   :Security:
 
 *Remediation* :math:`\rightarrow` **High**
 
@@ -55,7 +55,7 @@ Where one of the rules above prohibits the occurrence of an object or any of its
    * A prohibited construct enclosed in parentheses.
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-Applicable vulnerability within ISO TR 24772-2 
+Applicable vulnerability within ISO TR 24772-2
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 * 6.32 Passing parameters and return values [CSJ]
@@ -69,17 +69,17 @@ Noncompliant Code Example
       type R is record
         Data : Integer := 0;
       end record;
-   
-      procedure Detect_Aliasing (Val_1 : in out R; 
-                                 Val_2 : in R) 
+
+      procedure Detect_Aliasing (Val_1 : in out R;
+                                 Val_2 : in R)
       is
       begin
          null;
       end Detect_Aliasing;
-   
+
       Obj : R;
-   
-   begin   
+
+   begin
       Detect_Aliasing (Obj, Obj);
 
 """"""""""""""""""""""""
@@ -93,4 +93,3 @@ Notes
 """""""
 
 All violations are detected by SPARK. The GNAT compiler switch "-gnateA[1]" enables detection of some cases, but not all.
-   

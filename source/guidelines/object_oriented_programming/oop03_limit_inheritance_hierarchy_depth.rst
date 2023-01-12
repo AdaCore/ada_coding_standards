@@ -11,8 +11,8 @@ Limit Inheritance Hierarchy Depth (OOP03)
 *Goal*
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
-   :Portability: 
-   :Performance: 
+   :Portability:
+   :Performance:
    :Security: :math:`\checkmark`
 
 *Remediation* :math:`\rightarrow` **High**
@@ -29,7 +29,7 @@ Reference
 Description
 """""""""""""
 
-A class inheritance hierarchy consists of a set of types related by inheritance. Each class, other than the root class, is a subclass of other classes, and each, except for "leaf" nodes, is a base class for those that are derived from it. 
+A class inheritance hierarchy consists of a set of types related by inheritance. Each class, other than the root class, is a subclass of other classes, and each, except for "leaf" nodes, is a base class for those that are derived from it.
 
 Improperly designed inheritance hierarchies complicate system maintenance and increase the effort in safety certification, in any programming language.
 
@@ -38,7 +38,7 @@ A common characteristic of problematic hierarchies is "excessive" depth, in whic
 Deep inheritance hierarchies also contribute to complexity, rather than lessening it, by requiring the reader to understand multiple superclasses in order to understand the behavior of a given subclass.
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-Applicable vulnerability within ISO TR 24772-2 
+Applicable vulnerability within ISO TR 24772-2
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 * 6.41 Inheritance [RIP]
@@ -68,4 +68,4 @@ Compliant Code Example
 Notes
 """""""
 
-Violations can be detected with the GNATcheck tool parameter Deep_Inheritance_Hierarchies, specifying a maximum inheritance depth as a parameter of the rule. 
+Violations can be detected with the GNATcheck tool parameter Deep_Inheritance_Hierarchies, specifying a maximum inheritance depth as a parameter of the rule.

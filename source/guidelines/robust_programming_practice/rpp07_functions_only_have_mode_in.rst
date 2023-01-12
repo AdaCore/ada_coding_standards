@@ -12,8 +12,8 @@ Functions Only Have Mode "in" (RPP07)
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
    :Portability: :math:`\checkmark`
-   :Performance: 
-   :Security: 
+   :Performance:
+   :Security:
 
 *Remediation* :math:`\rightarrow` **Low**
 
@@ -36,11 +36,11 @@ As of Ada 2012, functions are allowed to have the same modes as procedures. Howe
 This rule disallows all modes except mode "in" for functions.
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-Applicable vulnerability within ISO TR 24772-2 
+Applicable vulnerability within ISO TR 24772-2
 """"""""""""""""""""""""""""""""""""""""""""""""
-   
+
 * 6.24 Side-effects and order of evaluation [SAM]
-   
+
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -70,5 +70,4 @@ OR
 Notes
 """""""
 
-Violations are detected by SPARK. 
-   
+Violations are detected by SPARK.

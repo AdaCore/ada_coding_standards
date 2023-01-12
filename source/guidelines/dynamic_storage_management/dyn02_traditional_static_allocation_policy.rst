@@ -11,8 +11,8 @@ Traditional Static Allocation Policy (DYN02)
 *Goal*
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
-   :Portability: 
-   :Performance: 
+   :Portability:
+   :Performance:
    :Security: :math:`\checkmark`
 
 *Remediation* :math:`\rightarrow` **Low**
@@ -47,7 +47,7 @@ In this approach the following constructs are not allowed:
    * Unchecked Deallocations
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-Applicable vulnerability within ISO TR 24772-2 
+Applicable vulnerability within ISO TR 24772-2
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 * 4.10 Storage Pool
@@ -68,4 +68,4 @@ N/A
 Notes
 """""""
 
-The compiler, and/or GNATcheck, will detect violations of the restrictions. 
+The compiler, and/or GNATcheck, will detect violations of the restrictions.

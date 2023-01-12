@@ -15,8 +15,8 @@ No Unassigned Mode-Out Procedure Parameters (RPP04)
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
    :Portability: :math:`\checkmark`
-   :Performance: 
-   :Security: 
+   :Performance:
+   :Security:
 
 *Remediation* :math:`\rightarrow` **High**
 
@@ -35,11 +35,11 @@ Description
 For any procedure, all formal parameters of mode "out" must be assigned a value if the procedure exits normally. This rule ensures that, upon a normal return, the corresponding actual parameter has a defined value. Ensuring a defined value is especially important for scalar parameters because they are passed by value, such that some value is copied out to the actual. These undefined values can be especially difficult to locate because evaluation of the actual parameter's value might not occur immediately after the call returns.
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-Applicable vulnerability within ISO TR 24772-2 
+Applicable vulnerability within ISO TR 24772-2
 """"""""""""""""""""""""""""""""""""""""""""""""
-   
+
 * 6.32 Passing parameters and return values [CSJ]
-   
+
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -78,4 +78,4 @@ such as SPARK and CodePeer.
 
 Note that the GNATcheck rule does not check function parameters (as
 of Ada 2012 functions can have out parameters). As a result, the
-better choice is either SPARK or CodePeer.   
+better choice is either SPARK or CodePeer.

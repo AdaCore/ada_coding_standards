@@ -13,7 +13,7 @@ Use the Jorvik Profile (CON02)
    :Reliability: :math:`\checkmark`
    :Portability: :math:`\checkmark`
    :Performance: :math:`\checkmark`
-   :Security: 
+   :Security:
 
 *Remediation* :math:`\rightarrow` **High**
 
@@ -80,7 +80,7 @@ The following restrictions are part of the Ravenscar profile but **not** part of
 Jorvik also replaces restriction Simple_Barriers with Pure_Barriers (a weaker requirement than Simple_Barriers).
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-Applicable vulnerability within ISO TR 24772-2 
+Applicable vulnerability within ISO TR 24772-2
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 * 6.59 Concurrency - Activation [GGA]

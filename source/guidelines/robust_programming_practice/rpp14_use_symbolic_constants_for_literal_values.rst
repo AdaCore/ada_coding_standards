@@ -12,8 +12,8 @@ Use Symbolic Constants For Literal Values (RPP14)
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
    :Portability: :math:`\checkmark`
-   :Performance: 
-   :Security: 
+   :Performance:
+   :Security:
 
 *Remediation* :math:`\rightarrow` **Low**
 
@@ -47,11 +47,11 @@ over an array, it is better to use ``Array_Object'First .. Array_Object`Last``
 than using ``1 .. Array_Object'Length``.
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-Applicable vulnerability within ISO TR 24772-2 
+Applicable vulnerability within ISO TR 24772-2
 """"""""""""""""""""""""""""""""""""""""""""""""
-   
+
 N/A
-   
+
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -75,4 +75,3 @@ Notes
 """""""
 
 N/A
-   

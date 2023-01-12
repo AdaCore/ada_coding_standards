@@ -11,8 +11,8 @@ Access Types Without Allocators Policy (DYN03)
 *Goal*
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
-   :Portability: 
-   :Performance: 
+   :Portability:
+   :Performance:
    :Security: :math:`\checkmark`
 
 *Remediation* :math:`\rightarrow` **Low**
@@ -34,7 +34,7 @@ The following restrictions must be in effect:
    * No_Allocators
    * No_Dependence => Ada.Unchecked_Deallocation
 
-In this approach dynamic access values are only created via the attribute 'Access applied to aliased objects. Allocation and deallocation never occur. As a result, storage exhaustion cannot occur because no "dynamic" allocations occur. Fragmentation cannot occur because there are no deallocations.  
+In this approach dynamic access values are only created via the attribute 'Access applied to aliased objects. Allocation and deallocation never occur. As a result, storage exhaustion cannot occur because no "dynamic" allocations occur. Fragmentation cannot occur because there are no deallocations.
 
 In this approach the following constructs are not allowed:
 
@@ -52,7 +52,7 @@ The above would also ensure no allocations can occur with access types that have
 `Ada RM 13.11.3(6.1/3) - Default Storage Pools <http://ada-auth.org/standards/12rm/html/RM-13-11-3.html>`_)
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-Applicable vulnerability within ISO TR 24772-2 
+Applicable vulnerability within ISO TR 24772-2
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 * 4.10 Storage Pool
@@ -81,5 +81,4 @@ Compliant Code Example
 Notes
 """""""
 
-The compiler, and/or GNATcheck, will detect violations of the restrictions. 
-   
+The compiler, and/or GNATcheck, will detect violations of the restrictions.

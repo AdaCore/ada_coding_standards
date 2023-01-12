@@ -11,8 +11,8 @@ Use Class-wide Pre/Post Contracts (OOP06)
 *Goal*
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
-   :Portability: 
-   :Performance: 
+   :Portability:
+   :Performance:
    :Security: :math:`\checkmark`
 
 *Remediation* :math:`\rightarrow` **Low**
@@ -23,7 +23,7 @@ Use Class-wide Pre/Post Contracts (OOP06)
 Reference
 """""""""""
 
-[AdaOOP2016]_ section 6.1.4 
+[AdaOOP2016]_ section 6.1.4
 
 [SPARK2014]_ section 7.5.2
 
@@ -33,18 +33,18 @@ Description
 
 For primitive operations of tagged types, use only class-wide pre/post contracts, if any.
 
-The class-wide form of precondition and postcondition expresses conditions that are intended to apply to any version of the subprogram. Therefore, when a subprogram is derived as part of inheritance, only the class-wide form of those contracts is inherited from the parent subprogram, if any are defined. As a result, it only makes sense to use the class-wide form in this situation. 
+The class-wide form of precondition and postcondition expresses conditions that are intended to apply to any version of the subprogram. Therefore, when a subprogram is derived as part of inheritance, only the class-wide form of those contracts is inherited from the parent subprogram, if any are defined. As a result, it only makes sense to use the class-wide form in this situation.
 
 (The same semantics and recommendation applies to type invariants.)
 
 Note: this approach will be required for OOP07 (Ensure Local Type Consistency).
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-Applicable vulnerability within ISO TR 24772-2 
+Applicable vulnerability within ISO TR 24772-2
 """"""""""""""""""""""""""""""""""""""""""""""""
-   
+
 * 6.42 Violations of the Liskov substitution principle or the contract model [BLP]
-   
+
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -68,4 +68,3 @@ Notes
 """""""
 
 Violations can be detected with the GNATcheck rule Specific_Pre_Post.  SPARK enforces this guideline automatically.
-   

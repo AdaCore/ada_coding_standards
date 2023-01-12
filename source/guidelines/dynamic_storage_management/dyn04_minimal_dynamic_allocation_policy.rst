@@ -11,9 +11,9 @@ Minimal Dynamic Allocation Policy (DYN04)
 *Goal*
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
-   :Portability: 
-   :Performance: 
-   :Security: 
+   :Portability:
+   :Performance:
+   :Security:
 
 *Remediation* :math:`\rightarrow` **Low**
 
@@ -34,7 +34,7 @@ The following restrictions must be in effect:
    * No_Local_Allocators
    * No_Dependence => Ada.Unchecked_Deallocation
 
-In this approach dynamic allocation is only allowed during "start-up" and no later.  Deallocations never occur.  As a result, storage exhaustion should never occur assuming the initial allotment is sufficient.  This assumption is as strong as when using only declared objects on the "stack" because in that case a sufficient initial storage allotment for the stack must be made.  
+In this approach dynamic allocation is only allowed during "start-up" and no later.  Deallocations never occur.  As a result, storage exhaustion should never occur assuming the initial allotment is sufficient.  This assumption is as strong as when using only declared objects on the "stack" because in that case a sufficient initial storage allotment for the stack must be made.
 
 In this approach the following constructs are not allowed:
 
@@ -43,7 +43,7 @@ In this approach the following constructs are not allowed:
 Note that some operating systems intended for this domain directly support this policy.
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-Applicable vulnerability within ISO TR 24772-2 
+Applicable vulnerability within ISO TR 24772-2
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 * 4.10 Storage Pool
@@ -64,5 +64,4 @@ Code performing dynamic allocations any time prior to an arbitrary point designa
 Notes
 """""""
 
-The compiler, and/or GNATcheck, will detect violations of the restrictions. 
-   
+The compiler, and/or GNATcheck, will detect violations of the restrictions.

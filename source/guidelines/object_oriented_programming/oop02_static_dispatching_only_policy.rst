@@ -11,8 +11,8 @@ Static Dispatching Only Policy (OOP02)
 *Goal*
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
-   :Portability: 
-   :Performance: 
+   :Portability:
+   :Performance:
    :Security: :math:`\checkmark`
 
 *Remediation* :math:`\rightarrow` **N/A**
@@ -38,11 +38,11 @@ This rule ensures there are no class-wide values passed as the parameter to a pr
 Note that this rule should not be applied without due consideration.
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-Applicable vulnerability within ISO TR 24772-2 
+Applicable vulnerability within ISO TR 24772-2
 """"""""""""""""""""""""""""""""""""""""""""""""
-   
-* 6.43 "Redispatching [PPH]"
-   
+
+* 6.43 Redispatching [PPH]
+
 """""""""""""""""""""""""""
 Noncompliant Code Example
 """""""""""""""""""""""""""
@@ -63,5 +63,4 @@ Compliant Code Example
 Notes
 """""""
 
-The compiler will detect violations with the GNAT-defined restriction No_Dispatching_Calls applied. 
-   
+The compiler will detect violations with the GNAT-defined restriction No_Dispatching_Calls applied.

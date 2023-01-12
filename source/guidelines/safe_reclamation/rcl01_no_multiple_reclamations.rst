@@ -12,7 +12,7 @@ No Multiple Reclamations (RCL01)
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
    :Portability: :math:`\checkmark`
-   :Performance: 
+   :Performance:
    :Security: :math:`\checkmark`
 
 *Remediation* :math:`\rightarrow` **High**
@@ -32,7 +32,7 @@ Description
 Never deallocate the storage designated by a given access value more than once.
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-Applicable vulnerability within ISO TR 24772-2 
+Applicable vulnerability within ISO TR 24772-2
 """"""""""""""""""""""""""""""""""""""""""""""""
 
 * 6.39 Memory leak and heap fragmentation [XYL]
@@ -52,7 +52,7 @@ Noncompliant Code Example
       Y := S;
       Free (S);
       Free (Y);
-   
+
 """"""""""""""""""""""""
 Compliant Code Example
 """"""""""""""""""""""""
@@ -64,4 +64,3 @@ Notes
 """""""
 
 Enforcement of this rule can be provided by manual code review, unless deallocation is forbidden via No_Unchecked_Deallocation or SPARK is used, as ownership analysis in SPARK detects such cases. Note that storage utilization analysis tools such as Valgrind can usually find this sort of error. In addition, a GNAT-defined storage pool is available to help debug such errors.
-   
