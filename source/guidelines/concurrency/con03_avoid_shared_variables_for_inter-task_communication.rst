@@ -17,7 +17,7 @@ Avoid Shared Variables for Inter-task Communication (CON03)
 
 *Remediation* :math:`\rightarrow` **High**
 
-*GNATcheck Rule* :math:`\rightarrow` Volatile_Objects_Without_Address_Clauses
+*Verification Method* :math:`\rightarrow` GNATcheck rule: ``Volatile_Objects_Without_Address_Clauses``
 
 """""""""""
 Reference

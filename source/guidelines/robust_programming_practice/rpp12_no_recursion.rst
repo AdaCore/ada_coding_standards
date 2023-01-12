@@ -17,7 +17,7 @@ No Recursion (RPP12)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*GNATcheck Rule* :math:`\rightarrow` Recursive_Subprograms
+*Verification Method* :math:`\rightarrow` GNATcheck rule: ``Recursive_Subprograms``
 
 """""""""""
 Reference
@@ -61,5 +61,9 @@ Compliant Code Example
 Notes
 """""""
 
-The compiler will detect violations with the restriction No_Recursion in place. Note this is a dynamic check. GNATcheck enforces it statically with +RRecursive_Subprograms, subject to the limitations described in http://docs.adacore.com/live/wave/asis/html/gnatcheck_rm/gnatcheck_rm/predefined_rules.html#recursive-subprograms.
+The compiler will detect violations with the restriction No_Recursion in place.
+Note this is a dynamic check.
+
+The GNATcheck rule specified above is a static check, subject to the limitations
+described in http://docs.adacore.com/live/wave/asis/html/gnatcheck_rm/gnatcheck_rm/predefined_rules.html#recursive-subprograms.
    

@@ -1,3 +1,6 @@
+.. role:: ada(code)
+    :language: Ada 
+
 ---------------------------------------------
 Use Explicit Overriding Annotations (OOP05)
 ---------------------------------------------
@@ -17,7 +20,7 @@ Use Explicit Overriding Annotations (OOP05)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*GNATcheck Rule* :math:`\rightarrow` Style_Checks:O
+*Verification Method* :math:`\rightarrow` GNATcheck rule: ``Style_Checks:O``
 
 """""""""""
 Reference

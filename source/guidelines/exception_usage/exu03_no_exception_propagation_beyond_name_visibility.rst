@@ -17,7 +17,7 @@ No Exception Propagation Beyond Name Visibility (EXU03)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*GNATcheck Rule* :math:`\rightarrow` Non_Visible_Exceptions
+*Verification Method* :math:`\rightarrow` GNATcheck rule: ``Non_Visible_Exceptions``
 
 """""""""""
 Reference

@@ -17,7 +17,7 @@ Limit Statically-Dispatched Calls To Primitive Operations (OOP04)
 
 *Remediation* :math:`\rightarrow` **Medium (easy fix, but a difficult to detect bug)**
 
-*GNATcheck Rule* :math:`\rightarrow` Direct_Calls_To_Primitives
+*Verification Method* :math:`\rightarrow` GNATcheck rule: ``Direct_Calls_To_Primitives``
 
 """""""""""
 Reference

@@ -1,3 +1,6 @@
+.. role:: ada(code)
+    :language: Ada 
+
 --------------------------------------------------
 No Use of "others" in Exception Handlers (RPP05)
 --------------------------------------------------
@@ -17,7 +20,7 @@ No Use of "others" in Exception Handlers (RPP05)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*GNATcheck Rule* :math:`\rightarrow` OTHERS_In_Exception_Handlers
+*Verification Method* :math:`\rightarrow` GNATcheck rule: ``OTHERS_In_Exception_Handlers``
 
 """""""""""
 Reference
@@ -59,13 +62,13 @@ Compliant Code Example
 Notes
 """""""
 
-GNATcheck can detect violations via the OTHERS_In_Exception_Handlers rule. 
-   
 ISO TR 24772-2: 6.50.2 slightly contradicts this when applying exception handlers around calls to library routines: 
    
-   * "Put appropriate exception handlers in all routines that call library routines, including the catch-all exception handler when others =>."
+   * Put appropriate exception handlers in all routines that call library routines,
+     including the catch-all exception handler :ada:`when others =>`
    
-   * Put appropriate exception handlers in all routines that are called by library routines, including the catch-all exception handler when others =>.
+   * Put appropriate exception handlers in all routines that are called by library routines,
+     including the catch-all exception handler :ada:`when others =>`
    
 It also recommends "All tasks should contain an exception handler at the outer level to prevent silent termination due to unhandled exceptions." for vulnerability 6.62 Concurrency - Premature termination.
    

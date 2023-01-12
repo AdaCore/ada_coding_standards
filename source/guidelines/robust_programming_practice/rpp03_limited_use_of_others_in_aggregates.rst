@@ -17,7 +17,7 @@ Limited Use of "others" In Aggregates (RPP03)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*GNATcheck Rule* :math:`\rightarrow` OTHERS_In_Aggregates
+*Verification Method* :math:`\rightarrow` GNATcheck rule: ``OTHERS_In_Aggregates``
 
 """""""""""
 Reference

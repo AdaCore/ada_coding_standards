@@ -17,7 +17,7 @@ Functions Only Have Mode "in" (RPP07)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*GNATcheck Rule* :math:`\rightarrow` function_out_parameters
+*Verification Method* :math:`\rightarrow` GNATcheck rule: ``function_out_parameters``
 
 """""""""""
 Reference

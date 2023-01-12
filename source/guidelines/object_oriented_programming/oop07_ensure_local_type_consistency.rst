@@ -17,7 +17,7 @@ Ensure Local Type Consistency (OOP07)
 
 *Remediation* :math:`\rightarrow` **N/A**
 
-*GNATcheck Rule* :math:`\rightarrow` TBD SPARK
+*Verification Method* :math:`\rightarrow` Software test
 
 """""""""""
 Reference

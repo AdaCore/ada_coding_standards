@@ -17,7 +17,7 @@ No Multiple Reclamations (RCL01)
 
 *Remediation* :math:`\rightarrow` **High**
 
-*GNATcheck Rule* :math:`\rightarrow` TBD
+*Verification Method* :math:`\rightarrow` Code inspection
 
 """""""""""
 Reference

@@ -17,7 +17,7 @@ Always Use the Result of Function Calls (RPP11)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*GNATcheck Rule* :math:`\rightarrow` TBD
+*Verification Method* :math:`\rightarrow` Compiler restrictions
 
 """""""""""
 Reference

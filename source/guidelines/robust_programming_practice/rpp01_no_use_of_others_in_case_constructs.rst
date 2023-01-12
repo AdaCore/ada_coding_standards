@@ -17,7 +17,7 @@ No Use of "others" in Case Constructs (RPP01)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*GNATcheck Rule* :math:`\rightarrow` OTHERS_In_CASE_Statements
+*Verification Method* :math:`\rightarrow` GNATcheck rule: ``OTHERS_In_CASE_Statements``
 
 """""""""""
 Reference
