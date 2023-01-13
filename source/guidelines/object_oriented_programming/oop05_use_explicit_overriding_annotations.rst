@@ -1,9 +1,9 @@
-.. role:: ada(code)
-    :language: Ada
-
 ---------------------------------------------
 Use Explicit Overriding Annotations (OOP05)
 ---------------------------------------------
+
+.. role:: ada(code)
+    :language: Ada
 
 *Level* :math:`\rightarrow` **Required**
 
