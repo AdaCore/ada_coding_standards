@@ -1,9 +1,9 @@
-.. role:: ada(code)
-    :language: Ada
-
 --------------------------------------------------
 No Use of "others" in Exception Handlers (RPP05)
 --------------------------------------------------
+
+.. role:: ada(code)
+    :language: Ada
 
 *Level* :math:`\rightarrow` **Required**
 

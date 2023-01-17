@@ -1,9 +1,9 @@
-.. role:: ada(code)
-    :language: Ada
-
 ---------------------------------------------
 Use Explicit Overriding Annotations (OOP05)
 ---------------------------------------------
+
+.. role:: ada(code)
+    :language: Ada
 
 *Level* :math:`\rightarrow` **Required**
 
@@ -60,6 +60,7 @@ Note that the compiler switches will also require the explicit overriding indica
 Applicable vulnerability within ISO TR 24772-2
 """"""""""""""""""""""""""""""""""""""""""""""""
 
+* 6.34 Subprogram signature mismatch [OTR]
 * 6.41 Inheritance [RIP]
 
 """""""""""""""""""""""""""
