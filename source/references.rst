@@ -31,3 +31,5 @@ References
 .. [CWE2019] MITRE. 2019. *Common Weakness Enumeration (CWE)*
    
 .. [SEI-Java] The Software Engineering Institute. *SEI CERT Oracle Coding Standard for Java*
+
+.. [TR24772] ISO/IEC. 2022. *ISO/IEC TR 24772-2:20 Programming Languages - Guidance to Avoiding Vulnerabilities in Programming Languages - Part 2: Ada*
