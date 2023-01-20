@@ -2,8 +2,7 @@
 No Use of "others" in Exception Handlers (RPP05)
 --------------------------------------------------
 
-.. role:: ada(code)
-    :language: Ada
+.. include:: ../../../../global.txt
 
 *Level* :math:`\rightarrow` **Required**
 

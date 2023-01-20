@@ -47,7 +47,7 @@ Applicable vulnerability within ISO TR 24772-2
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
+.. code-block:: Ada
 
    Call_Count : Integer := 0;
    function F return Boolean is

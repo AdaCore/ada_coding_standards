@@ -57,7 +57,7 @@ Allocation via an access type not tied to a user-defined storage pool.
 Compliant Code Example
 """"""""""""""""""""""""
 
-.. code:: Ada
+.. code-block:: Ada
 
    Heap : Sequential_Fixed_Blocks.Storage_Pool
             (Storage_Size => Required_Storage_Size,

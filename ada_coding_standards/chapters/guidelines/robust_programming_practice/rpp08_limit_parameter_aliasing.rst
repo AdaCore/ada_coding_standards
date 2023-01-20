@@ -64,7 +64,7 @@ Applicable vulnerability within ISO TR 24772-2
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
+.. code-block:: Ada
 
       type R is record
         Data : Integer := 0;

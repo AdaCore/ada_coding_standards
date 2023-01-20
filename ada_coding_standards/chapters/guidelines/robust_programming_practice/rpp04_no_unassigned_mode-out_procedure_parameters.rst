@@ -2,8 +2,7 @@
 No Unassigned Mode-Out Procedure Parameters (RPP04)
 -----------------------------------------------------
 
-.. role:: ada(code)
-    :language: Ada
+.. include:: ../../../../global.txt
 
 *Level* :math:`\rightarrow` **Required**
 

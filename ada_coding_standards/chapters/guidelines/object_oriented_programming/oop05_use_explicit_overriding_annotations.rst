@@ -2,8 +2,7 @@
 Use Explicit Overriding Annotations (OOP05)
 ---------------------------------------------
 
-.. role:: ada(code)
-    :language: Ada
+.. include:: ../../../../global.txt
 
 *Level* :math:`\rightarrow` **Required**
 

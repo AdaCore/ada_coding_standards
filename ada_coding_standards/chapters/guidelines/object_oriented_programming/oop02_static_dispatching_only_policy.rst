@@ -1,6 +1,6 @@
------------------------------------------
-No Class-wide Constructs Policy (OOP01)
------------------------------------------
+----------------------------------------
+Static Dispatching Only Policy (OOP02)
+----------------------------------------
 
 *Level* :math:`\rightarrow` **Advisory**
 
@@ -19,7 +19,7 @@ No Class-wide Constructs Policy (OOP01)
 
 *Verification Method* :math:`\rightarrow` Compiler restrictions
 
-*Mutually Exclusive* :math:`\rightarrow` OOP02
+*Mutually Exclusive* :math:`\rightarrow` OOP01
 
 """""""""""
 Reference
@@ -31,11 +31,11 @@ N/A
 Description
 """""""""""""
 
-In this approach, tagged types are allowed and type extension (inheritance) is allowed, but there are no class-wide constructs.
+In this approach, class-wide constructs are allowed, as well as tagged types and type extension (inheritance), but dynamic dispatching remains disallowed (i.e., as in OOP01).
 
-This restriction ensures there are no class-wide objects or formal parameters, nor access types designating class-wide types.
+This rule ensures there are no class-wide values passed as the parameter to a primitive operation of a tagged type, hence there are no dynamically dispatched calls.
 
-In this approach there are no possible dynamic dispatching calls because such calls can only occur when a class-wide value is passed as the parameter to a primitive operation of a tagged type.
+Note that this rule should not be applied without due consideration.
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2
@@ -47,20 +47,20 @@ Applicable vulnerability within ISO TR 24772-2
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
+.. code-block:: Ada
 
-   X : Object'Class := Some_Object;
+   Some_Primitive (Object'Class (X));
 
 """"""""""""""""""""""""
 Compliant Code Example
 """"""""""""""""""""""""
 
-.. code:: Ada
+.. code-block:: Ada
 
-   X : Object := Some_Object;
+   Some_Primitive (X);
 
 """""""
 Notes
 """""""
 
-The compiler will detect violations with the standard Ada restriction No_Dispatch applied.
+N/A

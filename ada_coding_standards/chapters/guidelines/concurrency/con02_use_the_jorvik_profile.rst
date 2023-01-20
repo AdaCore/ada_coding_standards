@@ -33,13 +33,13 @@ Description
 
 The following profile must be in effect:
 
-.. code:: Ada
+.. code-block:: Ada
 
    pragma Profile (Jorvik);
 
 The profile is equivalent to the following set of pragmas:
 
-.. code:: Ada
+.. code-block:: Ada
 
    pragma Task_Dispatching_Policy (FIFO_Within_Priorities);
    pragma Locking_Policy (Ceiling_Locking);
@@ -68,7 +68,7 @@ The profile is equivalent to the following set of pragmas:
 
 The following restrictions are part of the Ravenscar profile but **not** part of the Jorvik profile.
 
-.. code:: Ada
+.. code-block:: Ada
 
     No_Implicit_Heap_Allocations
     No_Relative_Delay

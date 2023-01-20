@@ -67,7 +67,7 @@ Any code using the constructs listed above.
 Compliant Code Example
 """"""""""""""""""""""""
 
-.. code:: Ada
+.. code-block:: Ada
 
    type Descriptor is ...;
    type Descriptor_Ref is access all Descriptor;

@@ -41,7 +41,7 @@ N/A
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
+.. code-block:: Ada
 
    type Stack is private;
    procedure Push (This : in out Stack;  Item : Element) with
@@ -61,7 +61,7 @@ Noncompliant Code Example
 Compliant Code Example
 """"""""""""""""""""""""
 
-.. code:: Ada
+.. code-block:: Ada
 
    type Stack is private;
    procedure Push (This : in out Stack;  Item : Element) with

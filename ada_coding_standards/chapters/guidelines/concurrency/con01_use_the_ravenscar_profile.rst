@@ -33,13 +33,13 @@ Description
 
 The following profile must be in effect:
 
-.. code:: Ada
+.. code-block:: Ada
 
    pragma Profile (Ravenscar);
 
 The profile is equivalent to the following set of pragmas:
 
-.. code:: Ada
+.. code-block:: Ada
 
    pragma Task_Dispatching_Policy (FIFO_Within_Priorities);
    pragma Locking_Policy (Ceiling_Locking);

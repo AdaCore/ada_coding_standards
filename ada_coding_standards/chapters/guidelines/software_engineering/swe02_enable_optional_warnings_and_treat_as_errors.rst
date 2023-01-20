@@ -50,7 +50,7 @@ Applicable vulnerability within ISO TR 24772-2
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
+.. code-block:: Ada
 
    procedure P (This : Obj) is
    begin
@@ -63,7 +63,7 @@ The formal parameter controls dispatching for the sake of selecting the subprogr
 Compliant Code Example
 """"""""""""""""""""""""
 
-.. code:: Ada
+.. code-block:: Ada
 
    procedure P (This : Obj) is
       pragma Unreferenced (This);

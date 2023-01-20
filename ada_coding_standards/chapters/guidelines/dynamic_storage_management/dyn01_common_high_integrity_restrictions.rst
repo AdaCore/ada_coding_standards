@@ -50,7 +50,7 @@ Noncompliant Code Example
 
 For No_Anonymous_Allocators:
 
-   .. code:: Ada
+   .. code-block:: Ada
 
       X : access String := new String'("Hello");
       ...
@@ -58,14 +58,14 @@ For No_Anonymous_Allocators:
 
 For No_Coextensions:
 
-   .. code:: Ada
+   .. code-block:: Ada
 
       type Object (Msg : access String) is ...
       Obj : Object (Msg => new String'("Hello"));
 
 For No_Access_Parameter_Allocators:
 
-   .. code:: Ada
+   .. code-block:: Ada
 
       procedure P (Formal : access String);
       ...
@@ -77,7 +77,7 @@ Compliant Code Example
 
 For No_Anonymous_Allocators, use a named access type:
 
-   .. code:: Ada
+   .. code-block:: Ada
 
       type String_Reference is access all String;
       S : constant String_Reference := new String'("Hello");
@@ -87,7 +87,7 @@ For No_Anonymous_Allocators, use a named access type:
 
 For No_Coextensions, use a variable of a named access type:
 
-   .. code:: Ada
+   .. code-block:: Ada
 
       type Object (Msg : access String) is ...
       type String_Reference is access all String;
@@ -96,7 +96,7 @@ For No_Coextensions, use a variable of a named access type:
 
 For No_Access_Parameter_Allocators, use a variable of a named access type:
 
-   .. code:: Ada
+   .. code-block:: Ada
 
       procedure P (Formal : access String);
       type String_Reference is access all String;

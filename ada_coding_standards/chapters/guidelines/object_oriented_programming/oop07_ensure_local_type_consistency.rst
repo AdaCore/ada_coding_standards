@@ -78,7 +78,7 @@ Applicable vulnerability within ISO TR 24772-2
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
+.. code-block:: Ada
 
    package P is
       pragma Elaborate_Body;
@@ -107,7 +107,7 @@ The postcondition for Set_Width states that the Height is not changed. Likewise,
 
 Now, in a subclass Square, the operations are overridden so that setting the width also sets the height to the same value, and vice versa. Thus the overridden operations do not maintain type consistency, but this fact is neither detected at run-time, nor could SPARK verify it statically (and SPARK is not used at all in these versions of the packages).
 
-.. code:: Ada
+.. code-block:: Ada
 
    with P; use P;
    package Q is
@@ -134,7 +134,7 @@ Now, in a subclass Square, the operations are overridden so that setting the wid
 Compliant Code Example
 """"""""""""""""""""""""
 
-.. code:: Ada
+.. code-block:: Ada
 
    package P with SPARK_Mode is
       pragma Elaborate_Body;
@@ -162,7 +162,7 @@ Compliant Code Example
 
 Now the postconditions are class-wide so they are inherited by subclasses. In the subclass Square, the postconditions will not hold at run-time. Likewise, SPARK can now prove that type consistency is not verified because the postconditions are weaker than those inherited:
 
-.. code:: Ada
+.. code-block:: Ada
 
    with P; use P;
    package Q with SPARK_Mode is

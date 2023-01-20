@@ -44,7 +44,7 @@ Applicable vulnerability within ISO TR 24772-2
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-.. code:: Ada
+.. code-block:: Ada
 
       type Pointer1 is access all Integer;
       type Pointer2 is access all Integer;
