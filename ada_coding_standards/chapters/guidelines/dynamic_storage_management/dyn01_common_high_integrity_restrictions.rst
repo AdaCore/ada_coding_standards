@@ -19,16 +19,16 @@ Common High Integrity Restrictions (DYN01)
 
 *Verification Method* :math:`\rightarrow` Compiler restrictions
 
-"""""""""""
++++++++++++
 Reference
-"""""""""""
++++++++++++
 
 `Ada RM H.4 - High Integrity Restrictions
 <http://www.ada-auth.org/standards/2xrm/html/RM-H-4.html>`_
 
-"""""""""""""
++++++++++++++
 Description
-"""""""""""""
++++++++++++++
 
 The following restrictions must be in effect:
 
@@ -43,15 +43,15 @@ any storage allocated by the compiler at run-time for representing objects is
 reclaimed at once. (That restriction does not apply to objects created by
 allocators in the application.)
 
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 * 4.10 Storage Pool
 
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 Noncompliant Code Example
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 
 For No_Anonymous_Allocators:
 
@@ -76,9 +76,9 @@ For No_Access_Parameter_Allocators:
       ...
       P (Formal => new String'("Hello"));
 
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 Compliant Code Example
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 
 For No_Anonymous_Allocators, use a named access type:
 
@@ -109,9 +109,9 @@ For No_Access_Parameter_Allocators, use a variable of a named access type:
       ...
       P (Formal => S);
 
-"""""""
++++++++
 Notes
-"""""""
++++++++
 
 The compiler will detect violations of the first three restrictions. Note that
 GNATcheck can detect violations in addition to the compiler.

@@ -19,15 +19,15 @@ Only Reclaim To The Same Pool (RCL03)
 
 *Verification Method* :math:`\rightarrow` Code inspection
 
-"""""""""""
++++++++++++
 Reference
-"""""""""""
++++++++++++
 
 N/A
 
-"""""""""""""
++++++++++++++
 Description
-"""""""""""""
++++++++++++++
 
 When deallocating, ensure that the pool to which the storage will be returned
 was the same pool from which it was allocated. Execution is erroneous
@@ -40,15 +40,15 @@ or explicitly with a storage pool specified by the programmer. The implicit
 default pool might not be the same pool used for another access type, even an
 access type designating the same subtype.
 
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 * 6.39 Memory leak and heap fragmentation [XYL]
 
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 Noncompliant Code Example
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 
 .. code-block:: Ada
 
@@ -68,15 +68,15 @@ In the above, P1.all was allocated from Pointer1'Storage_Pool, but, via the
 type conversion, the code above is attempting to return it to
 Pointer2'Storage_Pool, which may be a different pool.
 
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 Compliant Code Example
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 
 Don't deallocate converted access values.
 
-"""""""
++++++++
 Notes
-"""""""
++++++++
 
 Enforcement of this rule can only be provided by manual code review, unless
 deallocation is forbidden via No_Unchecked_Deallocation.

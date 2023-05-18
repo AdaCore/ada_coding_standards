@@ -21,15 +21,15 @@ Use Explicit Overriding Annotations (OOP05)
 
 *Verification Method* :math:`\rightarrow` GNATcheck rule: ``Style_Checks:O``
 
-"""""""""""
++++++++++++
 Reference
-"""""""""""
++++++++++++
 
 [AdaOOP2016]_ section 4.3
 
-"""""""""""""
++++++++++++++
 Description
-"""""""""""""
++++++++++++++
 
 The declaration of a primitive operation that overrides an inherited operation
 must include an explicit "overriding" annotation.
@@ -92,16 +92,16 @@ Note that the compiler switches will also require the explicit overriding
 indicator when overriding a language-defined operator. The switches also apply
 to inherited primitive subprograms for non-tagged types.
 
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 * 6.34 Subprogram signature mismatch [OTR]
 * 6.41 Inheritance [RIP]
 
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 Noncompliant Code Example
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 
 .. include:: examples/oop05.ads
   :code: Ada
@@ -113,18 +113,18 @@ Noncompliant Code Example
   :start-line: 5
   :end-line: 7
 
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 Compliant Code Example
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 
 .. include:: examples/oop05.ads
   :code: Ada
   :start-line: 7
   :end-line: 10
 
-"""""""
++++++++
 Notes
-"""""""
++++++++
 
 This rule requires the GNAT compiler switches "-gnatyO" and "-gnatwe" in order
 for the compiler to flag missing overriding annotations as errors. The first

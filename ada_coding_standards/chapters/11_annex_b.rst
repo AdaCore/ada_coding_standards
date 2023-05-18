@@ -48,7 +48,7 @@ Developers that use the GNU GPL protect your rights with two steps:
 
    1. Assert copyright on the software, and
    2. Offer you this License giving you legal permission to copy, distribute
-   and/or modify it.
+      and/or modify it.
 
 For the developers' and authors' protection, the GPL clearly explains
 that there is no warranty for this free software.  For both users' and
@@ -85,30 +85,30 @@ Terms And Conditions
 Definitions
 -------------
 
-""""""""""""""
+++++++++++++++
 This License
-""""""""""""""
+++++++++++++++
 
 Refers to version 3 of the GNU General Public License.
 
-"""""""""""
++++++++++++
 Copyright
-"""""""""""
++++++++++++
 
 Also means copyright-like laws that apply to other kinds of works, such
 as semiconductor masks.
 
-"""""""""
++++++++++
 Program
-"""""""""
++++++++++
 
 *The Program* refers to any copyrightable work licensed under this License.
 Each licensee is addressed as "you".
 "Licensees" and "recipients" may be individuals or organizations.
 
-""""""""
+++++++++
 Modify
-""""""""
+++++++++
 
 To *modify* a work means to copy from or adapt all or part of the work
 in a fashion requiring copyright permission, other than the making of
@@ -116,16 +116,16 @@ an exact copy.
 The resulting work is called a "modified version" of the earlier work
 or a work "based on" the earlier work.
 
-""""""""""""""
+++++++++++++++
 Covered Work
-""""""""""""""
+++++++++++++++
 
 A *covered work* means either the unmodified Program or a work based on
 the Program.
 
-"""""""""""
++++++++++++
 Propagate
-"""""""""""
++++++++++++
 
 To *propagate* a work means to do anything with it that, without
 permission, would make you directly or secondarily liable for
@@ -135,18 +135,18 @@ Propagation includes copying, distribution (with or without
 modification), making available to the public, and in some countries
 other activities as well.
 
-""""""""
+++++++++
 Convey
-""""""""
+++++++++
 
 To *convey* a work means any kind of propagation that enables other
 parties to make or receive copies.
 Mere interaction with a user through a computer network, with no
 transfer of a copy, is not conveying.
 
-"""""""""""""""""""""""""
++++++++++++++++++++++++++++
 Appropriate Legal Notices
-"""""""""""""""""""""""""
++++++++++++++++++++++++++++
 
 An interactive user interface displays *Appropriate Legal Notices* to
 the extent that it includes a convenient and prominently visible feature

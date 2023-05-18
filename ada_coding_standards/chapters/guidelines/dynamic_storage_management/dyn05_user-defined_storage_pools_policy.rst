@@ -19,16 +19,16 @@ User-Defined Storage Pools Policy (DYN05)
 
 *Verification Method* :math:`\rightarrow` Code inspection
 
-"""""""""""
++++++++++++
 Reference
-"""""""""""
++++++++++++
 
 MISRA rule 21.3 "The memory allocation and deallocation functions of <stdlib.h>
 shall not be used"
 
-"""""""""""""
++++++++++++++
 Description
-"""""""""""""
++++++++++++++
 
 There are two issues that make storage utilization analysis difficult: 1) the
 predictability of the allocation and deallocation implementation, and 2) how
@@ -57,21 +57,21 @@ of the "owning" access-to-object types provided by SPARK.
 In this approach no storage-related constructs are disallowed unless the SPARK
 subset is applied.
 
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 * 4.10 Storage Pool
 
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 Noncompliant Code Example
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 
 Allocation via an access type not tied to a user-defined storage pool.
 
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 Compliant Code Example
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 
 .. code-block:: Ada
 
@@ -85,9 +85,9 @@ Compliant Code Example
    ...
    Ptr := new Unsigned_Longword; -- from Heap
 
-"""""""
++++++++
 Notes
-"""""""
++++++++
 
 Enforcement of this approach can only be provided by manual code review unless
 SPARK is used.

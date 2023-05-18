@@ -19,9 +19,9 @@ Limit Parameter Aliasing  (RPP08)
 
 *Verification Method* :math:`\rightarrow` Code inspection
 
-"""""""""""
++++++++++++
 Reference
-"""""""""""
++++++++++++
 
 `Ada RM 6.2 - Formal Parameter Modes
 <http://www.ada-auth.org/standards/2xrm/html/RM-6-2.html>`_,
@@ -29,9 +29,9 @@ Reference
 `SPARK RM 6.4.2 - Anti-Aliasing
 <https://docs.adacore.com/spark2014-docs/html/lrm/subprograms.html#anti-aliasing>`_
 
-"""""""""""""
++++++++++++++
 Description
-"""""""""""""
++++++++++++++
 
 In software, an alias is a name which refers to the same object as another
 name. In some cases, it is an error in Ada to reference an object through a
@@ -78,15 +78,15 @@ prohibited in this context:
    * A qualified expression whose operand is a prohibited construct;
    * A prohibited construct enclosed in parentheses.
 
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 * 6.32 Passing parameters and return values [CSJ]
 
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 Noncompliant Code Example
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 
 .. code-block:: Ada
 
@@ -106,15 +106,15 @@ Noncompliant Code Example
    begin
       Detect_Aliasing (Obj, Obj);
 
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 Compliant Code Example
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 
 Don't pass Obj as the actual parameter to both formal parameters.
 
-"""""""
++++++++
 Notes
-"""""""
++++++++
 
 All violations are detected by SPARK. The GNAT compiler switch "-gnateA[1]"
 enables detection of some cases, but not all.

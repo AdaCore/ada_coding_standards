@@ -22,16 +22,16 @@ Use the Ravenscar Profile (CON01)
 
 *Mutually Exclusive* :math:`\rightarrow` CON02
 
-"""""""""""
++++++++++++
 Reference
-"""""""""""
++++++++++++
 
 `Ada RM D.13 - The Ravenscar Profile
 <http://ada-auth.org/standards/12rm/html/RM-D-13.html>`_
 
-"""""""""""""
++++++++++++++
 Description
-"""""""""""""
++++++++++++++
 
 The following profile must be in effect:
 
@@ -74,9 +74,9 @@ The profile is equivalent to the following set of pragmas:
            No_Dependence => Ada.Task_Attributes,
            No_Dependence => System.Multiprocessors.Dispatching_Domains);
 
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 * 6.59 Concurrency - Activation [GGA]
 * 6.60 Concurrency - Directed termination [CGT]
@@ -84,9 +84,9 @@ Applicable vulnerability within ISO TR 24772-2
 * 6.62 Concurrency - Premature termination [CGS]
 * 6.63 Lock protocol errors [CGM]
 
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 Noncompliant Code Example
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 
 Any code disallowed by the profile. Remediation is "high" because use of the
 facilities outside the subset can be difficult to retrofit into compliance.
@@ -96,18 +96,18 @@ facilities outside the subset can be difficult to retrofit into compliance.
   :start-line: 11
   :end-line: 18
 
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 Compliant Code Example
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 
 .. include:: examples/con01.adb
   :code: Ada
   :start-line: 26
   :end-line: 36
 
-"""""""
++++++++
 Notes
-"""""""
++++++++
 
 The Ada builder will detect violations if the programmer specifies this profile
 or corresponding pragmas. GNATcheck also can detect violations of profile

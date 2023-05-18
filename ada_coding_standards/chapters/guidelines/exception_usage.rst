@@ -1,7 +1,8 @@
-
 =======================
 Exception Usage (EXU)
 =======================
+
+.. include:: ../../../global.txt
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -29,7 +30,7 @@ case overall integrity is reduced or unwarranted.
 In addition, programming languages may define some system-level errors in terms
 of language-defined exceptions. Such exceptions may be unavoidable, at least at
 the system level. For example, in Ada, stack overflow is signalled with the
-language-defined "Storage_Error" exception. Other system events, such as bus
+language-defined :ada:`Storage_Error` exception. Other system events, such as bus
 error, may also be mapped to language-defined or vendor-defined exceptions.
 
 Complicating the issue further is the fact that, if exceptions are completely

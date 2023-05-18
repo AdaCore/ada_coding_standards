@@ -20,15 +20,15 @@ No Reuse of Standard Typemarks (RPP13)
 *Verification Method* :math:`\rightarrow` GNATcheck rule:
 ``overrides_standard_name``
 
-"""""""""""
++++++++++++
 Reference
-"""""""""""
++++++++++++
 
 N/A
 
-"""""""""""""
++++++++++++++
 Description
-"""""""""""""
++++++++++++++
 
 Do not reuse the names of standard Ada typemarks
 (e.g. ``type Integer is range -1_000 .. 1_000;``)
@@ -40,32 +40,32 @@ unintentionally use the locally-scoped ``Integer`` rather than the original
 ``Standard.Integer``. The locally-scoped ``Integer`` can have different
 attributes (and may not even be of the same base type).
 
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 N/A
 
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 Noncompliant Code Example
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 
 .. include:: examples/rpp13.ads
   :code: Ada
   :start-line: 3
   :end-line: 5
 
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 Compliant Code Example
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 
 .. include:: examples/rpp13.ads
   :code: Ada
   :start-line: 8
   :end-line: 10
 
-"""""""
++++++++
 Notes
-"""""""
++++++++
 
 N/A

@@ -19,15 +19,15 @@ Minimal Dynamic Allocation Policy (DYN04)
 
 *Verification Method* :math:`\rightarrow` Compiler restrictions
 
-"""""""""""
++++++++++++
 Reference
-"""""""""""
++++++++++++
 
 Power of Ten rule 3 "Do not use dynamic memory allocation after initialization"
 
-"""""""""""""
++++++++++++++
 Description
-"""""""""""""
++++++++++++++
 
 The following restrictions must be in effect:
 
@@ -47,27 +47,27 @@ In this approach the following constructs are not allowed:
 Note that some operating systems intended for this domain directly support this
 policy.
 
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 * 4.10 Storage Pool
 
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 Noncompliant Code Example
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 
 Any code using the constructs listed above.
 
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 Compliant Code Example
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 
 Code performing dynamic allocations any time prior to an arbitrary point
 designated as the end of the "startup" interval.
 
-"""""""
++++++++
 Notes
-"""""""
++++++++
 
 The compiler, and/or GNATcheck, will detect violations of the restrictions.

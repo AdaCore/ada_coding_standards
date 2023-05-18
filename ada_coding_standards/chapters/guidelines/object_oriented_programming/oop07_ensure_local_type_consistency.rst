@@ -19,23 +19,23 @@ Ensure Local Type Consistency (OOP07)
 
 *Verification Method* :math:`\rightarrow` Software test
 
-"""""""""""
++++++++++++
 Reference
-"""""""""""
++++++++++++
 
 [AdaOOP2016]_ See section 4.2.
 
 [GNATUG]_ See section 5.10.11.
 
-"""""""""""""
++++++++++++++
 Description
-"""""""""""""
++++++++++++++
 
 Either:
 
 * Formally verify local type consistency, or
 * Ensure that each tagged type passes all the tests of all the parent types
-which it can replace.
+  which it can replace.
 
 Rationale:
 
@@ -125,18 +125,18 @@ consistency provides an even higher degree of confidence.
 For further discussion of this topic, see the sections cited in the Reference
 entry in this table.
 
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 * 6.42 Violations of the Liskov substitution principle of the contract model
-[BLP]
+  [BLP]
 * 6.43 Redispatching [PPH]
 * 6.44 Polymorphic variables [BKK]
 
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 Noncompliant Code Example
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 
 .. code-block:: Ada
 
@@ -197,9 +197,9 @@ is not used at all in these versions of the packages).
       ...
    end Q;
 
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 Compliant Code Example
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 
 .. code-block:: Ada
 
@@ -255,9 +255,9 @@ postconditions are weaker than those inherited:
       type Square is new Rectangle with null record;
    end Q;
 
-"""""""
++++++++
 Notes
-"""""""
++++++++
 
 Verification can be achieved dynamically with the GNATtest tool, using the
 "---validate-type-extensions" switch. SPARK enforces this rule.

@@ -20,15 +20,15 @@ Don't Raise Language-Defined Exceptions (EXU01)
 *Verification Method* :math:`\rightarrow` GNATcheck rule:
 ``Raising_Predefined_Exceptions``
 
-"""""""""""
++++++++++++
 Reference
-"""""""""""
++++++++++++
 
 [SEI-Java]_ ERR07-J
 
-"""""""""""""
++++++++++++++
 Description
-"""""""""""""
++++++++++++++
 
 In no case should the application explicitly raise a language-defined
 exception.
@@ -41,32 +41,32 @@ away from the point of the raise statement, because this increases the number
 of paths and thus corresponding language-defined checks that could have been
 the cause.
 
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 N/A
 
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 Noncompliant Code Example
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 
 .. include:: examples/exu01.adb
   :code: Ada
   :start-line: 3
   :end-line: 12
 
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 Compliant Code Example
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 
 .. include:: examples/exu01.adb
   :code: Ada
   :start-line: 13
   :end-line: 22
 
-"""""""
++++++++
 Notes
-"""""""
++++++++
 
 N/A

@@ -19,28 +19,28 @@ Do Not Re-Verify Preconditions In Subprogram Bodies (RPP10)
 
 *Verification Method* :math:`\rightarrow` Static analysis tools
 
-"""""""""""
++++++++++++
 Reference
-"""""""""""
++++++++++++
 
 RPP10
 
-"""""""""""""
++++++++++++++
 Description
-"""""""""""""
++++++++++++++
 
 Do not re-verify preconditions in the corresponding subprogram bodies. It is a
 waste of cycles and confuses the reader as well.
 
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 N/A
 
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 Noncompliant Code Example
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 
 .. code-block:: Ada
 
@@ -58,9 +58,9 @@ Noncompliant Code Example
       This.Values (This.Top) := Item;
    end Push;
 
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 Compliant Code Example
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 
 .. code-block:: Ada
 
@@ -75,8 +75,8 @@ Compliant Code Example
       This.Values (This.Top) := Item;
    end Push;
 
-"""""""
++++++++
 Notes
-"""""""
++++++++
 
 This rule can be enforced by CodePeer or SPARK, via detection of dead code.

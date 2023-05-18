@@ -2,6 +2,8 @@
 Hide Implementation Artifacts  (SWE04)
 ----------------------------------------
 
+.. include:: ../../../../global.txt
+
 *Level* :math:`\rightarrow` **Advisory**
 
 *Category*

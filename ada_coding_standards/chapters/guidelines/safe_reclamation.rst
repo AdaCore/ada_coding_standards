@@ -12,7 +12,7 @@ Safe Reclamation (RCL)
 
 Description
    Related to managing dynamic storage at the system (policy) level, these
-   statement-level rules concern the safe reclamation of access ("pointer")
+   statement-level rules concern the safe reclamation of access (*pointer*)
    values.
 
 Rules

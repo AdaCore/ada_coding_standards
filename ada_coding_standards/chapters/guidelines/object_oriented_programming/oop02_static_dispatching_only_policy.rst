@@ -21,15 +21,15 @@ Static Dispatching Only Policy (OOP02)
 
 *Mutually Exclusive* :math:`\rightarrow` OOP01
 
-"""""""""""
++++++++++++
 Reference
-"""""""""""
++++++++++++
 
 N/A
 
-"""""""""""""
++++++++++++++
 Description
-"""""""""""""
++++++++++++++
 
 In this approach, class-wide constructs are allowed, as well as tagged types
 and type extension (inheritance), but dynamic dispatching remains disallowed
@@ -41,30 +41,30 @@ calls.
 
 Note that this rule should not be applied without due consideration.
 
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 * 6.43 Redispatching [PPH]
 
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 Noncompliant Code Example
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 
 .. code-block:: Ada
 
    Some_Primitive (Object'Class (X));
 
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 Compliant Code Example
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 
 .. code-block:: Ada
 
    Some_Primitive (X);
 
-"""""""
++++++++
 Notes
-"""""""
++++++++
 
 N/A

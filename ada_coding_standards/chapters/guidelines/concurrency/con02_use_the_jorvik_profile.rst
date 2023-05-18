@@ -22,16 +22,16 @@ Use the Jorvik Profile (CON02)
 
 *Mutually Exclusive* :math:`\rightarrow` CON01
 
-"""""""""""
++++++++++++
 Reference
-"""""""""""
++++++++++++
 
 `Ada RM D.13 - The Ravenscar and Jorvik Profiles
 <http://ada-auth.org/standards/22rm/html/RM-D-13.html>`_
 
-"""""""""""""
++++++++++++++
 Description
-"""""""""""""
++++++++++++++
 
 The following profile must be in effect:
 
@@ -83,9 +83,9 @@ of the Jorvik profile.
 Jorvik also replaces restriction Simple_Barriers with Pure_Barriers (a weaker
 requirement than Simple_Barriers).
 
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 * 6.59 Concurrency - Activation [GGA]
 * 6.60 Concurrency - Directed termination [CGT]
@@ -93,9 +93,9 @@ Applicable vulnerability within ISO TR 24772-2
 * 6.62 Concurrency - Premature termination [CGS]
 * 6.63 Lock protocol errors [CGM]
 
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 Noncompliant Code Example
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 
 Any code disallowed by the profile. Remediation is "high" because use of the
 facilities outside the subset can be difficult to retrofit into compliance.
@@ -105,9 +105,9 @@ facilities outside the subset can be difficult to retrofit into compliance.
   :start-line: 12
   :end-line: 22
 
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 Compliant Code Example
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 
 .. include:: examples/con02.adb
   :code: Ada
@@ -115,8 +115,8 @@ Compliant Code Example
   :end-line: 38
 
 
-"""""""
++++++++
 Notes
-"""""""
++++++++
 
 The Ada builder will detect violations. GNATcheck can also detect violations.

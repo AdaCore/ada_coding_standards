@@ -19,16 +19,16 @@ Use Precondition and Postcondition Contracts (RPP09)
 
 *Verification Method* :math:`\rightarrow` Code inspection
 
-"""""""""""
++++++++++++
 Reference
-"""""""""""
++++++++++++
 
 Power of Ten rule 5 "The assertion density of the code should average to a
 minimum of two assertions per function."
 
-"""""""""""""
++++++++++++++
 Description
-"""""""""""""
++++++++++++++
 
 Subprograms should declare Pre and/or Post contracts.  Developers should
 consider specifying the Global contract as well, when the default does not
@@ -57,25 +57,25 @@ because, otherwise, one would need to examine the body of the subprogram itself
 and all those it calls, directly or indirectly, to know whether any global
 objects were accessed.
 
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 * 6.42 Violations of the Liskov substitution principle or the contract model
-[BLP]
+  [BLP]
 
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 Noncompliant Code Example
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 
 .. code-block:: Ada
 
    type Stack is private;
    procedure Push (This : in out Stack;  Item : Element);
 
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 Compliant Code Example
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 
 .. code-block:: Ada
 
@@ -88,9 +88,9 @@ Compliant Code Example
               and Unchanged (This'Old, Within => This),
       Global => null;
 
-"""""""
++++++++
 Notes
-"""""""
++++++++
 
 This rule must be enforced by manual inspection.
 

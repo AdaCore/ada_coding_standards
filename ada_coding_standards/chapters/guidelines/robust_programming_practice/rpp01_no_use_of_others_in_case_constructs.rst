@@ -20,15 +20,15 @@ No Use of "others" in Case Constructs (RPP01)
 *Verification Method* :math:`\rightarrow` GNATcheck rule:
 ``OTHERS_In_CASE_Statements``
 
-"""""""""""
++++++++++++
 Reference
-"""""""""""
++++++++++++
 
 [SEI-C]_ MSC01-C
 
-"""""""""""""
++++++++++++++
 Description
-"""""""""""""
++++++++++++++
 
 Case statement alternatives and case-expressions must not include use of the
 "others" discrete choice option. This rule prevents accidental coverage of a
@@ -44,32 +44,32 @@ check against invalid values which serves as implicit defensive code; as a
 result, Ada's "others" alternative doesn't play C's defensive code role and
 therefore a stronger guideline can be adopted.
 
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 * 6.27 Switch statements and static analysis [CLL]
 
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 Noncompliant Code Example
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 
 .. include:: examples/rpp01.adb
   :code: Ada
   :start-line: 5
   :end-line: 11
 
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 Compliant Code Example
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 
 .. include:: examples/rpp01.adb
   :code: Ada
   :start-line: 15
   :end-line: 21
 
-"""""""
++++++++
 Notes
-"""""""
++++++++
 
 N/A

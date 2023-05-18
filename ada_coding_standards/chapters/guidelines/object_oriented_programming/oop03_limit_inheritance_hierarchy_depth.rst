@@ -20,15 +20,15 @@ Limit Inheritance Hierarchy Depth (OOP03)
 *Verification Method* :math:`\rightarrow` GNATcheck rule:
 ``Deep_Inheritance_Hierarchies:2``
 
-"""""""""""
++++++++++++
 Reference
-"""""""""""
++++++++++++
 
 [AdaOOP2016]_ section 5.1
 
-"""""""""""""
++++++++++++++
 Description
-"""""""""""""
++++++++++++++
 
 A class inheritance hierarchy consists of a set of types related by
 inheritance. Each class, other than the root class, is a subclass of other
@@ -53,15 +53,15 @@ Deep inheritance hierarchies also contribute to complexity, rather than
 lessening it, by requiring the reader to understand multiple superclasses in
 order to understand the behavior of a given subclass.
 
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 * 6.41 Inheritance [RIP]
 
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 Noncompliant Code Example
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 
 The threshold for "too deep" is inexact, but beyond around 4 or 5 levels the
 complexity accelerates rapidly.
@@ -71,9 +71,9 @@ complexity accelerates rapidly.
   :start-line: 3
   :end-line: 12
 
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 Compliant Code Example
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 
 .. include:: examples/oop03.ads
   :code: Ada
@@ -81,8 +81,8 @@ Compliant Code Example
   :end-line: 34
 
 
-"""""""
++++++++
 Notes
-"""""""
++++++++
 
 N/A

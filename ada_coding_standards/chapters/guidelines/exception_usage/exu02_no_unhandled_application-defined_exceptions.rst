@@ -20,15 +20,15 @@ No Unhandled Application-Defined Exceptions (EXU02)
 *Verification Method* :math:`\rightarrow` GNATcheck rule:
 ``Unhandled_Exceptions``
 
-"""""""""""
++++++++++++
 Reference
-"""""""""""
++++++++++++
 
 N/A
 
-"""""""""""""
++++++++++++++
 Description
-"""""""""""""
++++++++++++++
 
 All application-defined exceptions must have at least one corresponding handler
 that is applicable. Otherwise, if an exception is raised, undesirable behavior
@@ -79,33 +79,33 @@ is no concept of a calling environment beyond the environment task
 In some systems there is no calling environment, such as bare-metal platforms
 with only an Ada run-time library and no operating system.
 
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 * 6.36 Ignored error status and unhandled exceptions [OYB]
 
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 Noncompliant Code Example
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 
 .. include:: examples/exu02.adb
   :code: Ada
   :start-line: 18
   :end-line: 31
 
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 Compliant Code Example
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 
 .. include:: examples/exu02.adb
   :code: Ada
   :start-line: 34
   :end-line: 50
 
-"""""""
++++++++
 Notes
-"""""""
++++++++
 
 SPARK can prove that no exception will be raised (or fail to prove it and
 indicate the failure).

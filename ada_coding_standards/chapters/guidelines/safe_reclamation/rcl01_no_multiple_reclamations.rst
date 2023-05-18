@@ -19,27 +19,27 @@ No Multiple Reclamations (RCL01)
 
 *Verification Method* :math:`\rightarrow` Code inspection
 
-"""""""""""
++++++++++++
 Reference
-"""""""""""
++++++++++++
 
 [CWE2019]_ CWE-415: Double Free
 
-"""""""""""""
++++++++++++++
 Description
-"""""""""""""
++++++++++++++
 
 Never deallocate the storage designated by a given access value more than once.
 
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 * 6.39 Memory leak and heap fragmentation [XYL]
 
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 Noncompliant Code Example
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 
 .. code-block:: Ada
 
@@ -53,15 +53,15 @@ Noncompliant Code Example
       Free (S);
       Free (Y);
 
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 Compliant Code Example
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 
 Remove the call to Free (Y).
 
-"""""""
++++++++
 Notes
-"""""""
++++++++
 
 Enforcement of this rule can be provided by manual code review, unless
 deallocation is forbidden via No_Unchecked_Deallocation or SPARK is used, as

@@ -19,16 +19,16 @@ Avoid Function Side-Effects (RPP06)
 
 *Verification Method* :math:`\rightarrow` Code inspection
 
-"""""""""""
++++++++++++
 Reference
-"""""""""""
++++++++++++
 
 MISRA C rule 13.3 "The value of an expression and its persistent side effects
 shall be the same under all permitted evaluation orders"
 
-"""""""""""""
++++++++++++++
 Description
-"""""""""""""
++++++++++++++
 
 Functions cannot update an actual parameter or global variable.
 
@@ -46,15 +46,15 @@ function tracks the number of times it is called. Therefore, exceptions to this
 rule are anticipated but should only be allowed on a per-instance basis after
 careful analysis.
 
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 * 6.24 Side-effects and order of evaluation [SAM]
 
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 Noncompliant Code Example
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 
 .. code-block:: Ada
 
@@ -67,16 +67,16 @@ Noncompliant Code Example
       return Result;
    end F;
 
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 Compliant Code Example
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 
 Remove the update to Call_Count. or change the function into a procedure with a
 parameter for Call_Count.
 
-"""""""
++++++++
 Notes
-"""""""
++++++++
 
 Violations are detected by SPARK as part of a rule disallowing side effects on
 expression evaluation.

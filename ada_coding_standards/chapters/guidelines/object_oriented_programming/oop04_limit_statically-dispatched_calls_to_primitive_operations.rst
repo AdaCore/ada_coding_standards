@@ -21,15 +21,15 @@ bug)**
 *Verification Method* :math:`\rightarrow` GNATcheck rule:
 ``Direct_Calls_To_Primitives``
 
-"""""""""""
++++++++++++
 Reference
-"""""""""""
++++++++++++
 
    TBD
 
-"""""""""""""
++++++++++++++
 Description
-"""""""""""""
++++++++++++++
 
 This rule applies only to tagged types, when visibly tagged at the point of a
 call from one primitive to another of that same type.
@@ -71,18 +71,18 @@ is allowed by this rule and does not require the GNATcheck parameter. (The
 difference between function and procedure constructors is that these procedures
 will have a formal parameter of the tagged type, of mode "out".)
 
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 * 6.42 Violations of the Liskov substitution principle of the contract model
-[BLP]
+  [BLP]
 * 6.43 Redispatching [PPH]
 * 6.44 Polymorphic variables [BKK]
 
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 Noncompliant Code Example
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 
 Class constructs
 
@@ -98,17 +98,17 @@ Noncompliant Code
   :start-line: 21
   :end-line: 26
 
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 Compliant Code Example
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 
 .. include:: examples/oop04.adb
   :code: Ada
   :start-line: 27
   :end-line: 32
 
-"""""""
++++++++
 Notes
-"""""""
++++++++
 
 N/A

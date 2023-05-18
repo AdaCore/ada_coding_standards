@@ -1,7 +1,8 @@
-
 ==================================
 Dynamic Storage Management (DYN)
 ==================================
+
+.. include:: ../../../global.txt
 
 *Goal*
    :Maintainability: :math:`\checkmark`
@@ -16,19 +17,19 @@ Description
 Rules
    DYN01, DYN02, DYN03, DYN04, DYN05, DYN06
 
-In Ada, objects are created by being either "declared" or "allocated".
+In Ada, objects are created by being either *declared* or *allocated*.
 Declared objects may be informally thought of as being created "on the stack"
-although such details are not specified by the language.  "Allocated" objects
+although such details are not specified by the language.  *Allocated* objects
 may be thought of as being allocated "from the heap", which is, again, an
 informal term. Allocated objects are created by the evaluation of allocators
-represented by the reserved word "new" and, unlike declared objects, have
+represented by the reserved word :ada:`new` and, unlike declared objects, have
 lifetimes independent of scope.
 
-The terms "static" and "dynamic" tend to be used in place of "declared" and
-"allocated", although in traditional storage management terminology all storage
-allocation in Ada is dynamic. In the following discussion, the term "dynamic
-allocation" refers to storage that is allocated by allocators. "Static" object
-allocation refers to objects that are declared. "Deallocation" refers to the
+The terms *static* and *dynamic* tend to be used in place of *declared* and
+*allocated*, although in traditional storage management terminology all storage
+allocation in Ada is dynamic. In the following discussion, the term *dynamic
+allocation* refers to storage that is allocated by allocators. *Static* object
+allocation refers to objects that are declared. *Deallocation* refers to the
 reclamation of allocated storage.
 
 Unmanaged dynamic storage allocation and deallocation can lead to storage

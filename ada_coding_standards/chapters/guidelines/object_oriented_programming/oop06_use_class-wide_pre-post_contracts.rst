@@ -19,17 +19,17 @@ Use Class-wide Pre/Post Contracts (OOP06)
 
 *Verification Method* :math:`\rightarrow` GNATcheck rule: ``Specific_Pre_Post``
 
-"""""""""""
++++++++++++
 Reference
-"""""""""""
++++++++++++
 
 [AdaOOP2016]_ section 6.1.4
 
 [SPARK2014]_ section 7.5.2
 
-"""""""""""""
++++++++++++++
 Description
-"""""""""""""
++++++++++++++
 
 For primitive operations of tagged types, use only class-wide pre/post
 contracts, if any.
@@ -44,33 +44,33 @@ result, it only makes sense to use the class-wide form in this situation.
 
 Note: this approach will be required for OOP07 (Ensure Local Type Consistency).
 
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 * 6.42 Violations of the Liskov substitution principle or the contract model
-[BLP]
+  [BLP]
 
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 Noncompliant Code Example
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 
 .. include:: examples/oop06.adb
   :code: Ada
   :start-line: 3
   :end-line: 9
 
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 Compliant Code Example
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 
 .. include:: examples/oop06.adb
   :code: Ada
   :start-line: 12
   :end-line: 18
 
-"""""""
++++++++
 Notes
-"""""""
++++++++
 
 N/A

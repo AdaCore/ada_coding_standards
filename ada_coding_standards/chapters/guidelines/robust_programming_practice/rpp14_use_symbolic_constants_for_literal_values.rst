@@ -19,15 +19,15 @@ Use Symbolic Constants For Literal Values (RPP14)
 
 *Verification Method* :math:`\rightarrow` GNATcheck rule: ``Numeric_Literals``
 
-"""""""""""
++++++++++++
 Reference
-"""""""""""
++++++++++++
 
 N/A
 
-"""""""""""""
++++++++++++++
 Description
-"""""""""""""
++++++++++++++
 
 Extensive use of literals in a program can lead to two problems. First,
 the meaning of the literal is often obscured or unclear from the context.
@@ -47,32 +47,32 @@ iterating
 over an array, it is better to use ``Array_Object'First .. Array_Object`Last``
 than using ``1 .. Array_Object'Length``.
 
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 N/A
 
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 Noncompliant Code Example
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 
 .. include:: examples/rpp14.ads
   :code: Ada
   :start-line: 3
   :end-line: 6
 
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 Compliant Code Example
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 
 .. include:: examples/rpp14.ads
   :code: Ada
   :start-line: 9
   :end-line: 13
 
-"""""""
++++++++
 Notes
-"""""""
++++++++
 
 N/A

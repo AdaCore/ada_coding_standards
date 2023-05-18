@@ -19,15 +19,15 @@ Traditional Static Allocation Policy (DYN02)
 
 *Verification Method* :math:`\rightarrow` Compiler restrictions
 
-"""""""""""
++++++++++++
 Reference
-"""""""""""
++++++++++++
 
 MISRA C Dir 4.12 "Dynamic memory allocation shall not be used"
 
-"""""""""""""
++++++++++++++
 Description
-"""""""""""""
++++++++++++++
 
 The following restrictions must be in effect:
 
@@ -51,26 +51,26 @@ In this approach the following constructs are not allowed:
    * User-defined storage pools
    * Unchecked Deallocations
 
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 * 4.10 Storage Pool
 
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 Noncompliant Code Example
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 
 Any code using the constructs listed above.
 
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 Compliant Code Example
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 
 N/A
 
-"""""""
++++++++
 Notes
-"""""""
++++++++
 
 The compiler, and/or GNATcheck, will detect violations of the restrictions.

@@ -19,16 +19,16 @@ Prove Absence of Run-time Exceptions (EXU04)
 
 *Verification Method* :math:`\rightarrow` Compiler restrictions
 
-"""""""""""
++++++++++++
 Reference
-"""""""""""
++++++++++++
 
 MISRA C rule 1.3 "There shall be no occurrence of undefined or critical
 unspecified behaviour"
 
-"""""""""""""
++++++++++++++
 Description
-"""""""""""""
++++++++++++++
 
 In many high-integrity systems the possible responses to an exception are
 limited or nonexistent.  In these cases the only approach is to prove
@@ -47,27 +47,27 @@ would have failed, execution is unpredictable. As a result, enforcement with
 the restriction is not ideal. However, proof of the absence of run-time errors
 is possible using the SPARK subset of Ada.
 
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 N/A
 
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 Noncompliant Code Example
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 
 N/A
 
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 Compliant Code Example
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 
 N/A
 
-"""""""
++++++++
 Notes
-"""""""
++++++++
 
 This restriction is detected by SPARK, in which any statements explicitly
 raising an exception must be proven unreachable (or proof fails and the failure

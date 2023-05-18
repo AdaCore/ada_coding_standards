@@ -19,15 +19,15 @@ Use SPARK Extensively (SWE01)
 
 *Verification Method* :math:`\rightarrow` Compiler restrictions
 
-"""""""""""
++++++++++++
 Reference
-"""""""""""
++++++++++++
 
 [SPARK2014]_ Section 8 "Applying SPARK in Practice"
 
-"""""""""""""
++++++++++++++
 Description
-"""""""""""""
++++++++++++++
 
 SPARK has proven itself highly effective, both in terms of low defects, low
 development costs, and high productivity. The guideline advises extensive of
@@ -36,26 +36,26 @@ the source code. The rest of the code can be in SPARK as well, even if formal
 proof is not intended, with some parts in Ada when features outside the SPARK
 subset are essential.
 
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 N/A
 
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 Noncompliant Code Example
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 
 Any code outside the (very large) SPARK subset is flagged by the compiler.
 
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 Compliant Code Example
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 
 N/A
 
-"""""""
++++++++
 Notes
-"""""""
++++++++
 
 Violations are detected by the SPARK toolset.
