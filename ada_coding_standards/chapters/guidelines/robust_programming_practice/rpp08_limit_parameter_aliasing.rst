@@ -57,8 +57,8 @@ A procedure call shall not pass two actual parameters which potentially
 introduce aliasing via parameter passing unless either:
 
    * both of the corresponding formal parameters are immutable; or
-   * at least one of the corresponding formal parameters is immutable and is of a
-     by-copy type that is not an access type.
+   * at least one of the corresponding formal parameters is immutable and is
+     of a by-copy type that is not an access type.
 
 If an actual parameter in a procedure call and a global variable referenced by
 the called procedure potentially introduce aliasing via parameter passing,
