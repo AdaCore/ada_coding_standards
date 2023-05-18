@@ -39,7 +39,7 @@ call from one primitive to another of that same type.
 By default, subprogram calls are statically dispatched. Dynamic dispatching
 only occurs when a class-wide value is passed to a primitive operation of a
 specific type. Forcing an otherwise optional dynamic dispatching call in this
-case is known as "redispatching."
+case is known as *redispatching.*
 
 When one primitive operation of a given tagged type invokes another distinct
 primitive operation of that same type, use redispatching so that an overriding
@@ -55,7 +55,7 @@ the new version must do whatever the parent version did, and can then add
 functionality specific to the new type.
 
 By default, this rule applies to another common case in which static calls from
-one primitive operation to another make sense.  Specifically, "constructors"
+one primitive operation to another make sense.  Specifically, *constructors*
 are often implemented in Ada as functions that create a new value of the tagged
 type.  As constructors, these functions are type-specific. They must call the
 primitive operations of the type being created, not operations that may be
@@ -71,7 +71,7 @@ Note that constructors implemented as procedures also call primitive operations
 of the specific type, for the same reasons as constructor functions. This usage
 is allowed by this rule and does not require the GNATcheck parameter. (The
 difference between function and procedure constructors is that these procedures
-will have a formal parameter of the tagged type, of mode "out".)
+will have a formal parameter of the tagged type, of mode :ada:`out`.)
 
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2

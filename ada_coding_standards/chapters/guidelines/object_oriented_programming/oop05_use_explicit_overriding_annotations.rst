@@ -32,7 +32,7 @@ Description
 +++++++++++++
 
 The declaration of a primitive operation that overrides an inherited operation
-must include an explicit "overriding" annotation.
+must include an explicit :ada:`overriding` annotation.
 
 The semantics of inheritance in mainstream object-oriented languages may result
 in two kinds of programming errors: 1) intending, but failing, to override an
@@ -52,12 +52,12 @@ superclass version. This mistake typically happens during program maintenance.
 
 In Ada, much like other modern languages, one can annotate a subprogram
 declaration (and body) with an indication that the subprogram is an overriding
-of an inherited version. This is done with the "overriding" reserved word
+of an inherited version. This is done with the :ada:`overriding` reserved word
 preceding the subprogram specification.
 
 Similarly, in Ada one can explicitly indicate that a subprogram is not an
-overriding. To do so, the programmer includes the reserved words "not
-overriding" immediately prior to the subprogram specification.
+overriding. To do so, the programmer includes the reserved words :ada:`not
+overriding` immediately prior to the subprogram specification.
 
 Of course, incorrect marking errors are flagged by the compiler. If a
 subprogram is explicitly marked as overriding but is not actually overriding,
@@ -126,7 +126,7 @@ Compliant Code Example
 Notes
 +++++++
 
-This rule requires the GNAT compiler switches "-gnatyO" and "-gnatwe" in order
-for the compiler to flag missing overriding annotations as errors. The first
-causes the compiler to generate the warnings, and the second causes those
-warnings to be treated as errors.
+This rule requires the GNAT compiler switches :switch:`-gnatyO` and
+:switch:`-gnatwe` in order for the compiler to flag missing overriding
+annotations as errors. The first causes the compiler to generate the
+warnings, and the second causes those warnings to be treated as errors.

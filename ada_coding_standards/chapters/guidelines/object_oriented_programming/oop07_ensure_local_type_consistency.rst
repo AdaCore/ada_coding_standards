@@ -41,13 +41,13 @@ Rationale:
 
 One of the fundamental benefits of OOP is the ability to manipulate objects in
 a class inheritance hierarchy without "knowing" at compile-time the specific
-classes of the objects being manipulated. By "manipulate" we mean invoking the
-primitive operations, the "methods" defined by the classes.
+classes of the objects being manipulated. By *manipulate* we mean invoking the
+primitive operations, the *methods* defined by the classes.
 
-We will use the words "class" and "type" interchangeably, because classes are
+We will use the words *class* and *type* interchangeably, because classes are
 composed in Ada and SPARK using a combination of building blocks, especially
-type declarations. However, we will use the term "subclass" rather than
-"subtype" because the latter has a specific meaning in Ada and SPARK that is
+type declarations. However, we will use the term *subclass* rather than
+*subtype* because the latter has a specific meaning in Ada and SPARK that is
 unrelated to OOP.
 
 The objects whose operations are being invoked can be of types anywhere in the
@@ -77,7 +77,7 @@ functionality is inherited as-is, and is thus transparent trivially.)
 
 The concept of functional transparency was introduced, albeit with different
 terminology, by Liskov and Wing in 1994 [LiskovWing1994]_  and is, therefore,
-known as the Liskov Substitution Principle, or LSP.  The "substitution" in LSP
+known as the Liskov Substitution Principle, or LSP.  The *substitution* in LSP
 means that a subclass must be substitutable for its superclass, i.e., a
 subclass instance should be usable whenever a superclass instance is required.
 
@@ -260,4 +260,4 @@ Notes
 +++++++
 
 Verification can be achieved dynamically with the GNATtest tool, using the
-"---validate-type-extensions" switch. SPARK enforces this rule.
+:switch:`--validate-type-extensions` switch. SPARK enforces this rule.

@@ -32,12 +32,12 @@ RP07
 Description
 +++++++++++++
 
-Functions must have only mode "in".
+Functions must have only mode :ada:`in`.
 
 As of Ada 2012, functions are allowed to have the same modes as procedures.
 However, this can lead to side effects and aliasing.
 
-This rule disallows all modes except mode "in" for functions.
+This rule disallows all modes except mode :ada:`in` for functions.
 
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2

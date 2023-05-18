@@ -94,7 +94,7 @@ Notes
 
 This rule must be enforced by manual inspection.
 
-Moreover, the program must be compiled with enabled assertions (GNAT "-gnata"
-switch) to ensure that the contracts are executed, or a sound static analysis
-tool such as CodePeer or SPARK toolset should be used to prove that the
-contracts are always true.
+Moreover, the program must be compiled with enabled assertions
+(GNAT :switch:`-gnata` switch) to ensure that the contracts are executed, or
+a sound static analysis tool such as CodePeer or SPARK toolset should be used
+to prove that the contracts are always true.

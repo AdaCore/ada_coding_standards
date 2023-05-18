@@ -90,7 +90,7 @@ Applicable vulnerability within ISO TR 24772-2
 Noncompliant Code Example
 +++++++++++++++++++++++++++
 
-Any code disallowed by the profile. Remediation is "high" because use of the
+Any code disallowed by the profile. Remediation is **high** because use of the
 facilities outside the subset can be difficult to retrofit into compliance.
 
 .. include:: examples/con01.adb

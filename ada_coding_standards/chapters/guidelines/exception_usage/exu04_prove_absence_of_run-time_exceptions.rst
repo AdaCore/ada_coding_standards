@@ -37,8 +37,8 @@ exceptions cannot happen may be less than the cost of analyzing code in which
 they are allowed to be raised.
 
 The restriction No_Exceptions can be used with pragma Restrictions to enforce
-this approach.  Specifically, the restriction ensures that "raise" statements
-and exception handlers do not appear in the source code and that
+this approach.  Specifically, the restriction ensures that :ada:`raise`
+statements and exception handlers do not appear in the source code and that
 language-defined checks are not emitted by the compiler.  However, a run-time
 check performed automatically by the hardware is permitted because it typically
 cannot be prevented.  An example of such a check would be traps on invalid

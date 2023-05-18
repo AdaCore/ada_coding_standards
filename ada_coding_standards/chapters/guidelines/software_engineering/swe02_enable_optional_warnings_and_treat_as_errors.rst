@@ -92,8 +92,8 @@ compiler will flag the pragma.
 Notes
 +++++++
 
-This rule can be applied via the GNAT "-gnatwae" compiler switch, which both
-enables warnings and treats them as errors. Note that the switch enables almost
-all optional warnings, but not all. Some optional warnings correspond to very
-specific circumstances, and would otherwise generate too much noise for their
-value.
+This rule can be applied via the GNAT :switch:`-gnatwae` compiler switch,
+which both enables warnings and treats them as errors. Note that the switch
+enables almost all optional warnings, but not all. Some optional warnings
+correspond to very specific circumstances, and would otherwise generate too
+much noise for their value.

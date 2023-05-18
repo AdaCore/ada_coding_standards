@@ -32,12 +32,12 @@ N/A
 Description
 +++++++++++++
 
-Much like the situation with "others" in case statements and case expressions,
-the use of "others" in exception handlers makes it possible to omit an intended
-specific handler for an exception, especially a new exception added to an
-existing set of handlers. As a result, a subprogram could return normally
-without having applied any recovery for the specific exception occurrence,
-which is likely a coding error.
+Much like the situation with :ada:`others` in case statements and case
+expressions, the use of :ada:`others` in exception handlers makes it
+possible to omit an intended specific handler for an exception, especially
+a new exception added to an existing set of handlers. As a result, a
+subprogram could return normally without having applied any recovery for
+the specific exception occurrence, which is likely a coding error.
 
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2

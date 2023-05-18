@@ -32,9 +32,9 @@ Similar to RPP01
 Description
 +++++++++++++
 
-Do not use an "others" choice in an extension aggregate. In record and array
-aggregates, do not use an "others" choice unless it is used either to refer to
-all components, or to all but one component.
+Do not use an :ada:`others` choice in an extension aggregate. In record and
+array aggregates, do not use an :ada:`others` choice unless it is used either
+to refer to all components, or to all but one component.
 
 This guideline prevents accidental provision of a general value for a record
 component or array component, when a specific value was intended. This

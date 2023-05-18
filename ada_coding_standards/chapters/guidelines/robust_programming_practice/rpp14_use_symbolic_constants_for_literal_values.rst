@@ -17,7 +17,8 @@ Use Symbolic Constants For Literal Values (RPP14)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*Verification Method* :math:`\rightarrow` GNATcheck rule: :rule:`Numeric_Literals`
+*Verification Method* :math:`\rightarrow` GNATcheck rule:
+:rule:`Numeric_Literals`
 
 +++++++++++
 Reference
@@ -43,9 +44,9 @@ the constant require modification, the change is limited to the declaration;
 searching the code is unnecessary.
 
 Some literals can be replaced with attribute values. For example, when
-iterating
-over an array, it is better to use ``Array_Object'First .. Array_Object`Last``
-than using ``1 .. Array_Object'Length``.
+iterating over an array, it is better to use
+:ada:`Array_Object'First .. Array_Object'Last`
+than using :ada:`1 .. Array_Object'Length`.
 
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2

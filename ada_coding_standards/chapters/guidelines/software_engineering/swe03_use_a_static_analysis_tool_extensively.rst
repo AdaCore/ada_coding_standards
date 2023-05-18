@@ -68,5 +68,5 @@ Notes
 +++++++
 
 CodePeer is the recommended static analyzer. Note that CodePeer can detect
-GNATcheck rule violations (via the "--gnatcheck" CodePeer switch and a rules
-file).
+GNATcheck rule violations (via the :switch:`--gnatcheck` CodePeer switch and a
+rules file).

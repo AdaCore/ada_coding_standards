@@ -50,7 +50,7 @@ A formal parameter is said to be immutable when the subprogram cannot modify
 its value or modify the value of an object by dereferencing a part of the
 parameter of access type (at any depth in the case of SPARK). In Ada and SPARK,
 this corresponds to either an anonymous access-to-constant parameter or a
-parameter of mode "in" and not of an access type. Otherwise, the formal
+parameter of mode :ada:`in` and not of an access type. Otherwise, the formal
 parameter is said to be mutable.
 
 A procedure call shall not pass two actual parameters which potentially
@@ -116,5 +116,5 @@ Don't pass Obj as the actual parameter to both formal parameters.
 Notes
 +++++++
 
-All violations are detected by SPARK. The GNAT compiler switch "-gnateA[1]"
-enables detection of some cases, but not all.
+All violations are detected by SPARK. The GNAT compiler switch
+:switch:`-gnateA[1]` enables detection of some cases, but not all.

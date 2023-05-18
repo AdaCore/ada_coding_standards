@@ -17,7 +17,8 @@ Use Class-wide Pre/Post Contracts (OOP06)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*Verification Method* :math:`\rightarrow` GNATcheck rule: :rule:`Specific_Pre_Post`
+*Verification Method* :math:`\rightarrow` GNATcheck rule:
+:rule:`Specific_Pre_Post`
 
 +++++++++++
 Reference

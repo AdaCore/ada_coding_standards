@@ -36,9 +36,10 @@ The following restrictions must be in effect:
    * No_Dependence => Ada.Unchecked_Deallocation
 
 In this approach dynamic access values are only created via the attribute
-'Access applied to aliased objects. Allocation and deallocation never occur. As
-a result, storage exhaustion cannot occur because no "dynamic" allocations
-occur. Fragmentation cannot occur because there are no deallocations.
+:ada:`'Access` applied to aliased objects. Allocation and deallocation never
+occur. As a result, storage exhaustion cannot occur because no *dynamic*
+allocations occur. Fragmentation cannot occur because there are no
+deallocations.
 
 In this approach the following constructs are not allowed:
 
@@ -53,7 +54,9 @@ value of zero for the storage size.  Although the restriction No_Allocators is
 present, such clauses may be necessary to prevent any default storage pools
 from being allocated for the access types, even though the pools would never be
 used. A direct way to accomplish this is to use pragma Default_Storage_Pool
-with a parameter of "null" like so:
+with a parameter of :ada:`null` like so:
+
+.. code:: Ada
 
    pragma Default_Storage_Pool (null);
 

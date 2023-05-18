@@ -22,16 +22,16 @@ Hide Implementation Artifacts  (SWE04)
 *Verification Method* :math:`\rightarrow` GNATcheck rule:
 :rule:`Visible_Components`
 
-"""""""""""
++++++++++++
 Reference
-"""""""""""
++++++++++++
 
 MISRA C rule 8.7 "Functions and objects should not be defined with external
 linkage if they are referenced in only one translation unit"
 
-"""""""""""""
++++++++++++++
 Description
-"""""""""""""
++++++++++++++
 
 Do not make implementation artifacts compile-time visible to clients. Only make
 available those declarations that define the abstraction presented to clients
@@ -50,15 +50,15 @@ This guideline is to be followed extensively, as the design default for
 components. Once the application code size becomes non-trivial, the cost of
 retrofit is extremely high.
 
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2
-""""""""""""""""""""""""""""""""""""""""""""""""
+++++++++++++++++++++++++++++++++++++++++++++++++
 
 N/A
 
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 Noncompliant Code Example
-"""""""""""""""""""""""""""
++++++++++++++++++++++++++++
 
 .. include:: examples/swe04.ads
   :code: Ada
@@ -72,9 +72,9 @@ components.
 Bugs introduced via this access could be anywhere in the entire client
 codebase.
 
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 Compliant Code Example
-""""""""""""""""""""""""
+++++++++++++++++++++++++
 
 .. include:: examples/swe04.ads
   :code: Ada
@@ -88,8 +88,8 @@ are no longer visible to clients. Any bugs in the stack processing code must be
 in
 this package, or its child packages, if any.
 
-"""""""
++++++++
 Notes
-"""""""
++++++++
 
 The GNATcheck rule specified above is not exhaustive.

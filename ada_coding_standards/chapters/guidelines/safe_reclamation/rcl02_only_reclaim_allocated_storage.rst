@@ -30,7 +30,7 @@ Description
 +++++++++++++
 
 Only deallocate storage that was dynamically allocated by the evaluation of an
-allocator (i.e., "new").
+allocator (i.e., :ada:`new`).
 
 This is a possibility because Ada allows creation of access values designating
 declared (aliased) objects.

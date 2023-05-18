@@ -41,8 +41,8 @@ Under this policy, the full expressive power of access-to-object types is
 provided but one of the two areas of analysis difficulty is removed.
 Specifically, predictability of the allocation and deallocation implementation
 is achieved via user-defined storage pools.  (With these  storage pools, the
-implementation of allocation ("new") and deallocation (instances of
-Ada.Unchecked_Deallocation) is defined by the pool type.)
+implementation of allocation (:ada:`new`) and deallocation (instances of
+:ada:`Ada.Unchecked_Deallocation`) is defined by the pool type.)
 
 If the pool type is implemented with fixed-size blocks on the stack, allocation
 and deallocation timing behavior are predictable.

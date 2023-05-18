@@ -34,13 +34,13 @@ Description
 
 All application-defined exceptions must have at least one corresponding handler
 that is applicable. Otherwise, if an exception is raised, undesirable behavior
-is possible. The term "applicable" means that there is no dynamic call chain
+is possible. The term *applicable* means that there is no dynamic call chain
 that can reach the active exception which does not also include a handler that
 will be invoked for that exception, somewhere in that chain.
 
 When an unhandled exception occurrence is raised in the sequence of statements
 of an application task and reaches the body of that task, the task completes
-abnormally. No "notification" of some sort is required or defined by the
+abnormally. No *notification* of some sort is required or defined by the
 language, although some vendors' implementations may print out a log message or
 provide some other non-standard response. (Note that such a notification
 implies an external persistent environment, such as an operating system, that

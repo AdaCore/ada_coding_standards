@@ -24,9 +24,7 @@ Reference
 +++++++++++
 
 MISRA C rule 17.7 "The value returned by a function having
-
-non-void return type shall be used" and directive 4.7 "  If a function
-
+non-void return type shall be used" and directive 4.7 "If a function
 returns error information, that error information shall be tested."
 
 +++++++++++++
@@ -69,7 +67,8 @@ N/A
 Notes
 +++++++
 
-The GNAT compiler warning switch "-gnatwu" (or the more general "-gnatwa"
-warnings switch) will cause the compiler to detect variables assigned but not
-read. CodePeer will detect these unused variables as well. SPARK goes further
-by checking that all computations contribute all the way to subprogram outputs.
+The GNAT compiler warning switch :switch:`-gnatwu` (or the more general
+:switch:-gnatwa` warnings switch) will cause the compiler to detect variables
+assigned but not read. CodePeer will detect these unused variables as well.
+SPARK goes further by checking that all computations contribute all the way
+to subprogram outputs.

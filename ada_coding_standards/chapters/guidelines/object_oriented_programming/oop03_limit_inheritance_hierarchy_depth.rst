@@ -45,7 +45,7 @@ which a given class is a subclass of many other classes. Depth can be a problem
 because a change to a class likely requires inspection, modification,
 recompilation, and retesting/reverification of all classes below it in the
 hierarchy. The extent of that effect increases as we approach the root class.
-This rippling effect is known as the "fragile base class" problem. Clearly, the
+This rippling effect is known as the *fragile base class* problem. Clearly, the
 greater the depth the more subclasses there are to be potentially affected. In
 addition, note that a change to one class may cause a cascade of other
 secondary changes to subclasses, so the effect is often not limited to a single
