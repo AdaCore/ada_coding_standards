@@ -34,13 +34,18 @@ The following restrictions must be in effect:
    * No_Local_Allocators
    * No_Dependence => Ada.Unchecked_Deallocation
 
-In this approach dynamic allocation is only allowed during "start-up" and no later.  Deallocations never occur.  As a result, storage exhaustion should never occur assuming the initial allotment is sufficient.  This assumption is as strong as when using only declared objects on the "stack" because in that case a sufficient initial storage allotment for the stack must be made.
+In this approach dynamic allocation is only allowed during "start-up" and no
+later.  Deallocations never occur.  As a result, storage exhaustion should
+never occur assuming the initial allotment is sufficient.  This assumption is
+as strong as when using only declared objects on the "stack" because in that
+case a sufficient initial storage allotment for the stack must be made.
 
 In this approach the following constructs are not allowed:
 
    * Unchecked Deallocations
 
-Note that some operating systems intended for this domain directly support this policy.
+Note that some operating systems intended for this domain directly support this
+policy.
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2
@@ -58,7 +63,8 @@ Any code using the constructs listed above.
 Compliant Code Example
 """"""""""""""""""""""""
 
-Code performing dynamic allocations any time prior to an arbitrary point designated as the end of the "startup" interval.
+Code performing dynamic allocations any time prior to an arbitrary point
+designated as the end of the "startup" interval.
 
 """""""
 Notes

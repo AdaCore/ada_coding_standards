@@ -17,7 +17,8 @@ No Exception Propagation Beyond Name Visibility (EXU03)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*Verification Method* :math:`\rightarrow` GNATcheck rule: ``Non_Visible_Exceptions``
+*Verification Method* :math:`\rightarrow` GNATcheck rule:
+``Non_Visible_Exceptions``
 
 """""""""""
 Reference
@@ -29,7 +30,10 @@ RPP05
 Description
 """""""""""""
 
-An active exception can be propagated dynamically past the point where the name of the exception is visible (the scope of the declaration). The exception can only be handled via "others" past that point. That situation prevents handling the exception specifically, and violates RPP05.
+An active exception can be propagated dynamically past the point where the name
+of the exception is visible (the scope of the declaration). The exception can
+only be handled via "others" past that point. That situation prevents handling
+the exception specifically, and violates RPP05.
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2

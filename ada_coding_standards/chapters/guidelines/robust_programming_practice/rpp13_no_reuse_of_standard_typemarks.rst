@@ -17,7 +17,8 @@ No Reuse of Standard Typemarks (RPP13)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*Verification Method* :math:`\rightarrow` GNATcheck rule: ``overrides_standard_name``
+*Verification Method* :math:`\rightarrow` GNATcheck rule:
+``overrides_standard_name``
 
 """""""""""
 Reference

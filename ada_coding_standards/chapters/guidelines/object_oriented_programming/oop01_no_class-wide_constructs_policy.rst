@@ -31,11 +31,15 @@ N/A
 Description
 """""""""""""
 
-In this approach, tagged types are allowed and type extension (inheritance) is allowed, but there are no class-wide constructs.
+In this approach, tagged types are allowed and type extension (inheritance) is
+allowed, but there are no class-wide constructs.
 
-This restriction ensures there are no class-wide objects or formal parameters, nor access types designating class-wide types.
+This restriction ensures there are no class-wide objects or formal parameters,
+nor access types designating class-wide types.
 
-In this approach there are no possible dynamic dispatching calls because such calls can only occur when a class-wide value is passed as the parameter to a primitive operation of a tagged type.
+In this approach there are no possible dynamic dispatching calls because such
+calls can only occur when a class-wide value is passed as the parameter to a
+primitive operation of a tagged type.
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2
@@ -63,4 +67,5 @@ Compliant Code Example
 Notes
 """""""
 
-The compiler will detect violations with the standard Ada restriction No_Dispatch applied.
+The compiler will detect violations with the standard Ada restriction
+No_Dispatch applied.

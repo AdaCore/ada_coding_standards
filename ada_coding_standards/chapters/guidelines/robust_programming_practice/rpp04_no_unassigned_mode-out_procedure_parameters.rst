@@ -19,19 +19,27 @@ No Unassigned Mode-Out Procedure Parameters (RPP04)
 
 *Remediation* :math:`\rightarrow` **High**
 
-*Verification Method* :math:`\rightarrow` GNATcheck rule: ``Unassigned_OUT_Parameters``
+*Verification Method* :math:`\rightarrow` GNATcheck rule:
+``Unassigned_OUT_Parameters``
 
 """""""""""
 Reference
 """""""""""
 
-MISRA C rule 9.1 "The value of an object with automatic storage duration shall not be read before it has been set"
+MISRA C rule 9.1 "The value of an object with automatic storage duration shall
+not be read before it has been set"
 
 """""""""""""
 Description
 """""""""""""
 
-For any procedure, all formal parameters of mode "out" must be assigned a value if the procedure exits normally. This rule ensures that, upon a normal return, the corresponding actual parameter has a defined value. Ensuring a defined value is especially important for scalar parameters because they are passed by value, such that some value is copied out to the actual. These undefined values can be especially difficult to locate because evaluation of the actual parameter's value might not occur immediately after the call returns.
+For any procedure, all formal parameters of mode "out" must be assigned a value
+if the procedure exits normally. This rule ensures that, upon a normal return,
+the corresponding actual parameter has a defined value. Ensuring a defined
+value is especially important for scalar parameters because they are passed by
+value, such that some value is copied out to the actual. These undefined values
+can be especially difficult to locate because evaluation of the actual
+parameter's value might not occur immediately after the call returns.
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2

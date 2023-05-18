@@ -17,7 +17,8 @@ Use the Jorvik Profile (CON02)
 
 *Remediation* :math:`\rightarrow` **High**
 
-*Verification Method* :math:`\rightarrow` GNATcheck rule: ``uses_profile:jorvik``
+*Verification Method* :math:`\rightarrow` GNATcheck rule:
+``uses_profile:jorvik``
 
 *Mutually Exclusive* :math:`\rightarrow` CON01
 
@@ -25,7 +26,8 @@ Use the Jorvik Profile (CON02)
 Reference
 """""""""""
 
-`Ada RM D.13 - The Ravenscar and Jorvik Profiles <http://ada-auth.org/standards/22rm/html/RM-D-13.html>`_
+`Ada RM D.13 - The Ravenscar and Jorvik Profiles
+<http://ada-auth.org/standards/22rm/html/RM-D-13.html>`_
 
 """""""""""""
 Description
@@ -66,7 +68,8 @@ The profile is equivalent to the following set of pragmas:
               No_Dependence => Ada.Task_Attributes,
               No_Dependence => System.Multiprocessors.Dispatching_Domains);
 
-The following restrictions are part of the Ravenscar profile but **not** part of the Jorvik profile.
+The following restrictions are part of the Ravenscar profile but **not** part
+of the Jorvik profile.
 
 .. code-block:: Ada
 
@@ -77,7 +80,8 @@ The following restrictions are part of the Ravenscar profile but **not** part of
     No_Dependence => Ada.Calendar
     No_Dependence => Ada.Synchronous_Barriers
 
-Jorvik also replaces restriction Simple_Barriers with Pure_Barriers (a weaker requirement than Simple_Barriers).
+Jorvik also replaces restriction Simple_Barriers with Pure_Barriers (a weaker
+requirement than Simple_Barriers).
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2
@@ -93,7 +97,8 @@ Applicable vulnerability within ISO TR 24772-2
 Noncompliant Code Example
 """""""""""""""""""""""""""
 
-Any code disallowed by the profile. Remediation is "high" because use of the facilities outside the subset can be difficult to retrofit into compliance.
+Any code disallowed by the profile. Remediation is "high" because use of the
+facilities outside the subset can be difficult to retrofit into compliance.
 
 .. include:: examples/con02.adb
   :code: Ada

@@ -34,9 +34,14 @@ The following restrictions must be in effect:
    * No_Allocators
    * No_Task_Allocators
 
-Under the traditional approach, no dynamic allocations and no deallocations occur.  Only declared objects are used and no access types of any kind appear in the code.
+Under the traditional approach, no dynamic allocations and no deallocations
+occur.  Only declared objects are used and no access types of any kind appear
+in the code.
 
-Without allocations there is no issue with deallocation as there would be nothing to deallocate. "Heap" storage exhaustion and fragmentation are clearly prevented although storage may still be exhausted due to insufficient stack size allotments.
+Without allocations there is no issue with deallocation as there would be
+nothing to deallocate. "Heap" storage exhaustion and fragmentation are clearly
+prevented although storage may still be exhausted due to insufficient stack
+size allotments.
 
 In this approach the following constructs are not allowed:
 

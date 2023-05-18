@@ -23,7 +23,8 @@ Common High Integrity Restrictions (DYN01)
 Reference
 """""""""""
 
-`Ada RM H.4 - High Integrity Restrictions <http://www.ada-auth.org/standards/2xrm/html/RM-H-4.html>`_
+`Ada RM H.4 - High Integrity Restrictions
+<http://www.ada-auth.org/standards/2xrm/html/RM-H-4.html>`_
 
 """""""""""""
 Description
@@ -36,7 +37,11 @@ The following restrictions must be in effect:
    * No_Access_Parameter_Allocators
    * Immediate_Reclamation
 
-The first three restrictions prevent problematic usage that, for example, may cause un-reclaimed (and unreclaimable) storage. The last restriction ensures any storage allocated by the compiler at run-time for representing objects is reclaimed at once. (That restriction does not apply to objects created by allocators in the application.)
+The first three restrictions prevent problematic usage that, for example, may
+cause un-reclaimed (and unreclaimable) storage. The last restriction ensures
+any storage allocated by the compiler at run-time for representing objects is
+reclaimed at once. (That restriction does not apply to objects created by
+allocators in the application.)
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2
@@ -108,6 +113,8 @@ For No_Access_Parameter_Allocators, use a variable of a named access type:
 Notes
 """""""
 
-The compiler will detect violations of the first three restrictions. Note that GNATcheck can detect violations in addition to the compiler.
+The compiler will detect violations of the first three restrictions. Note that
+GNATcheck can detect violations in addition to the compiler.
 
-The fourth restriction is a directive for implementation behavior, not subject to source-based violation detection.
+The fourth restriction is a directive for implementation behavior, not subject
+to source-based violation detection.

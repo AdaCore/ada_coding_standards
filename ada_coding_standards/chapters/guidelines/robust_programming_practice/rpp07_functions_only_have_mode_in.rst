@@ -17,7 +17,8 @@ Functions Only Have Mode "in" (RPP07)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*Verification Method* :math:`\rightarrow` GNATcheck rule: ``function_out_parameters``
+*Verification Method* :math:`\rightarrow` GNATcheck rule:
+``function_out_parameters``
 
 """""""""""
 Reference
@@ -31,7 +32,8 @@ Description
 
 Functions must have only mode "in".
 
-As of Ada 2012, functions are allowed to have the same modes as procedures. However, this can lead to side effects and aliasing.
+As of Ada 2012, functions are allowed to have the same modes as procedures.
+However, this can lead to side effects and aliasing.
 
 This rule disallows all modes except mode "in" for functions.
 

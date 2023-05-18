@@ -29,10 +29,16 @@ N/A
 Description
 """""""""""""
 
-When deallocating, ensure that the pool to which the storage will be returned was the same pool from which it was allocated. Execution is erroneous otherwise, meaning anything can happen
-(`Ada RM 13.11.2(16) - Unchecked Storage Deallocation <http://www.ada-auth.org/standards/2xrm/html/RM-13=11-2.html>`_).
+When deallocating, ensure that the pool to which the storage will be returned
+was the same pool from which it was allocated. Execution is erroneous
+otherwise, meaning anything can happen
+(`Ada RM 13.11.2(16) - Unchecked Storage Deallocation
+<http://www.ada-auth.org/standards/2xrm/html/RM-13=11-2.html>`_).
 
-Each access type has an associated storage pool, either implicitly by default, or explicitly with a storage pool specified by the programmer. The implicit default pool might not be the same pool used for another access type, even an access type designating the same subtype.
+Each access type has an associated storage pool, either implicitly by default,
+or explicitly with a storage pool specified by the programmer. The implicit
+default pool might not be the same pool used for another access type, even an
+access type designating the same subtype.
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2
@@ -58,7 +64,9 @@ Noncompliant Code Example
       ...
       Free (P2);
 
-In the above, P1.all was allocated from Pointer1'Storage_Pool, but, via the type conversion, the code above is attempting to return it to Pointer2'Storage_Pool, which may be a different pool.
+In the above, P1.all was allocated from Pointer1'Storage_Pool, but, via the
+type conversion, the code above is attempting to return it to
+Pointer2'Storage_Pool, which may be a different pool.
 
 """"""""""""""""""""""""
 Compliant Code Example
@@ -70,4 +78,5 @@ Don't deallocate converted access values.
 Notes
 """""""
 
-Enforcement of this rule can only be provided by manual code review, unless deallocation is forbidden via No_Unchecked_Deallocation.
+Enforcement of this rule can only be provided by manual code review, unless
+deallocation is forbidden via No_Unchecked_Deallocation.

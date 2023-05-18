@@ -23,15 +23,29 @@ Prove Absence of Run-time Exceptions (EXU04)
 Reference
 """""""""""
 
-MISRA C rule 1.3 "There shall be no occurrence of undefined or critical unspecified behaviour"
+MISRA C rule 1.3 "There shall be no occurrence of undefined or critical
+unspecified behaviour"
 
 """""""""""""
 Description
 """""""""""""
 
-In many high-integrity systems the possible responses to an exception are limited or nonexistent.  In these cases the only approach is to prove exceptions cannot occur in the first place.  Additionally, the cost of proving exceptions cannot happen may be less than the cost of analyzing code in which they are allowed to be raised.
+In many high-integrity systems the possible responses to an exception are
+limited or nonexistent.  In these cases the only approach is to prove
+exceptions cannot occur in the first place.  Additionally, the cost of proving
+exceptions cannot happen may be less than the cost of analyzing code in which
+they are allowed to be raised.
 
-The restriction No_Exceptions can be used with pragma Restrictions to enforce this approach.  Specifically, the restriction ensures that "raise" statements and exception handlers do not appear in the source code and that language-defined checks are not emitted by the compiler.  However, a run-time check performed automatically by the hardware is permitted because it typically cannot be prevented.  An example of such a check would be traps on invalid addresses.  If a hardware check fails, or if an omitted language-defined check would have failed, execution is unpredictable. As a result, enforcement with the restriction is not ideal. However, proof of the absence of run-time errors is possible using the SPARK subset of Ada.
+The restriction No_Exceptions can be used with pragma Restrictions to enforce
+this approach.  Specifically, the restriction ensures that "raise" statements
+and exception handlers do not appear in the source code and that
+language-defined checks are not emitted by the compiler.  However, a run-time
+check performed automatically by the hardware is permitted because it typically
+cannot be prevented.  An example of such a check would be traps on invalid
+addresses.  If a hardware check fails, or if an omitted language-defined check
+would have failed, execution is unpredictable. As a result, enforcement with
+the restriction is not ideal. However, proof of the absence of run-time errors
+is possible using the SPARK subset of Ada.
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2
@@ -55,4 +69,7 @@ N/A
 Notes
 """""""
 
-This restriction is detected by SPARK, in which any statements explicitly raising an exception must be proven unreachable (or proof fails and the failure is indicated), and any possibility of run-time exception should be proved not to happen.
+This restriction is detected by SPARK, in which any statements explicitly
+raising an exception must be proven unreachable (or proof fails and the failure
+is indicated), and any possibility of run-time exception should be proved not
+to happen.

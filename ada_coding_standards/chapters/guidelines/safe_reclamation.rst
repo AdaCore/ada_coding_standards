@@ -6,12 +6,14 @@ Safe Reclamation (RCL)
 *Goal*
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
-   :Portability: 
+   :Portability:
    :Performance: :math:`\checkmark`
    :Security: :math:`\checkmark`
 
 Description
-   Related to managing dynamic storage at the system (policy) level, these statement-level rules concern the safe reclamation of access ("pointer") values.
+   Related to managing dynamic storage at the system (policy) level, these
+   statement-level rules concern the safe reclamation of access ("pointer")
+   values.
 
 Rules
    RCL01, RCL02, RCL03

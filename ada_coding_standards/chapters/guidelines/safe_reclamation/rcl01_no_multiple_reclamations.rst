@@ -45,7 +45,7 @@ Noncompliant Code Example
 
       type String_Reference is access all String;
       procedure Free is new Ada.Unchecked_Deallocation
-    	(Object => String,  Name => String_Reference);
+     (Object => String,  Name => String_Reference);
       S : String_Reference := new String'("Hello");
       Y : String_Reference;
    begin
@@ -63,4 +63,8 @@ Remove the call to Free (Y).
 Notes
 """""""
 
-Enforcement of this rule can be provided by manual code review, unless deallocation is forbidden via No_Unchecked_Deallocation or SPARK is used, as ownership analysis in SPARK detects such cases. Note that storage utilization analysis tools such as Valgrind can usually find this sort of error. In addition, a GNAT-defined storage pool is available to help debug such errors.
+Enforcement of this rule can be provided by manual code review, unless
+deallocation is forbidden via No_Unchecked_Deallocation or SPARK is used, as
+ownership analysis in SPARK detects such cases. Note that storage utilization
+analysis tools such as Valgrind can usually find this sort of error. In
+addition, a GNAT-defined storage pool is available to help debug such errors.

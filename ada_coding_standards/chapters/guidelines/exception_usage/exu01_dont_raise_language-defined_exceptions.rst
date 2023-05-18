@@ -17,7 +17,8 @@ Don't Raise Language-Defined Exceptions (EXU01)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*Verification Method* :math:`\rightarrow` GNATcheck rule: ``Raising_Predefined_Exceptions``
+*Verification Method* :math:`\rightarrow` GNATcheck rule:
+``Raising_Predefined_Exceptions``
 
 """""""""""
 Reference
@@ -29,9 +30,16 @@ Reference
 Description
 """""""""""""
 
-In no case should the application explicitly raise a language-defined exception.
+In no case should the application explicitly raise a language-defined
+exception.
 
-The Ada language-defined exceptions are raised implicitly in specific circumstances defined by the language standard. Explicitly raising these exceptions would be confusing to application developers. The potential for confusion increases as the exception is propagated up the dynamic call chain, away from the point of the raise statement, because this increases the number of paths and thus corresponding language-defined checks that could have been the cause.
+The Ada language-defined exceptions are raised implicitly in specific
+circumstances defined by the language standard. Explicitly raising these
+exceptions would be confusing to application developers. The potential for
+confusion increases as the exception is propagated up the dynamic call chain,
+away from the point of the raise statement, because this increases the number
+of paths and thus corresponding language-defined checks that could have been
+the cause.
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2

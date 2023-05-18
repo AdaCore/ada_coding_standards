@@ -42,7 +42,8 @@ indicates the meaning or intended use of each literal. Furthermore, should
 the constant require modification, the change is limited to the declaration;
 searching the code is unnecessary.
 
-Some literals can be replaced with attribute values. For example, when iterating
+Some literals can be replaced with attribute values. For example, when
+iterating
 over an array, it is better to use ``Array_Object'First .. Array_Object`Last``
 than using ``1 .. Array_Object'Length``.
 

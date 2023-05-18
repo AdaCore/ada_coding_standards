@@ -27,9 +27,6 @@ Guidelines for Development of Safety-Critical and Security-Critical Applications
         You can find license details
         `on this page <http://creativecommons.org/licenses/by-sa/4.0>`_
 
-        .. image:: ../../images/ccheart_black.png
-            :width: 108pt
-
 .. container:: content-description
 
     This document provides a reasonable set of coding standards to be
@@ -42,11 +39,13 @@ Guidelines for Development of Safety-Critical and Security-Critical Applications
 
         .. raw:: html
 
-            <a class="ebook-download-button" href="/pdf_books/courses/Ada_Coding_Standards.pdf">
+            <a class="ebook-download-button"
+            href="/pdf_books/courses/Ada_Coding_Standards.pdf">
                 Download PDF
             </a>
             <br>
-            <a class="ebook-download-button" href="/epub_books/courses/Ada_Coding_Standards.epub">
+            <a class="ebook-download-button"
+            href="/epub_books/courses/Ada_Coding_Standards.epub">
                 Download EPUB
             </a>
 

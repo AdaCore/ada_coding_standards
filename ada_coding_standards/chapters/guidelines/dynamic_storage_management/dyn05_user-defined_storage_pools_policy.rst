@@ -23,23 +23,39 @@ User-Defined Storage Pools Policy (DYN05)
 Reference
 """""""""""
 
-MISRA rule 21.3 "The memory allocation and deallocation functions of <stdlib.h> shall not be used"
+MISRA rule 21.3 "The memory allocation and deallocation functions of <stdlib.h>
+shall not be used"
 
 """""""""""""
 Description
 """""""""""""
 
-There are two issues that make storage utilization analysis difficult: 1) the predictability of the allocation and deallocation implementation, and 2) how access values are used by the application. The behavior of the underlying implementation is largely undefined and may, for example, consist of calls to the operating-system (if present). Application code can manipulate access values beyond the scope of analysis.
+There are two issues that make storage utilization analysis difficult: 1) the
+predictability of the allocation and deallocation implementation, and 2) how
+access values are used by the application. The behavior of the underlying
+implementation is largely undefined and may, for example, consist of calls to
+the operating-system (if present). Application code can manipulate access
+values beyond the scope of analysis.
 
-Under this policy, the full expressive power of access-to-object types is provided but one of the two areas of analysis difficulty is removed.  Specifically, predictability of the allocation and deallocation implementation is achieved via user-defined storage pools.  (With these  storage pools, the implementation of allocation ("new") and deallocation (instances of Ada.Unchecked_Deallocation) is defined by the pool type.)
+Under this policy, the full expressive power of access-to-object types is
+provided but one of the two areas of analysis difficulty is removed. 
+Specifically, predictability of the allocation and deallocation implementation
+is achieved via user-defined storage pools.  (With these  storage pools, the
+implementation of allocation ("new") and deallocation (instances of
+Ada.Unchecked_Deallocation) is defined by the pool type.)
 
-If the pool type is implemented with fixed-size blocks on the stack, allocation and deallocation timing behavior are predictable.
+If the pool type is implemented with fixed-size blocks on the stack, allocation
+and deallocation timing behavior are predictable.
 
 Such an implementation would also be free from fragmentation.
 
-Given an analysis providing the worst-case allocations and deallocations, it would be possible to verify that pool exhaustion does not occur.  However, as mentioned such analysis can be quite difficult. A mitigation would be the use of the "owning" access-to-object types provided by SPARK.
+Given an analysis providing the worst-case allocations and deallocations, it
+would be possible to verify that pool exhaustion does not occur.  However, as
+mentioned such analysis can be quite difficult. A mitigation would be the use
+of the "owning" access-to-object types provided by SPARK.
 
-In this approach no storage-related constructs are disallowed unless the SPARK subset is applied.
+In this approach no storage-related constructs are disallowed unless the SPARK
+subset is applied.
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2
@@ -73,4 +89,5 @@ Compliant Code Example
 Notes
 """""""
 
-Enforcement of this approach can only be provided by manual code review unless SPARK is used.
+Enforcement of this approach can only be provided by manual code review unless
+SPARK is used.

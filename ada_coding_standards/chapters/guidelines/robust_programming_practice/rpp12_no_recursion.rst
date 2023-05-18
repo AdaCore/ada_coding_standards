@@ -17,21 +17,26 @@ No Recursion (RPP12)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*Verification Method* :math:`\rightarrow` GNATcheck rule: ``Recursive_Subprograms``
+*Verification Method* :math:`\rightarrow` GNATcheck rule:
+``Recursive_Subprograms``
 
 """""""""""
 Reference
 """""""""""
 
-MISRA C rule 17.2 "Functions shall not call themselves, either directly or indirectly"
+MISRA C rule 17.2 "Functions shall not call themselves, either directly or
+indirectly"
 
 """""""""""""
 Description
 """""""""""""
 
-No subprogram shall be invoked, directly or indirectly, as part of its own execution.
+No subprogram shall be invoked, directly or indirectly, as part of its own
+execution.
 
-In addition to making static analysis more complex, recursive calls make static stack usage analysis extremely difficult, requiring manual supply of call limits (for example).
+In addition to making static analysis more complex, recursive calls make static
+stack usage analysis extremely difficult, requiring manual supply of call
+limits (for example).
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2
@@ -64,5 +69,7 @@ Notes
 The compiler will detect violations with the restriction No_Recursion in place.
 Note this is a dynamic check.
 
-The GNATcheck rule specified above is a static check, subject to the limitations
-described in http://docs.adacore.com/live/wave/asis/html/gnatcheck_rm/gnatcheck_rm/predefined_rules.html#recursive-subprograms.
+The GNATcheck rule specified above is a static check, subject to the
+limitations
+described in
+http://docs.adacore.com/live/wave/asis/html/gnatcheck_rm/gnatcheck_rm/predefined_rules.html#recursive-subprograms.

@@ -1,4 +1,4 @@
-   
+
 ===================================
 Robust Programming Practice (RPP)
 ===================================
@@ -14,7 +14,8 @@ Description
    These rules promote the production of robust software.
 
 Rules
-   RPP01, RPP02, RPP03, RPP04, RPP05, RPP06, RPP07, RPP07, RPP08, RPP09, RPP10, RPP11, RPP12, RPP13, RPP14
+   RPP01, RPP02, RPP03, RPP04, RPP05, RPP06, RPP07, RPP07, RPP08, RPP09, RPP10,
+   RPP11, RPP12, RPP13, RPP14
 
 .. toctree::
    :maxdepth: 1

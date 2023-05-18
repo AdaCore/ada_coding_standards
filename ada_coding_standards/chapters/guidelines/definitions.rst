@@ -3,7 +3,8 @@
 Definitions
 =============
 
-This section contains terms and values used in the definitions of the rules set forth in this chapter.
+This section contains terms and values used in the definitions of the rules set
+forth in this chapter.
 
 -------
 Level

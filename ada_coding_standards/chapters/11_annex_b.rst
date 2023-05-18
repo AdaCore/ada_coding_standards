@@ -7,7 +7,8 @@ Annex B - GNU General Public License
 
 Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
 
-Everyone is permitted to copy and distribute verbatim copies of this license document, but changing it is not allowed.
+Everyone is permitted to copy and distribute verbatim copies of this license
+document, but changing it is not allowed.
 
 ==========
 Preamble
@@ -46,7 +47,8 @@ know their rights.
 Developers that use the GNU GPL protect your rights with two steps:
 
    1. Assert copyright on the software, and
-   2. Offer you this License giving you legal permission to copy, distribute and/or modify it.
+   2. Offer you this License giving you legal permission to copy, distribute
+   and/or modify it.
 
 For the developers' and authors' protection, the GPL clearly explains
 that there is no warranty for this free software.  For both users' and
@@ -779,5 +781,5 @@ into proprietary programs.  If your program is a subroutine library, you
 may consider it more useful to permit linking proprietary applications with
 the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
-<http://www.gnu.org/philosophy/why-not-lgpl.html>. 
+<http://www.gnu.org/philosophy/why-not-lgpl.html>.
 

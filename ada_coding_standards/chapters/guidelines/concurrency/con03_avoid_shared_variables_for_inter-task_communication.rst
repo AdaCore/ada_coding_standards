@@ -17,19 +17,23 @@ Avoid Shared Variables for Inter-task Communication (CON03)
 
 *Remediation* :math:`\rightarrow` **High**
 
-*Verification Method* :math:`\rightarrow` GNATcheck rule: ``Volatile_Objects_Without_Address_Clauses``
+*Verification Method* :math:`\rightarrow` GNATcheck rule:
+``Volatile_Objects_Without_Address_Clauses``
 
 """""""""""
 Reference
 """""""""""
 
-`Ada RM D.13 - The Ravenscar Profile <http://ada-auth.org/standards/12rm/html/RM-D-13.html>`_
+`Ada RM D.13 - The Ravenscar Profile
+<http://ada-auth.org/standards/12rm/html/RM-D-13.html>`_
 
 """""""""""""
 Description
 """""""""""""
 
-Although the Ravenscar and Jorvik profiles allow the use of shared variables for inter-task communication, such use is less robust and less reliable than encapsulating shared variables within protected objects.
+Although the Ravenscar and Jorvik profiles allow the use of shared variables
+for inter-task communication, such use is less robust and less reliable than
+encapsulating shared variables within protected objects.
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2
@@ -47,13 +51,15 @@ Noncompliant Code Example
   :end-line: 7
 
 Note that variables marked as Atomic are also Volatile, per the
-`Ada RM C.6/8(3) - Shared Variable Control <http://www.ada-auth.org/standards/12rm/html/RM-C-6.html>`_
+`Ada RM C.6/8(3) - Shared Variable Control
+<http://www.ada-auth.org/standards/12rm/html/RM-C-6.html>`_
 
 """"""""""""""""""""""""
 Compliant Code Example
 """"""""""""""""""""""""
 
-When assigned to a memory address, a Volatile variable can be used to interact with a memory-mapped device, among other similar usages.
+When assigned to a memory address, a Volatile variable can be used to interact
+with a memory-mapped device, among other similar usages.
 
 .. include:: examples/con03.ads
   :code: Ada
@@ -64,4 +70,5 @@ When assigned to a memory address, a Volatile variable can be used to interact w
 Notes
 """""""
 
-In additon to GNATcheck, SPARK and CodePeer can also detect conflicting access to unprotected variables.
+In additon to GNATcheck, SPARK and CodePeer can also detect conflicting access
+to unprotected variables.

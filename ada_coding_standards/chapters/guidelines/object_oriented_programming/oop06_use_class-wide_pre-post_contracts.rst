@@ -31,9 +31,14 @@ Reference
 Description
 """""""""""""
 
-For primitive operations of tagged types, use only class-wide pre/post contracts, if any.
+For primitive operations of tagged types, use only class-wide pre/post
+contracts, if any.
 
-The class-wide form of precondition and postcondition expresses conditions that are intended to apply to any version of the subprogram. Therefore, when a subprogram is derived as part of inheritance, only the class-wide form of those contracts is inherited from the parent subprogram, if any are defined. As a result, it only makes sense to use the class-wide form in this situation.
+The class-wide form of precondition and postcondition expresses conditions that
+are intended to apply to any version of the subprogram. Therefore, when a
+subprogram is derived as part of inheritance, only the class-wide form of those
+contracts is inherited from the parent subprogram, if any are defined. As a
+result, it only makes sense to use the class-wide form in this situation.
 
 (The same semantics and recommendation applies to type invariants.)
 
@@ -43,7 +48,8 @@ Note: this approach will be required for OOP07 (Ensure Local Type Consistency).
 Applicable vulnerability within ISO TR 24772-2
 """"""""""""""""""""""""""""""""""""""""""""""""
 
-* 6.42 Violations of the Liskov substitution principle or the contract model [BLP]
+* 6.42 Violations of the Liskov substitution principle or the contract model
+[BLP]
 
 """""""""""""""""""""""""""
 Noncompliant Code Example

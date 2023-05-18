@@ -1,4 +1,4 @@
-   
+
 ============================
 Software Engineering (SWE)
 ============================
@@ -7,7 +7,7 @@ Software Engineering (SWE)
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
    :Portability: :math:`\checkmark`
-   :Performance: 
+   :Performance:
    :Security: :math:`\checkmark`
 
 Description

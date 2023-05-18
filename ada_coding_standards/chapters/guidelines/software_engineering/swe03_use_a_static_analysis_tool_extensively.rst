@@ -23,15 +23,22 @@ Use A Static Analysis Tool Extensively (SWE03)
 Reference
 """""""""""
 
-Power of 10 rule #10: All code must also be checked daily with at least one, but preferably more than one, strong static source code analyzer and should pass all analyses with zero warnings.
+Power of 10 rule #10: All code must also be checked daily with at least one,
+but preferably more than one, strong static source code analyzer and should
+pass all analyses with zero warnings.
 
 """""""""""""
 Description
 """""""""""""
 
-If not using SPARK for regular development, use a static analyzer, such as CodePeer, extensively. No warnings or errors should remain unresolved at the given level adopted for analysis (which can be selected to adjust the false positive ratio).
+If not using SPARK for regular development, use a static analyzer, such as
+CodePeer, extensively. No warnings or errors should remain unresolved at the
+given level adopted for analysis (which can be selected to adjust the false
+positive ratio).
 
-Specifically, any code checked into the configuration management system must be checked by the analyzer and be error-free prior to check-in. Similarly, each nightly build should produce a CodePeer baseline for the project.
+Specifically, any code checked into the configuration management system must be
+checked by the analyzer and be error-free prior to check-in. Similarly, each
+nightly build should produce a CodePeer baseline for the project.
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 Applicable vulnerability within ISO TR 24772-2
@@ -60,4 +67,6 @@ N/A
 Notes
 """""""
 
-CodePeer is the recommended static analyzer. Note that CodePeer can detect GNATcheck rule violations (via the "--gnatcheck" CodePeer switch and a rules file).
+CodePeer is the recommended static analyzer. Note that CodePeer can detect
+GNATcheck rule violations (via the "--gnatcheck" CodePeer switch and a rules
+file).
