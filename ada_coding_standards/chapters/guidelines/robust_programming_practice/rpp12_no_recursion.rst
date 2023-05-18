@@ -72,4 +72,5 @@ Note this is a dynamic check.
 The GNATcheck rule specified above is a static check, subject to the
 limitations
 described in
-http://docs.adacore.com/live/wave/asis/html/gnatcheck_rm/gnatcheck_rm/predefined_rules.html#recursive-subprograms.
+`GNATcheck Reference Manual (Recursive Subprograms)
+<https://docs.adacore.com/live/wave/lkql/html/gnatcheck_rm/gnatcheck_rm/predefined_rules.html#recursive-subprograms>`_

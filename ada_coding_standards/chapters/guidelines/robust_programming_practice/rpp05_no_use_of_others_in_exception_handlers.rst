@@ -71,12 +71,10 @@ ISO TR 24772-2: 6.50.2 slightly contradicts this when applying exception
 handlers around calls to library routines:
 
    * Put appropriate exception handlers in all routines that call library
-   routines,
-     including the catch-all exception handler :ada:`when others =>`
+     routines, including the catch-all exception handler :ada:`when others =>`
 
    * Put appropriate exception handlers in all routines that are called by library
-   routines,
-     including the catch-all exception handler :ada:`when others =>`
+     routines, including the catch-all exception handler :ada:`when others =>`
 
 It also recommends "All tasks should contain an exception handler at the outer
 level to prevent silent termination due to unhandled exceptions." for

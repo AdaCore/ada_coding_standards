@@ -33,16 +33,16 @@ such Material:
    published by the Creative Commons Foundation, or
    4. any other terms of the Customer's choosing, provided that:
 
-      a. AdaCore Material is incorporated in whole or part in a document containing
-      significant content other than such AdaCore Material; and
+      a. AdaCore Material is incorporated in whole or part in a document
+         containing significant content other than such AdaCore Material; and
       b. an acknowledgement is made that parts of the document were produced by
-      AdaCore; and
+         AdaCore; and
       c. AdaCore is not identified as author of the whole document; and
       d. Warranty and liability disclaimers contained in AdaCore Material are
-      preserved;
-      e. such other terms, if they permit redistribution of this document to third
-      parties, require that any further redistribution satisfies (b), (c), and (d)
-      above.
+         preserved;
+      e. such other terms, if they permit redistribution of this document to
+         third parties, require that any further redistribution satisfies (b),
+         (c), and (d) above.
 
 AdaCore represents and warrants to the Customer that it has the right to
 distribute AdaCore Material under the terms in this License.

@@ -38,7 +38,7 @@ the operating-system (if present). Application code can manipulate access
 values beyond the scope of analysis.
 
 Under this policy, the full expressive power of access-to-object types is
-provided but one of the two areas of analysis difficulty is removed. 
+provided but one of the two areas of analysis difficulty is removed.
 Specifically, predictability of the allocation and deallocation implementation
 is achieved via user-defined storage pools.  (With these  storage pools, the
 implementation of allocation ("new") and deallocation (instances of

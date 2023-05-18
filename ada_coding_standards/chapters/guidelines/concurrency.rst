@@ -11,8 +11,8 @@ Concurrency (CON)
    :Security:
 
 Description
-   Have a plan for managing the use of concurrency in high-integrity applications
-   having real-time requirements.
+   Have a plan for managing the use of concurrency in high-integrity
+   applications having real-time requirements.
 
 Rules
    CON01, CON02, CON03

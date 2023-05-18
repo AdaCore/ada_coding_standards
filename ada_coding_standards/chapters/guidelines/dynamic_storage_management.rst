@@ -16,7 +16,7 @@ Description
 Rules
    DYN01, DYN02, DYN03, DYN04, DYN05, DYN06
 
-In Ada, objects are created by being either "declared" or "allocated". 
+In Ada, objects are created by being either "declared" or "allocated".
 Declared objects may be informally thought of as being created "on the stack"
 although such details are not specified by the language.  "Allocated" objects
 may be thought of as being allocated "from the heap", which is, again, an

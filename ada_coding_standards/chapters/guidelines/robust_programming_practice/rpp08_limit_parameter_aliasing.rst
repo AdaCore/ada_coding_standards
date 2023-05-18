@@ -58,7 +58,7 @@ introduce aliasing via parameter passing unless either:
 
    * both of the corresponding formal parameters are immutable; or
    * at least one of the corresponding formal parameters is immutable and is of a
-   by-copy type that is not an access type.
+     by-copy type that is not an access type.
 
 If an actual parameter in a procedure call and a global variable referenced by
 the called procedure potentially introduce aliasing via parameter passing,
@@ -66,7 +66,7 @@ then:
 
    * the corresponding formal parameter shall be immutable; and
    * if the global variable is written in the subprogram, then the corresponding
-   formal parameter shall be of a by-copy type that is not an access type.
+     formal parameter shall be of a by-copy type that is not an access type.
 
 Where one of the rules above prohibits the occurrence of an object or any of
 its subcomponents as an actual parameter, the following constructs are also
@@ -74,7 +74,7 @@ prohibited in this context:
 
    * A type conversion whose operand is a prohibited construct;
    * A call to an instance of Unchecked_Conversion whose operand is a prohibited
-   construct;
+     construct;
    * A qualified expression whose operand is a prohibited construct;
    * A prohibited construct enclosed in parentheses.
 
