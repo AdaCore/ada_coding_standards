@@ -2,6 +2,8 @@
 Limit Inheritance Hierarchy Depth (OOP03)
 -------------------------------------------
 
+.. include:: ../../../../global.txt
+
 *Level* :math:`\rightarrow` **Advisory**
 
 *Category*
@@ -18,7 +20,7 @@ Limit Inheritance Hierarchy Depth (OOP03)
 *Remediation* :math:`\rightarrow` **High**
 
 *Verification Method* :math:`\rightarrow` GNATcheck rule:
-``Deep_Inheritance_Hierarchies:2``
+:rule:`Deep_Inheritance_Hierarchies:2`
 
 +++++++++++
 Reference

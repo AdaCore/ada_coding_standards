@@ -18,7 +18,7 @@ No Reuse of Standard Typemarks (RPP13)
 *Remediation* :math:`\rightarrow` **Low**
 
 *Verification Method* :math:`\rightarrow` GNATcheck rule:
-``overrides_standard_name``
+:rule:`overrides_standard_name`
 
 +++++++++++
 Reference
@@ -37,7 +37,7 @@ When a developer uses an identifier that has the same name as a standard
 typemark, such as ``Integer``, a subsequent maintainer might be unaware that
 this identifier does not actually refer to ``Standard.Integer`` and might
 unintentionally use the locally-scoped ``Integer`` rather than the original
-``Standard.Integer``. The locally-scoped ``Integer`` can have different
+:ada:`Standard.Integer``. The locally-scoped ``Integer`` can have different
 attributes (and may not even be of the same base type).
 
 ++++++++++++++++++++++++++++++++++++++++++++++++

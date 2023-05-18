@@ -2,6 +2,8 @@
 Limit Statically-Dispatched Calls To Primitive Operations (OOP04)
 -------------------------------------------------------------------
 
+.. include:: ../../../../global.txt
+
 *Level* :math:`\rightarrow` **Advisory**
 
 *Category*
@@ -19,7 +21,7 @@ Limit Statically-Dispatched Calls To Primitive Operations (OOP04)
 bug)**
 
 *Verification Method* :math:`\rightarrow` GNATcheck rule:
-``Direct_Calls_To_Primitives``
+:rule:`Direct_Calls_To_Primitives`
 
 +++++++++++
 Reference

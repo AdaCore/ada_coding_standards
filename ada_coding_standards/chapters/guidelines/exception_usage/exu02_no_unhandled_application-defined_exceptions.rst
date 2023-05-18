@@ -2,6 +2,8 @@
 No Unhandled Application-Defined Exceptions (EXU02)
 -----------------------------------------------------
 
+.. include:: ../../../../global.txt
+
 *Level* :math:`\rightarrow` **Required**
 
 *Category*
@@ -18,7 +20,7 @@ No Unhandled Application-Defined Exceptions (EXU02)
 *Remediation* :math:`\rightarrow` **Low**
 
 *Verification Method* :math:`\rightarrow` GNATcheck rule:
-``Unhandled_Exceptions``
+:rule:`Unhandled_Exceptions`
 
 +++++++++++
 Reference

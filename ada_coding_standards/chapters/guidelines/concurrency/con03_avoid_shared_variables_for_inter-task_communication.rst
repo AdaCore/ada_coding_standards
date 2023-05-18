@@ -2,6 +2,8 @@
 Avoid Shared Variables for Inter-task Communication (CON03)
 -------------------------------------------------------------
 
+.. include:: ../../../../global.txt
+
 *Level* :math:`\rightarrow` **Advisory**
 
 *Category*
@@ -18,7 +20,7 @@ Avoid Shared Variables for Inter-task Communication (CON03)
 *Remediation* :math:`\rightarrow` **High**
 
 *Verification Method* :math:`\rightarrow` GNATcheck rule:
-``Volatile_Objects_Without_Address_Clauses``
+:rule:`Volatile_Objects_Without_Address_Clauses`
 
 +++++++++++
 Reference

@@ -20,7 +20,7 @@ No Use of "others" in Exception Handlers (RPP05)
 *Remediation* :math:`\rightarrow` **Low**
 
 *Verification Method* :math:`\rightarrow` GNATcheck rule:
-``OTHERS_In_Exception_Handlers``
+:rule:`OTHERS_In_Exception_Handlers`
 
 +++++++++++
 Reference

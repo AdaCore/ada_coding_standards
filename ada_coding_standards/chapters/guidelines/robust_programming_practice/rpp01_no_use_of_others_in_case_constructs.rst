@@ -2,6 +2,8 @@
 No Use of "others" in Case Constructs (RPP01)
 -----------------------------------------------
 
+.. include:: ../../../../global.txt
+
 *Level* :math:`\rightarrow` **Required**
 
 *Category*
@@ -18,7 +20,7 @@ No Use of "others" in Case Constructs (RPP01)
 *Remediation* :math:`\rightarrow` **Low**
 
 *Verification Method* :math:`\rightarrow` GNATcheck rule:
-``OTHERS_In_CASE_Statements``
+:rule:`OTHERS_In_CASE_Statements`
 
 +++++++++++
 Reference

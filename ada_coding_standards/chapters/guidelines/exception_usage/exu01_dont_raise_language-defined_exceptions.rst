@@ -2,6 +2,8 @@
 Don't Raise Language-Defined Exceptions (EXU01)
 -------------------------------------------------
 
+.. include:: ../../../../global.txt
+
 *Level* :math:`\rightarrow` **Required**
 
 *Category*
@@ -18,7 +20,7 @@ Don't Raise Language-Defined Exceptions (EXU01)
 *Remediation* :math:`\rightarrow` **Low**
 
 *Verification Method* :math:`\rightarrow` GNATcheck rule:
-``Raising_Predefined_Exceptions``
+:rule:`Raising_Predefined_Exceptions`
 
 +++++++++++
 Reference

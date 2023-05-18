@@ -19,7 +19,7 @@ Use Explicit Overriding Annotations (OOP05)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*Verification Method* :math:`\rightarrow` GNATcheck rule: ``Style_Checks:O``
+*Verification Method* :math:`\rightarrow` GNATcheck rule: :rule:`Style_Checks:O`
 
 +++++++++++
 Reference

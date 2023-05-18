@@ -2,6 +2,8 @@
 No Enumeration Ranges in Case Constructs (RPP02)
 --------------------------------------------------
 
+.. include:: ../../../../global.txt
+
 *Level* :math:`\rightarrow` **Required**
 
 *Category*
@@ -18,7 +20,7 @@ No Enumeration Ranges in Case Constructs (RPP02)
 *Remediation* :math:`\rightarrow` **Low**
 
 *Verification Method* :math:`\rightarrow` GNATcheck rule:
-``Enumeration_Ranges_In_CASE_Statements``
+:rule:`Enumeration_Ranges_In_CASE_Statements`
 
 +++++++++++
 Reference

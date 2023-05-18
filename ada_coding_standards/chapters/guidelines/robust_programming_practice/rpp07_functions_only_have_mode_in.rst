@@ -2,6 +2,8 @@
 Functions Only Have Mode "in" (RPP07)
 ---------------------------------------
 
+.. include:: ../../../../global.txt
+
 *Level* :math:`\rightarrow` **Required**
 
 *Category*
@@ -18,7 +20,7 @@ Functions Only Have Mode "in" (RPP07)
 *Remediation* :math:`\rightarrow` **Low**
 
 *Verification Method* :math:`\rightarrow` GNATcheck rule:
-``function_out_parameters``
+:rule:`function_out_parameters`
 
 +++++++++++
 Reference

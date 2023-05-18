@@ -2,6 +2,8 @@
 Use the Ravenscar Profile (CON01)
 -----------------------------------
 
+.. include:: ../../../../global.txt
+
 *Level* :math:`\rightarrow` **Advisory**
 
 *Category*
@@ -18,7 +20,7 @@ Use the Ravenscar Profile (CON01)
 *Remediation* :math:`\rightarrow` **High**
 
 *Verification Method* :math:`\rightarrow` GNATcheck rule:
-``uses_profile:ravenscar``
+:rule:`uses_profile:ravenscar`
 
 *Mutually Exclusive* :math:`\rightarrow` CON02
 

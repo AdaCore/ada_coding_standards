@@ -2,6 +2,8 @@
 No Exception Propagation Beyond Name Visibility (EXU03)
 ---------------------------------------------------------
 
+.. include:: ../../../../global.txt
+
 *Level* :math:`\rightarrow` **Required**
 
 *Category*
@@ -18,7 +20,7 @@ No Exception Propagation Beyond Name Visibility (EXU03)
 *Remediation* :math:`\rightarrow` **Low**
 
 *Verification Method* :math:`\rightarrow` GNATcheck rule:
-``Non_Visible_Exceptions``
+:rule:`Non_Visible_Exceptions`
 
 +++++++++++
 Reference

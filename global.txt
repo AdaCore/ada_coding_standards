@@ -16,6 +16,8 @@
 
 .. role:: assembly(code)
 
+.. role:: rule(code)
+
 .. include:: <isopub.txt>
 
 .. include:: <isoamsa.txt>

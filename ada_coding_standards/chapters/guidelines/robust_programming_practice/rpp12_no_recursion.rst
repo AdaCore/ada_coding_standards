@@ -2,6 +2,8 @@
 No Recursion (RPP12)
 ----------------------
 
+.. include:: ../../../../global.txt
+
 *Level* :math:`\rightarrow` **Advisory**
 
 *Category*
@@ -18,7 +20,7 @@ No Recursion (RPP12)
 *Remediation* :math:`\rightarrow` **Low**
 
 *Verification Method* :math:`\rightarrow` GNATcheck rule:
-``Recursive_Subprograms``
+:rule:`Recursive_Subprograms`
 
 +++++++++++
 Reference

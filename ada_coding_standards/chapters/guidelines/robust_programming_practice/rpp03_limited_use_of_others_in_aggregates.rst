@@ -2,6 +2,8 @@
 Limited Use of "others" In Aggregates (RPP03)
 -----------------------------------------------
 
+.. include:: ../../../../global.txt
+
 *Level* :math:`\rightarrow` **Advisory**
 
 *Category*
@@ -18,7 +20,7 @@ Limited Use of "others" In Aggregates (RPP03)
 *Remediation* :math:`\rightarrow` **Low**
 
 *Verification Method* :math:`\rightarrow` GNATcheck rule:
-``OTHERS_In_Aggregates``
+:rule:`OTHERS_In_Aggregates`
 
 +++++++++++
 Reference

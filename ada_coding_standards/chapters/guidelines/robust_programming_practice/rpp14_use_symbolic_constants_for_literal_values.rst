@@ -17,7 +17,7 @@ Use Symbolic Constants For Literal Values (RPP14)
 
 *Remediation* :math:`\rightarrow` **Low**
 
-*Verification Method* :math:`\rightarrow` GNATcheck rule: ``Numeric_Literals``
+*Verification Method* :math:`\rightarrow` GNATcheck rule: :rule:`Numeric_Literals`
 
 +++++++++++
 Reference
