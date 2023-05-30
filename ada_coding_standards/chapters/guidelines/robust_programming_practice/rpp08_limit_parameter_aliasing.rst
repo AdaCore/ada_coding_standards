@@ -2,22 +2,22 @@
 Limit Parameter Aliasing  (RPP08)
 -----------------------------------
 
-*Level* :math:`\rightarrow` **Required**
+**Level** :math:`\rightarrow` Required
 
-*Category*
+Category
    :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
 
-*Goal*
+Goal
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
    :Portability: :math:`\checkmark`
    :Performance:
    :Security:
 
-*Remediation* :math:`\rightarrow` **High**
+**Remediation** :math:`\rightarrow` High
 
-*Verification Method* :math:`\rightarrow` Code inspection
+**Verification Method** :math:`\rightarrow` Code inspection
 
 +++++++++++
 Reference

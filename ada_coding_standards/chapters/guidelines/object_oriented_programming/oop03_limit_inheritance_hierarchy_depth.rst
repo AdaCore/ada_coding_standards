@@ -4,22 +4,22 @@ Limit Inheritance Hierarchy Depth (OOP03)
 
 .. include:: ../../../../global.txt
 
-*Level* :math:`\rightarrow` **Advisory**
+**Level** :math:`\rightarrow` Advisory
 
-*Category*
+Category
    :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
 
-*Goal*
+Goal
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
    :Portability:
    :Performance:
    :Security: :math:`\checkmark`
 
-*Remediation* :math:`\rightarrow` **High**
+**Remediation** :math:`\rightarrow` High
 
-*Verification Method* :math:`\rightarrow` GNATcheck rule:
+**Verification Method** :math:`\rightarrow` GNATcheck rule:
 :rule:`Deep_Inheritance_Hierarchies:2`
 
 +++++++++++

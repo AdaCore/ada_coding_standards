@@ -2,22 +2,22 @@
 No Reuse of Standard Typemarks (RPP13)
 ----------------------------------------
 
-*Level* :math:`\rightarrow` **Advisory**
+**Level** :math:`\rightarrow` Advisory
 
-*Category*
+Category
    :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
 
-*Goal*
+Goal
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
    :Portability: :math:`\checkmark`
    :Performance:
    :Security:
 
-*Remediation* :math:`\rightarrow` **Low**
+**Remediation** :math:`\rightarrow` Low
 
-*Verification Method* :math:`\rightarrow` GNATcheck rule:
+**Verification Method** :math:`\rightarrow` GNATcheck rule:
 :rule:`overrides_standard_name`
 
 +++++++++++

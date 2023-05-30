@@ -2,22 +2,22 @@
 Always Use the Result of Function Calls (RPP11)
 -------------------------------------------------
 
-*Level* :math:`\rightarrow` **Advisory**
+**Level** :math:`\rightarrow` Advisory
 
-*Category*
+Category
    :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
 
-*Goal*
+Goal
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
    :Portability: :math:`\checkmark`
    :Performance:
    :Security:
 
-*Remediation* :math:`\rightarrow` **Low**
+**Remediation** :math:`\rightarrow` Low
 
-*Verification Method* :math:`\rightarrow` Compiler restrictions
+**Verification Method** :math:`\rightarrow` Compiler restrictions
 
 +++++++++++
 Reference

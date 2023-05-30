@@ -4,22 +4,22 @@ Functions Only Have Mode "in" (RPP07)
 
 .. include:: ../../../../global.txt
 
-*Level* :math:`\rightarrow` **Required**
+**Level** :math:`\rightarrow` Required
 
-*Category*
+Category
    :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
 
-*Goal*
+Goal
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
    :Portability: :math:`\checkmark`
    :Performance:
    :Security:
 
-*Remediation* :math:`\rightarrow` **Low**
+**Remediation** :math:`\rightarrow` Low
 
-*Verification Method* :math:`\rightarrow` GNATcheck rule:
+**Verification Method** :math:`\rightarrow` GNATcheck rule:
 :rule:`function_out_parameters`
 
 +++++++++++

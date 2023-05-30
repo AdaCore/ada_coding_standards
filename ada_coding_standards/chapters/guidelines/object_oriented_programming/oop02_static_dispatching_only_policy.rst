@@ -2,24 +2,24 @@
 Static Dispatching Only Policy (OOP02)
 ----------------------------------------
 
-*Level* :math:`\rightarrow` **Advisory**
+**Level** :math:`\rightarrow` Advisory
 
-*Category*
+Category
    :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
 
-*Goal*
+Goal
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
    :Portability:
    :Performance:
    :Security: :math:`\checkmark`
 
-*Remediation* :math:`\rightarrow` **N/A**
+**Remediation** :math:`\rightarrow` N/A
 
-*Verification Method* :math:`\rightarrow` Compiler restrictions
+**Verification Method** :math:`\rightarrow` Compiler restrictions
 
-*Mutually Exclusive* :math:`\rightarrow` OOP01
+**Mutually Exclusive** :math:`\rightarrow` OOP01
 
 +++++++++++
 Reference

@@ -2,22 +2,22 @@
 Avoid Function Side-Effects (RPP06)
 -------------------------------------
 
-*Level* :math:`\rightarrow` **Advisory**
+**Level** :math:`\rightarrow` Advisory
 
-*Category*
+Category
    :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
 
-*Goal*
+Goal
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
    :Portability: :math:`\checkmark`
    :Performance:
    :Security:
 
-*Remediation* :math:`\rightarrow` **Medium**
+**Remediation** :math:`\rightarrow` Medium
 
-*Verification Method* :math:`\rightarrow` Code inspection
+**Verification Method** :math:`\rightarrow` Code inspection
 
 +++++++++++
 Reference

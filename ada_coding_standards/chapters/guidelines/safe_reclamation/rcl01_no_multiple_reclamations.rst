@@ -2,22 +2,22 @@
 No Multiple Reclamations (RCL01)
 ----------------------------------
 
-*Level* :math:`\rightarrow` **Mandatory**
+**Level** :math:`\rightarrow` Mandatory
 
-*Category*
+Category
    :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
 
-*Goal*
+Goal
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
    :Portability: :math:`\checkmark`
    :Performance:
    :Security: :math:`\checkmark`
 
-*Remediation* :math:`\rightarrow` **High**
+**Remediation** :math:`\rightarrow` High
 
-*Verification Method* :math:`\rightarrow` Code inspection
+**Verification Method** :math:`\rightarrow` Code inspection
 
 +++++++++++
 Reference

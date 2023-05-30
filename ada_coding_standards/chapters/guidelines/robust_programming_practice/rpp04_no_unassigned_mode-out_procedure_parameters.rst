@@ -4,22 +4,22 @@ No Unassigned Mode-Out Procedure Parameters (RPP04)
 
 .. include:: ../../../../global.txt
 
-*Level* :math:`\rightarrow` **Required**
+**Level** :math:`\rightarrow` Required
 
-*Category*
+Category
    :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
 
-*Goal*
+Goal
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
    :Portability: :math:`\checkmark`
    :Performance:
    :Security:
 
-*Remediation* :math:`\rightarrow` **High**
+**Remediation** :math:`\rightarrow` High
 
-*Verification Method* :math:`\rightarrow` GNATcheck rule:
+**Verification Method** :math:`\rightarrow` GNATcheck rule:
 :rule:`Unassigned_OUT_Parameters`
 
 +++++++++++

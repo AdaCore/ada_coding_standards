@@ -4,22 +4,22 @@ Don't Raise Language-Defined Exceptions (EXU01)
 
 .. include:: ../../../../global.txt
 
-*Level* :math:`\rightarrow` **Required**
+**Level** :math:`\rightarrow` Required
 
-*Category*
+Category
    :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
 
-*Goal*
+Goal
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
    :Portability: :math:`\checkmark`
    :Performance:
    :Security:
 
-*Remediation* :math:`\rightarrow` **Low**
+**Remediation** :math:`\rightarrow` Low
 
-*Verification Method* :math:`\rightarrow` GNATcheck rule:
+**Verification Method** :math:`\rightarrow` GNATcheck rule:
 :rule:`Raising_Predefined_Exceptions`
 
 +++++++++++

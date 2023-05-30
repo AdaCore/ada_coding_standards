@@ -2,22 +2,22 @@
 Access Types Without Allocators Policy (DYN03)
 ------------------------------------------------
 
-*Level* :math:`\rightarrow` **Advisory**
+**Level** :math:`\rightarrow` Advisory
 
-*Category*
+Category
    :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
 
-*Goal*
+Goal
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
    :Portability:
    :Performance:
    :Security: :math:`\checkmark`
 
-*Remediation* :math:`\rightarrow` **Low**
+**Remediation** :math:`\rightarrow` Low
 
-*Verification Method* :math:`\rightarrow` Compiler restrictions
+**Verification Method** :math:`\rightarrow` Compiler restrictions
 
 +++++++++++
 Reference

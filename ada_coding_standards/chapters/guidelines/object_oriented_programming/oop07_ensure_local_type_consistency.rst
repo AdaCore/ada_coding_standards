@@ -2,22 +2,22 @@
 Ensure Local Type Consistency (OOP07)
 ---------------------------------------
 
-*Level* :math:`\rightarrow` **Required**
+**Level** :math:`\rightarrow` Required
 
-*Category*
+Category
    :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
 
-*Goal*
+Goal
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
    :Portability:
    :Performance:
    :Security: :math:`\checkmark`
 
-*Remediation* :math:`\rightarrow` **N/A**
+**Remediation** :math:`\rightarrow` N/A
 
-*Verification Method* :math:`\rightarrow` Software test
+**Verification Method** :math:`\rightarrow` Software test
 
 +++++++++++
 Reference

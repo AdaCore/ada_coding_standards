@@ -2,22 +2,22 @@
 Statically Determine Maximum Stack Requirements (DYN06)
 ---------------------------------------------------------
 
-*Level* :math:`\rightarrow` **Required**
+**Level** :math:`\rightarrow` Required
 
-*Category*
+Category
    :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
 
-*Goal*
+Goal
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
    :Portability:
    :Performance:
    :Security:
 
-*Remediation* :math:`\rightarrow` **Low**
+**Remediation** :math:`\rightarrow` Low
 
-*Verification Method* :math:`\rightarrow` Static analysis tools
+**Verification Method** :math:`\rightarrow` Static analysis tools
 
 +++++++++++
 Reference

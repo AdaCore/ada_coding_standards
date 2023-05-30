@@ -2,22 +2,22 @@
 Use A Static Analysis Tool Extensively (SWE03)
 ------------------------------------------------
 
-*Level* :math:`\rightarrow` **Mandatory**
+**Level** :math:`\rightarrow` Mandatory
 
-*Category*
+Category
    :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
 
-*Goal*
+Goal
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
    :Portability: :math:`\checkmark`
    :Performance: :math:`\checkmark`
    :Security: :math:`\checkmark`
 
-*Remediation* :math:`\rightarrow` **High**
+**Remediation** :math:`\rightarrow` High
 
-*Verification Method* :math:`\rightarrow` Static analysis tools
+**Verification Method** :math:`\rightarrow` Static analysis tools
 
 +++++++++++
 Reference

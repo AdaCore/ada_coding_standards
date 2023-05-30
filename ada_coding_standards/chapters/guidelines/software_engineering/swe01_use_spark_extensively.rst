@@ -2,22 +2,22 @@
 Use SPARK Extensively (SWE01)
 -------------------------------
 
-*Level* :math:`\rightarrow` **Advisory**
+**Level** :math:`\rightarrow` Advisory
 
-*Category*
+Category
    :Safety: :math:`\checkmark`
    :Cyber: :math:`\checkmark`
 
-*Goal*
+Goal
    :Maintainability: :math:`\checkmark`
    :Reliability: :math:`\checkmark`
    :Portability: :math:`\checkmark`
    :Performance: :math:`\checkmark`
    :Security: :math:`\checkmark`
 
-*Remediation* :math:`\rightarrow` **High, as retrofit can be extensive**
+**Remediation** :math:`\rightarrow` High, as retrofit can be extensive
 
-*Verification Method* :math:`\rightarrow` Compiler restrictions
+**Verification Method** :math:`\rightarrow` Compiler restrictions
 
 +++++++++++
 Reference
