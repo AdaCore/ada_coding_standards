@@ -26,7 +26,7 @@ Goal
 Reference
 +++++++++++
 
-MISRA C rule 9.1 "The value of an object with automatic storage duration shall
+MISRA C Rule 9.1 "The value of an object with automatic storage duration shall
 not be read before it has been set"
 
 +++++++++++++

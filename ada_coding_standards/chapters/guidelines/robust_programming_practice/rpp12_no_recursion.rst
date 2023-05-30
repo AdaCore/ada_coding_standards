@@ -26,7 +26,7 @@ Goal
 Reference
 +++++++++++
 
-MISRA C rule 17.2 "Functions shall not call themselves, either directly or
+MISRA C Rule 17.2 "Functions shall not call themselves, either directly or
 indirectly"
 
 +++++++++++++

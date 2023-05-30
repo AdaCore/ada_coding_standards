@@ -23,7 +23,7 @@ Goal
 Reference
 +++++++++++
 
-MISRA rule 21.3 "The memory allocation and deallocation functions of <stdlib.h>
+MISRA C Rule 21.3 "The memory allocation and deallocation functions of <stdlib.h>
 shall not be used"
 
 +++++++++++++

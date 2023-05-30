@@ -23,7 +23,7 @@ Goal
 Reference
 +++++++++++
 
-MISRA C rule 13.3 "The value of an expression and its persistent side effects
+MISRA C Rule 13.3 "The value of an expression and its persistent side effects
 shall be the same under all permitted evaluation orders"
 
 +++++++++++++
