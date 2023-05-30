@@ -23,7 +23,7 @@ Do Not Re-Verify Preconditions In Subprogram Bodies (RPP10)
 Reference
 +++++++++++
 
-RPP10
+N/A
 
 +++++++++++++
 Description

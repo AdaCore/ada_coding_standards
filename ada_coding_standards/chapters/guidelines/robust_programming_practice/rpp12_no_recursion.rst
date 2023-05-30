@@ -37,8 +37,8 @@ No subprogram shall be invoked, directly or indirectly, as part of its own
 execution.
 
 In addition to making static analysis more complex, recursive calls make static
-stack usage analysis extremely difficult, requiring manual supply of call
-limits (for example).
+stack usage analysis extremely difficult, requiring, for example, manual supply of call
+limits.
 
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2

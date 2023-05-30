@@ -45,7 +45,7 @@ Noncompliant Code Example
 
       type String_Reference is access all String;
       procedure Free is new Ada.Unchecked_Deallocation
-     (Object => String,  Name => String_Reference);
+         (Object => String, Name => String_Reference);
       S : String_Reference := new String'("Hello");
       Y : String_Reference;
    begin
@@ -57,7 +57,7 @@ Noncompliant Code Example
 Compliant Code Example
 ++++++++++++++++++++++++
 
-Remove the call to Free (Y).
+Remove the call to :ada:`Free (Y)`.
 
 +++++++
 Notes

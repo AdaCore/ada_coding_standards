@@ -34,15 +34,15 @@ There are two issues that make storage utilization analysis difficult: 1) the
 predictability of the allocation and deallocation implementation, and 2) how
 access values are used by the application. The behavior of the underlying
 implementation is largely undefined and may, for example, consist of calls to
-the operating-system (if present). Application code can manipulate access
+the operating system (if present). Application code can manipulate access
 values beyond the scope of analysis.
 
 Under this policy, the full expressive power of access-to-object types is
 provided but one of the two areas of analysis difficulty is removed.
 Specifically, predictability of the allocation and deallocation implementation
-is achieved via user-defined storage pools.  (With these  storage pools, the
+is achieved via user-defined storage pools.  With these  storage pools, the
 implementation of allocation (:ada:`new`) and deallocation (instances of
-:ada:`Ada.Unchecked_Deallocation`) is defined by the pool type.)
+:ada:`Ada.Unchecked_Deallocation`) is defined by the pool type.
 
 If the pool type is implemented with fixed-size blocks on the stack, allocation
 and deallocation timing behavior are predictable.

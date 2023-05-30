@@ -48,7 +48,7 @@ may not be present in all platforms.) The task failure does not affect any
 other tasks unless those other tasks attempt to communicate with it. In short,
 failure is silent.
 
-Although the language-defined package Ada.Task_Termination can be used to
+Although the language-defined package :ada:`Ada.Task_Termination` can be used to
 provide a response using standard facilities, not all run-time libraries
 provide that package. For example, under the  Ravenscar profile, application
 tasks are not intended to terminate, neither normally nor abnormally, and the
@@ -77,7 +77,7 @@ Finally, whether the environment task waited for the dependent tasks or aborted
 them, the semantics of further execution beyond that point are undefined. There
 is no concept of a calling environment beyond the environment task
 (`Ada RM 10.2(30) - Program Execution
-<http://www.ada-auth.org/standards/2xrm/html/RM-10-2.html>`_)
+<http://www.ada-auth.org/standards/2xrm/html/RM-10-2.html>`_).
 In some systems there is no calling environment, such as bare-metal platforms
 with only an Ada run-time library and no operating system.
 

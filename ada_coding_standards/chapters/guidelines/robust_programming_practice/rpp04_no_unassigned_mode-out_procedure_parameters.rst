@@ -57,7 +57,7 @@ Noncompliant Code Example
   :start-line: 5
   :end-line: 21
 
-In the above, some value is copied back for an output parameter as
+In the above example, some value is copied back for an output parameter as
 specified by :ada:`Register`. The other parameter is not assigned, and
 on return the value copied to the actual parameter may not be a valid
 representation for a value of the type.
@@ -85,5 +85,5 @@ for uninitialized access provided by advanced static analysis tools
 such as SPARK and CodePeer.
 
 Note that the GNATcheck rule does not check function parameters (as
-of Ada 2012 functions can have out parameters). As a result, the
+of Ada 2012 functions can have :ada:`out` parameters). As a result, the
 better choice is either SPARK or CodePeer.

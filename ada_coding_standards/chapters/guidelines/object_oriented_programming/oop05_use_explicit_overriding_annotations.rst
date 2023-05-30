@@ -74,7 +74,7 @@ prior versions of the language. Therefore, a subprogram without either
 annotation might or might not be overriding. A legal program could contain some
 explicitly annotated subprograms and some that are not annotated at all. But
 because the compiler will reject explicit annotations that are incorrect, all
-we require is that one of the two cases be explicitly indicated, for all such
+we require is that one of the two cases be explicitly indicated for all such
 subprograms. Any unannotated subprograms not flagged as errors are then
 necessarily not that case, they must be the other one.
 

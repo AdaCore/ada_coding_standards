@@ -32,7 +32,7 @@ Description
 Only deallocate storage that was dynamically allocated by the evaluation of an
 allocator (i.e., :ada:`new`).
 
-This is a possibility because Ada allows creation of access values designating
+This is possible because Ada allows creation of access values designating
 declared (aliased) objects.
 
 ++++++++++++++++++++++++++++++++++++++++++++++++
@@ -49,7 +49,7 @@ Noncompliant Code Example
 
       type String_Reference is access all String;
       procedure Free is new Ada.Unchecked_Deallocation
-     (Object => String,  Name => String_Reference);
+        (Object => String, Name => String_Reference);
       S : aliased String := "Hello";
       Y : String_Reference := S'Access;
    begin
@@ -59,7 +59,7 @@ Noncompliant Code Example
 Compliant Code Example
 ++++++++++++++++++++++++
 
-Remove the call to Free (Y).
+Remove the call to :ada:`Free (Y)`.
 
 +++++++
 Notes

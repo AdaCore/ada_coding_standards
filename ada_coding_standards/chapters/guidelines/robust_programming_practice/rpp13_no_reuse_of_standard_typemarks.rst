@@ -37,7 +37,7 @@ When a developer uses an identifier that has the same name as a standard
 typemark, such as :ada:`Integer`, a subsequent maintainer might be unaware that
 this identifier does not actually refer to :ada:`Standard.Integer` and might
 unintentionally use the locally-scoped :ada:`Integer` rather than the original
-:ada:`Standard.Integer``. The locally-scoped :ada:`Integer` can have different
+:ada:`Standard.Integer`. The locally-scoped :ada:`Integer` can have different
 attributes (and may not even be of the same base type).
 
 ++++++++++++++++++++++++++++++++++++++++++++++++

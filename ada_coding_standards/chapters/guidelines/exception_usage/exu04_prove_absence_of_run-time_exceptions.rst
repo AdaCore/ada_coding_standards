@@ -36,7 +36,8 @@ exceptions cannot occur in the first place.  Additionally, the cost of proving
 exceptions cannot happen may be less than the cost of analyzing code in which
 they are allowed to be raised.
 
-The restriction No_Exceptions can be used with pragma Restrictions to enforce
+The restriction :ada:`No_Exceptions` can be used with :ada:`pragma Restrictions`
+to enforce
 this approach.  Specifically, the restriction ensures that :ada:`raise`
 statements and exception handlers do not appear in the source code and that
 language-defined checks are not emitted by the compiler.  However, a run-time

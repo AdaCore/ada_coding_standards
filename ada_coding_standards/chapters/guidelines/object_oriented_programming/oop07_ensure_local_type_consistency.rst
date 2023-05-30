@@ -122,9 +122,6 @@ pass, this provides a high degree of confidence that objects of the new tagged
 type can properly substitute for parent type objects. Note that static proof of
 consistency provides an even higher degree of confidence.
 
-For further discussion of this topic, see the sections cited in the Reference
-entry in this table.
-
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Applicable vulnerability within ISO TR 24772-2
 ++++++++++++++++++++++++++++++++++++++++++++++++
@@ -163,8 +160,10 @@ Noncompliant Code Example
       ...
    end P;
 
-The postcondition for Set_Width states that the Height is not changed.
-Likewise, for Set_Height, the postcondition asserts that the Width is not
+The postcondition for :ada:`Set_Width` states that the :ada:`Height`
+is not changed.
+Likewise, for :ada:`Set_Height`, the postcondition asserts that the :ada:`Width`
+is not
 changed. However, these postconditions are not class-wide so they are not
 inherited by subclasses.
 

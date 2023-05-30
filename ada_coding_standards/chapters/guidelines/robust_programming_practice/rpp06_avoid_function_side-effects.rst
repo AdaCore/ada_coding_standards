@@ -71,8 +71,8 @@ Noncompliant Code Example
 Compliant Code Example
 ++++++++++++++++++++++++
 
-Remove the update to Call_Count. or change the function into a procedure with a
-parameter for Call_Count.
+Remove the update to :ada:`Call_Count`, or change the function into a procedure
+with a parameter for :ada:`Call_Count`.
 
 +++++++
 Notes

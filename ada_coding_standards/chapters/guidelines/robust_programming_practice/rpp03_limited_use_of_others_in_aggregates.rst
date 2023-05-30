@@ -32,12 +32,14 @@ Similar to RPP01
 Description
 +++++++++++++
 
-Do not use an :ada:`others` choice in an extension aggregate. In record and
-array aggregates, do not use an :ada:`others` choice unless it is used either
+Do not use an :ada:`others` choice in an extension aggregate. In :ada:`record`
+and :ada:`array` aggregates,
+do not use an :ada:`others` choice unless it is used either
 to refer to all components, or to all but one component.
 
-This guideline prevents accidental provision of a general value for a record
-component or array component, when a specific value was intended. This
+This guideline prevents accidental provision of a general value for a
+:ada:`record` component or :ada:`array`
+component, when a specific value was intended. This
 possibility includes the case in which new components are added to an existing
 composite type.
 
@@ -64,7 +66,7 @@ Compliant Code Example
 .. include:: examples/rpp03.ads
   :code: Ada
   :start-line: 17
-  :end-line: 27
+  :end-line: 26
 
 +++++++
 Notes

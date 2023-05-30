@@ -52,7 +52,7 @@ Noncompliant Code Example
   :start-line: 4
   :end-line: 7
 
-Note that variables marked as Atomic are also Volatile, per the
+Note that variables marked as :ada:`Atomic` are also :ada:`Volatile`, per the
 `Ada RM C.6/8(3) - Shared Variable Control
 <http://www.ada-auth.org/standards/12rm/html/RM-C-6.html>`_
 
@@ -60,8 +60,8 @@ Note that variables marked as Atomic are also Volatile, per the
 Compliant Code Example
 ++++++++++++++++++++++++
 
-When assigned to a memory address, a Volatile variable can be used to interact
-with a memory-mapped device, among other similar usages.
+When assigned to a memory address, a :ada:`Volatile` variable can be used to
+interact with a memory-mapped device, among other similar usages.
 
 .. include:: examples/con03.ads
   :code: Ada

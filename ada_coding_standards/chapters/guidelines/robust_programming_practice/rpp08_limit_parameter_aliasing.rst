@@ -44,7 +44,7 @@ during maintenance.
 This rule is meant to detect problematic cases of aliasing that are introduced
 through the actual parameters and between actual parameters and global
 variables in a subprogram call. It is a simplified version of the SPARK rule
-for anti-aliasing defined in SPARK Reference Manual section 6.4.2.
+for anti-aliasing defined in *SPARK Reference Manual* section 6.4.2.
 
 A formal parameter is said to be immutable when the subprogram cannot modify
 its value or modify the value of an object by dereferencing a part of the
@@ -110,7 +110,7 @@ Noncompliant Code Example
 Compliant Code Example
 ++++++++++++++++++++++++
 
-Don't pass Obj as the actual parameter to both formal parameters.
+Do not pass :ada:`Obj` as the actual parameter to both formal parameters.
 
 +++++++
 Notes

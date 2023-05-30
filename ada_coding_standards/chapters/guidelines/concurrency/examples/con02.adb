@@ -12,6 +12,7 @@ package body Con02 is
    package body Noncompliant is
       task body Task_T is
       begin
+         -- Error: Max_Task_Entries => 0
          accept Entry_Point do
             Put_Line ("Hello World");
          end Entry_Point;
@@ -31,6 +32,7 @@ package body Con02 is
       task body Task_T is
       begin
          delay 1.0;
+         Put_Line ("Hello World");
          loop
             delay 1.0;
             Put_Line ("Ping");

@@ -46,7 +46,7 @@ editing changes required for client code when implementation changes are made.
 This guideline also limits the region of code required to find any bugs to the
 package and child packages, if any, defining the abstraction.
 
-This guideline is to be followed extensively, as the design default for
+This guideline is to be followed extensively as the design default for
 components. Once the application code size becomes non-trivial, the cost of
 retrofit is extremely high.
 

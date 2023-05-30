@@ -25,7 +25,6 @@ Reference
 
 Power of 10 rule #10: All code must be compiled, from the first day of
 development, with all compiler warnings enabled at the most
-
 pedantic setting available. All code must compile without warnings.
 
 +++++++++++++

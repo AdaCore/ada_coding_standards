@@ -32,7 +32,8 @@ N/A
 Description
 +++++++++++++
 
-Much like the situation with :ada:`others` in case statements and case
+Much like the situation with :ada:`others` in
+:ada:`case` statements and :ada:`case`
 expressions, the use of :ada:`others` in exception handlers makes it
 possible to omit an intended specific handler for an exception, especially
 a new exception added to an existing set of handlers. As a result, a
@@ -77,6 +78,6 @@ handlers around calls to library routines:
      library routines, including the catch-all exception handler
      :ada:`when others =>`
 
-It also recommends "All tasks should contain an exception handler at the outer
-level to prevent silent termination due to unhandled exceptions." for
-vulnerability 6.62 Concurrency - Premature termination.
+ISO TR 24772-2 also recommends "All tasks should contain an exception handler
+at the outer
+level to prevent silent termination due to unhandled exceptions."

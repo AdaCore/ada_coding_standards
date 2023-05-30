@@ -68,7 +68,7 @@ Notes
 +++++++
 
 The GNAT compiler warning switch :switch:`-gnatwu` (or the more general
-:switch:-gnatwa` warnings switch) will cause the compiler to detect variables
+:switch:`-gnatwa` warnings switch) will cause the compiler to detect variables
 assigned but not read. CodePeer will detect these unused variables as well.
 SPARK goes further by checking that all computations contribute all the way
 to subprogram outputs.

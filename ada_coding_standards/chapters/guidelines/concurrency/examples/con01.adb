@@ -12,6 +12,7 @@ package body Con01 is
       task body Task_T is
       begin
          loop
+            -- Error: No_Relative_Delay
             delay 1.0;
             Put_Line ("Hello World");
          end loop;

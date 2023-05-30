@@ -57,22 +57,36 @@ Noncompliant Code Example
       P1 : Pointer1;
       P2 : Pointer2;
       procedure Free is new Ada.Unchecked_Deallocation
-         (Object => Integer, Name   => Pointer2);
+         (Object => Integer, Name => Pointer2);
    begin
       P1 := new Integer;
       P2 := Pointer2 (P1);
+      Call_Something ( P2.all );
       ...
       Free (P2);
 
-In the above, P1.all was allocated from Pointer1'Storage_Pool, but, via the
-type conversion, the code above is attempting to return it to
-Pointer2'Storage_Pool, which may be a different pool.
+In the above, :ada:`P1.all` was allocated from :ada:`Pointer1'Storage_Pool`,
+but, via the type conversion, the code above is attempting to return it to
+:ada:`Pointer2'Storage_Pool`, which may be a different pool.
 
 ++++++++++++++++++++++++
 Compliant Code Example
 ++++++++++++++++++++++++
 
-Don't deallocate converted access values.
+.. code-block:: Ada
+
+      type Pointer1 is access all Integer;
+      type Pointer2 is access all Integer;
+      P1 : Pointer1;
+      P2 : Pointer2;
+      procedure Free is new Ada.Unchecked_Deallocation
+         (Object => Integer, Name => Pointer1);
+   begin
+      P1 := new Integer;
+      P2 := Pointer2 (P1);
+      Call_Something ( P2.all );
+      ...
+      Free (P1);
 
 +++++++
 Notes

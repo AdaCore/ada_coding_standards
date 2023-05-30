@@ -47,8 +47,6 @@ In this approach the following constructs are not allowed:
    * User-defined storage pools
    * Unchecked Deallocations
 
-Notes
-
 Aspects should be applied to all access types in this approach, specifying a
 value of zero for the storage size.  Although the restriction No_Allocators is
 present, such clauses may be necessary to prevent any default storage pools

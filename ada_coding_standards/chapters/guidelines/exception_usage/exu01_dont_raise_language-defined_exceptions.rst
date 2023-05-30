@@ -39,7 +39,8 @@ The Ada language-defined exceptions are raised implicitly in specific
 circumstances defined by the language standard. Explicitly raising these
 exceptions would be confusing to application developers. The potential for
 confusion increases as the exception is propagated up the dynamic call chain,
-away from the point of the raise statement, because this increases the number
+away from the point of the
+:ada:`raise` statement, because this increases the number
 of paths and thus corresponding language-defined checks that could have been
 the cause.
 
