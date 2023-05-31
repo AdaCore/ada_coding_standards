@@ -29,7 +29,7 @@ the user's desired format.
 This folder currently contains a python script that will generate a map file that
 parses the source files looking to connect coding standards to ``gnatcheck`` rules.
 
-## Source 
+## ada_coding_standards
 
 This folder contains the source files necessary to generate the coding standards.
 
