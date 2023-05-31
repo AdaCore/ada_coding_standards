@@ -58,19 +58,19 @@ N/A
 Noncompliant Code Example
 +++++++++++++++++++++++++++
 
-.. include:: examples/rpp14.ads
-  :code: Ada
-  :start-line: 3
-  :end-line: 6
+.. literalinclude:: examples/rpp14.ads
+  :language: Ada
+  :lines: 4-6
+  :dedent: 3
 
 ++++++++++++++++++++++++
 Compliant Code Example
 ++++++++++++++++++++++++
 
-.. include:: examples/rpp14.ads
-  :code: Ada
-  :start-line: 9
-  :end-line: 13
+.. literalinclude:: examples/rpp14.ads
+  :language: Ada
+  :lines: 10-13
+  :dedent: 3
 
 +++++++
 Notes

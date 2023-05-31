@@ -93,19 +93,19 @@ Noncompliant Code Example
 Any code disallowed by the profile. Remediation is **high** because use of the
 facilities outside the subset can be difficult to retrofit into compliance.
 
-.. include:: examples/con01.adb
-  :code: Ada
-  :start-line: 11
-  :end-line: 18
+.. literalinclude:: examples/con01.adb
+  :language: Ada
+  :lines: 12-19
+  :dedent: 3
 
 ++++++++++++++++++++++++
 Compliant Code Example
 ++++++++++++++++++++++++
 
-.. include:: examples/con01.adb
-  :code: Ada
-  :start-line: 26
-  :end-line: 36
+.. literalinclude:: examples/con01.adb
+  :language: Ada
+  :lines: 28-37
+  :dedent: 3
 
 +++++++
 Notes

@@ -91,19 +91,19 @@ Applicable vulnerability within ISO TR 24772-2
 Noncompliant Code Example
 +++++++++++++++++++++++++++
 
-.. include:: examples/exu02.adb
-  :code: Ada
-  :start-line: 18
-  :end-line: 31
+.. literalinclude:: examples/exu02.adb
+  :language: Ada
+  :lines: 19-31
+  :dedent: 3
 
 ++++++++++++++++++++++++
 Compliant Code Example
 ++++++++++++++++++++++++
 
-.. include:: examples/exu02.adb
-  :code: Ada
-  :start-line: 34
-  :end-line: 50
+.. literalinclude:: examples/exu02.adb
+  :language: Ada
+  :lines: 35-50
+  :dedent: 3
 
 +++++++
 Notes

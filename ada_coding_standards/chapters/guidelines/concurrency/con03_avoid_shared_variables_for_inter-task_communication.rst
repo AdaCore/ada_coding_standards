@@ -47,10 +47,10 @@ Applicable vulnerability within ISO TR 24772-2
 Noncompliant Code Example
 +++++++++++++++++++++++++++
 
-.. include:: examples/con03.ads
-  :code: Ada
-  :start-line: 4
-  :end-line: 7
+.. literalinclude:: examples/con03.ads
+  :language: Ada
+  :lines: 5-7
+  :dedent: 3
 
 Note that variables marked as :ada:`Atomic` are also :ada:`Volatile`, per the
 `Ada RM C.6/8(3) - Shared Variable Control
@@ -63,10 +63,10 @@ Compliant Code Example
 When assigned to a memory address, a :ada:`Volatile` variable can be used to
 interact with a memory-mapped device, among other similar usages.
 
-.. include:: examples/con03.ads
-  :code: Ada
-  :start-line: 10
-  :end-line: 14
+.. literalinclude:: examples/con03.ads
+  :language: Ada
+  :lines: 11-14
+  :dedent: 3
 
 +++++++
 Notes

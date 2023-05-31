@@ -47,26 +47,26 @@ N/A
 Noncompliant Code Example
 +++++++++++++++++++++++++++
 
-.. include:: examples/exu03.adb
-  :code: Ada
-  :start-line: 3
-  :end-line: 11
+.. literalinclude:: examples/exu03.adb
+  :language: Ada
+  :lines: 4-12
+  :dedent: 3
 
 As a result the exception name cannot be referenced outside the body:
 
-.. include:: examples/exu03.adb
-  :code: Ada
-  :start-line: 12
-  :end-line: 19
+.. literalinclude:: examples/exu03.adb
+  :language: Ada
+  :lines: 13-20
+  :dedent: 3
 
 ++++++++++++++++++++++++
 Compliant Code Example
 ++++++++++++++++++++++++
 
-.. include:: examples/exu03.adb
-  :code: Ada
-  :start-line: 20
-  :end-line: 36
+.. literalinclude:: examples/exu03.adb
+  :language: Ada
+  :lines: 21-37
+  :dedent: 3
 
 
 +++++++

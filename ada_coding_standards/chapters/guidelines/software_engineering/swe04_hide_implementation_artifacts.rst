@@ -60,10 +60,10 @@ N/A
 Noncompliant Code Example
 +++++++++++++++++++++++++++
 
-.. include:: examples/swe04.ads
-  :code: Ada
-  :start-line: 4
-  :end-line: 17
+.. literalinclude:: examples/swe04.ads
+  :language: Ada
+  :lines: 5-18
+  :dedent: 3
 
 Note that both type :ada:`Content_T`, as well as the record type components of
 type :ada:`Stack_T`, are visible to clients. Client code may declare variables
@@ -76,10 +76,10 @@ codebase.
 Compliant Code Example
 ++++++++++++++++++++++++
 
-.. include:: examples/swe04.ads
-  :code: Ada
-  :start-line: 18
-  :end-line: 33
+.. literalinclude:: examples/swe04.ads
+  :language: Ada
+  :lines: 19-34
+  :dedent: 3
 
 
 Type :ada:`Content_T`, as well as the record type components of type

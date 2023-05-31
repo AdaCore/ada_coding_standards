@@ -50,19 +50,19 @@ N/A
 Noncompliant Code Example
 +++++++++++++++++++++++++++
 
-.. include:: examples/rpp05.adb
-  :code: Ada
-  :start-line: 2
-  :end-line: 9
+.. literalinclude:: examples/rpp05.adb
+  :language: Ada
+  :lines: 3-10
+  :dedent: 3
 
 ++++++++++++++++++++++++
 Compliant Code Example
 ++++++++++++++++++++++++
 
-.. include:: examples/rpp05.adb
-  :code: Ada
-  :start-line: 10
-  :end-line: 17
+.. literalinclude:: examples/rpp05.adb
+  :language: Ada
+  :lines: 11-18
+  :dedent: 3
 
 +++++++
 Notes

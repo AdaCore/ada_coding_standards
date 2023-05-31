@@ -54,19 +54,19 @@ Applicable vulnerability within ISO TR 24772-2
 Noncompliant Code Example
 +++++++++++++++++++++++++++
 
-.. include:: examples/rpp03.ads
-  :code: Ada
-  :start-line: 3
-  :end-line: 14
+.. literalinclude:: examples/rpp03.ads
+  :language: Ada
+  :lines: 4-14
+  :dedent: 3
 
 ++++++++++++++++++++++++
 Compliant Code Example
 ++++++++++++++++++++++++
 
-.. include:: examples/rpp03.ads
-  :code: Ada
-  :start-line: 17
-  :end-line: 26
+.. literalinclude:: examples/rpp03.ads
+  :language: Ada
+  :lines: 18-26
+  :dedent: 3
 
 +++++++
 Notes

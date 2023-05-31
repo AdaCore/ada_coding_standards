@@ -103,24 +103,24 @@ Applicable vulnerability within ISO TR 24772-2
 Noncompliant Code Example
 +++++++++++++++++++++++++++
 
-.. include:: examples/oop05.ads
-  :code: Ada
-  :start-line: 2
-  :end-line: 4
+.. literalinclude:: examples/oop05.ads
+  :language: Ada
+  :lines: 3-5
+  :dedent: 3
 
-.. include:: examples/oop05.ads
-  :code: Ada
-  :start-line: 5
-  :end-line: 7
+.. literalinclude:: examples/oop05.ads
+  :language: Ada
+  :lines: 6-8
+  :dedent: 3
 
 ++++++++++++++++++++++++
 Compliant Code Example
 ++++++++++++++++++++++++
 
-.. include:: examples/oop05.ads
-  :code: Ada
-  :start-line: 7
-  :end-line: 10
+.. literalinclude:: examples/oop05.ads
+  :language: Ada
+  :lines: 8-11
+  :dedent: 3
 
 +++++++
 Notes

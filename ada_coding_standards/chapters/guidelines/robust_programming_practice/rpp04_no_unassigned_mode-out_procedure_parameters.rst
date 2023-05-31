@@ -52,10 +52,10 @@ Applicable vulnerability within ISO TR 24772-2
 Noncompliant Code Example
 +++++++++++++++++++++++++++
 
-.. include:: examples/rpp04.adb
-  :code: Ada
-  :start-line: 5
-  :end-line: 21
+.. literalinclude:: examples/rpp04.adb
+  :language: Ada
+  :lines: 7-22
+  :dedent: 3
 
 In the above example, some value is copied back for an output parameter as
 specified by :ada:`Register`. The other parameter is not assigned, and
@@ -69,10 +69,10 @@ is not valid.)
 Compliant Code Example
 ++++++++++++++++++++++++
 
-.. include:: examples/rpp04.adb
-  :code: Ada
-  :start-line: 22
-  :end-line: 32
+.. literalinclude:: examples/rpp04.adb
+  :language: Ada
+  :lines: 23-33
+  :dedent: 3
 
 +++++++
 Notes

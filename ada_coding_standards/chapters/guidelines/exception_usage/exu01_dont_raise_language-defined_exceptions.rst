@@ -54,19 +54,19 @@ N/A
 Noncompliant Code Example
 +++++++++++++++++++++++++++
 
-.. include:: examples/exu01.adb
-  :code: Ada
-  :start-line: 3
-  :end-line: 12
+.. literalinclude:: examples/exu01.adb
+  :language: Ada
+  :lines: 4-13
+  :dedent: 3
 
 ++++++++++++++++++++++++
 Compliant Code Example
 ++++++++++++++++++++++++
 
-.. include:: examples/exu01.adb
-  :code: Ada
-  :start-line: 13
-  :end-line: 22
+.. literalinclude:: examples/exu01.adb
+  :language: Ada
+  :lines: 14-23
+  :dedent: 3
 
 +++++++
 Notes

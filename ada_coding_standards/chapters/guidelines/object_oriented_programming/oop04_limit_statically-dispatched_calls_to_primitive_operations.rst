@@ -88,26 +88,26 @@ Noncompliant Code Example
 
 Class constructs
 
-.. include:: examples/oop04.adb
-  :code: Ada
-  :start-line: 2
-  :end-line: 18
+.. literalinclude:: examples/oop04.adb
+  :language: Ada
+  :lines: 3-19
+  :dedent: 3
 
 Noncompliant Code
 
-.. include:: examples/oop04.adb
-  :code: Ada
-  :start-line: 21
-  :end-line: 26
+.. literalinclude:: examples/oop04.adb
+  :language: Ada
+  :lines: 22-27
+  :dedent: 6
 
 ++++++++++++++++++++++++
 Compliant Code Example
 ++++++++++++++++++++++++
 
-.. include:: examples/oop04.adb
-  :code: Ada
-  :start-line: 27
-  :end-line: 32
+.. literalinclude:: examples/oop04.adb
+  :language: Ada
+  :lines: 28-33
+  :dedent: 6
 
 +++++++
 Notes

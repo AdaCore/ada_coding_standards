@@ -50,19 +50,19 @@ N/A
 Noncompliant Code Example
 +++++++++++++++++++++++++++
 
-.. include:: examples/rpp13.ads
-  :code: Ada
-  :start-line: 3
-  :end-line: 5
+.. literalinclude:: examples/rpp13.ads
+  :language: Ada
+  :lines: 4-5
+  :dedent: 3
 
 ++++++++++++++++++++++++
 Compliant Code Example
 ++++++++++++++++++++++++
 
-.. include:: examples/rpp13.ads
-  :code: Ada
-  :start-line: 8
-  :end-line: 10
+.. literalinclude:: examples/rpp13.ads
+  :language: Ada
+  :lines: 9-10
+  :dedent: 3
 
 +++++++
 Notes
