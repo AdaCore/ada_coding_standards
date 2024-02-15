@@ -5,10 +5,18 @@ RULE   = "---"
 HEADER = "==="
 
 global_file = None
+global_blank_lines = 0
 
 def write ( text ):
     global global_file
-    global_file.write ( text + '\n' )
+    global global_blank_lines
+    if len(text) > 0:
+        global_blank_lines = 0
+        global_file.write ( text + '\n' )
+    else:
+        global_blank_lines = global_blank_lines + 1
+        if global_blank_lines < 2:
+            global_file.write ( '\n' )
 
 def list_text ( items ):
     retval = ""
@@ -102,7 +110,7 @@ def process_rule ( lines, detail ):
 def print_header ( title, want_header ):
     if want_header and len(title) > 0:
         sep = '-'.ljust(len(title),'-')
-        write ( "---" + sep + "---" )
+        write ( "\n---" + sep + "---" )
         write ( "-- " + title + " --" )
         write ( "---" + sep + "---" )
         write ( '' )
@@ -139,7 +147,8 @@ def process_one_directory ( dir, detail ):
             if file.lower().endswith('.rst'):
                 dirname = process_one_file ( os.path.join ( root, file ), detail, dirname )
         if detail != 'quiet' and len(dirname) == 0:
-            write ( '\n' )
+            write ( '' )
+            write ( '' )
 
 def process_source ( source, output, detail ):
     global global_file
