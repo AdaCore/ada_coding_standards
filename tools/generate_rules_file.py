@@ -31,61 +31,70 @@ def camel_case ( text ):
                 retval = retval + text[i]
     return retval
 
-def find_rule ( lines ):
+'''
+Assumes format for rule:
+  :rule:`<rule>`
+(role does not have to be alone on the line)
+'''
+def print_rule ( lines, detail, id, name ):
+    rule = ""
     for line in lines:
         location = line.find(':rule:')
         if location >= 0:
             pieces = line[location:].split('`')
             if len(pieces) > 1:
-                return pieces[1]
-    return ''
-
-def find_value ( lines, key ):
-    for line in lines:
-        if key in line:
-            return line[line.rindex(' '):].replace('*','').strip()
-    return ''
-
-def find_values ( lines, key ):
-    start_looking = False
-    retval = ''
-
-    for line in lines:
-        if key in line:
-            start_looking = True
-        elif start_looking:
-            l = line.strip()
-            if len(l) <= 1:
-                break
-            first = l.find(':')
-            last = l.find(':', first+1)
-            if first >= 0 and last > first:
-                if len(retval) > 0:
-                    retval = retval + ', '
-                retval = retval + l[first+1:last]
-    return retval
-
-def process_rule ( lines, detail ):
-    id_start = lines[1].index('(')
-    id = f = lines[1][id_start+1:lines[1].index(')')]
-    name = lines[1][:id_start].strip()
-    rule = find_rule ( lines[2:] )
+                rule = pieces[1]
     if detail != 'quiet':
         write ( '-- ' + id + ' ' + name )
     if len(rule) > 0:
         write ( '+R' + rule )
     elif detail != 'quiet':
         write ( '-- (no GNATcheck rule)')
+
+'''
+Assumes format for level:
+  **Level** :math:`\rightarrow` Required
+(everything after the last space is the level)
+'''
+def print_level ( lines ):
+    for line in lines:
+        if '**Level**' in line:
+            level = line[line.rindex(' '):].replace('*','').strip()
+            write ( '-- Level: ' + level )
+
+def print_collection ( title, values, lines ):
+    to_print = []
+    for value in values:
+        key = ':' + value + ':'
+        for line in lines:
+            if (key in line) and ('checkmark') in line:
+                to_print.append ( value )
+    if len(to_print) > 0:
+        write ('-- ' + title)
+        for one in to_print:
+            write ('--   ' + one)
+
+def print_categories ( lines ):
+    values = ['Safety', 'Cyber']
+    print_collection ( 'Category', values, lines )
+
+def print_goals ( lines ):
+    values = [ 'Maintainability',
+               'Reliability',
+               'Portability',
+               'Performance',
+               'Security']
+    print_collection ( 'Goal', values, lines )
+
+def process_rule ( lines, detail ):
+    id_start = lines[1].index('(')
+    id = f = lines[1][id_start+1:lines[1].index(')')]
+    name = lines[1][:id_start].strip()
+    print_rule ( lines[2:], detail, id, name )
     if detail != 'quiet' and detail != 'short':
-        level = find_value ( lines, "*Level*" )
-        if len(level) > 0:
-            write ( '--  Level: ' + level )
-        category = find_values ( lines, '*Category*' )
-        if len(category) > 0:
-            write ( '--  Category: ' + category )
-        goal = find_values ( lines, '*Goal*' )
-        if len(category) > 0:
-            write ( '--  Goal: ' + goal )
+        print_level ( lines )
+        print_categories ( lines )
+        print_goals ( lines )
         write('')
     if detail != 'quiet':
         write('')
