@@ -31,6 +31,15 @@ def camel_case ( text ):
                 retval = retval + text[i]
     return retval
 
+def find_rule ( lines ):
+    for line in lines:
+        location = line.find(':rule:')
+        if location >= 0:
+            pieces = line[location:].split('`')
+            if len(pieces) > 1:
+                return pieces[1]
+    return ''
+
 def find_value ( lines, key ):
     for line in lines:
         if key in line:
@@ -60,10 +69,13 @@ def process_rule ( lines, detail ):
     id_start = lines[1].index('(')
     id = f = lines[1][id_start+1:lines[1].index(')')]
     name = lines[1][:id_start].strip()
-    rule = find_value ( lines[2:], 'GNATcheck Rule' )
+    rule = find_rule ( lines[2:] )
     if detail != 'quiet':
         write ( '-- ' + id + ' ' + name )
-    write ( '+R' + rule )
+    if len(rule) > 0:
+        write ( '+R' + rule )
+    elif detail != 'quiet':
+        write ( '-- (no GNATcheck rule)')
     if detail != 'quiet' and detail != 'short':
         level = find_value ( lines, "*Level*" )
         if len(level) > 0:
